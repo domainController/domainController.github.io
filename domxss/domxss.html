@@ -8,12 +8,14 @@
 </head>
 
 <body>
-    <h2>Building a DOM XSS chrome extension scanner</h2>
+    <h1>Process of building a DOM XSS chrome extension scanner</h1>
     <ul>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/console#Stack_traces">console.stack()</a></li>
+        <li><a href="#sources">Attacker-controlled sources</a></li>
+        <li><a href="#sinks">Injection sinks</a></li>
+        <li><a href="#devtools">Chrome DevTools</a></li>
     </ul>
     <hr>
-    <h2>Attacker-controlled sources</h2>
+    <h2 id=sources>Attacker-controlled sources</h2>
     By nature you can't build a comprehensive list of DOM XSS sources
     <ol>
         <li>location</li>
@@ -25,7 +27,7 @@
         <li>document.documentURI</li>
         <li>document.baseURI</li>
     </ol>
-    <h2><a href="https://w3c.github.io/webappsec-trusted-types/dist/spec/#injection-sinks">Injection sinks</a></h2>
+    <h2><a href="https://w3c.github.io/webappsec-trusted-types/dist/spec/#injection-sinks" id=sinks>Injection sinks</a></h2>
     <ol>
         <!--HTML Injection Sinks parse input strings into a DOM tree. https://w3c.github.io/webappsec-trusted-types/dist/spec/#html-injection-sinks-->
         <li class="HIS"><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML">inner.html</a></li>
@@ -87,6 +89,11 @@
         <li class="HIS"><a href="https://www.w3schools.com/jsref/met_doc_write.asp">document.write()</a></li>
         <li class="HIS"><a href="https://www.w3schools.com/jsref/met_doc_writeln.asp">document.writeln()</a></li>
         <li class="DXIS"><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement">HTMLScriptElement</a></li>
+    </ol>
+    <hr>
+    <h2 id=devtools>Chrome DevTools</h2>
+    <ol>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/console#Stack_traces">console.stack()</a></li>
     </ol>
 </body>
 
