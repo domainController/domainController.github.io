@@ -1,6 +1,12 @@
 
-title: https://kevin-garnette.github.io/
-description: base43
+title: base43
+description: bug bounty knowledge base
 show_downloads: false
 show_repo: false
 theme: jekyll-theme-hacker
+url: https://kevin-garnette.github.io/
+author:
+  name: Patrice Kenmoe
+  email: noyau.imperatif@gmail.com 
+  
+year: 2021
