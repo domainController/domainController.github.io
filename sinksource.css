@@ -1,0 +1,90 @@
+    body {
+        text-align: left;
+    }
+
+    .content-table {
+        border-collapse: collapse;
+        margin: 20px 0;
+        min-width: 400px;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .content-table th,
+    .content-table td {
+        padding: 3px 3px;
+        font-size: 22px;
+    }
+
+    .content-table td a:visited {
+        color: white;
+    }
+
+    .uds {
+        background-color: #581845;
+        color: white;
+    }
+
+    .nds{
+        background-color: #5F9EA0;
+        color: white;
+    }
+
+    .cbs {
+        background-color: #BDB76B;
+        color: white;
+    }
+
+    
+    .sbs {
+        background-color: #3CB371;
+        color: white;
+    }
+
+    .his {
+        background-color: #191970;
+        color: #A9A9A9;
+    }
+
+    .dxis {
+        background-color: #DB7093;
+        color: white;
+    }
+
+
+
+    .eaj {
+        background-color: #808080;
+        color: white;
+    }
+
+    .eju {
+        background-color: #B8860B;
+        color: white;
+    }
+
+    table {
+        counter-reset: rowNumber;
+    }
+
+    table tr>td:first-child {
+        counter-increment: rowNumber;
+    }
+
+    table tr td:first-child::before {
+        content: counter(rowNumber);
+        min-width: 1em;
+        margin-right: 0.5em;
+    }
+
+
+    h2 {
+        font-size: 35px;
+        text-indent: 3%;
+        line-height: 3%;
+    }
+
+    a {
+        text-decoration: none;
+    }

@@ -1,27 +1,21 @@
-    body{
-    text-align: left;
-    text-transform: capitalize;
+    body {
+        text-align: left;
     }
 
     .content-table {
+        text-transform: capitalize;
         border-collapse: collapse;
-        margin: 25px 0;
+        margin: 20px 0;
         min-width: 400px;
         border-radius: 5px 5px 0 0;
         overflow: hidden;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     }
 
-    .content-table thead tr {
-        background-color: #009879;
-        color: #ffffff;
-        text-align: left;
-        font-weight: bold font-size: 50px;
-    }
-
     .content-table th,
     .content-table td {
         padding: 1px 1px;
+        font-size: 18px;
     }
 
     .python {
@@ -42,38 +36,21 @@
         background-color: #7FBC8F;
     }
 
-    td {
-        font-size: 18px;
+    .his {
+        background-color: #708090;
+        color: white;
+    }
+
+    .dxis {
+        background-color: #DB7093;
     }
 
     h2 {
-        font-size: 25px;
-        text-transform: uppercase;
+        font-size: 23px;
+        text-indent: 3%;
+        line-height: 3%;
     }
-    a{
+
+    a {
         text-decoration: none;
     }
-
-    /*
-h1,ol{
-    color: white;
-}
-h1{
-    font-size: 40 px;
-}
-
-ol{
-    color: green;
-}
-.HIS{
-    color: cyan;
-}
-.DXIS{
-    : magenta;
-}
-.EAJ{
-    color: red;
-}
-.EJU
-    color: pink;
-}*/

@@ -5,98 +5,184 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM XSS</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../sinksource.css">
 </head>
 
 <body>
-    <h1>Perimeter of DOM XSS</h1>
-    <ul>
-        <li><a href="#sources">Attacker-controlled sources</a></li>
-        <li><a href="#sinks">Injection sinks</a></li>
-        <li><a href="#devtools">Chrome DevTools</a></li>
-    </ul>
-    <hr>
-    <h2 id=sources>Attacker-controlled sources</h2>
-    By nature you can't build a comprehensive list of DOM XSS sources
-    <ol>
-        <li>location</li>
-        <li>location.href</li>
-        <li>location.pathname</li>
-        <li>location.search</li>
-        <li>location.hash</li>
-        <li>document.URL</li>
-        <li>document.documentURI</li>
-        <li>document.baseURI</li>
-    </ol>
-    <h2><a href="https://w3c.github.io/webappsec-trusted-types/dist/spec/#injection-sinks" id=sinks>Injection sinks</a></h2>
-    <ol>
-        <!--HTML Injection Sinks parse input strings into a DOM tree. https://w3c.github.io/webappsec-trusted-types/dist/spec/#html-injection-sinks-->
-        <li class="HIS"><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML">inner.html</a></li>
-        <li class="HIS"><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-outerHTML">outer.html</a></li>
-        <li class="HIS"><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMParser">DOMParser parseFromString()</a></li>
-        <li class="HIS"><a href="https://www.w3schools.com/jsref/met_doc_write.asp">document.write()</a></li>
-        <li class="HIS"><a href="https://www.w3schools.com/jsref/met_doc_writeln.asp">document.writeln()</a></li>
-        <!-- DOM XSS injection sinks evaluate an input string value in a way that could result in DOM XSS if that value is untrusted -->
-        <li class="DXIS"><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement">HTMLScriptElement</a></li>
-        <li class="DXIS"><a href="https://w3c.github.io/webappsec-trusted-types/dist/spec/#dom-htmlscriptelement-text">HTMLScriptElement.text</a></li>
-        <!-- Sinks that Execute payload As JavaScript https://domgo.at/cxss/sinks -->
-        <li class="EAJ"><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML">eval()</a></li>
-        <li class="EAJ"><a href="https://www.w3schools.com/jsref/met_win_settimeout.asp">setTimeout</a></li>
-        <li class="EAJ"><a href="https://www.w3schools.com/js/js_timing.asp">setInterval()</a></li>
-        <li class="EAJ"><a href="https://www.w3schools.com/js/js_function_definition.asp">function()</a></li>
-        <li class="EAJ"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">&lt;script&gt;&lt;/script&gt;</a></li>
-        <li class="EAJ"><a href="https://www.w3schools.com/jsref/event_onclick.asp">&lt;div onclick ='payload'&gt;</a></li>
-        <!-- Sinks that Evaluate JavaScript URIs https://domgo.at/cxss/sinks -->
-        <li class="EJU"><a href="https://www.w3schools.com/js/js_window_location.asp">location</a></li>
-        <li class="EJU"><a href="https://www.w3schools.com/jsref/prop_loc_href.asp">location.href</a></li>
-        <li class="EJU"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/assign">location.assign()</a></li>
-        <li class="EJU"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/replace">location.replace()</a></li>
-        <!-- Sinks that execute payload as HTML https://domgo.at/cxss/sinks -->
-        <hr>
-        <li class="HIS"><a href="https://www.w3schools.com/jsref/met_doc_writeln.asp">document.writeln()</a></li>
-        <li class="DXIS"><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement">HTMLScriptElement</a></li>
-        <li class="HIS"><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML">inner.html</a></li>
-        <li class="HIS"><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-outerHTML">outer.html</a></li>
-        <li class="HIS"><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMParser">DOMParser parseFromString()</a></li>
-        <li class="HIS"><a href="https://www.w3schools.com/jsref/met_doc_write.asp">document.write()</a></li>
-        <li class="HIS"><a href="https://www.w3schools.com/jsref/met_doc_writeln.asp">document.writeln()</a></li>
-        <li class="DXIS"><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement">HTMLScriptElement</a></li>
-        <li class="HIS"><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML">inner.html</a></li>
-        <li class="HIS"><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-outerHTML">outer.html</a></li>
-        <li class="HIS"><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMParser">DOMParser parseFromString()</a></li>
-        <li class="HIS"><a href="https://www.w3schools.com/jsref/met_doc_write.asp">document.write()</a></li>
-        <li class="HIS"><a href="https://www.w3schools.com/jsref/met_doc_writeln.asp">document.writeln()</a></li>
-        <li class="DXIS"><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement">HTMLScriptElement</a></li>
-        <li class="HIS"><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML">inner.html</a></li>
-        <li class="HIS"><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-outerHTML">outer.html</a></li>
-        <li class="HIS"><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMParser">DOMParser parseFromString()</a></li>
-        <li class="HIS"><a href="https://www.w3schools.com/jsref/met_doc_write.asp">document.write()</a></li>
-        <li class="HIS"><a href="https://www.w3schools.com/jsref/met_doc_writeln.asp">document.writeln()</a></li>
-        <li class="DXIS"><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement">HTMLScriptElement</a></li>
-        <li class="HIS"><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML">inner.html</a></li>
-        <li class="HIS"><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-outerHTML">outer.html</a></li>
-        <li class="HIS"><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMParser">DOMParser parseFromString()</a></li>
-        <li class="HIS"><a href="https://www.w3schools.com/jsref/met_doc_write.asp">document.write()</a></li>
-        <li class="HIS"><a href="https://www.w3schools.com/jsref/met_doc_writeln.asp">document.writeln()</a></li>
-        <li class="DXIS"><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement">HTMLScriptElement</a></li>
-        <li class="HIS"><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-outerHTML">outer.html</a></li>
-        <li class="HIS"><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMParser">DOMParser parseFromString()</a></li>
-        <li class="HIS"><a href="https://www.w3schools.com/jsref/met_doc_write.asp">document.write()</a></li>
-        <li class="HIS"><a href="https://www.w3schools.com/jsref/met_doc_writeln.asp">document.writeln()</a></li>
-        <li class="DXIS"><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement">HTMLScriptElement</a></li>
-        <li class="HIS"><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML">inner.html</a></li>
-        <li class="HIS"><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-outerHTML">outer.html</a></li>
-        <li class="HIS"><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMParser">DOMParser parseFromString()</a></li>
-        <li class="HIS"><a href="https://www.w3schools.com/jsref/met_doc_write.asp">document.write()</a></li>
-        <li class="HIS"><a href="https://www.w3schools.com/jsref/met_doc_writeln.asp">document.writeln()</a></li>
-        <li class="DXIS"><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement">HTMLScriptElement</a></li>
-    </ol>
-    <hr>
-    <h2 id=devtools>Chrome DevTools</h2>
-    <ol>
-        <li><a href="scanners.html">Scanners</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/console#Stack_traces">console.stack()</a></li>
-    </ol>
+    <h2 id=Source>Attacker-controlled Source</h2>
+    <table class="content-table">
+        <tbody>
+            <tr class=uds>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">location</a></td>
+                <td>URL-based</td>
+                <td>DOM Property</td>
+            </tr>
+            <tr class=uds>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-outerHTML" target="_blank">location.href</a></td>
+                <td>URL-based</td>
+                <td>DOM Property</td>
+                <td>https://www.youtube.com/watch?v=vYA81UAExKA</td>
+            </tr>
+            <tr class=uds>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMParser" target="_blank">location.pathname</a></td>
+                <td>URL-based</td>
+                <td>DOM Property</td>
+                <td>/watch</td>
+            </tr>
+            <tr class=uds>
+                <td><a href="https://www.w3schools.com/jsref/met_doc_write.asp" target="_blank">location.search</a></td>
+                <td>URL-based</td>
+                <td>DOM Property</td>
+                <td>"?v=vYA81UAExKA"</td>
+            </tr>
+            <tr class=uds>
+                <td><a href="https://www.w3schools.com/jsref/met_doc_writeln.asp" target="_blank">location.hash</a></td>
+                <td>URL-based</td>
+                <td>DOM Property</td>
+            <tr class=uds>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement" target="_blank">document.URL</a></td>
+                <td>URL-based</td>
+                <td>DOM Property</td>
+                <td>https://www.youtube.com/watch?v=vYA81UAExKA</td>
+            </tr>
+            <tr class=uds>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">document.documentURI</a></td>
+                <td>URL-based</td>
+                <td>DOM Property</td>
+                <td>https://www.youtube.com/watch?v=vYA81UAExKA</td>
+            </tr>
+            <tr class=uds>
+                <td><a href="https://www.w3schools.com/jsref/met_win_settimeout.asp" target="_blank">document.baseURI</a></td>
+                <td>URL-based</td>
+                <td>DOM Property</td>
+                <td>https://www.youtube.com/watch?v=vYA81UAExKA</td>
+            </tr>
+            <tr class=nds>
+                <td><a href="https://developer.mozilla.org/en-us/docs/Web/API/Window/name" target="_blank">window.name</a></td>
+                <td>Navigation-based</td>
+                <td>DOM Property</td>
+            </tr>
+            <tr class=nds>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/referrer" target="_blank">document.referrer</a></td>
+                <td>Navigation-based</td>
+                <td>DOM Property</td>
+            </tr>
+            <tr class=cbs>
+                <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">XMLHTTPRequest/Fetch</a></td>
+                <td>Communication based</td>
+                <td>Communication Type</td>
+            </tr>
+            <tr class=cbs>
+                <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">WebSocket</a></td>
+                <td>Communication based</td>
+                <td>Communication Type</td>
+            </tr>
+            <tr class=cbs>
+                <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">Window Messaging</a></td>
+                <td>Communication based</td>
+                <td>Communication Type</td>
+            </tr>
+            <tr class=sbs>
+                <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">Cookie</a></td>
+                <td>Storage-based</td>
+                <td>Store Type</td>
+                <td>__Secure-3PAPISID=HeUXhr8c-MfPn</td>
+            </tr>
+            <tr class=sbs>
+                <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">LocalStorage</a></td>
+                <td>Storage-based</td>
+                <td>Store Type</td>
+            </tr>
+            <tr class=sbs>
+                <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">SessionStorage</a></td>
+                <td>Storage-based</td>
+                <td>Store Type</td>
+            </tr>
+    </table>
+    <h2><a>Injection sinks</a></h2>
+    <table class="content-table">
+        <tbody>
+            <tr class=his>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">inner.html</a></td>
+                <td>Executes payload as HTML</td>
+                <td>HTML Injection Sink</td>
+            </tr>
+            <tr class=his>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-outerHTML" target="_blank">outer.html</a></td>
+                <td>Executes payload as HTML</td>
+                <td>HTML Injection Sink</td>
+            </tr>
+            <tr class=his>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMParser" target="_blank">parseFromString()</a></td>
+                <td>Executes payload as HTML</td>
+                <td>HTML Injection Sink</td>
+            </tr>
+            <tr class=his>
+                <td><a href="https://www.w3schools.com/jsref/met_doc_write.asp" target="_blank">document.write()</a></td>
+                <td>Executes payload as HTML</td>
+                <td>HTML Injection Sink</td>
+            </tr>
+            <tr class=his>
+                <td><a href="https://www.w3schools.com/jsref/met_doc_writeln.asp" target="_blank">document.writeln()</a></td>
+                <td>Executes payload as HTML</td>
+                <td>HTML Injection Sink</td>
+            <tr class=dxis>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement" target="_blank">HTMLScriptElement</a></td>
+                <td>DOM XSS injection sink</td>
+                <td>property</td>
+            </tr>
+            <tr class=dxis>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">eval()</a></td>
+                <td>DOM XSS injection sink</td>
+                <td>function</td>
+            </tr>
+            <tr class=eaj>
+                <td><a href="https://www.w3schools.com/jsref/met_win_settimeout.asp" target="_blank">setTimeout()</a></td>
+                <td>Executes payload as JavaScript</td>
+                <td>event</td>
+            </tr>
+            <tr class=eaj>
+                <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">setInterval()</a></td>
+                <td>Executes payload as JavaScript</td>
+                <td>event</td>
+            </tr>
+            <tr class=eaj>
+                <td><a href="https://www.w3schools.com/js/js_function_definition.asp" target="_blank">function()</a></td>
+                <td>Executes payload as JavaScript</td>
+                <td>function</td>
+            </tr>
+            <tr class=eaj>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script" target="_blank">&lt;script&gt;&lt;/script&gt;</a></td>
+                <td>Executes payload as JavaScript</td>
+                <td>tag</td>
+            </tr>
+            <tr class=eaj>
+                <td><a href="https://www.w3schools.com/jsref/event_onclick.asp" target="_blank">&lt;div onclick ='payload'&gt;</a></td>
+                <td>Executes payload as JavaScript</td>
+                <td>event</td>
+            </tr>
+            <tr class=eju>
+                <td><a href="https://www.w3schools.com/js/js_window_location.asp">location</a></td>
+                <td>Evaluates JavaScript URIs</td>
+                <td>property</td>
+            </tr>
+            <tr class=eju>
+                <td><a href="https://www.w3schools.com/jsref/prop_loc_href.asp">location.href</a></td>
+                <td>Evaluates JavaScript URIs</td>
+                <td>property</td>
+            </tr>
+            <tr class=eju>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/assign">location.assign()</a></td>
+                <td>Evaluates JavaScript URIs</td>
+                <td>property</td>
+            </tr>
+            <tr class=eju>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/replace">location.replace()</a></td>
+                <td>Evaluates JavaScript URIs</td>
+                <td>property</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 
 </html>
