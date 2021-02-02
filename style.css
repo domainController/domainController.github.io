@@ -1,25 +1,79 @@
-/*body{
-	background-color: black;
-}
+    body{
+    text-align: left;
+    text-transform: capitalize;
+    }
+
+    .content-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        min-width: 400px;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .content-table thead tr {
+        background-color: #009879;
+        color: #ffffff;
+        text-align: left;
+        font-weight: bold font-size: 50px;
+    }
+
+    .content-table th,
+    .content-table td {
+        padding: 1px 1px;
+    }
+
+    .python {
+        background-color: #B0C4DE;
+    }
+
+    .javascript {
+        background-color: #F5DEB3;
+    }
+
+    .shell {
+        background-color: #900C3F;
+        color: white;
+        opacity: 0.8;
+    }
+
+    .go {
+        background-color: #7FBC8F;
+    }
+
+    td {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 25px;
+        text-transform: uppercase;
+    }
+    a{
+        text-decoration: none;
+    }
+
+    /*
 h1,ol{
-	color: white;
+    color: white;
 }
 h1{
-	font-size: 40 px;
+    font-size: 40 px;
 }
 
 ol{
-	color: green;
+    color: green;
 }
 .HIS{
-	color: cyan;
+    color: cyan;
 }
 .DXIS{
-	: magenta;
+    : magenta;
 }
 .EAJ{
-	color: red;
+    color: red;
 }
-.EJU{
-	color: pink;
+.EJU
+    color: pink;
 }*/
