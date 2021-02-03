@@ -14,48 +14,56 @@
     .content-table th,
     .content-table td {
         padding: 3px 3px;
-        font-size: 22px;
+        font-size: 19px;
     }
 
     .content-table td a:visited {
         color: white;
     }
 
+    /* Attacker-controlled Source */
+
     .uds {
         background-color: #581845;
         color: white;
     }
 
-    .nds{
+    .nds {
         background-color: #5F9EA0;
         color: white;
     }
 
     .cbs {
         background-color: #BDB76B;
-        color: white;
+        color: maroon;
     }
 
-    
+
     .sbs {
         background-color: #3CB371;
         color: white;
     }
 
+    .hbs {
+        background-color: #DEB887;
+        color: maroon;
+    }
+
+    /* Injection sinks */
+
+    .eaj {
+        background-color: #CD5C5C;
+        color: #FFFFF0;
+    }
+
+
     .his {
         background-color: #191970;
-        color: #A9A9A9;
+        color: #ADD8E6;
     }
 
     .dxis {
         background-color: #DB7093;
-        color: white;
-    }
-
-
-
-    .eaj {
-        background-color: #808080;
         color: white;
     }
 
@@ -87,4 +95,10 @@
 
     a {
         text-decoration: none;
+    }
+
+    a:hover {
+        color: white;
+        background-color: black;
+        text-decoration: underline;
     }

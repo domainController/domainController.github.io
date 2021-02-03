@@ -1,8 +1,5 @@
-document.baseURI
+
 document.cookie
-document.documentURI
-document.referrer
-document.URL
 document.URLUnencoded (IE 5.5 or later Only)
 Element.innerHTML
 history.pushState()
@@ -22,15 +19,6 @@ HTMLScriptElement.InnerText
 HTMLScriptElement.textContent
 HTMLSourceElement.src
 HTMLTrackElement.src
-kami@base43:~/Documents/blog/kevin-garnette.github.io$ sort sinkslist.txt 
-localStorage
 location
 location.assign
-location.hash
-location.href
-location.href
-location.pathname
-location.search
-sessionStorage
-window.name
 window.open

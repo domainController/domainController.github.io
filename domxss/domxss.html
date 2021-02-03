@@ -9,12 +9,12 @@
 </head>
 
 <body>
-    <h2 id=Source>Attacker-controlled Source</h2>
+    <h2 id=Source>Attacker-controlled Sources</h2>
     <table class="content-table">
         <tbody>
             <tr class=uds>
                 <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">location</a></td>
-                <td>URL-based</td>
+                <td><a href="https://github.com/wisec/domxsswiki/wiki/location,-documentURI-and-URL-sources" target="_blank">URL-based</a></td>
                 <td>DOM Property</td>
             </tr>
             <tr class=uds>
@@ -57,14 +57,20 @@
                 <td>DOM Property</td>
                 <td>https://www.youtube.com/watch?v=vYA81UAExKA</td>
             </tr>
+            <tr class=uds>
+                <td><a href="https://www.w3schools.com/jsref/met_win_settimeout.asp" target="_blank">document.URLUnencoded</a></td>
+                <td>URL-based</td>
+                <td>DOM Property</td>
+                <td></td>
+            </tr>
             <tr class=nds>
                 <td><a href="https://developer.mozilla.org/en-us/docs/Web/API/Window/name" target="_blank">window.name</a></td>
-                <td>Navigation-based</td>
+                <td><a href="https://github.com/wisec/domxsswiki/wiki/window.name-source">Navigation-based</a></td>
                 <td>DOM Property</td>
             </tr>
             <tr class=nds>
                 <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/referrer" target="_blank">document.referrer</a></td>
-                <td>Navigation-based</td>
+                <td><a href="https://github.com/wisec/domxsswiki/wiki/referrer-source" target="_blank">Navigation-based</a></td>
                 <td>DOM Property</td>
             </tr>
             <tr class=cbs>
@@ -84,102 +90,246 @@
             </tr>
             <tr class=sbs>
                 <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">Cookie</a></td>
-                <td>Storage-based</td>
+                <td><a href="https://github.com/wisec/domxsswiki/wiki/cookie-sources">Cookie source</a></td>
                 <td>Store Type</td>
                 <td>__Secure-3PAPISID=HeUXhr8c-MfPn</td>
             </tr>
             <tr class=sbs>
                 <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">LocalStorage</a></td>
-                <td>Storage-based</td>
-                <td>Store Type</td>
+                <td><a href="https://github.com/wisec/domxsswiki/wiki/indirect-sources">Indirect source</a></td>
+                <td>Storage Object</td>
             </tr>
             <tr class=sbs>
                 <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">SessionStorage</a></td>
-                <td>Storage-based</td>
-                <td>Store Type</td>
+                <td>Indirect source</td>
+                <td>Storage Object</td>
+            </tr>
+            <tr class=sbs>
+                <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">IndexedDB</a></td>
+                <td>Indirect source</td>
+                <td>Storage Object</td>
+            </tr>
+            <tr class=hbs>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/History/pushState" target="_blank">history.pushState()</a></td>
+                <td><a href="https://github.com/wisec/domxsswiki/wiki/history-source" target="_blank">History-based</a></td>
+                <td>DOM Property</td>
+            </tr>
+            <tr class=hbs>
+                <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">history.replaceState()</a></td>
+                <td>History-based</td>
+                <td>DOM Property</td>
             </tr>
     </table>
     <h2><a>Injection sinks</a></h2>
     <table class="content-table">
         <tbody>
-            <tr class=his>
-                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">inner.html</a></td>
-                <td>Executes payload as HTML</td>
-                <td>HTML Injection Sink</td>
+            <tr class=eaj>
+                <td><a href="https://www.w3schools.com/js/js_function_definition.asp" target="_blank">eval()</a></td>
+                <td><a href="https://github.com/wisec/domxsswiki/wiki/Direct-Execution-Sinks">Direct execution sink</a></td>
+                <td>Executes payload as JavaScript</td>
+                <td>function</td>
             </tr>
-            <tr class=his>
-                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-outerHTML" target="_blank">outer.html</a></td>
-                <td>Executes payload as HTML</td>
-                <td>HTML Injection Sink</td>
-            </tr>
-            <tr class=his>
-                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMParser" target="_blank">parseFromString()</a></td>
-                <td>Executes payload as HTML</td>
-                <td>HTML Injection Sink</td>
-            </tr>
-            <tr class=his>
-                <td><a href="https://www.w3schools.com/jsref/met_doc_write.asp" target="_blank">document.write()</a></td>
-                <td>Executes payload as HTML</td>
-                <td>HTML Injection Sink</td>
-            </tr>
-            <tr class=his>
-                <td><a href="https://www.w3schools.com/jsref/met_doc_writeln.asp" target="_blank">document.writeln()</a></td>
-                <td>Executes payload as HTML</td>
-                <td>HTML Injection Sink</td>
-            <tr class=dxis>
-                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement" target="_blank">HTMLScriptElement</a></td>
-                <td>DOM XSS injection sink</td>
-                <td>property</td>
-            </tr>
-            <tr class=dxis>
-                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">eval()</a></td>
-                <td>DOM XSS injection sink</td>
+            <tr class=eaj>
+                <td><a href="https://www.w3schools.com/js/js_function_definition.asp" target="_blank">function()</a></td>
+                <td>Direct execution sink</td>
+                <td>Executes payload as JavaScript</td>
                 <td>function</td>
             </tr>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/jsref/met_win_settimeout.asp" target="_blank">setTimeout()</a></td>
+                <td>Direct execution sink</td>
                 <td>Executes payload as JavaScript</td>
-                <td>event</td>
+                <td>function</td>
             </tr>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">setInterval()</a></td>
+                <td>Direct execution sink</td>
                 <td>Executes payload as JavaScript</td>
-                <td>event</td>
+                <td>function</td>
             </tr>
             <tr class=eaj>
-                <td><a href="https://www.w3schools.com/js/js_function_definition.asp" target="_blank">function()</a></td>
+                <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">setImmediate()</a></td>
+                <td>Direct execution sink</td>
+                <td>Executes payload as JavaScript</td>
+                <td>function</td>
+            </tr>
+            <tr class=eaj>
+                <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">execScript</a></td>
+                <td>Direct execution sink</td>
+                <td>Executes payload as JavaScript</td>
+                <td>function</td>
+            </tr>
+            <tr class=eaj>
+                <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">crypto.generateCRMFRequest</a></td>
+                <td>Direct execution sink</td>
+                <td>Executes payload as JavaScript</td>
+                <td>function</td>
+            </tr>
+            <tr class=eaj>
+                <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">ScriptElement.src</a></td>
+                <td>Direct execution sink</td>
+                <td>Executes payload as JavaScript</td>
+                <td>function</td>
+            </tr>
+            <tr class=eaj>
+                <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">ScriptElement.text</a></td>
+                <td>Direct execution sink</td>
+                <td>Executes payload as JavaScript</td>
+                <td>function</td>
+            </tr>
+            <tr class=eaj>
+                <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">ScriptElement.textContent</a></td>
+                <td>Direct execution sink</td>
+                <td>Executes payload as JavaScript</td>
+                <td>function</td>
+            </tr>
+            <tr class=eaj>
+                <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">ScriptElement.innerText</a></td>
+                <td>Direct execution sink</td>
                 <td>Executes payload as JavaScript</td>
                 <td>function</td>
             </tr>
             <tr class=eaj>
                 <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script" target="_blank">&lt;script&gt;&lt;/script&gt;</a></td>
+                <td>Direct execution sink</td>
                 <td>Executes payload as JavaScript</td>
                 <td>tag</td>
             </tr>
             <tr class=eaj>
-                <td><a href="https://www.w3schools.com/jsref/event_onclick.asp" target="_blank">&lt;div onclick ='payload'&gt;</a></td>
+                <td><a href="https://www.w3schools.com/jsref/event_onclick.asp" target="_blank">&lt;anyTag.onEventName='payload'&gt;</a></td>
+                <td>Direct execution sink</td>
                 <td>Executes payload as JavaScript</td>
                 <td>event</td>
             </tr>
+            <tr class=his>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">inner.html</a></td>
+                <td>HTML manipulation/injection sink</td>
+                <td>Executes payload as HTML</td>
+            </tr>
+            <tr class=his>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-outerHTML" target="_blank">outer.html</a></td>
+                <td>HTML manipulation/injection sink</td>
+                <td>Executes payload as HTML</td>
+            </tr>
+            <tr class=his>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMParser" target="_blank">parseFromString()</a></td>
+                <td>HTML manipulation/injection sink</td>
+                <td>Executes payload as HTML</td>
+            </tr>
+            <tr class=his>
+                <td><a href="https://www.w3schools.com/jsref/met_doc_write.asp" target="_blank">document.write()</a></td>
+                <td>HTML manipulation/injection sink</td>
+                <td>Executes payload as HTML</td>
+            </tr>
+            <tr class=his>
+                <td><a href="https://www.w3schools.com/jsref/met_doc_writeln.asp" target="_blank">document.writeln()</a></td>
+                <td>HTML manipulation/injection sink</td>
+                <td>Executes payload as HTML</td>
+            </tr>
+            <tr class=his>
+                <td><a href="https://www.w3schools.com/jsref/met_doc_writeln.asp" target="_blank">Range.createContextualFragment</a></td>
+                <td>HTML manipulation/injection sink</td>
+                <td>Executes payload as HTML</td>
+            </tr>
+            <tr class=his>
+                <td><a href="https://www.w3schools.com/jsref/met_doc_writeln.asp" target="_blank">HTMLButton.value</a></td>
+                <td>HTML manipulation/injection sink</td>
+                <td>Executes payload as HTML</td>
+            </tr>
+            <tr class=dxis>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement" target="_blank">HTMLScriptElement</a></td>
+                <td>DOM XSS injection sink</td>
+                <td>Location sink</td>
+            </tr>
+            <tr class=dxis>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">HTMLButtonElement.formAction</a></td>
+                <td>DOM XSS injection sink</td>
+                <td>function</td>
+            </tr>
+            <tr class=dxis>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">HTMLEmbededElement.src</a></td>
+                <td>DOM XSS injection sink</td>
+                <td>function</td>
+            </tr>
+            <tr class=dxis>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">HTMLFormElement.action</a></td>
+                <td>DOM XSS injection sink</td>
+                <td>function</td>
+            </tr>
+            <tr class=dxis>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">HTMLFrameElement.src</a></td>
+                <td>DOM XSS injection sink</td>
+                <td>function</td>
+            </tr>
+            <tr class=dxis>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">HTMLFrameElement.srcdoc</a></td>
+                <td>DOM XSS injection sink</td>
+                <td>function</td>
+            </tr>
+            <tr class=dxis>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">HTMLImageElement.src</a></td>
+                <td>DOM XSS injection sink</td>
+                <td>function</td>
+            </tr>
+            <tr class=dxis>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">HTMLInputElement.formAction</a></td>
+                <td>DOM XSS injection sink</td>
+                <td>function</td>
+            </tr>
+            <tr class=dxis>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">HTMLInputElement.src</a></td>
+                <td>DOM XSS injection sink</td>
+                <td>function</td>
+            </tr>
+            <tr class=dxis>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">HTMLMediaElement.src</a></td>
+                <td>DOM XSS injection sink</td>
+                <td>function</td>
+            </tr>
+            <tr class=dxis>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">HTMLScriptElement.InnerText</a></td>
+                <td>DOM XSS injection sink</td>
+                <td>function</td>
+            </tr>
+            <tr class=dxis>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">HTMLScriptElement.textContent</a></td>
+                <td>DOM XSS injection sink</td>
+                <td>function</td>
+            </tr>
+            <tr class=dxis>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">HTMLSourceElement.src</a></td>
+                <td>DOM XSS injection sink</td>
+                <td>function</td>
+            </tr>
+            <tr class=dxis>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">HTMLTrackElement.src</a></td>
+                <td>DOM XSS injection sink</td>
+                <td>function</td>
+            </tr>
             <tr class=eju>
                 <td><a href="https://www.w3schools.com/js/js_window_location.asp">location</a></td>
+                <td><a href="https://github.com/wisec/domxsswiki/wiki/Set-location-sink">Location sink</a></td>
                 <td>Evaluates JavaScript URIs</td>
-                <td>property</td>
             </tr>
             <tr class=eju>
                 <td><a href="https://www.w3schools.com/jsref/prop_loc_href.asp">location.href</a></td>
+                <td>Location sink</td>
                 <td>Evaluates JavaScript URIs</td>
-                <td>property</td>
             </tr>
             <tr class=eju>
-                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/assign">location.assign()</a></td>
+                <td><a href="https://www.w3schools.com/jsref/prop_loc_href.asp">location.protocol</a></td>
+                <td>Location sink</td>
                 <td>Evaluates JavaScript URIs</td>
-                <td>property</td>
+            </tr>
+            <tr class=eju>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/assign">location.hostname</a></td>
+                <td>Location sink</td>
+                <td>Evaluates JavaScript URIs</td>
             </tr>
             <tr class=eju>
                 <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/replace">location.replace()</a></td>
+                <td>Location sink</td>
                 <td>Evaluates JavaScript URIs</td>
-                <td>property</td>
             </tr>
         </tbody>
     </table>
