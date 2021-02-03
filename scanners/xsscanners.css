@@ -1,0 +1,20 @@
+img.ut {
+	width: 500px;
+}
+
+a{
+	text-decoration: none;
+}
+
+body{
+	font-size: 16px;
+	line-height: 3
+}
+
+.ut1 {
+	float: left;
+}
+
+.ut2 {
+	float: left;
+}
