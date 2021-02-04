@@ -5,14 +5,26 @@
         text-transform: capitalize;
     }
 
+    h3 {
+        font-size: 20px;
+        text-indent: 2%;
+        line-height: 2%;
+        text-transform: capitalize;
+    }
+
     a {
         text-decoration: none;
     }
 
-    ul {
+    ul, ol {
         font-size: 18px;
+
     }
 
+#webapps{
+    font-family: monospace;
+    font-size: 13px;
+}
     a:visited {
         color: #800000;
         background-color: transparent;
