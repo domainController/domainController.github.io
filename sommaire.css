@@ -1,69 +1,70 @@
-body {
-    background-color: #272822;
-    color: #f8f8f2;
-    margin-left: auto;
-    margin-right: auto;
-}
+    body {
+        background-color: #272822;
+        color: #f8f8f2;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.3;
+    }
 
-h2 {
-    font-size: 30px;
-    text-indent: 2%;
-    line-height: 2%;
-    text-transform: capitalize;
-}
+    h2 {
+        font-size: 30px;
+        text-indent: 2%;
+        line-height: 2%;
+        text-transform: capitalize;
+    }
 
-h3 {
-    font-size: 20px;
-    text-indent: 2%;
-    line-height: 2%;
-    text-transform: capitalize;
-}
+    h3 {
+        font-size: 20px;
+        text-indent: 2%;
+        line-height: 2%;
+        text-transform: capitalize;
+    }
 
-a {
-    text-decoration: none;
-}
+    a {
+        text-decoration: none;
+    }
 
-ul,
-ol {
-    font-size: 18px;
-}
+    ul,
+    ol {
+        font-size: 18px;
+    }
 
-#webapps {
-    font-family: monospace;
-    font-size: 13px;
-}
+    #webapps {
+        font-family: monospace;
+        font-size: 13px;
+    }
 
-#vuln a:visited {
-    color: #66d9ef;
-}
+    #vuln a:visited {
+        color: #66d9ef;
+    }
 
-#tools a:visited,
-#extensions a:visited {
-    color: #fd971f;
-}
+    #tools a:visited,
+    #extensions a:visited {
+        color: #fd971f;
+    }
 
-#scopes a:visited {
-    color: #a6e22e;
-}
+    #scopes a:visited {
+        color: #a6e22e;
+    }
 
-#tactics a:visited,
-#python a:visited {
-    color: #f92672;
-}
+    #tactics a:visited,
+    #python a:visited {
+        color: #f92672;
+    }
 
-#prog a:visited,
-#leak a:visited {
-    color: #e6db74;
-}
+    #prog a:visited,
+    #leak a:visited {
+        color: #e6db74;
+    }
 
-a:visited {
-    background-color: transparent;
-    text-decoration: none;
-    font-weight: bold;
-}
+    a:visited {
+        background-color: transparent;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
-a:hover {
-    color: white;
-    background-color: #3e3d32;
-    text-decoration: underline;
-}
+    a:hover {
+        color: white;
+        background-color: #3e3d32;
+        text-decoration: underline;
+    }
