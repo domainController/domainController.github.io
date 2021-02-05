@@ -1,39 +1,69 @@
-    h2 {
-        font-size: 30px;
-        text-indent: 2%;
-        line-height: 2%;
-        text-transform: capitalize;
-    }
+body {
+    background-color: #272822;
+    color: #f8f8f2;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    h3 {
-        font-size: 20px;
-        text-indent: 2%;
-        line-height: 2%;
-        text-transform: capitalize;
-    }
+h2 {
+    font-size: 30px;
+    text-indent: 2%;
+    line-height: 2%;
+    text-transform: capitalize;
+}
 
-    a {
-        text-decoration: none;
-    }
+h3 {
+    font-size: 20px;
+    text-indent: 2%;
+    line-height: 2%;
+    text-transform: capitalize;
+}
 
-    ul, ol {
-        font-size: 18px;
+a {
+    text-decoration: none;
+}
 
-    }
+ul,
+ol {
+    font-size: 18px;
+}
 
-#webapps{
+#webapps {
     font-family: monospace;
     font-size: 13px;
 }
-    a:visited {
-        color: #800000;
-        background-color: transparent;
-        text-decoration: none;
-        font-weight: bold;
-    }
 
-    a:hover {
-        color: white;
-        background-color: black;
-        text-decoration: underline;
-    }
+#vuln a:visited {
+    color: #66d9ef;
+}
+
+#tools a:visited,
+#extensions a:visited {
+    color: #fd971f;
+}
+
+#scopes a:visited {
+    color: #a6e22e;
+}
+
+#tactics a:visited,
+#python a:visited {
+    color: #f92672;
+}
+
+#prog a:visited,
+#leak a:visited {
+    color: #e6db74;
+}
+
+a:visited {
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: white;
+    background-color: #3e3d32;
+    text-decoration: underline;
+}

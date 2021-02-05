@@ -1,5 +1,7 @@
     body {
         text-align: left;
+        background-color: #272822;
+
     }
 
     .content-table {
@@ -9,71 +11,71 @@
         border-radius: 5px 5px 0 0;
         overflow: hidden;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #272822;
+        font-family: monospace;
     }
 
     .content-table th,
     .content-table td {
         padding: 5px 5px;
-        font-size: 18px;
-    }
-
-    .content-table td a:visited {
-        color: white;
+        font-size: 14px;
     }
 
     /* Attacker-controlled Source */
 
     .uds {
-        background-color: #581845;
-        color: white;
+    background-color: #3e3d32;
+        color: #F92672;
     }
 
     .nds {
-        background-color: #5F9EA0;
-        color: white;
+        background-color:;
+        color:  #a6e22e;
     }
 
     .cbs {
-        background-color: #BDB76B;
-        color: maroon;
+        background-color: #3e3d32;
+        color: #e6db74;
     }
 
 
     .sbs {
-        background-color: #3CB371;
-        color: white;
+        background-color: ;
+        color: #fd5ff0;
     }
 
     .hbs {
-        background-color: #DEB887;
-        color: maroon;
+        background-color: #3e3d32;
+        color: #66d9ef;
     }
 
     /* Injection sinks */
 
     .eaj {
-        background-color: #CD5C5C;
-        color: #FFFFF0;
+        background-color: ;
+        color: #F92672;
     }
-
 
     .his {
-        background-color: #4682B4;
-        color: #ADD8E6P;
-    }
-
-    .dxis {
-        background-color: #DB7093;
-        color: white;
+        background-color: #3e3d32;
+        color: #fd971f;
     }
 
     .eju {
-        background-color: #B8860B;
-        color: white;
+        background-color: ;
+        color: #a1efe4;
     }
+
+    .dxis {
+        background-color: #3e3d32;
+        color: #e6db74;
+    }
+
     .jqs {
-        background-color: #566573;
-        color: white;
+        background-color: ;
+        color: #a6e22e;
     }
 
     table {
@@ -93,12 +95,16 @@
 
     caption {
         font-size: 35px;
+        color: #cfcfc2;
+        font-family: liberation serif;
     }
 
     a {
         text-decoration: none;
     }
-
+    .content-table td a:visited {
+        color: #cfcfc2;
+    }
     a:hover {
         color: white;
         background-color: black;

@@ -1,5 +1,9 @@
     body {
         text-align: left;
+        background-color: #272822;
+        color: #f8f8f2;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .content-table {
@@ -10,6 +14,7 @@
         border-radius: 5px 5px 0 0;
         overflow: hidden;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        background-color: #3e3d32;
     }
 
     .content-table th,
@@ -17,23 +22,18 @@
         padding: 1px 1px;
         font-size: 18px;
     }
-
     .python {
-        background-color: #B0C4DE;
+        
+        color: #f92672;
     }
-
     .javascript {
-        background-color: #F5DEB3;
+        color: #a6e22e;
     }
-
     .shell {
-        background-color: #900C3F;
-        color: white;
-        opacity: 0.8;
+        color: #fd971f;
     }
-
     .go {
-        background-color: #7FBC8F;
+            color: #66d9ef;
     }
 
     .his {
@@ -49,8 +49,17 @@
         font-size: 23px;
         text-indent: 3%;
         line-height: 3%;
+        color: #75715e;
     }
 
     a {
         text-decoration: none;
+    }
+
+
+    a:visited {
+        background-color: transparent;
+        text-decoration: none;
+        font-weight: bold;
+        color: #75715e;
     }
