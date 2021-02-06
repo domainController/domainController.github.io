@@ -8,7 +8,7 @@
     }
 
     h2 {
-        font-size: 30px;
+        font-size: 28px;
         text-indent: 2%;
         line-height: 2%;
         text-transform: capitalize;
@@ -40,25 +40,41 @@
         color: #66d9ef;
     }
 
+    #vuln {
+        color: #75715e;
+    }
+
     #tools a:visited,
     #extensions a:visited {
         color: #fd971f;
     }
 
-    #scopes a:visited {
+    #tools {
+        color: #75715e;
+    }
+
+    #scopes a:visited
+     {
         color: #a6e22e;
+    }
+        #scopes {
+        color: #75715e;
     }
 
     #tactics a:visited,
     #python a:visited {
-        color: #f92672;
+        color: #f92972;
     }
-
+    #tactics {
+        color: #75715e;
+    }
     #prog a:visited,
     #leak a:visited {
         color: #e6db74;
     }
-
+     #prog {
+        color: #75715e;
+    }
     a:visited {
         background-color: transparent;
         text-decoration: none;
