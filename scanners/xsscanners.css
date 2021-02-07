@@ -1,9 +1,7 @@
     body {
         background-color: #272822;
-        color: #f8f8f2;
         margin-left: auto;
         margin-right: auto;
-        line-height: 0, 3;
         font-family: "Ubuntu", sans-serif;
 
     }
@@ -22,18 +20,20 @@
         line-height: 1%;
         color: #3e3d32;
     }
-        h3 a:hover {
+
+    h3 a:hover {
         color: #a6e22e;
         background-color: #75715e;
         text-decoration: underline;
-}
+    }
+
     h3 a:visited {
         color: #3e3d32;
     }
+
     div {
         font-size: 15px;
         line-height: 2;
-        float: center
     }
 
     #ut {
@@ -54,23 +54,33 @@
         background-color: #3e3d32;
         text-decoration: underline;
     }
+
     #chromeruntime a:visited,
     #chromeruntime {
         color: #f92672;
     }
 
+    #domproperties, a:visited,
+    #domproperties {
+        color: #fd971f;;
+    }
+
     #chromeanalyze a:visited,
-    #chromeanalyze {
+    #domproperties, #chromeanalyze,
+        {
         color: #fd971f;
     }
+
     #chromecontrolflow a:visited,
     #chromecontrolflow {
         color: #fd5ff0;
     }
+
     #chromeconfig a:visited,
     #chromeconfig {
-        color: #a1efe4 ;
+        color: #a1efe4;
     }
+
     #UI a:visited,
     #UI {
         color: #66d9ef;
