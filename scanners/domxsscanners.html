@@ -5,23 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM XSS Scanners</title>
-    <link rel="stylesheet" href="xsscanners.css">
+    <link rel="stylesheet" href="./xsscanners.css">
 </head>
 
 <body>
     <h3>Extensions</h3>
     <div id=ut>
         <ul>
-            <li> Untrusted Types: <a href="https://github.com/filedescriptor/untrusted-types/tree/main/src" target="_blank">Git</a> 
-            | Ttt-ext: <a href="https://github.com/filedescriptor/untrusted-types/tree/main/src" target="_blank">Git</a> | Eval Villain: <a href="https://github.com/swoops/eval_villain" target="_blank">Git</a></li>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/console#Stack_traces">console.stack()</a></li>
+            <li> untrusted Types, <a href="https://github.com/filedescriptor/untrusted-types/blob/main/public/manifest.json" target="_blank">manifest</a> | ttt-ext, <a href="https://github.com/filedescriptor/untrusted-types/tree/main/src" target="_blank">git</a> | eval villain, <a href="https://github.com/swoops/eval_villain" target="_blank">Git</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/console#Stack_traces">console.stack()</a> | <a href="https://potch.github.io/cross-browser-extensions/#53">extension architecture</a></li>
         </ul>
     </div>
     <h3>Storage</h3>
     <div id="chromestorage">
         <ul>
-            <li>browser.storage.local.get (8) | chrome.storage.local.get (3) </li>
-            <li>browser.storage.local.set (4) | chrome.storage.local.set (1) </li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get" target="_blank">browser.storage.local.get (8)</a> | <a href="https://developer.chrome.com/docs/extensions/reference/storage/" target="_blank">chrome.storage.local.get (3) </a></li>
+            <li> <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set">browser.storage.local.set (4) </a>| <a href="https://www.youtube.com/watch?v=7cdPjR_-qs4&t=780s" target="_blank">chrome.storage.local.set (1) </a></li>
             <li><a href="https://developer.chrome.com/docs/extensions/reference/storage" target="_blank"> chrome.storage.onChanged.addListener (5)</a></li>
             <li>chrome.storage.sync.set | chrome.storage.sync.get </li>
         </ul>
@@ -30,10 +29,9 @@
     <div id="chromeruntime">
         <ul>
             <li><a href="https://developer.chrome.com/docs/extensions/reference/runtime/#method-getURL" target="_blank">chrome.runtime.getURL (4)</a>
-                | browser.runtime.getURL (2) </li>
-            <li>browser.runtime.sendMessage (3) | <a href="https://developer.chrome.com/docs/extensions/reference/runtime/#method-sendMessage" target="_blank">chrome.runtime.sendMessage (2)</a> | chrome.runtime.MessageSender (2) |chrome.tabs.sendMessage (2)</li>
-            <li><a href="https://developer.chrome.com/docs/extensions/mv3/messaging/" target="_blank">chrome.runtime.onMessage.addListener (4)</a> | browser.runtime.onMessage.addListener</li>
-            <li><a href="https://developer.chrome.com/docs/extensions/reference/runtime/#method-openOptionsPage" target="_blank">chrome.runtime.openOptionsPage (1)</a></li>
+                | <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL" target="_blank">browser.runtime.getURL (2) </a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage" target="_blank">browser.runtime.sendMessage</a> (3) | <a href="https://developer.chrome.com/docs/extensions/reference/runtime/#method-sendMessage" target="_blank">chrome.runtime.sendMessage (2)</a> | <a href="https://developer.chrome.com/docs/extensions/reference/runtime/#type-MessageSender" target="_blank">chrome.runtime.MessageSender</a> (2) | <a href="https://developer.chrome.com/docs/extensions/reference/tabs/#method-sendMessage" target="_blank">chrome.tabs.sendMessage (2)</a></li>
+            <li><a href="https://developer.chrome.com/docs/extensions/reference/runtime/#event-onMessage" target="_blank">chrome.runtime.onMessage.addListener (4)</a> | <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">browser.runtime.onMessage.addListener (1)</a></li>
         </ul>
     </div>
     <h3>Analyze</h3>
@@ -43,38 +41,41 @@
                 <a href="" target="_blank">chrome.webRequest.onBeforeSendHeaders.addListener</a></li>
         </ul>
     </div>
-    <h3>UI</h3>
+    <h3><a href="https://potch.github.io/cross-browser-extensions/#61">UI</a></h3>
     <div id=UI>
         <ul>
             <li><a href="" target="_blank"></a>browser.browserAction.setTitle (2) | <a href="" target="_blank"></a>browser.browserAction.setIcon (2)</li>
             <li> chrome.browserAction.setBadgeText (2) | chrome.browserAction.onClicked.addListener </li>
             <li>chrome.devtools.panels.create (1) | chrome.notifications.create (1)</li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/commands/onCommand" target="_blank">browser.commands.onCommand.addListener (1)</a></li>
         </ul>
     </div>
-    <h3>Misc</h3>
-    <div id=misc>
+    <h3>Flow</h3>
+    <div id=chromecontrolflow>
         <ul>
-            <li>chrome.google.com (1)</li>
-            <li><a href="" target="_blank">browser.runtime.onInstalled.addListener (1)</a> | browser.commands.onCommand.addListener (1) </li>
-            <li><a href="" target="_blank">browser.contentScripts.register (1)</a></li>
-            <li>chrome.devtools.inspectedWindow.tabId (2)</li>
-            <li>chrome.webNavigation.onCompleted.addListener (1) | chrome.webNavigation.onBeforeNavigate.addListener (1)</li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled" target="_blank">browser.runtime.onInstalled.addListener (1)</a></li>
+            <li><a href="https://developer.chrome.com/docs/extensions/reference/devtools_inspectedWindow/">chrome.devtools.inspectedWindow.tabId (2)</a></li>
+            <li><a href="https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-onCompleted" target="_blank">chrome.webNavigation.onCompleted.addListener (1)</a> | <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders" target="_blank">chrome.webNavigation.onBeforeNavigate.addListener (1)</a></li>
         </ul>
     </div>
-    <div class="utmedia">
-        <img id=ut src="untrustedTypes.png"></a><br><br>
-        <iframe id=ut2 width="560" height="315" src="https://www.youtube.com/embed/CNNCCgDkt5k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h3>Config</h3>
+    <div id=chromeconfig>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contentScripts/register" target="_blank">browser.contentScripts.register (1)</a></li>
+            <li><a href="https://developer.chrome.com/docs/extensions/reference/runtime/#method-openOptionsPage" target="_blank">chrome.runtime.openOptionsPage (1)</a></li>
+        </ul>
     </div>
-    <div>
-        <h2 id=ev>Eval villain</h2>
-        <a href="https://github.com/swoops/eval_villain" target="_blank"><img src="evalVillain.png"></a><br><br>
-        <iframe src="https://player.vimeo.com/video/365789766" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-        <p><a href="https://vimeo.com/365789766">Eval Villain: Simplifying DOM XSS and JS reversing</a> from <a href="https://vimeo.com/hurricanelabs">Hurricane Labs</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-    </div>
-    <div>
-        <h2 id=ev>ttt-ext</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/A2ay7tEANjQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+        <div class="utmedia">
+            <img id=ut src="untrustedTypes.png"></a><br><br>
+            <iframe id=ut2 width="560" height="315" src="https://www.youtube.com/embed/CNNCCgDkt5k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div>
+            <h2 id=ev>Eval villain</h2>
+            <a href="https://github.com/swoops/eval_villain" target="_blank"><img src="evalVillain.png"></a><br><br>
+            <iframe src="https://player.vimeo.com/video/365789766" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/A2ay7tEANjQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
 </body>
-
 </html>
