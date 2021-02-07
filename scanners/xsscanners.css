@@ -3,17 +3,33 @@
         color: #f8f8f2;
         margin-left: auto;
         margin-right: auto;
+        line-height: 0, 3;
+        font-family: "Ubuntu", sans-serif;
 
     }
 
+    h2 {
+        font-size: 28px;
+        text-indent: 2%;
+        line-height: 2%;
+        text-transform: capitalize;
+        color: #3e3d32;
+    }
+
+    h3 {
+        font-size: 21px;
+        text-indent: 2%;
+        line-height: 1%;
+        color: #3e3d32;
+    }
+
     div {
-        font-size: 18px;
+        font-size: 15px;
         line-height: 2;
         float: center
     }
 
     #ut {
-
         color: #66d9ef;
     }
 
@@ -21,16 +37,38 @@
         color: #66d9ef;
     }
 
+    #chromestorage a:visited,
+    #chromestorage {
+        color: #a6e22e;
+    }
+
+    #chromeruntime a:visited,
+    #chromeruntime {
+        color: #f92972;
+    }
+
+    #chromeanalyze a:visited,
+    #chromeanalyze {
+        color: #e6db74;
+    }
+
+    #UI a:visited,
+    #UI {
+        color: #66d9ef;
+    }
+
+    #misc a:visited,
+    #misc {
+        color: #3e3d32;
+    }
 
     img {
-        width: 500px;
+        width: 560px;
     }
 
     a {
         text-decoration: none;
     }
-
-
 
     .ut1 .ut2 {
         float: left;

@@ -9,17 +9,57 @@
 </head>
 
 <body>
-    <h2>Untrusted Types</h2>
-    <div id="ut">
-        <ol>
-            <li><a href="https://github.com/filedescriptor/untrusted-types/tree/main/src" target="_blank">Source code on GitHub</a></li>
-            <li><a href="https://chrome.google.com/webstore/detail/untrusted-types-for-devto/bpeblffgmddnafmnmdjohcmkbeifdlnb" target="_blank]">Extension on Chrome Web Store</a></li>
-            <li><a href="https://thomasorlita.com/" target="_blank">Thomas Orlita</a></li>
+    <h3>Extensions</h3>
+    <div id=ut>
+        <ul>
+            <li> Untrusted Types: <a href="https://github.com/filedescriptor/untrusted-types/tree/main/src" target="_blank">Git</a> 
+            | Ttt-ext: <a href="https://github.com/filedescriptor/untrusted-types/tree/main/src" target="_blank">Git</a> | Eval Villain: <a href="https://github.com/swoops/eval_villain" target="_blank">Git</a></li>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/console#Stack_traces">console.stack()</a></li>
-            <li><a href="https://github.com/NekitCorp/chrome-extension-svelte-typescript-boilerplate" target="_blank">Boilerplate for Chrome Extension Svelte Typescript project</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/Boilerplate_code">Boilerplate code</a></li>
-            <li><a href="https://twitter.com/hexrcs/status/1185186492982943744" target="_blank">Svelte crash course</a></li>  
-        </ol>
+        </ul>
+    </div>
+    <h3>Storage</h3>
+    <div id="chromestorage">
+        <ul>
+            <li>browser.storage.local.get (8) | chrome.storage.local.get (3) </li>
+            <li>browser.storage.local.set (4) | chrome.storage.local.set (1) </li>
+            <li><a href="https://developer.chrome.com/docs/extensions/reference/storage" target="_blank"> chrome.storage.onChanged.addListener (5)</a></li>
+            <li>chrome.storage.sync.set | chrome.storage.sync.get </li>
+        </ul>
+    </div>
+    <h3>Runtime</h3>
+    <div id="chromeruntime">
+        <ul>
+            <li><a href="https://developer.chrome.com/docs/extensions/reference/runtime/#method-getURL" target="_blank">chrome.runtime.getURL (4)</a>
+                | browser.runtime.getURL (2) </li>
+            <li>browser.runtime.sendMessage (3) | <a href="https://developer.chrome.com/docs/extensions/reference/runtime/#method-sendMessage" target="_blank">chrome.runtime.sendMessage (2)</a> | chrome.runtime.MessageSender (2) |chrome.tabs.sendMessage (2)</li>
+            <li><a href="https://developer.chrome.com/docs/extensions/mv3/messaging/" target="_blank">chrome.runtime.onMessage.addListener (4)</a> | browser.runtime.onMessage.addListener</li>
+            <li><a href="https://developer.chrome.com/docs/extensions/reference/runtime/#method-openOptionsPage" target="_blank">chrome.runtime.openOptionsPage (1)</a></li>
+        </ul>
+    </div>
+    <h3>Analyze</h3>
+    <div id="chromeanalyze">
+        <ul>
+            <li><a href="" target="_blank">chrome.webRequest.onBeforeRequest.addListener (2)</a> |
+                <a href="" target="_blank">chrome.webRequest.onBeforeSendHeaders.addListener</a></li>
+        </ul>
+    </div>
+    <h3>UI</h3>
+    <div id=UI>
+        <ul>
+            <li><a href="" target="_blank"></a>browser.browserAction.setTitle (2) | <a href="" target="_blank"></a>browser.browserAction.setIcon (2)</li>
+            <li> chrome.browserAction.setBadgeText (2) | chrome.browserAction.onClicked.addListener </li>
+            <li>chrome.devtools.panels.create (1) | chrome.notifications.create (1)</li>
+        </ul>
+    </div>
+    <h3>Misc</h3>
+    <div id=misc>
+        <ul>
+            <li>chrome.google.com (1)</li>
+            <li><a href="" target="_blank">browser.runtime.onInstalled.addListener (1)</a> | browser.commands.onCommand.addListener (1) </li>
+            <li><a href="" target="_blank">browser.contentScripts.register (1)</a></li>
+            <li>chrome.devtools.inspectedWindow.tabId (2)</li>
+            <li>chrome.webNavigation.onCompleted.addListener (1) | chrome.webNavigation.onBeforeNavigate.addListener (1)</li>
+        </ul>
     </div>
     <div class="utmedia">
         <img id=ut src="untrustedTypes.png"></a><br><br>
@@ -28,7 +68,7 @@
     <div>
         <h2 id=ev>Eval villain</h2>
         <a href="https://github.com/swoops/eval_villain" target="_blank"><img src="evalVillain.png"></a><br><br>
-        <iframe src="https://player.vimeo.com/video/365789766" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/365789766" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         <p><a href="https://vimeo.com/365789766">Eval Villain: Simplifying DOM XSS and JS reversing</a> from <a href="https://vimeo.com/hurricanelabs">Hurricane Labs</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
     </div>
     <div>

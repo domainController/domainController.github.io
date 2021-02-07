@@ -6,12 +6,7 @@
 
     }
 
-    h2 {
-        font-size: 21px;
-        text-indent: 3%;
-        line-height: 3%;
-        color: #3e3d32;
-    }
+    h2 { font-size: 21px; text-indent: 3%; line-height: 3%; color: #3e3d32; }
 
     a {
         text-decoration: none;
