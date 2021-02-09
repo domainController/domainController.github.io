@@ -53,11 +53,11 @@
         color: #fd971f;
     }
 
-    #scopes a:visited
-     {
+    #scopes a:visited {
         color: #a6e22e;
     }
-        #scopes {
+
+    #scopes {
         color: #a6e22e;
     }
 
@@ -65,15 +65,42 @@
     #python a:visited {
         color: #f92972;
     }
+
     #tactics {
         color: #f92972;
     }
+
     #prog a:visited,
     #leak a:visited {
         color: #e6db74;
     }
-     #prog {
+
+    #prog {
         color: #e6db74;
+    }
+
+    #science a:visited {
+        color: #a1efe4;
+    }
+
+    #science {
+        color: #a1efe4;
+    }
+
+    #books a:visited {
+        color: #fd5ff0;
+    }
+
+    #books {
+        color: #fd5ff0;
+    }
+
+    #history a:visited {
+        color: #ae81ff;
+    }
+
+    #history {
+        color: #ae81ff;
     }
     a:visited {
         background-color: transparent;
