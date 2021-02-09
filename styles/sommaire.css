@@ -41,7 +41,7 @@
     }
 
     #vuln {
-        color: #75715e;
+        color: #66d9ef;
     }
 
     #tools a:visited,
@@ -50,7 +50,7 @@
     }
 
     #tools {
-        color: #75715e;
+        color: #fd971f;
     }
 
     #scopes a:visited
@@ -58,7 +58,7 @@
         color: #a6e22e;
     }
         #scopes {
-        color: #75715e;
+        color: #a6e22e;
     }
 
     #tactics a:visited,
@@ -66,14 +66,14 @@
         color: #f92972;
     }
     #tactics {
-        color: #75715e;
+        color: #f92972;
     }
     #prog a:visited,
     #leak a:visited {
         color: #e6db74;
     }
      #prog {
-        color: #75715e;
+        color: #e6db74;
     }
     a:visited {
         background-color: transparent;

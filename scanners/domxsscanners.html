@@ -5,70 +5,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM XSS Scanners</title>
-    <link rel="stylesheet" href="./xsscanners.css">
+    <link rel="stylesheet" href="./styles/domxsscanners.css">
 </head>
 
 <body>
-    <h3>Extensions</h3>
-    <div id=ut>
-        <ul>
-            <li> untrusted Types, <a href="https://github.com/filedescriptor/untrusted-types/blob/main/public/manifest.json" target="_blank">manifest</a> | ttt-ext, <a href="https://github.com/filedescriptor/untrusted-types/tree/main/src" target="_blank">git</a> | eval villain, <a href="https://github.com/swoops/eval_villain" target="_blank">Git</a></li>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/console#Stack_traces">console.stack()</a> | <a href="https://potch.github.io/cross-browser-extensions/#53">extension architecture</a></li>
-        </ul>
+    <div class="domxss">
+        <div class="domxsscanners">
+            <h3>DOM XSS Scanners</h3>
+            <table class="content-table">
+                <tbody>
+                    <tr class=javascript>
+                        <td><a href="domxsscanners.html" target="_blank">1&nbsp</a></td>
+                        <td>untrusted types</td>
+                        <td><a href="https://github.com/filedescriptor/untrusted-types/blob/main/public/manifest.json" target="_blank">extension</a></td>
+                        <td>2021</td>
+                        <td><a href="https://github.com/filedescriptor/untrusted-types" target="_blank">446</a></td>
+                    </tr>
+                    <tr class=javascript>
+                        <td><a href="domxsscanners.html#ev">5&nbsp</a></td>
+                        <td>eval villain</td>
+                        <td>extension</td>
+                        <td>2021</td>
+                        <td><a href="https://github.com/swoops/eval_villain" target="_blank">33</a></td>
+                    </tr>
+                    <tr class=javascript>
+                        <td>6&nbsp</td>
+                        <td>ttt-ext</td>
+                        <td>extension</td>
+                        <td>2019</td>
+                        <td><a href="https://github.com/ollseg/ttt-ext" target="_blank">65</a> </td>
+                    </tr>
+                    <tr class=shell>
+                        <td>2&nbsp</td>
+                        <td>finDOM-XSS</td>
+                        <td>shell</td>
+                        <td>2021</td>
+                        <td><a href="https://github.com/dwisiswant0/findom-xss" target="_blank">264</a></td>
+                    </tr>
+                    <tr class=puppeteer>
+                        <td>3&nbsp</td>
+                        <td>domdig</td>
+                        <td>puppeteer</td>
+                        <td>2021</td>
+                        <td><a href="https://github.com/fcavallarin/domdig" target="_blank">216</a></td>
+                    </tr>
+                    <tr class=puppeteer>
+                        <td>4&nbsp</td>
+                        <td>crosser</td>
+                        <td>puppeteer</td>
+                        <td>2020</td>
+                        <td><a href="https://github.com/phra/crosser" target="_blank">27</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="domxssplaylist">
+            <iframe id=ut2 width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLxeJU39M7tLGlQFFo347NmemUED6M7ldw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div>
-    <h3>Storage</h3>
-    <div id="chromestorage">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get" target="_blank">browser.storage.local.get (8)</a> | <a href="https://developer.chrome.com/docs/extensions/reference/storage/" target="_blank">chrome.storage.local.get (3) </a></li>
-            <li> <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set">browser.storage.local.set (4) </a>| <a href="https://www.youtube.com/watch?v=7cdPjR_-qs4&t=780s" target="_blank">chrome.storage.local.set (1) </a></li>
-            <li><a href="https://developer.chrome.com/docs/extensions/reference/storage" target="_blank"> chrome.storage.onChanged.addListener (5)</a></li>
-            <li>chrome.storage.sync.set | chrome.storage.sync.get </li>
-        </ul>
+    <hr color=#3e3d32>
+    <div class="extension_api">
+        <div class="extension_api_stats">
+            <div id=extension_architecture>
+                <h3>Extensions Architecture</h3>
+                <ul>
+                    <li><a href="https://potch.github.io/cross-browser-extensions/#53" target="_blank">manifest.json</a> | <a href="https://potch.github.io/cross-browser-extensions/#61" target="_blank">background.js </a> | <a href="https://developer.chrome.com/docs/extensions/mv3/architecture-overview/#contentScripts" target="_blank">content.js</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/API/console#Stack_traces" target="_blank">console.stack</a></li>
+                </ul>
+            </div>
+            <div id="chromestorage">
+                <h3>Storage</h3>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get" target="_blank">browser.storage.local.get (8|<a href="https://developer.chrome.com/docs/extensions/reference/storage/" target="_blank">3</a>)</a></li>
+                    <li> <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set">browser.storage.local.set (4|<a href="https://www.youtube.com/watch?v=7cdPjR_-qs4&t=780s" target="_blank">1</a>)</li>
+                    <li><a href="https://developer.chrome.com/docs/extensions/reference/storage" target="_blank"> chrome.storage.onChanged.addListener (5)</a></li>
+                    <li><a href="https://developer.chrome.com/docs/extensions/reference/storage/#property-sync"></a>chrome.storage.sync.(set|get)</li>
+                </ul>
+            </div>
+            <div id="chromeruntime">
+                <h3>Runtime</h3>
+                <ul>
+                    <li><a href="https://developer.chrome.com/docs/extensions/reference/runtime/#method-getURL" target="_blank">chrome.runtime.getURL (4|<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL" target="_blank">2</a>)</li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage" target="_blank">browser.runtime.sendMessage</a> (3|<a href="https://developer.chrome.com/docs/extensions/reference/runtime/#method-sendMessage" target="_blank">2</a>) |
+                        <a href="https://developer.chrome.com/docs/extensions/reference/runtime/#type-MessageSender" target="_blank">chrome.runtime.MessageSender</a> (2) |
+                        <a href="https://developer.chrome.com/docs/extensions/reference/tabs/#method-sendMessage" target="_blank">chrome.tabs.sendMessage (2)</a></li>
+                    <li><a href="https://developer.chrome.com/docs/extensions/reference/runtime/#event-onMessage" target="_blank">chrome.runtime.onMessage.addListener (4|<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">1</a>)</li>
+                </ul>
+            </div>
+            <div id="chromeanalyze">
+                <h3>Analyze</h3>
+                <ul>
+                    <li><a href="" target="_blank">chrome.webRequest.onBeforeRequest.addListener (2)</a> |
+                        <a href="" target="_blank">chrome.webRequest.onBeforeSendHeaders.addListener</a></li>
+                </ul>
+            </div>
+            <div id=UI>
+                <h3>UI</h3>
+                <ul>
+                    <li><a href="" target="_blank"></a>browser.browserAction.setTitle (2) |
+                        <a href="" target="_blank"></a>browser.browserAction.setIcon (2)</li>
+                    <li> chrome.browserAction.setBadgeText (2) | chrome.browserAction.onClicked.addListener </li>
+                    <li>chrome.devtools.panels.create (1) | chrome.notifications.create (1)</li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/commands/onCommand" target="_blank">browser.commands.onCommand.addListener (1)</a></li>
+                </ul>
+            </div>
+            <div id=chromecontrolflow>
+                <h3>Flow</h3>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled" target="_blank">browser.runtime.onInstalled.addListener (1)</a></li>
+                    <li><a href="https://developer.chrome.com/docs/extensions/reference/devtools_inspectedWindow/">chrome.devtools.inspectedWindow.tabId (2)</a></li>
+                    <li><a href="https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-onCompleted" target="_blank">chrome.webNavigation.onCompleted.addListener (1)</a> |
+                        <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders" target="_blank">chrome.webNavigation.onBeforeNavigate.addListener (1)</a></li>
+                </ul>
+            </div>
+            <div id=chromeconfig>
+                <h3>Config</h3>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contentScripts/register" target="_blank">browser.contentScripts.register (1)</a></li>
+                    <li><a href="https://developer.chrome.com/docs/extensions/reference/runtime/#method-openOptionsPage" target="_blank">chrome.runtime.openOptionsPage (1)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="extension_development_videos">
+            <div class="chrome_extension_playlist">
+                <iframe id=ut2 width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLxeJU39M7tLEWCmv_LijQTx7uR7h5fMvR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="firefox_addons_playlist">
+                <iframe id=ut2 width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLxeJU39M7tLGtbljhFIYEn3OPIYWqhsJU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
-    <h3>Runtime</h3>
-    <div id="chromeruntime">
-        <ul>
-            <li><a href="https://developer.chrome.com/docs/extensions/reference/runtime/#method-getURL" target="_blank">chrome.runtime.getURL (4)</a>
-                <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL" target="_blank">browser.runtime.getURL (2) </a></li>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage" target="_blank">browser.runtime.sendMessage</a> (3) |
-                <a href="https://developer.chrome.com/docs/extensions/reference/runtime/#method-sendMessage" target="_blank">chrome.runtime.sendMessage (2)</a> | <a href="https://developer.chrome.com/docs/extensions/reference/runtime/#type-MessageSender" target="_blank">chrome.runtime.MessageSender</a> (2) |
-                <a href="https://developer.chrome.com/docs/extensions/reference/tabs/#method-sendMessage" target="_blank">chrome.tabs.sendMessage (2)</a></li>
-            <li><a href="https://developer.chrome.com/docs/extensions/reference/runtime/#event-onMessage" target="_blank">chrome.runtime.onMessage.addListener (4)</a> | <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">browser.runtime.onMessage.addListener (1)</a></li>
-        </ul>
-    </div>
-    <h3>Analyze</h3>
-    <div id="chromeanalyze">
-        <ul>
-            <li><a href="" target="_blank">chrome.webRequest.onBeforeRequest.addListener (2)</a> |
-                <a href="" target="_blank">chrome.webRequest.onBeforeSendHeaders.addListener</a></li>
-        </ul>
-    </div>
-    <h3><a href="https://potch.github.io/cross-browser-extensions/#61">UI</a></h3>
-    <div id=UI>
-        <ul>
-            <li><a href="" target="_blank"></a>browser.browserAction.setTitle (2) |
-                <a href="" target="_blank"></a>browser.browserAction.setIcon (2)</li>
-            <li> chrome.browserAction.setBadgeText (2) | chrome.browserAction.onClicked.addListener </li>
-            <li>chrome.devtools.panels.create (1) | chrome.notifications.create (1)</li>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/commands/onCommand" target="_blank">browser.commands.onCommand.addListener (1)</a></li>
-        </ul>
-    </div>
-    <h3>Flow</h3>
-    <div id=chromecontrolflow>
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled" target="_blank">browser.runtime.onInstalled.addListener (1)</a></li>
-            <li><a href="https://developer.chrome.com/docs/extensions/reference/devtools_inspectedWindow/">chrome.devtools.inspectedWindow.tabId (2)</a></li>
-            <li><a href="https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-onCompleted" target="_blank">chrome.webNavigation.onCompleted.addListener (1)</a> |
-                <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders" target="_blank">chrome.webNavigation.onBeforeNavigate.addListener (1)</a></li>
-        </ul>
-    </div>
-    <h3>Config</h3>
-    <div id=chromeconfig>
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contentScripts/register" target="_blank">browser.contentScripts.register (1)</a></li>
-            <li><a href="https://developer.chrome.com/docs/extensions/reference/runtime/#method-openOptionsPage" target="_blank">chrome.runtime.openOptionsPage (1)</a></li>
-        </ul>
-    </div>
+    <hr color=#3e3d32>   
     <div class="utmedia">
         <img id=ut src="untrustedTypes.png"></a><br><br>
         <iframe id=ut2 width="560" height="315" src="https://www.youtube.com/embed/CNNCCgDkt5k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -81,6 +147,7 @@
     <div>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/A2ay7tEANjQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+    <img id=ut src="untrustedTypes.png"></a><br><br>
     <h3>DOM</h3>
     <div id="domproperties">
         <ul>
@@ -94,7 +161,7 @@
             <li><a href="https://www.youtube.com/watch?v=mPd2aJXCZ2g&t=852s" target="_blank">68 document.createElement</a></li>
             <li><a href="" target="_blank"></a>34 window.name</li>
             <li><a href="" target="_blank"></a>31 document.write() | 14 document.writeln()</li>
-            <li><a href="" target="_blank"></a>14 location.hash | 10 location.search | 
+            <li><a href="" target="_blank"></a>14 location.hash | 10 location.search |
                 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/toString">2 location.toString</a></li>
             <li><a href="" target="_blank"></a>12 window.addEventListener | 10 document.addEventListener | 2 window.dispatchEvent</li>
             <li><a href="" target="_blank"></a>8 window.close | 1 window.open </li>
@@ -103,7 +170,7 @@
                 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/origin">4 document.origin</a></li>
             <li><a href="" target="_blank"> 4 document.head</a> | <a href="">3 document.body </a> </li>
             <li><a href="https://www.w3schools.com/jsref/met_node_appendchild.asp" target="_blank"> 5 document.documentElement.appendChild </a>|
-                <a href="">1 document.body.removeChild</a>  | <a href="">1 document.body.appendChild</a></li>
+                <a href="">1 document.body.removeChild</a> | <a href="">1 document.body.appendChild</a></li>
             <li><a href="" target="_blank">4 window.postMessage</a></li>
             <li><a href="" target="_blank">4 document.querySelectorAll</a></li>
             <li><a href="" target="_blank">4 document.documentElement</a></li>
@@ -114,7 +181,10 @@
             <li><a href="">2 window.top</a></li>
             <li><a href="">2 window.eval()</a></li>
         </ul>
+        <div class="static_analysis_playlist">
+            <iframe id=ut2 width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLxeJU39M7tLHGMI41kwSCq6ea8xxE2Up2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div>
 </body>
 
-</html>
+</html></a></a>

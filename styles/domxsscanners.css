@@ -1,0 +1,172 @@
+    body {
+        background-color: #272822;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: "Ubuntu", sans-serif;
+
+    }
+
+    h2 {
+        font-size: 28px;
+        text-indent: 2%;
+        line-height: 1;
+        text-align: center;
+        text-transform: capitalize;
+        color: #3e3d32;
+    }
+
+    h3 {
+        font-size: 21px;
+        text-indent: 2%;
+        line-height: 1%;
+        color: #3e3d32;
+    }
+
+    h3 a:hover {
+        color: #a6e22e;
+        background-color: #75715e;
+        text-decoration: underline;
+    }
+
+    h3 a:visited {
+        color: #3e3d32;
+    }
+
+    div {
+        font-size: 15px;
+        line-height: 2;
+    }
+
+    #extension_architecture {
+        color: #66d9ef;
+    }
+
+    #extension_architecture a:visited {
+        color: #66d9ef;
+    }
+
+    #chromestorage a:visited,
+    #chromestorage {
+        color: #a6e22e;
+    }
+
+    #chromestorage a:hover {
+        color: #a6e22e;
+        background-color: #3e3d32;
+        text-decoration: underline;
+    }
+
+    #chromeruntime a:visited,
+    #chromeruntime {
+        color: #f92672;
+    }
+
+    #domproperties,
+    a:visited,
+    #domproperties {
+        color: #fd971f;
+        ;
+    }
+
+    #chromeanalyze a:visited,
+    #domproperties,
+    #chromeanalyze,
+        {
+        color: #fd971f;
+    }
+
+    #chromecontrolflow a:visited,
+    #chromecontrolflow {
+        color: #fd5ff0;
+    }
+
+    #chromeconfig a:visited,
+    #chromeconfig {
+        color: #a1efe4;
+    }
+
+    #UI a:visited,
+    #UI {
+        color: #66d9ef;
+    }
+
+    img {
+        width: 560px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    /* tableau */
+    .domxss {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .extension_api {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .puppeteerdomxsscanners
+    {
+        border: 1px solid #e6db74;
+    }
+
+    .domxsscanners,
+    .extension_api_stats {
+        border: 1px solid #e6db74;
+    }
+
+    .puppeteerplaylist{
+        border: 1px solid #fd971f;
+    }
+
+    .domxssplaylist,
+    .extension_development_videos {
+        border: 1px solid #fd971f;
+    }
+
+    .content-table {
+        text-transform: capitalize;
+        border-collapse: collapse;
+        margin: 20px 0;
+        min-width: 400px;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        background-color: #3e3d32;
+        margin-left: 20px;
+        font-family: "Ubuntu", sans-serif;
+    }
+
+    .content-table th,
+    .content-table td {
+        padding: 1px 1px;
+        font-size: 16px;
+    }
+
+    .python {
+        color: #a1efe4;
+    }
+
+    .javascript {
+        color: #a1efe4;
+    }
+
+    .javascript a:visited {
+        background-color: transparent;
+        text-decoration: none;
+        font-weight: bold;
+        color: #a1efe4;
+    }
+
+    .puppeteer {
+        color: #66d9ef;
+    }
+
+    .shell {
+        color: #fd971f;
+    }
