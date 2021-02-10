@@ -134,10 +134,10 @@
     }
 
 
-    caption {
-        font-size: 35px;
+    div {
         color: #cfcfc2;
         font-family: "Ubuntu", sans-serif;
+text-align: center;
     }
 
     a {
