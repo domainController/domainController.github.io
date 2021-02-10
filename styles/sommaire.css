@@ -7,6 +7,31 @@
         font-family: "Ubuntu", sans-serif;
     }
 
+    a {
+        text-decoration: none;
+    }
+
+    a:visited {
+        background-color: transparent;
+        text-decoration: none;
+        font-weight: bold;
+        color: brown;
+    }
+
+    a:hover {
+        color: white;
+        background-color: #3e3d32;
+        text-decoration: underline;
+    }
+
+    a:link {
+        color: #e6db74;
+    }
+
+    a:active {
+        color: orange;
+    }
+
     h2 {
         font-size: 24px;
         text-indent: 2%;
@@ -22,9 +47,6 @@
         text-transform: capitalize;
     }
 
-    a {
-        text-decoration: none;
-    }
 
     ul,
     ol {
@@ -40,6 +62,7 @@
     #vuln a:visited {
         color: #66d9ef;
     }
+
     #sast,
     #vuln {
         color: #66d9ef;
@@ -71,6 +94,7 @@
     #tactics {
         color: #f92972;
     }
+
     #domxsstools a:visited,
     #prog a:visited,
     #leak a:visited {
@@ -105,19 +129,8 @@
     #history {
         color: #ae81ff;
     }
+
     #startups,
     #startups a:visited {
         color: #cfcfc2;
-    }
-    
-    a:visited {
-        background-color: transparent;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    a:hover {
-        color: white;
-        background-color: #3e3d32;
-        text-decoration: underline;
     }

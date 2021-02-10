@@ -110,8 +110,7 @@
         justify-content: space-around;
     }
 
-    .puppeteerdomxsscanners
-    {
+    .puppeteerdomxsscanners {
         border: 1px solid #e6db74;
     }
 
@@ -120,7 +119,7 @@
         border: 1px solid #e6db74;
     }
 
-    .puppeteerplaylist{
+    .puppeteerplaylist {
         border: 1px solid #fd971f;
     }
 
@@ -156,7 +155,7 @@
         color: #a1efe4;
     }
 
-    .javascript a:visited {
+    a.javascript:visited {
         background-color: transparent;
         text-decoration: none;
         font-weight: bold;

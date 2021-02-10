@@ -4,6 +4,26 @@
         font-family:
 
     }
+      a {
+        text-decoration: none;
+    }
+
+    a:visited {
+        background-color: transparent;
+        text-decoration: none;
+        font-weight: bold;
+        color: brown;
+    }
+
+    a:hover {
+        color: white;
+        background-color: #3e3d32;
+        text-decoration: underline;
+    }
+
+    a:link {
+        color: #e6db74;
+    }
 
     .content-table {
         border-collapse: collapse;
@@ -137,7 +157,7 @@
     div {
         color: #cfcfc2;
         font-family: "Ubuntu", sans-serif;
-text-align: center;
+        text-align: center;
     }
 
     a {

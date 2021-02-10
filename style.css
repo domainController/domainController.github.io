@@ -5,6 +5,26 @@
         font-family: "Ubuntu", sans-serif;
 
     }
+      a {
+        text-decoration: none;
+    }
+
+    a:visited {
+        background-color: transparent;
+        text-decoration: none;
+        font-weight: bold;
+        color: brown;
+    }
+
+    a:hover {
+        color: white;
+        background-color: #3e3d32;
+        text-decoration: underline;
+    }
+
+    a:link {
+        color: #e6db74;
+    }
 
     h2 {
         font-size: 21px;
@@ -30,7 +50,6 @@
         font-family: "Ubuntu", sans-serif;
     }
 
-    .content-table th,
     .content-table td {
         padding: 1px 1px;
         font-size: 16px;
@@ -40,7 +59,7 @@
         color: #f92672;
     }
 
-    a:visited {
+    .javascript a:visited {
         color: #a6e22e;
     }
 
