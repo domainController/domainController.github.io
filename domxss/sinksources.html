@@ -10,7 +10,14 @@
 
 <body>
     <table class="content-table">
-        <caption id=Source><strong>Attacker-controlled Sources</strong></caption>
+        <div id=sources>
+            <h2>Attacker-controlled Sources</h2>
+            <p>
+                <a href="https://www.youtube.com/watch?v=ergeHSRr1a0&t=270s" target="_blank">Secret</a> <a href="https://speakerdeck.com/exactpro/static-taint-analysis-for-javascript-programs?slide=14">sources</a> are either functions or object properties that can be controlled by the attacker. <br>
+
+                <a href="https://www.youtube.com/watch?v=ergeHSRr1a0&t=348s">Possible sources</a> are variables, return values of particular function, data from a particular I/O stream.
+            </p>
+        </div>
         <tbody>
             <tr class=uds>
                 <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">location</a></td>
@@ -114,85 +121,78 @@
         </tbody>
     </table>
     <table class="content-table">
-        <caption id=injection><strong>Injection sinks</strong></caption>
+        <div id=sinks>
+            <h2>Injection sinks</h2>
+            <p>
+                <a href="https://www.youtube.com/watch?v=ergeHSRr1a0&t=276s">Untrusted</a> <a href="https://speakerdeck.com/exactpro/static-taint-analysis-for-javascript-programs?slide=14">sinks</a> are functions or object where data can be executed.<br>
+                <a href="https://youtu.be/ergeHSRr1a0?t=392">Possible sinks</a>: variables, parameters given to a particular function, instructions of particular type (e.g., jump instructions)
+            </p>
+        </div>
         <tbody>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/js/js_function_definition.asp" target="_blank">eval()</a></td>
                 <td><a href="https://github.com/wisec/domxsswiki/wiki/Direct-Execution-Sinks">Direct execution sink</a></td>
                 <td>Executes payload as JavaScript</td>
-             
             </tr>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/js/js_function_definition.asp" target="_blank">function()</a></td>
                 <td>Direct execution sink</td>
                 <td>Executes payload as JavaScript</td>
-                
             </tr>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/jsref/met_win_settimeout.asp" target="_blank">setTimeout()</a></td>
                 <td>Direct execution sink</td>
                 <td>Executes payload as JavaScript</td>
-
             </tr>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">setInterval()</a></td>
                 <td>Direct execution sink</td>
                 <td>Executes payload as JavaScript</td>
-                
             </tr>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">setImmediate()</a></td>
                 <td>Direct execution sink</td>
                 <td>Executes payload as JavaScript</td>
-                
             </tr>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">execScript</a></td>
                 <td>Direct execution sink</td>
                 <td>Executes payload as JavaScript</td>
-                
             </tr>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">crypto.generateCRMFRequest</a></td>
                 <td>Direct execution sink</td>
                 <td>Executes payload as JavaScript</td>
-                
             </tr>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">ScriptElement.src</a></td>
                 <td>Direct execution sink</td>
                 <td>Executes payload as JavaScript</td>
-                
             </tr>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">ScriptElement.text</a></td>
                 <td>Direct execution sink</td>
                 <td>Executes payload as JavaScript</td>
-                
             </tr>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">ScriptElement.textContent</a></td>
                 <td>Direct execution sink</td>
                 <td>Executes payload as JavaScript</td>
-                
             </tr>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">ScriptElement.innerText</a></td>
                 <td>Direct execution sink</td>
                 <td>Executes payload as JavaScript</td>
-            
             </tr>
             <tr class=eaj>
                 <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script" target="_blank">&lt;script&gt;&lt;/script&gt;</a></td>
                 <td>Direct execution sink</td>
                 <td>Executes payload as JavaScript</td>
-
             </tr>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/jsref/event_onclick.asp" target="_blank">&lt;anyTag.onEventName='payload'&gt;</a></td>
                 <td>Direct execution sink</td>
                 <td>Executes payload as JavaScript</td>
- 
             </tr>
             <tr class=his>
                 <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">inner.html</a></td>
