@@ -41,7 +41,7 @@
             </tr>
             <tr class=uds>
                 <td><a href="https://www.w3schools.com/jsref/met_doc_writeln.asp" target="_blank">location.hash</a></td>
-                <td>URL-based</td>
+                <td><a href="https://www.youtube.com/watch?v=kedmtrIEW1k&t=405s">URL-based</a></td>
                 <td>DOM Property</td>
             <tr class=uds>
                 <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement" target="_blank">document.URL</a></td>
@@ -76,17 +76,17 @@
             <tr class=cbs>
                 <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">XMLHTTPRequest/Fetch</a></td>
                 <td>Communication based</td>
-                <td>Communication Type</td>
+                <td><a href="https://youtu.be/kedmtrIEW1k?t=951">2nd order DOM Injections</a></td>
             </tr>
             <tr class=cbs>
                 <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">WebSocket</a></td>
                 <td>Communication based</td>
-                <td>Communication Type</td>
+                <td><a href="https://youtu.be/kedmtrIEW1k?t=951">2nd order DOM Injections</a></td>
             </tr>
             <tr class=cbs>
                 <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">Window Messaging</a></td>
                 <td>Communication based</td>
-                <td>Communication Type</td>
+                <td>2nd order DOM Injections</td>
             </tr>
             <tr class=sbs>
                 <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">Cookie</a></td>
@@ -136,7 +136,7 @@
             </tr>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/js/js_function_definition.asp" target="_blank">function()</a></td>
-                <td>Direct execution sink</td>
+                <td><a href="https://youtu.be/kedmtrIEW1k?t=571">Direct execution sink</a></td>
                 <td>Executes payload as JavaScript</td>
             </tr>
             <tr class=eaj>
@@ -196,8 +196,8 @@
             </tr>
             <tr class=his>
                 <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">inner.html</a></td>
-                <td>HTML manipulation/injection sink</td>
-                <td>Executes payload as HTML</td>
+                <td><a href="https://youtu.be/kedmtrIEW1k?t=608">HTML manipulation/injection sink</a></td>
+                <td><a href="https://youtu.be/kedmtrIEW1k?t=608">Executes payload as HTML</a></td>
             </tr>
             <tr class=his>
                 <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-outerHTML" target="_blank">outer.html</a></td>
@@ -211,7 +211,7 @@
             </tr>
             <tr class=his>
                 <td><a href="https://www.w3schools.com/jsref/met_doc_write.asp" target="_blank">document.write()</a></td>
-                <td>HTML manipulation/injection sink</td>
+                <td><a href="https://youtu.be/kedmtrIEW1k?t=441">HTML manipulation/injection sink</a></td>
                 <td>Executes payload as HTML</td>
             </tr>
             <tr class=his>
@@ -229,6 +229,17 @@
                 <td>HTML manipulation/injection sink</td>
                 <td>Executes payload as HTML</td>
             </tr>
+            <tr class=his>
+                <td><a href="https://dev.w3.org/html5/spec-LC/apis-in-html-documents.html#apis-in-html-documents" target="_blank">Element.setAttribute()</a></td>
+                <td><a href="https://youtu.be/kedmtrIEW1k?t=608">HTML manipulation/injection sink</a></td>
+                <td>Executes payload as HTML</td>
+            </tr>
+            <tr class=eju>
+                <td><a href="https://www.w3schools.com/js/js_window_location.asp">location</a></td>
+                <td><a href="https://github.com/wisec/domxsswiki/wiki/Set-location-sink">Location sink</a> </td>
+                <td>Evaluates JavaScript URIs</td>
+            </tr>
+
             <tr class=eju>
                 <td><a href="https://www.w3schools.com/js/js_window_location.asp">location</a></td>
                 <td><a href="https://github.com/wisec/domxsswiki/wiki/Set-location-sink">Location sink</a> </td>
@@ -323,6 +334,21 @@
                 <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">HTMLTrackElement.src</a></td>
                 <td>DOM XSS injection sink</td>
                 <td>function</td>
+            </tr>
+            <tr class=jqs>
+                <td><a href="https://api.jquery.com/jQuery/#jQuery2" target="_blank">jQuery(x)</a></td>
+                <td><a href="https://github.com/wisec/domxsswiki/wiki/jQuery-sinks">JQuery sink</a></td>
+                <td>Global jQuery Function</td>
+            </tr>
+            <tr class=jqs>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">jQuery $(x)</a></td>
+                <td><a href="https://youtu.be/kedmtrIEW1k?t=657">JQuery sink</a></td>
+                <td><a href="https://github.com/wisec/domxsswiki/wiki/jQuery-sinks">Global jQuery Function</a></td>
+            </tr>
+            <tr class=jqs>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">jQuery.parseHTML(x)</a></td>
+                <td>JQuery sink</td>
+                <td>Global jQuery Function</td>
             </tr>
             <tr class=jqs>
                 <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">jQuery.globalEval(userContent)</a></td>

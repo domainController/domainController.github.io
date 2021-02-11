@@ -65,7 +65,6 @@
     a:visited,
     #domproperties {
         color: #fd971f;
-        ;
     }
 
     #chromeanalyze a:visited,
@@ -99,10 +98,14 @@
     }
 
     /* tableau */
-    .domxss {
-        display: flex;
-        justify-content: space-between;
+        .domxss {
+            display: flex;
+            justify-content: space-between;
 
+        }
+    .domscanners{
+        float: left;
+        width: 50%;
     }
 
     .extension_api {

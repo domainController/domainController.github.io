@@ -58,61 +58,86 @@
         font-size: 13px;
     }
 
-    #sast a:visited,
+    #domxss101 a:visited,
     #vuln a:visited {
         color: #66d9ef;
     }
 
-    #sast,
+    #domxss101,
     #vuln {
         color: #66d9ef;
     }
+
+    #sast a:visited {
+        color: #fd971f;
+    }
+
 
     #tools a:visited,
     #extensions a:visited {
         color: #fd971f;
     }
 
+    #sast,
     #tools {
         color: #fd971f;
     }
 
+    #domxsstools a:visited,
     #scopes a:visited {
         color: #a6e22e;
     }
 
+    #domxsstools,
     #scopes {
         color: #a6e22e;
     }
 
-    #tactics a:visited,
-    #python a:visited {
+    #domxssreports a:visited {
+        color: #f92972;
+    }
+
+    #python,
+    #tactics a:visited {
         color: #f92972;
     }
 
 
+    #domxssreports,
     #tactics {
         color: #f92972;
     }
 
-    #domxsstools a:visited,
+    p{
+        position: relative;
+        left: 100px;
+
+    }
+    #dast a:visited,
     #prog a:visited,
     #leak a:visited {
         color: #e6db74;
     }
 
-    #domxsstools,
+    #dast,
     #prog {
         color: #e6db74;
     }
 
+    a:visited {
+        color: #a1efe4;
+    }
+
+    
     #science a:visited {
         color: #a1efe4;
     }
 
+    
     #science {
         color: #a1efe4;
     }
+
 
     #books a:visited {
         color: #fd5ff0;
