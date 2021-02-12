@@ -1,3 +1,20 @@
+/*
+$bg0: #272822;
+$bg1: #3e3d32;
+$bg2: #75715e;
+$fg1: #cfcfc2;
+$fg2: #f8f8f2;
+$red: #f92972;
+$blue: #66d9ef;
+$cyan: #a1efe4;
+$creme: #f8f8f2;
+$green: #a6e22e;
+$violet: #ae81ff;
+$yellow: #e6db74;
+$orange: #fd971f;
+$magenta: #fd5ff0;
+*/    
+
     body {
         background-color: #272822;
         color: #f8f8f2;
@@ -15,7 +32,6 @@
         background-color: transparent;
         text-decoration: none;
         font-weight: bold;
-        color: brown;
     }
 
     a:hover {
@@ -53,10 +69,50 @@
         font-size: 16px;
     }
 
-    #webapps {
-        font-family: monospace;
-        font-size: 13px;
-    }
+.red,
+.red a:visited {
+    color: #f92972;
+}
+
+.blue,
+.blue a:visited {
+    color: #66d9ef;
+}
+
+.cyan,
+.cyan a:visited {
+    color: #a1efe4;
+}
+
+.creme,
+.creme a:visited {
+    color: #f8f8f2;
+}
+.green,
+.green a:visited {
+    color: #a6e22e;
+}
+.violet,
+.violet a:visited {
+    color: #ae81ff;
+}
+
+.yellow,
+.yellow a:visited {
+    color: #e6db74;
+}
+
+.orange,
+.orange a:visited {
+    color: #fd971f;
+}
+
+.magenta,
+.magenta a:visited {
+    color: #fd5ff0;
+}
+
+
 
     #domxss101 a:visited,
     #vuln a:visited {
@@ -67,6 +123,12 @@
     #vuln {
         color: #66d9ef;
     }
+
+    #deepsource,
+    #deepsource a:visited {
+        color: #66d9ef;
+    }
+
 
     #sast a:visited {
         color: #fd971f;
@@ -93,6 +155,14 @@
         color: #a6e22e;
     }
 
+    #sastvendorslists {
+        color: #a6e22e;
+    }
+    
+    #sastvendorslists a:visited {
+        color: #a6e22e;
+    }
+
     #domxssreports a:visited {
         color: #f92972;
     }
@@ -108,11 +178,12 @@
         color: #f92972;
     }
 
-    p{
+    p {
         position: relative;
         left: 100px;
 
     }
+
     #dast a:visited,
     #prog a:visited,
     #leak a:visited {
@@ -124,16 +195,16 @@
         color: #e6db74;
     }
 
-    a:visited {
+/*     a:visited {
         color: #a1efe4;
-    }
+    } */
 
-    
+
     #science a:visited {
         color: #a1efe4;
     }
 
-    
+
     #science {
         color: #a1efe4;
     }
@@ -155,7 +226,13 @@
         color: #ae81ff;
     }
 
+
     #startups,
     #startups a:visited {
         color: #cfcfc2;
+    }
+
+    #dataflowanalysis,
+    #dataflowanalysis a:visited {
+        color: #a6e22e;
     }

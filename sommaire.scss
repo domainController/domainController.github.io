@@ -1,0 +1,106 @@
+$bg0: #272822;
+$bg1: #3e3d32;
+$bg2: #75715e;
+$fg1: #cfcfc2;
+$fg2: #f8f8f2;
+/******* colors *******/
+$red: #f92972;
+$blue: #66d9ef;
+$cyan: #a1efe4;
+$creme: #f8f8f2;
+$green: #a6e22e;
+$violet: #ae81ff;
+$yellow: #e6db74;
+$orange: #fd971f;
+$magenta: #fd5ff0;
+/******* fonts *******/
+$ubuntu: "Ubuntu",
+sans-serif;
+
+body {
+    background-color: $bg1;
+    font-family: $ubuntu;
+    color: $creme;
+}
+
+.redline {
+
+    color: $red;
+
+    a:visited {
+        color: $red;
+    }
+}
+
+
+.blueline {
+
+    color: $blue;
+
+    a:visited {
+        color: $blue;
+    }
+}
+
+.cyanline {
+
+    color: $cyan;
+
+    a:visited {
+        color: $cyan;
+    }
+}
+
+.cremeline {
+
+    color: $creme;
+
+    a:visited {
+        color: $creme;
+    }
+}
+
+.greenline {
+
+    color: $green;
+
+    a:visited {
+        color: $green;
+    }
+}
+
+.violetline {
+
+    color: $violet;
+
+    a:visited {
+        color: $violet;
+    }
+}
+
+.yellowline {
+
+    color: $yellow;
+
+    a:visited {
+        color: $yellow;
+    }
+}
+
+.orangeline {
+
+    color: $orange;
+
+    a:visited {
+        color: $orange;
+    }
+}
+
+.magentaline {
+
+    color: $magenta;
+
+    a:visited {
+        color: $magenta;
+    }
+}

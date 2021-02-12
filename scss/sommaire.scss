@@ -1,0 +1,35 @@
+$bg0: #272822;
+$bg1: #3e3d32;
+$bg2: #75715e;
+$fg1: #cfcfc2;
+$fg2: #f8f8f2;
+$red: #f92972;
+$blue: #66d9ef;
+$cyan: #a1efe4;
+$creme: #f8f8f2;
+$green: #a6e22e;
+$yellow: #e6db74;
+$orange: #fd971f;
+$magenta: #fd5ff0;
+
+
+$ubuntu: "Ubuntu",
+sans-serif;
+
+body {
+    background-color: $bg0;
+    font-family: $ubuntu;
+    color: $creme;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.3;
+}
+
+.greenline {
+
+    color: $green;
+
+    a:visited {
+        color: $green;
+    }
+}
