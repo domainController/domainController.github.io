@@ -22,10 +22,10 @@
         text-decoration: underline;
     }
 
-    a:link {
+/*     a:link {
         color: #e6db74;
     }
-
+ */
     h2 {
         font-size: 21px;
         text-indent: 3%;
@@ -41,7 +41,7 @@
         text-transform: capitalize;
         border-collapse: collapse;
         margin: 20px 0;
-        min-width: 400px;
+        min-width: 500px;
         border-radius: 5px 5px 0 0;
         overflow: hidden;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -70,8 +70,15 @@
     .shell {
         color: #fd971f;
     }
+        .shell a:visited {
+        color: #fd971f;
+    }
 
     .go {
+        color: #66d9ef;
+    }
+
+    .go a:visited{
         color: #66d9ef;
     }
 
