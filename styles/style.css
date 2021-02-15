@@ -41,12 +41,14 @@
         text-transform: capitalize;
         border-collapse: collapse;
         margin: 20px 0;
-        min-width: 500px;
+        min-width: 800px;
+        line-height: 23px;
         border-radius: 5px 5px 0 0;
         overflow: hidden;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
         background-color: #3e3d32;
-        margin-left: 20px;
+        margin-left: auto;
+        margin-right: auto;
         font-family: "Ubuntu", sans-serif;
     }
 
