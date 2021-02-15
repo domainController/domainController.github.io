@@ -35,9 +35,9 @@ $magenta: #fd5ff0;
     }
 
     a:hover {
-        color: white;
-        background-color: #3e3d32;
-        text-decoration: underline;
+        color: #75715e;
+        background-color: #272822;
+        text-decoration: none;
     }
 
     a:link {
@@ -63,12 +63,16 @@ $magenta: #fd5ff0;
         text-transform: capitalize;
     }
 
-
-
     ul,
     ol {
         font-size: 16px;
     }
+
+.bg1,
+.bg1 a:visited {
+    color: #3e3d32;
+
+}
 
 .red,
 .red a:visited {
