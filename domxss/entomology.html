@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entomology</title>
+    <link rel="stylesheet" type="text/css" href="../styles/sommaire.css">
+</head>
+
+<body>
+    <div id="TableWithRules">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" class="CVE16FEB2021">
+            <thead>
+                <tr>
+                    <th valign="top" style="padding:3px">Name</th>
+                    <th valign="top" style="padding:3px">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="https://hackerone.com/reports/283460" target="_blank">283460</a></td>
+                    <td valign="top"><strong>Open Redirect Protection Bypass</strong>: Report #281538 is fixed but Attacker can Bypass this Open Redirect Protection. Give this link https://twitter.com/teams/authorize?target_screen_name=&authorize_callback=//www.facebook.com to authorized victim.Twitter will say him to authorize a different account for create team.After authorization victim will be redirected to www.facebook.com
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="https://hackerone.com/reports/39631" target="_blank">39631</a></td>
+                    <td valign="top"><strong>Open redirection in fabric.io</strong>: Hi
+                        after I finish reading the report https://hackerone.com/reports/260744.i start to test this subdomain.i fount an interesting url [https://dev.twitter.com/web/sign-inhttps://dev.twitter.com/basics/adding-international-support-to-your-apps%5D.this url is special,my intuition tells me that this URL may have a problem.so,i try test,amzing i found a way to bypass protection.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="https://hackerone.com/reports/49759" target="_blank">49759</a></td>
+                    <td valign="top"><strong>Open Redirect leak of authenticity_token lead to full account take over.</strong>:Hey guys
+                        URL: https://mobile.twitter.com/messages/follow?recipient=/example.com
+                        when I click 'Follow'
+                        I will send my POST request to https://example.com
+                        witch contains my authenticity_token
+                        that can be used for anything like tweeting, following, sending messages, changing username.,.,.etc
+                        it can be used too to Add a mobile number, and then steal the account by recovering it by the mobile number.
+                        Thank You.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="https://hackerone.com/reports/330008" target="_blank">330008</a></td>
+                    <td valign="top"><strong>[dev.twitter.com] XSS and Open Redirect Protection Bypass</strong>: Hi
+                        after I finish reading the report https://hackerone.com/reports/260744.i start to test this subdomain.i fount an interesting url [https://dev.twitter.com/web/sign-inhttps://dev.twitter.com/basics/adding-international-support-to-your-apps%5D.this url is special,my intuition tells me that this URL may have a problem.so,i try test,amzing i found a way to bypass protection.
+                    </td>
+                </tr>
+                <br>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="https://hackerone.com/reports/683298" target="_blank">683298</a></td>
+                    <td valign="top"><strong>XSS and Open Redirect on MoPub Login</strong> Summary: I found open redirect at the MoPub login page, https://app.mopub.com/login?next=https://google.com. It also allows javascript URIs, leading to XSS.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="https://hackerone.com/reports/260744" target="_blank">260744</a></td>
+                    <td valign="top"><strong>[dev.twitter.com] XSS and Open Redirect</strong>: XSS via Request-URI which requires user interaction. The vulnerability is caused by the difference in the Request-URI processing in the Location header and in the link on the page.
+                        By creating an incorrect port in the link on the Location header, you can block the redirection for the FireFox browser. Next, using the difference in the processing, generate a "javascript" link on the page.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="https://hackerone.com/reports/246897" target="_blank">876022</a></td>
+                    <td valign="top"><strong>#246897
+                            Open Redirect</strong>:by converting &noredirect= from true to false i was able to redirect users to any site
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="https://hackerone.com/reports/33091" target="_blank">33091</a></td>
+                    <td valign="top"><strong>DOM Cross-Site Scripting</strong>: Hi, for me works on Firefox 32, tested on Mac OS X Mavericks and Windows 7
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="https://hackerone.com/reports/88719" target="_blank">88719</a></td>
+                    <td valign="top"><strong>Multiple DOMXSS on Amplify Web Player</strong>: It is dangerous to use jQuery's ajax function without specifying the expected data type. Attacker can supply a remote js file to achieve XSS. This can be addressed by specifying the data type to be JSON.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="https://hackerone.com/reports/57356" target="_blank">57356</a></td>
+                    <td valign="top"><strong>DOM based cookie bomb</strong> I would like to report an issue that allows attackers to plant a "cookie bomb" on a victim's browser, so that the victim will be unable to access any Twitter services.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="https://hackerone.com/reports/119471" target="_blank">119471</a></td>
+                    <td valign="top"><strong>DOMXSS in Tweetdeck</strong>: In Tweetdeck, a tweet contains info of what client (app) the user used to sent the tweet. The render process is vulnerable to DOMXSS.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="https://hackerone.com/reports/876022" target="_blank">876022</a></td>
+                    <td valign="top"><strong>RPC Implementation allows unauthenticated remote calls</strong>: It was found that the RPC implementation via postMessage within Lark did not check origin, so an attacker could have potentially performed RPC calls on behalf of a user. We thank @mike12 for reporting this to our team and confirming the resolution.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="https://hackerone.com/reports/876022" target="_blank">297968</a></td>
+                    <td valign="top"><strong>Persistent DOM-based XSS in https://help.twitter.com via localStorage</strong>: I've found a DOM-based XSS vulnerability in the website help.twitter.com that persists via a localStorage key lastArticleHref. The value of this localStorage key is used to dynamically generate a piece of HTML code without proper encoding or filtering allowing an attacker to inject additional HTML code into the response.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="https://hackerone.com/reports/876022" target="_blank">876022</a></td>
+                    <td valign="top">RPC Implementation allows unauthenticated remote calls: It was found that the RPC implementation via postMessage within Lark did not check origin, so an attacker could have potentially performed RPC calls on behalf of a user. We thank @mike12 for reporting this to our team and confirming the resolution.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8923" target="_blank">CVE-2020-8923</a></td>
+                    <td valign="top">An improper HTML sanitization in Dart versions up to and including 2.7.1 and dev versions 2.8.0-dev.16.0, allows an attacker leveraging DOM Clobbering techniques to skip the sanitization and inject custom html/javascript (XSS). Mitigation: update your Dart SDK to 2.7.2, and 2.8.0-dev.17.0 for the dev version. If you cannot update, we recommend you review the way you use the affected APIs, and pay special attention to cases where user-provided data is used to populate DOM nodes. Consider using Element.innerText or Node.text to populate DOM elements.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2020-8348">CVE-2020-8348</a></td>
+                    <td valign="top">A DOM-based cross-site scripting (XSS) vulnerability was reported in Lenovo Enterprise Network Disk prior to version 6.1 patch 6 hotfix 4 that could allow execution of code in an authenticated user's current browser session if a crafted url is visited, possibly through phishing.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2020-7239">CVE-2020-7239</a></td>
+                    <td valign="top">The conversation-watson plugin before 0.8.21 for WordPress has a DOM-based XSS vulnerability that is executed when a chat message containing JavaScript is sent.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2020-7050">CVE-2020-7050</a></td>
+                    <td valign="top">Codologic Codoforum through 4.8.4 allows a DOM-based XSS. While creating a new topic as a normal user, it is possible to add a poll that is automatically loaded in the DOM once the thread/topic is opened. Because session cookies lack the <a href="https://www.youtube.com/watch?v=roG99LkSkZA&t=457s">HttpOnly</a> flag, it is possible to steal authentication cookies and take over accounts.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2020-6847">CVE-2020-6847</a></td>
+                    <td valign="top">OpenTrade through 0.2.0 has a DOM-based XSS vulnerability that is executed when an administrator attempts to delete a message that contains JavaScript.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2020-6845">CVE-2020-6845</a></td>
+                    <td valign="top">An issue was discovered in TopManage OLK 2020. As there is no ReadOnly on the Session cookie, the user and admin accounts can be taken over in a DOM-Based XSS attack.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2020-6163">CVE-2020-6163</a></td>
+                    <td valign="top">The WikibaseMediaInfo extension 1.35 for MediaWiki allows XSS because of improper template syntax within the PropertySuggestionsWidget template (in the templates/search/PropertySuggestionsWidget.mustache+dom file).
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2020-29587">CVE-2020-29587</a></td>
+                    <td valign="top">SimplCommerce 1.0.0-rc uses the Bootbox.js library, which allows creation of programmatic dialog boxes using Bootstrap modals. The Bootbox.js library intentionally does not perform any sanitization of user input, which results in a DOM XSS, because it uses the jQuery .html() function to directly append the payload to a dialog.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2020-26870">CVE-2020-26870</a></td>
+                    <td valign="top">Cure53 DOMPurify before 2.0.17 allows mutation XSS. This occurs because a serialize-parse roundtrip does not necessarily return the original DOM tree, and a namespace can change from HTML to MathML, as demonstrated by nesting of FORM elements.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2020-26239">CVE-2020-26239</a></td>
+                    <td valign="top">Scratch Addons is a WebExtension that supports both Chrome and Firefox. Scratch Addons before version 1.3.2 is vulnerable to DOM-based XSS. If the victim visited a specific website, the More Links addon of the Scratch Addons extension used incorrect regular expression which caused the HTML-escaped values to be unescaped, leading to XSS. Scratch Addons version 1.3.2 fixes the bug. The extension will be automatically updated by the browser. More Links addon can be disabled via the option of the extension.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2020-26120">CVE-2020-26120</a></td>
+                    <td valign="top">XSS exists in the MobileFrontend extension for MediaWiki before 1.34.4 because section.line is mishandled during regex section line replacement from PageGateway. Using crafted HTML, an attacker can elicit an XSS attack via jQuery's parseHTML method, which can cause image callbacks to fire even without the element being appended to the DOM.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2020-15952">CVE-2020-15952</a></td>
+                    <td valign="top">Immuta v2.8.2 is affected by stored XSS that allows a low-privileged user to escalate privileges to administrative permissions. Additionally, unauthenticated attackers can phish unauthenticated Immuta users to steal credentials or force actions on authenticated users through reflected, DOM-based XSS.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2020-15139">CVE-2020-15139</a></td>
+                    <td valign="top">In MyBB before version 1.8.24, the custom MyCode (BBCode) for the visual editor doesn't escape input properly when rendering HTML, resulting in a DOM-based XSS vulnerability. The weakness can be exploited by pointing a victim to a page where the visual editor is active (e.g. as a post or Private Message) and operates on a maliciously crafted MyCode message. This may occur on pages where message content is pre-filled using a GET/POST parameter, or on reply pages where a previously saved malicious message is quoted. After upgrading MyBB to 1.8.24, make sure to update the version attribute in the `codebuttons` template for non-default themes to serve the latest version of the patched `jscripts/bbcodes_sceditor.js` file.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2020-15119">CVE-2020-15119</a></td>
+                    <td valign="top">In auth0-lock versions before and including 11.25.1, dangerouslySetInnerHTML is used to update the DOM. When dangerouslySetInnerHTML is used, the application and its users might be exposed to cross-site scripting (XSS) attacks.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2020-15092">CVE-2020-15092</a></td>
+                    <td valign="top">In TimelineJS before version 3.7.0, some user data renders as HTML. An attacker could implement an XSS exploit with maliciously crafted content in a number of data fields. This risk is present whether the source data for the timeline is stored on Google Sheets or in a JSON configuration file. Most TimelineJS users configure their timeline with a Google Sheets document. Those users are exposed to this vulnerability if they grant write access to the document to a malicious inside attacker, if the access of a trusted user is compromised, or if they grant public write access to the document. Some TimelineJS users configure their timeline with a JSON document. Those users are exposed to this vulnerability if they grant write access to the document to a malicious inside attacker, if the access of a trusted user is compromised, or if write access to the system hosting that document is otherwise compromised. Version 3.7.0 of TimelineJS addresses this in two ways. For content which is intended to support limited HTML markup for styling and linking, that content is "sanitized" before being added to the DOM. For content intended for simple text display, all markup is stripped. Very few users of TimelineJS actually install the TimelineJS code on their server. Most users publish a timeline using a URL hosted on systems we control. The fix for this issue is published to our system such that **those users will automatically begin using the new code**. The only exception would be users who have deliberately edited the embed URL to "pin" their timeline to an earlier version of the code. Some users of TimelineJS use it as a part of a wordpress plugin (knight-lab-timelinejs). Version 3.7.0.0 of that plugin and newer integrate the updated code. Users are encouraged to update the plugin rather than manually update the embedded version of TimelineJS.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2020-13409">CVE-2020-13409</a></td>
+                    <td valign="top">Tufin SecureTrack &lt; R20-2 GA contains reflected + stored XSS (as in, the value is reflected back to the user, but is also stored within the DB and can be later triggered again by the same victim, or also later by different users). Both stored, and reflected payloads are triggerable by admin, so malicious non-authenticated user could get admin level access. Even malicious low-privileged user can inject XSS, which can be executed by admin, potentially elevating privileges and obtaining admin access. (issue 3 of 3)
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2020-13408">CVE-2020-13408</a></td>
+                    <td valign="top">Tufin SecureTrack &lt; R20-2 GA contains reflected + stored XSS (as in, the value is reflected back to the user, but is also stored within the DB and can be later triggered again by the same victim, or also later by different users). Both stored, and reflected payloads are triggerable by admin, so malicious non-authenticated user could get admin level access. Even malicious low-privileged user can inject XSS, which can be executed by admin, potentially elevating privileges and obtaining admin access. (issue 2 of 3)
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2020-13407">CVE-2020-13407</a></td>
+                    <td valign="top">Tufin SecureTrack &lt; R20-2 GA contains reflected + stored XSS (as in, the value is reflected back to the user, but is also stored within the DB and can be later triggered again by the same victim, or also later by different users). Both stored, and reflected payloads are triggerable by admin, so malicious non-authenticated user could get admin level access. Even malicious low-privileged user can inject XSS, which can be executed by admin, potentially elevating privileges and obtaining admin access. (issue 1 of 3)
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2020-11737">CVE-2020-11737</a></td>
+                    <td valign="top">A cross-site scripting (XSS) vulnerability in Web Client in Zimbra 9.0 allows a remote attacker to craft links in an E-Mail message or calendar invite to execute arbitrary JavaScript. The attack requires an A element containing an href attribute with a "www" substring (including the quotes) followed immediately by a DOM event listener such as onmouseover. This is fixed in 9.0.0 Patch 2.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2020-10960">CVE-2020-10960</a></td>
+                    <td valign="top">In MediaWiki before 1.34.1, users can add various Cascading Style Sheets (CSS) classes (which can affect what content is shown or hidden in the user interface) to arbitrary DOM nodes via HTML content within a MediaWiki page. This occurs because jquery.makeCollapsible allows applying an event handler to any Cascading Style Sheets (CSS) selector. There is no known way to exploit this for cross-site scripting (XSS).
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2019-9738">CVE-2019-9738</a></td>
+                    <td valign="top">jimmykuu Gopher 2.0 has DOM-based XSS via vectors involving the '&lt;EMBED SRC="data:image/svg+xml' substring.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2019-9737">CVE-2019-9737</a></td>
+                    <td valign="top">Editor.md 1.5.0 has DOM-based XSS via vectors involving the '&lt;EMBED SRC="data:image/svg+xml' substring.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2019-9736">CVE-2019-9736</a></td>
+                    <td valign="top">DOM-based XSS exists in 1024Tools Markdown 1.0 via vectors involving the '&lt;EMBED SRC="data:image/svg+xml' substring.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2019-3826">CVE-2019-3826</a></td>
+                    <td valign="top">A stored, DOM based, cross-site scripting (XSS) flaw was found in Prometheus before version 2.7.1. An attacker could exploit this by convincing an authenticated user to visit a crafted URL on a Prometheus server, allowing for the execution and persistent storage of arbitrary scripts.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2019-3490">CVE-2019-3490</a></td>
+                    <td valign="top">A DOM based XSS vulnerability has been identified in the Netstorage component of Open Enterprise Server (OES) allowing a remote attacker to execute javascript in the victims browser by tricking the victim into clicking on a specially crafted link. This affects OES versions OES2015SP1, OES2018, and OES2018SP1. Older versions may be affected but were not tested as they are out of support.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2019-18652">CVE-2019-18652</a></td>
+                    <td valign="top">A DOM based XSS vulnerability has been identified on the WatchGuard XMT515 through 12.1.3, allowing a remote attacker to execute JavaScript in the victim's browser by tricking the victim into clicking on a crafted link. The payload was tested in Microsoft Internet Explorer 11.418.18362.0 and Microsoft Edge 44.18362.387.0 (Microsoft EdgeHTML 18.18362).
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2019-17581">CVE-2019-17581</a></td>
+                    <td valign="top">tonyy dormsystem through 1.3 allows DOM XSS.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2019-16414">CVE-2019-16414</a></td>
+                    <td valign="top">A DOM based XSS in GFI Kerio Control v9.3.0 allows embedding of malicious code and manipulating the login page to send back a victim's cleartext credentials to an attacker via a login/?reason=failure&amp;NTLM= URI.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2018-6958">CVE-2018-6958</a></td>
+                    <td valign="top">VMware vRealize Automation (vRA) prior to 7.3.1 contains a vulnerability that may allow for a DOM-based cross-site scripting (XSS) attack. Exploitation of this issue may lead to the compromise of the vRA user's workstation.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2018-6195">CVE-2018-6195</a></td>
+                    <td valign="top">admin/partials/wp-splashing-admin-main.php in the Splashing Images plugin (wp-splashing-images) before 2.1.1 for WordPress allows authenticated (administrator, editor, or author) remote attackers to conduct PHP Object Injection attacks via crafted serialized data in the 'session' HTTP GET parameter to wp-admin/upload.php.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2018-6194">CVE-2018-6194</a></td>
+                    <td valign="top">A cross-site scripting (XSS) vulnerability in admin/partials/wp-splashing-admin-sidebar.php in the Splashing Images plugin (wp-splashing-images) before 2.1.1 for WordPress allows remote attackers to inject arbitrary web script or HTML via the search parameter to wp-admin/upload.php.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2018-6076">CVE-2018-6076</a></td>
+                    <td valign="top">Insufficient encoding of URL fragment identifiers in Blink in Google Chrome prior to 65.0.3325.146 allowed a remote attacker to perform a DOM based XSS attack via a crafted HTML page.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2018-20736">CVE-2018-20736</a></td>
+                    <td valign="top">An issue was discovered in WSO2 API Manager 2.1.0 and 2.6.0. A DOM-based XSS exists in the store part of the product.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2018-19056">CVE-2018-19056</a></td>
+                    <td valign="top">pandao Editor.md 1.5.0 has DOM XSS via input starting with a "&lt;&lt;" substring, which is mishandled during construction of an A element.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2018-19048">CVE-2018-19048</a></td>
+                    <td valign="top">Simditor through 2.3.21 allows DOM XSS via an onload attribute within a malformed SVG element.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2018-14037">CVE-2018-14037</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in Progress Kendo UI Editor v2018.1.221 allows remote attackers to inject arbitrary JavaScript into the DOM of the WYSIWYG editor because of the editorNS.Serializer toEditableHtml function in kendo.all.min.js. If the victim accesses the editor, the payload gets executed. Furthermore, if the payload is reflected at any other resource that does rely on the sanitisation of the editor itself, the JavaScript payload will be executed in the context of the application. This allows attackers (in the worst case) to take over user sessions.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2018-11245">CVE-2018-11245</a></td>
+                    <td valign="top">app/webroot/js/misp.js in MISP 2.4.91 has a DOM based XSS with cortex type attributes.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2018-1000556">CVE-2018-1000556</a></td>
+                    <td valign="top">WordPress version 4.8 + contains a Cross Site Scripting (XSS) vulnerability in plugins.php or core wordpress on delete function that can result in An attacker can perform client side attacks which could be from stealing a cookie to code injection. This attack appear to be exploitable via an attacker must craft an URL with payload and send to the user. Victim need to open the link to be affected by reflected XSS. .
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2018-0406">CVE-2018-0406</a></td>
+                    <td valign="top">A vulnerability in the web-based management interface of Cisco Web Security Appliance (WSA) could allow an unauthenticated, remote attacker to conduct a reflected or Document Object Model based (DOM-based) cross-site scripting (XSS) attack against a user of the web-based management interface of an affected device. The vulnerability is due to insufficient validation of user-supplied input by the web-based management interface of an affected device. An attacker could exploit this vulnerability by persuading a user of the interface to click a crafted link. A successful exploit could allow the attacker to execute arbitrary script code in the context of the interface or allow the attacker to access sensitive browser-based information. Cisco Bug IDs: CSCve84006.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2018-0390">CVE-2018-0390</a></td>
+                    <td valign="top">A vulnerability in the web framework of Cisco Webex could allow an unauthenticated, remote attacker to conduct a Document Object Model-based (DOM-based) cross-site scripting (XSS) attack against the user of the web interface of an affected system. The vulnerability is due to insufficient input validation of certain parameters that are passed to the affected software by using the HTTP POST method. An attacker who can submit malicious scripts to the affected user interface element could execute arbitrary script or HTML code in the user's browser in the context of the affected site. Cisco Bug IDs: CSCvj33287.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2018-0149">CVE-2018-0149</a></td>
+                    <td valign="top">A vulnerability in the web-based management interface of Cisco Integrated Management Controller Supervisor Software and Cisco UCS Director Software could allow an authenticated, remote attacker to conduct a Document Object Model-based (DOM-based), stored cross-site scripting (XSS) attack against a user of the web-based management interface of an affected device. The vulnerability is due to insufficient validation of user-supplied input by the web-based management interface of the affected software. An attacker could exploit this vulnerability by persuading a user of the affected interface to click a malicious link. A successful exploit could allow the attacker to execute arbitrary script code in the context of the affected interface or allow the attacker to access sensitive browser-based information on the affected device. Cisco Bug IDs: CSCvh12994.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2018-0091">CVE-2018-0091</a></td>
+                    <td valign="top">A vulnerability in the web-based management interface of Cisco Identity Services Engine (ISE) could allow an unauthenticated, remote attacker to conduct a Document Object Model (DOM) cross-site scripting (XSS) attack against a user of the web-based management interface of an affected device. The vulnerability is due to insufficient validation of user-supplied input by the web-based management interface. An attacker could exploit this vulnerability by persuading a user of the interface to click a malicious link. A successful exploit could allow the attacker to execute arbitrary script code in the context of the interface or allow the attacker to access sensitive browser-based information. Cisco Bug IDs: CSCvf73922.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2017-8044">CVE-2017-8044</a></td>
+                    <td valign="top">In Pivotal Single Sign-On for PCF (1.3.x versions prior to 1.3.4 and 1.4.x versions prior to 1.4.3), certain pages allow code to be injected into the DOM environment through query parameters, leading to XSS attacks.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2017-6789">CVE-2017-6789</a></td>
+                    <td valign="top">A vulnerability in the Cisco Unified Intelligence Center web interface could allow an unauthenticated, remote attacker to impact the integrity of the system by executing a Document Object Model (DOM)-based, environment or client-side cross-site scripting (XSS) attack. The vulnerability occurs because user-supplied data in the DOM input is not validated. An attacker could exploit this vulnerability by sending crafted URLs that contain malicious DOM statements to the affected system. A successful exploit could allow the attacker to affect the integrity of the system by manipulating the database. Known Affected Releases 11.0(1)ES10. Cisco Bug IDs: CSCvf18325.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2017-6700">CVE-2017-6700</a></td>
+                    <td valign="top">A vulnerability in the web-based management interface of Cisco Prime Infrastructure (PI) and Evolved Programmable Network Manager (EPNM) could allow an unauthenticated, remote attacker to conduct a Document Object Model (DOM) based (environment or client-side) cross-site scripting (XSS) attack against a user of the web-based management interface of an affected device. More Information: CSCvc24620 CSCvc49586. Known Affected Releases: 3.1(1) 2.0(4.0.45B).
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2017-3838">CVE-2017-3838</a></td>
+                    <td valign="top">A vulnerability in Cisco Secure Access Control System (ACS) could allow an unauthenticated, remote attacker to conduct a DOM-based cross-site scripting (XSS) attack against the user of the web interface of the affected system. More Information: CSCvc04838. Known Affected Releases: 5.8(2.5).
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2017-3152">CVE-2017-3152</a></td>
+                    <td valign="top">Apache Atlas versions 0.6.0-incubating and 0.7.0-incubating were found vulnerable to DOM XSS in the edit-tag functionality.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2017-15687">CVE-2017-15687</a></td>
+                    <td valign="top">DOM Based Cross Site Scripting (XSS) exists in Logitech Media Server 7.7.1, 7.7.2, 7.7.3, 7.7.5, 7.7.6, 7.9.0, and 7.9.1 via a crafted URI.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2017-13138">CVE-2017-13138</a></td>
+                    <td valign="top">DOM based Cross-site scripting (XSS) vulnerability in the Bridge theme before 11.2 for WordPress allows remote attackers to inject arbitrary JavaScript.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2017-1000227">CVE-2017-1000227</a></td>
+                    <td valign="top">Stored XSS in Salutation Responsive WordPress + BuddyPress Theme version 3.0.15 could allow logged-in users to do almost anything an admin can
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2016-5305">CVE-2016-5305</a></td>
+                    <td valign="top">Multiple cross-site scripting (XSS) vulnerabilities in management scripts in Symantec Endpoint Protection Manager (SEPM) 12.1 before RU6 MP5 allow remote authenticated users to inject arbitrary web script or HTML via a "DOM link manipulation" attack.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2016-5148">CVE-2016-5148</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in Blink, as used in Google Chrome before 53.0.2785.89 on Windows and OS X and before 53.0.2785.92 on Linux, allows remote attackers to inject arbitrary web script or HTML via vectors related to widget updates, aka "Universal XSS (UXSS)."
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2016-4945">CVE-2016-4945</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in vpn/js/gateway_login_form_view.js in Citrix NetScaler Gateway 11.0 before Build 66.11 allows remote attackers to inject arbitrary web script or HTML via the NSC_TMAC cookie.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2016-4428">CVE-2016-4428</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in OpenStack Dashboard (Horizon) 8.0.1 and earlier and 9.0.0 through 9.0.1 allows remote authenticated users to inject arbitrary web script or HTML by injecting an AngularJS template in a dashboard form.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2016-2305">CVE-2016-2305</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in Ecava IntegraXor before 5.0 build 4522 allows remote attackers to inject arbitrary web script or HTML via a crafted URL.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2016-1954">CVE-2016-1954</a></td>
+                    <td valign="top">The nsCSPContext::SendReports function in dom/security/nsCSPContext.cpp in Mozilla Firefox before 45.0 and Firefox ESR 38.x before 38.7 does not prevent use of a non-HTTP report-uri for a Content Security Policy (CSP) violation report, which allows remote attackers to cause a denial of service (data overwrite) or possibly gain privileges by specifying a URL of a local file.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2016-1294">CVE-2016-1294</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in the Management Center in Cisco FireSIGHT System Software 6.0.1 allows remote attackers to inject arbitrary web script or HTML via a crafted cookie, aka Bug ID CSCuw89094.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2016-10547">CVE-2016-10547</a></td>
+                    <td valign="top">Nunjucks is a full featured templating engine for JavaScript. Versions 2.4.2 and lower have a cross site scripting (XSS) vulnerability in autoescape mode. In autoescape mode, all template vars should automatically be escaped. By using an array for the keys, such as `name[]=&lt;script&gt;alert(1)&lt;/script&gt;`, it is possible to bypass autoescaping and inject content into the DOM.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2016-1036">CVE-2016-1036</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in Adobe Analytics AppMeasurement for Flash Library before 4.0.1, when debugTracking is enabled, allows remote attackers to inject arbitrary web script or HTML via unspecified vectors.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2015-9299">CVE-2015-9299</a></td>
+                    <td valign="top">The events-manager plugin before 5.5.7.1 for WordPress has DOM XSS.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2015-8510">CVE-2015-8510</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in the internationalization feature in the default homescreen app in Mozilla Firefox OS before 2.5 allows user-assisted remote attackers to inject arbitrary web script or HTML via a crafted web site that is mishandled during "Add to home screen" bookmarking.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2015-8006">CVE-2015-8006</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in the PageTriage toolbar in the PageTriage extension for MediWiki allows remote attackers to inject arbitrary web script or HTML via the page title.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2015-7357">CVE-2015-7357</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in the uDesign (aka U-Design) theme 2.3.0 before 2.7.10 for WordPress allows remote attackers to inject arbitrary web script or HTML via a fragment identifier, as demonstrated by #&lt;svg onload=alert(1)&gt;.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2015-6346">CVE-2015-6346</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in Cisco Secure Access Control Server (ACS) 5.7(0.15) allows remote attackers to inject arbitrary web script or HTML via a crafted URL.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2015-4490">CVE-2015-4490</a></td>
+                    <td valign="top">The nsCSPHostSrc::permits function in dom/security/nsCSPUtils.cpp in Mozilla Firefox before 40.0 does not implement the Content Security Policy Level 2 exceptions for the blob, data, and filesystem URL schemes during wildcard source-expression matching, which might make it easier for remote attackers to conduct cross-site scripting (XSS) attacks by leveraging unexpected policy-enforcement behavior.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2015-3429">CVE-2015-3429</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in example.html in Genericons before 3.3.1, as used in WordPress before 4.2.2, allows remote attackers to inject arbitrary web script or HTML via a fragment identifier.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2014-8352">CVE-2014-8352</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in json.php in French National Commission on Informatics and Liberty (aka CNIL) CookieViz allows remote we servers to inject arbitrary web script or HTML via the max_date parameter.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2014-8351">CVE-2014-8351</a></td>
+                    <td valign="top">SQL injection vulnerability in info.php in French National Commission on Informatics and Liberty (aka CNIL) CookieViz before 1.0.1 allows remote web servers to execute arbitrary SQL commands via the domain parameter.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2014-8012">CVE-2014-8012</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in the WebVPN Portal Login page in Cisco Adaptive Security Appliance (ASA) Software allows remote attackers to inject arbitrary web script or HTML via crafted attributes in a cookie, aka Bug ID CSCuh24695.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2014-6300">CVE-2014-6300</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in the micro history implementation in phpMyAdmin 4.0.x before 4.0.10.3, 4.1.x before 4.1.14.4, and 4.2.x before 4.2.8.1 allows remote attackers to inject arbitrary web script or HTML, and consequently conduct a cross-site request forgery (CSRF) attack to create a root account, via a crafted URL, related to js/ajax.js.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2014-6179">CVE-2014-6179</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in the Web UI in IBM WebSphere Service Registry and Repository (WSRR) 7.5.x before 7.5.0.4 and 8.0.x before 8.0.0.2 allows remote attackers to inject arbitrary web script or HTML via unspecified vectors.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2014-6132">CVE-2014-6132</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in the Web UI in IBM WebSphere Service Registry and Repository (WSRR) 6.3 through 6.3.0.5, 7.0.x through 7.0.0.5, 7.5.x through 7.5.0.4, 8.0.x before 8.0.0.3, and 8.5.x before 8.5.0.1 allows remote authenticated users to inject arbitrary web script or HTML via unspecified vectors.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2014-5391">CVE-2014-5391</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in the JobScheduler Operations Center (JOC) in SOS JobScheduler before 1.6.4246 and 1.7.x before 1.7.4241 allows remote attackers to inject arbitrary web script or HTML via the hash property (location.hash).
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2014-5242">CVE-2014-5242</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in mediawiki.page.image.pagination.js in MediaWiki 1.22.x before 1.22.9 and 1.23.x before 1.23.2 allows remote attackers to inject arbitrary web script or HTML via vectors involving the multipageimagenavbox class in conjunction with an action=raw value.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2014-2502">CVE-2014-2502</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in rsa_fso.swf in EMC RSA Adaptive Authentication (Hosted) 11.0 allows remote attackers to inject arbitrary web script or HTML via unspecified vectors.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2014-1403">CVE-2014-1403</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in name.html in easyXDM before 2.4.19 allows remote attackers to inject arbitrary web script or HTML via the location.hash value.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2013-6853">CVE-2013-6853</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in clickstream.js in Y! Toolbar plugin for FireFox 3.1.0.20130813024103 for Mac, and 2.5.9.2013418100420 for Windows, allows remote attackers to inject arbitrary web script or HTML via a crafted URL that is stored by the victim.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2013-3979">CVE-2013-3979</a></td>
+                    <td valign="top">Multiple cross-site scripting (XSS) vulnerabilities in the help pages in Web\Content\Help\ in the Web Client in IBM Cognos Command Center (aka Star Command Center or Star Analytics) before 10.1, when Internet Explorer is used, allow remote authenticated users to inject arbitrary web script or HTML via unspecified vectors.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2013-3288">CVE-2013-3288</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability on the EMC RSA Data Protection Manager (DPM) appliance 3.2.x before 3.2.4.2 and 3.5.x before 3.5.1 allows remote attackers to inject arbitrary web script or HTML via a crafted URL.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2013-1198">CVE-2013-1198</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in a Flash component in Cisco Unified Computing System (UCS) Central allows remote attackers to inject arbitrary web script or HTML via unspecified vectors, aka Bug ID CSCud15430.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2013-0709">CVE-2013-0709</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in dopvSTAR* 0091 allows remote attackers to inject arbitrary web script or HTML via the HTTP Referer header, which is not properly handled during display of the access log.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2013-0708">CVE-2013-0708</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in dopvCOMET* 0009b allows remote attackers to inject arbitrary web script or HTML via the HTTP Referer header, which is not properly handled during display of the access log.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2013-0244">CVE-2013-0244</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in Drupal 6.x before 6.28 and 7.x before 7.19, when running with older versions of jQuery that are vulnerable to CVE-2011-4969, allows remote attackers to inject arbitrary web script or HTML via vectors involving unspecified Javascript functions that are used to select DOM elements.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2012-5650">CVE-2012-5650</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in the Futon UI in Apache CouchDB before 1.0.4, 1.1.x before 1.1.2, and 1.2.x before 1.2.1 allows remote attackers to inject arbitrary web script or HTML via unspecified parameters to the browser-based test suite.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2012-4378">CVE-2012-4378</a></td>
+                    <td valign="top">Multiple cross-site scripting (XSS) vulnerabilities in MediaWiki before 1.18.5 and 1.19.x before 1.19.2, when unspecified JavaScript gadgets are used, allow remote attackers to inject arbitrary web script or HTML via the userlang parameter to w/index.php.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2012-4144">CVE-2012-4144</a></td>
+                    <td valign="top">Opera before 12.01 on Windows and UNIX, and before 11.66 and 12.x before 12.01 on Mac OS X, does not properly escape characters in DOM elements, which makes it easier for remote attackers to bypass cross-site scripting (XSS) protection mechanisms via a crafted HTML document.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2012-0404">CVE-2012-0404</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in EMC Documentum eRoom before 7.4.4 allows remote attackers to inject arbitrary web script or HTML via unspecified vectors.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2012-0340">CVE-2012-0340</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in the management interface on the Cisco IronPort Encryption Appliance with software before 6.5.3 allows remote attackers to inject arbitrary web script or HTML via the header parameter to the default URI under admin/, aka bug ID 72410.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2011-4969">CVE-2011-4969</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in jQuery before 1.6.3, when using location.hash to select elements, allows remote attackers to inject arbitrary web script or HTML via a crafted tag.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2011-3243">CVE-2011-3243</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in WebKit, as used in Apple iOS before 5 and Safari before 5.1.1, allows remote attackers to inject arbitrary web script or HTML via vectors involving inactive DOM windows.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2011-1937">CVE-2011-1937</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in Webmin 1.540 and earlier allows local users to inject arbitrary web script or HTML via a chfn command that changes the real (aka Full Name) field, related to useradmin/index.cgi and useradmin/user-lib.pl.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2011-1295">CVE-2011-1295</a></td>
+                    <td valign="top">WebKit, as used in Google Chrome before 10.0.648.204 and Apple Safari before 5.0.6, does not properly handle node parentage, which allows remote attackers to cause a denial of service (DOM tree corruption), conduct cross-site scripting (XSS) attacks, or possibly have unspecified other impact via unknown vectors.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2010-5312">CVE-2010-5312</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in jquery.ui.dialog.js in the Dialog widget in jQuery UI before 1.10.0 allows remote attackers to inject arbitrary web script or HTML via the title option.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2010-1395">CVE-2010-1395</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in WebKit in Apple Safari before 5.0 on Mac OS X 10.5 through 10.6 and Windows, and before 4.1 on Mac OS X 10.4, allows remote attackers to inject arbitrary web script or HTML via vectors involving DOM constructor objects, related to a "scope management issue."
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2009-1201">CVE-2009-1201</a></td>
+                    <td valign="top">Eval injection vulnerability in the csco_wrap_js function in /+CSCOL+/cte.js in WebVPN on the Cisco Adaptive Security Appliances (ASA) device with software 8.0(4), 8.1.2, and 8.2.1 allows remote attackers to bypass a DOM wrapper and conduct cross-site scripting (XSS) attacks by setting CSCO_WebVPN['process'] to the name of a crafted function, aka Bug ID CSCsy80694.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2008-4918">CVE-2008-4918</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in SonicWALL SonicOS Enhanced before 4.0.1.1, as used in SonicWALL Pro 2040 and TZ 180 and 190, allows remote attackers to inject arbitrary web script or HTML into arbitrary web sites via a URL to a site that is blocked based on content filtering, which is not properly handled in the CFS block page, aka "universal website hijacking."
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2008-4737">CVE-2008-4737</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in wholite.cgi in WhoDomLite 1.1.3 allows remote attackers to inject arbitrary web script or HTML via the dom parameter.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2008-1082">CVE-2008-1082</a></td>
+                    <td valign="top">Opera before 9.26 allows remote attackers to "bypass sanitization filters" and conduct cross-site scripting (XSS) attacks via crafted attribute values in an XML document, which are not properly handled during DOM presentation.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2008-0737">CVE-2008-0737</a></td>
+                    <td valign="top">SQL injection vulnerability in admin/utilities_ConfigHelp.asp in CandyPress (CP) 4.1.1.26, and other 4.x and 3.x versions, allows remote attackers to execute arbitrary SQL commands via the helpfield parameter.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2008-0736">CVE-2008-0736</a></td>
+                    <td valign="top">admin/SA_shipFedExMeter.asp in CandyPress (CP) 4.1.1.26, and possibly other 4.x and 3.x versions, allows remote attackers to obtain the path via a certain value of the FedExAccount parameter.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2008-0547">CVE-2008-0547</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in admin/utilities_ConfigHelp.asp in CandyPress (CP) 4.1.1.26, and probably earlier 4.x and 3.x versions, allows remote attackers to inject arbitrary web script or HTML via the helpfield parameter.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2008-0546">CVE-2008-0546</a></td>
+                    <td valign="top">Multiple SQL injection vulnerabilities in CandyPress (CP) 4.1.1.26, and earlier 4.1.x versions, allow remote attackers to execute arbitrary SQL commands via the (1) idProduct and (2) options parameters to (a) ajax/ajax_optInventory.asp, or the (2) recid parameter to (b) ajax/ajax_getBrands.asp.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2007-3064">CVE-2007-3064</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in diary.php in My Databook allows remote attackers to inject arbitrary web script or HTML via the year parameter.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2007-3063">CVE-2007-3063</a></td>
+                    <td valign="top">SQL injection vulnerability in diary.php in My Databook allows remote attackers to execute arbitrary SQL commands via the delete parameter.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2007-3060">CVE-2007-3060</a></td>
+                    <td valign="top">Multiple cross-site scripting (XSS) vulnerabilities in PHP Live! 3.2.2 allow remote attackers to inject arbitrary web script or HTML via the (1) sid parameter to (a) chat.php, (2) LANG[DEFAULT_BRANDING] and (3) PHPLIVE_VERSION parameters to (b) help.php, the (4) admin[name] parameter to (c) admin/header.php, and the (5) BASE_URL parameter to (d) super/info.php, and in some cases, the LANG[DEFAULT_BRANDING], PHPLIVE_VERSION, and (6) nav_line parameters to setup/footer.php, different vectors than CVE-2006-6769.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2007-2676">CVE-2007-2676</a></td>
+                    <td valign="top">PHP remote file inclusion vulnerability in skins/header.php in Open Translation Engine (OTE) 0.7.8 allows remote attackers to execute arbitrary PHP code via a URL in the ote_home parameter.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2007-1390">CVE-2007-1390</a></td>
+                    <td valign="top">Multiple cross-site scripting (XSS) vulnerabilities in dynaliens 2.0 and 2.1 allow remote attackers to inject arbitrary web script or HTML via unspecified parameters to (1) recherche.php3 or (2) ajouter.php3.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2007-1389">CVE-2007-1389</a></td>
+                    <td valign="top">dynaliens 2.0 and 2.1 allows remote attackers to bypass authentication and perform certain privileged actions via a direct request for (1) validlien.php3 (2) supprlien.php3 (3) supprub.php3 (4) validlien.php3 (5) confsuppr.php3 (6) modiflien.php3, or (7) confmodif.php3 in admin/.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2007-1092">CVE-2007-1092</a></td>
+                    <td valign="top">Mozilla Firefox 1.5.0.9 and 2.0.0.1, and SeaMonkey before 1.0.8 allow remote attackers to execute arbitrary code via JavaScript onUnload handlers that modify the structure of a document, wich triggers memory corruption due to the lack of a finalize hook on DOM window objects.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2006-4754">CVE-2006-4754</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in index.php in PHProg before 1.1 allows remote attackers to inject arbitrary web script or HTML via the album parameter, which is used in an opendir call. NOTE: the same primary issue can be used for full path disclosure with an invalid parameter that reveals the installation path in an error message.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2006-4753">CVE-2006-4753</a></td>
+                    <td valign="top">Directory traversal vulnerability in index.php in PHProg before 1.1 allows remote attackers to read arbitrary files via a .. (dot dot) in the lang parameter.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2006-4742">CVE-2006-4742</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in user_add.php in IDevSpot PhpLinkExchange 1.0 allows remote attackers to inject arbitrary web script or HTML via the msg parameter.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2006-4741">CVE-2006-4741</a></td>
+                    <td valign="top">PHP remote file inclusion vulnerability in bits_listings.php in IDevSpot PhpLinkExchange 1.0 allows remote attackers to execute arbitrary code via the svr_rootPhpStart parameter.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2006-3914">CVE-2006-3914</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in Blackboard Academic Suite 6.2.3.23 allows remote authenticated users to inject arbitrary HTML or web script by bypassing client-side validation through disabling JavaScript when submitting an essay response, which has no server-side validation before being viewed via "View Attempt Details" in the Gradebook.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2006-3802">CVE-2006-3802</a></td>
+                    <td valign="top">Mozilla Firefox before 1.5.0.5, Thunderbird before 1.5.0.5, and SeaMonkey before 1.0.3 allows remote attackers to hijack native DOM methods from objects in another domain and conduct cross-site scripting (XSS) attacks using DOM methods of the top-level object.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2002-2056">CVE-2002-2056</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in TeeKai Forum 1.2 allows remote attackers to inject arbitrary web script or HTML via the valid_username_online cookie.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="nowrap"><a href="/cgi-bin/cvename.cgi?name=CVE-2002-2055">CVE-2002-2055</a></td>
+                    <td valign="top">Cross-site scripting (XSS) vulnerability in userlog.php in TeeKai Tracking Online 1.0 allows remote attackers to inject arbitrary web script or HTML via the id parameter.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
