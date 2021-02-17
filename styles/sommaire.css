@@ -13,62 +13,62 @@ $violet: #ae81ff;
 $yellow: #e6db74;
 $orange: #fd971f;
 $magenta: #fd5ff0;
-*/    
+*/
 
-    body {
-        background-color: #272822;
-        color: #f8f8f2;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.3;
-        font-family: "Ubuntu", sans-serif;
-    }
+body {
+    background-color: #272822;
+    color: #f8f8f2;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.3;
+    font-family: "Ubuntu", sans-serif;
+}
 
-    a {
-        text-decoration: none;
-    }
+a {
+    text-decoration: none;
+}
 
-    a:visited {
-        background-color: transparent;
-        text-decoration: none;
-        font-weight: bold;
-        color: white;
-    }
+a:visited {
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: bold;
+    color: #3e3d32;
+}
 
-    a:hover {
-        color: #75715e;
-        background-color: #272822;
-        text-decoration: none;
-    }
+a:hover {
+    color: #75715e;
+    background-color: #272822;
+    text-decoration: none;
+}
 
 
-    a:link {
-        color: #e6db74;
-    }
+a:link {
+    color: #e6db74;
+}
 
-    a:active {
-        color: orange;
-    }
+a:active {
+    color: orange;
+}
 
-    h2 {
-        font-size: 24px;
-        text-indent: 2%;
-        line-height: 2%;
-        text-transform: capitalize;
-        color: #3e3d32;
-    }
+h2 {
+    font-size: 24px;
+    text-indent: 2%;
+    line-height: 2%;
+    text-transform: capitalize;
+    color: #3e3d32;
+}
 
-    h3 {
-        font-size: 20px;
-        text-indent: 2%;
-        line-height: 2%;
-        text-transform: capitalize;
-    }
+h3 {
+    font-size: 20px;
+    text-indent: 2%;
+    line-height: 2%;
+    text-transform: capitalize;
+}
 
-    ul,
-    ol {
-        font-size: 16px;
-    }
+ul,
+ol {
+    font-size: 16px;
+}
 
 .bg1,
 .bg1 a:visited {
@@ -95,10 +95,12 @@ $magenta: #fd5ff0;
 .creme a:visited {
     color: #f8f8f2;
 }
+
 .green,
 .green a:visited {
     color: #a6e22e;
 }
+
 .violet,
 .violet a:visited {
     color: #ae81ff;
@@ -121,139 +123,149 @@ $magenta: #fd5ff0;
 
 
 
-    #domxss101 a:visited,
-    #vuln a:visited {
-        color: #66d9ef;
-    }
+#domxss101 a:visited,
+#vuln a:visited {
+    color: #66d9ef;
+}
 
-    #domxss101,
-    #vuln {
-        color: #66d9ef;
-    }
+#domxss101,
+#vuln {
+    color: #66d9ef;
+}
 
-    #deepsource,
-    #deepsource a:visited {
-        color: #66d9ef;
-    }
-
-
-    #sast a:visited {
-        color: #fd971f;
-    }
+#deepsource,
+#deepsource a:visited {
+    color: #66d9ef;
+}
 
 
-    #tools a:visited,
-    #extensions a:visited {
-        color: #fd971f;
-    }
-
-    #sast,
-    #tools {
-        color: #fd971f;
-    }
-
-    #domxsstools a:visited,
-    #scopes a:visited {
-        color: #a6e22e;
-    }
-
-    #domxsstools,
-    #scopes {
-        color: #a6e22e;
-    }
-
-    #sastvendorslists {
-        color: #a6e22e;
-    }
-    
-    #sastvendorslists a:visited {
-        color: #a6e22e;
-    }
-
-    #domxssreports a:visited {
-        color: #f92972;
-    }
-
-    #python,
-    #tactics a:visited {
-        color: #f92972;
-    }
+#sast a:visited {
+    color: #fd971f;
+}
 
 
-    #domxssreports,
-    #tactics {
-        color: #f92972;
-    }
+#tools a:visited,
+#extensions a:visited {
+    color: #fd971f;
+}
 
-    p {
-        position: relative;
-        left: 100px;
+#sast,
+#tools {
+    color: #fd971f;
+}
 
-    }
+#domxsstools a:visited,
+#scopes a:visited {
+    color: #a6e22e;
+}
 
-    #dast a:visited,
-    #prog a:visited,
-    #leak a:visited {
-        color: #e6db74;
-    }
+#domxsstools,
+#scopes {
+    color: #a6e22e;
+}
 
-    #dast,
-    #prog {
-        color: #e6db74;
-    }
+#sastvendorslists {
+    color: #a6e22e;
+}
+
+#sastvendorslists a:visited {
+    color: #a6e22e;
+}
+
+#domxssreports a:visited {
+    color: #f92972;
+}
+
+#python,
+#tactics a:visited {
+    color: #f92972;
+}
+
+
+#domxssreports,
+#tactics {
+    color: #f92972;
+}
+
+p {
+    position: relative;
+    left: 100px;
+
+}
+
+#dast a:visited,
+#prog a:visited,
+#leak a:visited {
+    color: #e6db74;
+}
+
+#dast,
+#prog {
+    color: #e6db74;
+}
 
 /*     a:visited {
         color: #a1efe4;
     } */
 
 
-    #science a:visited {
-        color: #a1efe4;
-    }
+#science a:visited {
+    color: #a1efe4;
+}
 
 
-    #science {
-        color: #a1efe4;
-    }
+#science {
+    color: #a1efe4;
+}
 
 
-    #books a:visited {
-        color: #fd5ff0;
-    }
+#books a:visited {
+    color: #fd5ff0;
+}
 
-    #books {
-        color: #fd5ff0;
-    }
+#books {
+    color: #fd5ff0;
+}
 
-    #history a:visited {
-        color: #ae81ff;
-    }
+#history a:visited {
+    color: #ae81ff;
+}
 
-    #history {
-        color: #ae81ff;
-    }
+#history {
+    color: #ae81ff;
+}
 
 
-    #startups,
-    #startups a:visited {
-        color: #cfcfc2;
-    }
+#startups,
+#startups a:visited {
+    color: #cfcfc2;
+}
 
-    #dataflowanalysis,
-    #dataflowanalysis a:visited {
-        color: #a6e22e;
-    }
+#dataflowanalysis,
+#dataflowanalysis a:visited {
+    color: #a6e22e;
+}
 
-    .CVE16FEB2021 tbody tr:nth-of-type(even){
-         background-color: #3e3d32; 
-        color: #a6e22e;
-    }
+.CVE16FEB2021 tbody tr:nth-of-type(even) {
+    background-color: #3e3d32;
+    color: #a6e22e;
 
-    .CVE16FEB2021 {
-        line-height: 1.3;
-        border-spacing:  0 15px;
-    }
 
-    strong {
-        color:#66d9ef ;
-    }
+}
+
+.CVE16FEB2021 {
+    line-height: 1.3;
+    border-spacing: 0 15px;
+
+}
+
+.CVE16FEB2021 a:visited {
+    background-color: transparent;
+    text-decoration: none;
+    color: #f92972;
+
+}
+
+strong {
+    color: #66d9ef;
+}

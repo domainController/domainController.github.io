@@ -5,7 +5,8 @@
         font-family: "Ubuntu", sans-serif;
 
     }
-      a {
+
+    a {
         text-decoration: none;
     }
 
@@ -13,7 +14,6 @@
         background-color: transparent;
         text-decoration: none;
         font-weight: bold;
-        color: brown;
     }
 
     a:hover {
@@ -22,7 +22,7 @@
         text-decoration: underline;
     }
 
-/*     a:link {
+    /*     a:link {
         color: #e6db74;
     }
  */
@@ -35,6 +35,89 @@
 
     a {
         text-decoration: none;
+    }
+
+    .content-table-papers {
+        text-transform: capitalize;
+        border-collapse: collapse;
+        margin: 20px 0;
+        table-layout: fixed;
+        width: 1200px;
+        line-height: 23px;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        margin-left: auto;
+        margin-right: auto;
+        font-family: "Ubuntu", sans-serif;
+    }
+    .content-table-papers tbody tr:nth-of-type(even){
+         background-color: #3e3d32; 
+    }
+    caption{
+        font-size: 21px;    
+    }
+    .orange,
+    .orange a:visited {
+        color: #fd971f;
+    }
+
+    .blue,
+    .blue a:visited {
+        color: #66d9ef;
+    }
+
+    .red,
+    .red a:visited {
+        color: #f92972;
+    }
+
+    .blue,
+    .blue a:visited {
+        color: #66d9ef;
+    }
+
+    .cyan,
+    .cyan a:visited {
+        color: #a1efe4;
+    }
+
+    .creme,
+    .creme a:visited {
+        color: #f8f8f2;
+    }
+
+    .green,
+    .green a:visited {
+        color: #a6e22e;
+    }
+
+    .violet,
+    .violet a:visited {
+        color: #ae81ff;
+    }
+
+    .yellow,
+    .yellow a:visited {
+        color: #e6db74;
+    }
+
+        .title {
+        width: 500px;
+    }
+
+
+    .supervisor,
+    .authors {
+        width: 250px;
+    }
+    .country {
+        width: 70px;
+    }
+
+    .page,
+    .year {
+        width: 50px;
     }
 
     .content-table {
@@ -72,7 +155,8 @@
     .shell {
         color: #fd971f;
     }
-        .shell a:visited {
+
+    .shell a:visited {
         color: #fd971f;
     }
 
@@ -80,7 +164,7 @@
         color: #66d9ef;
     }
 
-    .go a:visited{
+    .go a:visited {
         color: #66d9ef;
     }
 
