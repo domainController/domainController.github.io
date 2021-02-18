@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quotes</title>
+    <link rel="stylesheet" type="text/css" href="../styles/sommaire.css">
+</head>
+
+<body>
+    <div class="dontTrustTheLocals">
+        <h2>Don’t Trust The Locals</h2>
+        <ol>
+            <li>"... we leverage <strong>taint tracking</strong> to identify suspicious flows from <strong>client-side persistent storage</strong> (Web Storage, cookies) to dangerous sinks (HTML, JavaScript, andscript.src)"</li>
+            <li>
+                "With our <strong>taint-aware browser</strong> and these models in mind, we study <strong>the prevalence of</strong> Persistent Client-Side XSS in the Alexa Top 5,000 domains."
+            </li>
+            <li>"We find that more than 8% of them have <strong>unfiltered data flows from persistent storage to a dangerous sink</strong> "
+                Cross-Site Scripting enabled by <strong>persistence APIs</strong> on the client has not been acknowledged as an important type of XSS
+            </li>
+            <li>"we investigate the risk of using data <strong>from client-side storage in JavaScript</strong>, showing that Persistent Client-Side XSS must, in fact, be considered as a real threat to modern Web applications.""
+            </li>
+            <li>"We leverage taint tracking in the browser <strong>to find exploitable flows of data from Web Storage or cookies to dangerous sinks</strong>, such as eval. "</li>
+            <li>"Considering a Network Attacker capable of <strong>temporarily hijacking a non-encrypted connection</strong>, and a regular Web Attacker capable of forcing her victims to visit arbitrary URLs"</li>
+            <li>"These simple <strong>key-value stores are used by browsers to persist small pieces of string data, which are sent along in every HTTP request to matching servers</strong>. This allows sites <strong>to overcome the inherent limitation of HTTP, i.e., the lack of state."</strong></li>
+            <li>"... introduced the Web Storage API [21]. <strong>It consists of two containers, namely Session and Local Storage. While the former only persists data for the duration of a browsing session and is unique for each window, Local Storage makes it possible to indefinitely persist data on the client.</strong>"</li>
+            <li>"<strong>The most basic security policy in browsers it the SameOrigin Policy</strong> [67]. This policy governs interactions between sites, specifically as they relate to <strong>the access from JavaScript to another window. Whenever a JavaScript snippet tries to gain access to resources from another window</strong>" (e.g., popup or iframe), the action is only allowed if the accessed resource shares the origin of the JavaScript. This way, a malicious site including an iframe to another domain cannot read the content of the rendered document from that domain</li>
+            <li>"Cross-Site Scripting <strong>(XSS) is a code injection attack, in which an adversary is able to add JavaScript code </strong> of her choosing to a vulnerable site."</li>
+            <li>"In our notion, XSS can be roughly categorized in two dimensions. Specifically, <strong>it can be reflected or persistent, and can be located in the server-side or client-side code.</strong> Reflected here refers to the fact that the vulnerable code <strong>reflects back some attacker controllable information</strong>, e.g., using PHP’s echo functionality to print part of the requested URL on the server. Persistent in turn means that the malicious payload is not directly echoed back by the code, <strong>but rather stored and later retrieved.</strong>"</li>
+            <li>"Abstractly speaking, an XSS attack occurs <strong>if some attacker controllable piece of data flows into a dangerous sink</strong>. On the client, these sinks can be classified into three <a href="https://www.youtube.com/watch?v=bouTxh76yeU&t=253s">categories</a>: <strong>rendering of HTML, execution of JavaScript, and the inclusion of additional script resources</strong>"</li>
+            <li>"We then relate this concept to its server-side counterpart and introduce two<strong> attacker models</strong>, which enable <strong>storing payloads in her victim’s persistence APIs</strong>, allowing for a persistent XSS attack"</li>
+            <li>"An XSS attacker’s goal is often to <strong>hijack the session of their victim</strong>, i.e., steal the authentication cookies. This problem <strong>is mitigated by the use of HTTP-only cookies</strong>, which ensure that cookies cannot be accessed from JavaScript and are therefore out of reach of the adversary"</li>
+            <li>"This attack becomes more powerful if the attacker conducts a <strong>resident XSS attack</strong> [23], which leverages the existing XSS to ensure that all links a user may visit are also XSS-infested. "</li>
+            <li>"If, however, <strong>the malicious payload is persisted on the client</strong>, i.e., in cookies or Local Storage, <strong>the XSS attacker’s code is revived on every subsequent load of the flawed site</strong>, even without the necessity to add the payload to, e.g., the URL"</li>
+            <li>"Although in general, Session Storage allows to persist data on the client, <strong>it is bound to a browsing window and deleted when said window is closed."</strong></li>
+            <li>"A network-level adversary is able to inject arbitrary packets into any unencrypted connection between a client and server. "</li>
+        </ol>
+    </div>
+    <div class="ChromiumTaintTracking">
+    	<h2><a href="domxsspapers/21.pdf" target="_blank">Riding out DOMsday</a></h2>
+    	<ol>
+    		<li>"Preventing XSS typically requires website owners to not only sanitize all untrusted inputs to their web application, but also to sanitize all input that could be received <strong>by the client’s JavaScript interpreter—</strong>"</li>
+    	</ol>
+    </div>
+</body>
+
+</html>

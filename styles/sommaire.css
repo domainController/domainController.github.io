@@ -121,7 +121,15 @@ ol {
     color: #fd5ff0;
 }
 
+    .dontTrustTheLocals a:visited {
+        background-color: transparent;
+        text-decoration: none;
+        color: #f92972;
+    }
 
+    .dontTrustTheLocals li {
+       margin: 10px 0;
+    }
 
 #domxss101 a:visited,
 #vuln a:visited {
@@ -263,7 +271,6 @@ p {
     background-color: transparent;
     text-decoration: none;
     color: #f92972;
-
 }
 
 strong {

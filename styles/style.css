@@ -14,6 +14,7 @@
         background-color: transparent;
         text-decoration: none;
         font-weight: bold;
+        color: brown;
     }
 
     a:hover {
@@ -51,15 +52,25 @@
         margin-right: auto;
         font-family: "Ubuntu", sans-serif;
     }
-    .content-table-papers tbody tr:nth-of-type(even){
-         background-color: #3e3d32; 
+
+    .content-table-papers tbody tr:nth-of-type(even) {
+        background-color: #3e3d32;
     }
-    caption{
-        font-size: 21px;    
+
+    caption {
+        font-size: 16px;
+        color: #f92972;
     }
+
     .orange,
     .orange a:visited {
         color: #fd971f;
+    }
+
+    .quotes a:visited {
+        background-color: transparent;
+        text-decoration: none;
+        color: #f92972;
     }
 
     .blue,
@@ -102,7 +113,7 @@
         color: #e6db74;
     }
 
-        .title {
+    .title {
         width: 500px;
     }
 
@@ -111,6 +122,7 @@
     .authors {
         width: 250px;
     }
+
     .country {
         width: 70px;
     }
