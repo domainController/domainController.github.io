@@ -120,13 +120,14 @@ ol {
 .magenta a:visited {
     color: #fd5ff0;
 }
-
+    .ChromiumTaintTracking a:visited,
     .dontTrustTheLocals a:visited {
         background-color: transparent;
         text-decoration: none;
         color: #f92972;
     }
 
+    .ChromiumTaintTracking li,
     .dontTrustTheLocals li {
        margin: 10px 0;
     }

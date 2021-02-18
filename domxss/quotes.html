@@ -37,10 +37,14 @@
             <li>"A network-level adversary is able to inject arbitrary packets into any unencrypted connection between a client and server. "</li>
         </ol>
     </div>
+    <h2><a href="domxsspapers/21.pdf" target="_blank">Riding out DOMsday</a></h2>
     <div class="ChromiumTaintTracking">
-    	<h2><a href="domxsspapers/21.pdf" target="_blank">Riding out DOMsday</a></h2>
     	<ol>
-    		<li>"Preventing XSS typically requires website owners to not only sanitize all untrusted inputs to their web application, but also to sanitize all input that could be received <strong>by the client’s JavaScript interpreter—</strong>"</li>
+    		<li>"Preventing XSS typically requires website owners to not only sanitize all untrusted inputs to their web application, but also to sanitize all input that could be received <strong>by the client’s JavaScript <a href="https://www.youtube.com/watch?v=3bVcTFOKRyo&t=351s">interpreter—</a></strong>"</li>
+    		<li>". The existence of such flows only indicates that data from a source can reach a sink, but does not account for <strong>whether the data has been sanitized by the programmer</strong>. Thus, once a flow with a potential DOM XSS vulnerability is observed, <strong>the flow must be confirmed to be exploitable</strong>"In this paper, we show how to more accurately detect whether <strong>a flow that is potentially vulnerable is capable of being exploited.</strong></li>
+    		<li>"..., we focus, similarly to prior work [22], on confirming flows from <a href="sinksources.html">URL-based sources</a>. These are of particular interest because, compared to other flows, they are easy for attackers to exploit"</li>
+    		<li>"We crawled <strong>the homepages and five random subpages</strong> of websites"</li>
+    		<li>"In addition, we qualitatively examined the code paths that led to the vulnerabilities. We observed, for example, that <strong>most of the vulnerabilities did not share code</strong>, implying that the vulnerabilities we found are <strong>due to custom code</strong>, rather than the inclusion of buggy shared libraries"</li>
     	</ol>
     </div>
 </body>
