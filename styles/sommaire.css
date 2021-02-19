@@ -120,6 +120,15 @@ ol {
 .magenta a:visited {
     color: #fd5ff0;
 }
+
+
+    .quotes h2 a:visited {
+        color: #fd971f;
+    }
+
+
+    .HeiderichThesis a:visited,
+    .MillionFlowsLater a:visited,
     .ChromiumTaintTracking a:visited,
     .dontTrustTheLocals a:visited {
         background-color: transparent;
@@ -127,6 +136,8 @@ ol {
         color: #f92972;
     }
 
+    .HeiderichThesis li,
+    .MillionFlowsLater li,
     .ChromiumTaintTracking li,
     .dontTrustTheLocals li {
        margin: 10px 0;

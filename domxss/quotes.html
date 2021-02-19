@@ -9,43 +9,167 @@
 </head>
 
 <body>
-    <div class="dontTrustTheLocals">
-        <h2>Don’t Trust The Locals</h2>
-        <ol>
-            <li>"... we leverage <strong>taint tracking</strong> to identify suspicious flows from <strong>client-side persistent storage</strong> (Web Storage, cookies) to dangerous sinks (HTML, JavaScript, andscript.src)"</li>
-            <li>
-                "With our <strong>taint-aware browser</strong> and these models in mind, we study <strong>the prevalence of</strong> Persistent Client-Side XSS in the Alexa Top 5,000 domains."
-            </li>
-            <li>"We find that more than 8% of them have <strong>unfiltered data flows from persistent storage to a dangerous sink</strong> "
-                Cross-Site Scripting enabled by <strong>persistence APIs</strong> on the client has not been acknowledged as an important type of XSS
-            </li>
-            <li>"we investigate the risk of using data <strong>from client-side storage in JavaScript</strong>, showing that Persistent Client-Side XSS must, in fact, be considered as a real threat to modern Web applications.""
-            </li>
-            <li>"We leverage taint tracking in the browser <strong>to find exploitable flows of data from Web Storage or cookies to dangerous sinks</strong>, such as eval. "</li>
-            <li>"Considering a Network Attacker capable of <strong>temporarily hijacking a non-encrypted connection</strong>, and a regular Web Attacker capable of forcing her victims to visit arbitrary URLs"</li>
-            <li>"These simple <strong>key-value stores are used by browsers to persist small pieces of string data, which are sent along in every HTTP request to matching servers</strong>. This allows sites <strong>to overcome the inherent limitation of HTTP, i.e., the lack of state."</strong></li>
-            <li>"... introduced the Web Storage API [21]. <strong>It consists of two containers, namely Session and Local Storage. While the former only persists data for the duration of a browsing session and is unique for each window, Local Storage makes it possible to indefinitely persist data on the client.</strong>"</li>
-            <li>"<strong>The most basic security policy in browsers it the SameOrigin Policy</strong> [67]. This policy governs interactions between sites, specifically as they relate to <strong>the access from JavaScript to another window. Whenever a JavaScript snippet tries to gain access to resources from another window</strong>" (e.g., popup or iframe), the action is only allowed if the accessed resource shares the origin of the JavaScript. This way, a malicious site including an iframe to another domain cannot read the content of the rendered document from that domain</li>
-            <li>"Cross-Site Scripting <strong>(XSS) is a code injection attack, in which an adversary is able to add JavaScript code </strong> of her choosing to a vulnerable site."</li>
-            <li>"In our notion, XSS can be roughly categorized in two dimensions. Specifically, <strong>it can be reflected or persistent, and can be located in the server-side or client-side code.</strong> Reflected here refers to the fact that the vulnerable code <strong>reflects back some attacker controllable information</strong>, e.g., using PHP’s echo functionality to print part of the requested URL on the server. Persistent in turn means that the malicious payload is not directly echoed back by the code, <strong>but rather stored and later retrieved.</strong>"</li>
-            <li>"Abstractly speaking, an XSS attack occurs <strong>if some attacker controllable piece of data flows into a dangerous sink</strong>. On the client, these sinks can be classified into three <a href="https://www.youtube.com/watch?v=bouTxh76yeU&t=253s">categories</a>: <strong>rendering of HTML, execution of JavaScript, and the inclusion of additional script resources</strong>"</li>
-            <li>"We then relate this concept to its server-side counterpart and introduce two<strong> attacker models</strong>, which enable <strong>storing payloads in her victim’s persistence APIs</strong>, allowing for a persistent XSS attack"</li>
-            <li>"An XSS attacker’s goal is often to <strong>hijack the session of their victim</strong>, i.e., steal the authentication cookies. This problem <strong>is mitigated by the use of HTTP-only cookies</strong>, which ensure that cookies cannot be accessed from JavaScript and are therefore out of reach of the adversary"</li>
-            <li>"This attack becomes more powerful if the attacker conducts a <strong>resident XSS attack</strong> [23], which leverages the existing XSS to ensure that all links a user may visit are also XSS-infested. "</li>
-            <li>"If, however, <strong>the malicious payload is persisted on the client</strong>, i.e., in cookies or Local Storage, <strong>the XSS attacker’s code is revived on every subsequent load of the flawed site</strong>, even without the necessity to add the payload to, e.g., the URL"</li>
-            <li>"Although in general, Session Storage allows to persist data on the client, <strong>it is bound to a browsing window and deleted when said window is closed."</strong></li>
-            <li>"A network-level adversary is able to inject arbitrary packets into any unencrypted connection between a client and server. "</li>
-        </ol>
-    </div>
-    <h2><a href="domxsspapers/21.pdf" target="_blank">Riding out DOMsday</a></h2>
-    <div class="ChromiumTaintTracking">
-    	<ol>
-    		<li>"Preventing XSS typically requires website owners to not only sanitize all untrusted inputs to their web application, but also to sanitize all input that could be received <strong>by the client’s JavaScript <a href="https://www.youtube.com/watch?v=3bVcTFOKRyo&t=351s">interpreter—</a></strong>"</li>
-    		<li>". The existence of such flows only indicates that data from a source can reach a sink, but does not account for <strong>whether the data has been sanitized by the programmer</strong>. Thus, once a flow with a potential DOM XSS vulnerability is observed, <strong>the flow must be confirmed to be exploitable</strong>"In this paper, we show how to more accurately detect whether <strong>a flow that is potentially vulnerable is capable of being exploited.</strong></li>
-    		<li>"..., we focus, similarly to prior work [22], on confirming flows from <a href="sinksources.html">URL-based sources</a>. These are of particular interest because, compared to other flows, they are easy for attackers to exploit"</li>
-    		<li>"We crawled <strong>the homepages and five random subpages</strong> of websites"</li>
-    		<li>"In addition, we qualitatively examined the code paths that led to the vulnerabilities. We observed, for example, that <strong>most of the vulnerabilities did not share code</strong>, implying that the vulnerabilities we found are <strong>due to custom code</strong>, rather than the inclusion of buggy shared libraries"</li>
-    	</ol>
+    <div class="quotes">
+    	<h2 class="dontTrustTheLocals"><a href="domxsspapers/6.pdf" target="_blank"> ========= Don’t Trust The Locals =========  </a></h2>
+        <div class="dontTrustTheLocals">
+            <ol>
+                <li>"... we leverage <strong>taint tracking</strong> to identify suspicious flows from <strong>client-side persistent storage</strong> (Web Storage, cookies) to dangerous sinks (HTML, JavaScript, andscript.src)"</li>
+                <li>
+                    "With our <strong>taint-aware browser</strong> and these models in mind, we study <strong>the prevalence of</strong> Persistent Client-Side XSS in the Alexa Top 5,000 domains."
+                </li>
+                <li>"We find that more than 8% of them have <strong>unfiltered data flows from persistent storage to a dangerous sink</strong> "
+                    Cross-Site Scripting enabled by <strong>persistence APIs</strong> on the client has not been acknowledged as an important type of XSS
+                </li>
+                <li>"we investigate the risk of using data <strong>from client-side storage in JavaScript</strong>, showing that Persistent Client-Side XSS must, in fact, be considered as a real threat to modern Web applications.""
+                </li>
+                <li>"We leverage taint tracking in the browser <strong>to find exploitable flows of data from Web Storage or cookies to dangerous sinks</strong>, such as eval. "</li>
+                <li>"Considering a Network Attacker capable of <strong>temporarily hijacking a non-encrypted connection</strong>, and a regular Web Attacker capable of forcing her victims to visit arbitrary URLs"</li>
+                <li>"These simple <strong>key-value stores are used by browsers to persist small pieces of string data, which are sent along in every HTTP request to matching servers</strong>. This allows sites <strong>to overcome the inherent limitation of HTTP, i.e., the lack of state."</strong></li>
+                <li>"... introduced the Web Storage API [21]. <strong>It consists of two containers, namely Session and Local Storage. While the former only persists data for the duration of a browsing session and is unique for each window, Local Storage makes it possible to indefinitely persist data on the client.</strong>"</li>
+                <li>"<strong>The most basic security policy in browsers it the SameOrigin Policy</strong> [67]. This policy governs interactions between sites, specifically as they relate to <strong>the access from JavaScript to another window. Whenever a JavaScript snippet tries to gain access to resources from another window</strong>" (e.g., popup or iframe), the action is only allowed if the accessed resource shares the origin of the JavaScript. This way, a malicious site including an iframe to another domain cannot read the content of the rendered document from that domain</li>
+                <li>"Cross-Site Scripting <strong>(XSS) is a code injection attack, in which an adversary is able to add JavaScript code </strong> of her choosing to a vulnerable site."</li>
+                <li>"In our notion, XSS can be roughly categorized in two dimensions. Specifically, <strong>it can be reflected or persistent, and can be located in the server-side or client-side code.</strong> Reflected here refers to the fact that the vulnerable code <strong>reflects back some attacker controllable information</strong>, e.g., using PHP’s echo functionality to print part of the requested URL on the server. Persistent in turn means that the malicious payload is not directly echoed back by the code, <strong>but rather stored and later retrieved.</strong>"</li>
+                <li>"Abstractly speaking, an XSS attack occurs <strong>if some attacker controllable piece of data flows into a dangerous sink</strong>. On the client, these sinks can be classified into three <a href="https://www.youtube.com/watch?v=bouTxh76yeU&t=253s">categories</a>: <strong>rendering of HTML, execution of JavaScript, and the inclusion of additional script resources</strong>"</li>
+                <li>"We then relate this concept to its server-side counterpart and introduce two<strong> attacker models</strong>, which enable <strong>storing payloads in her victim’s persistence APIs</strong>, allowing for a persistent XSS attack"</li>
+                <li>"An XSS attacker’s goal is often to <strong>hijack the session of their victim</strong>, i.e., steal the authentication cookies. This problem <strong>is mitigated by the use of HTTP-only cookies</strong>, which ensure that cookies cannot be accessed from JavaScript and are therefore out of reach of the adversary"</li>
+                <li>"This attack becomes more powerful if the attacker conducts a <strong>resident XSS attack</strong> [23], which leverages the existing XSS to ensure that all links a user may visit are also XSS-infested. "</li>
+                <li>"If, however, <strong>the malicious payload is persisted on the client</strong>, i.e., in cookies or Local Storage, <strong>the XSS attacker’s code is revived on every subsequent load of the flawed site</strong>, even without the necessity to add the payload to, e.g., the URL"</li>
+                <li>"Although in general, Session Storage allows to persist data on the client, <strong>it is bound to a browsing window and deleted when said window is closed."</strong></li>
+                <li>"A network-level adversary is able to inject arbitrary packets into any unencrypted connection between a client and server. "</li>
+            </ol>
+        </div>
+        <h2 class="ChromiumTaintTracking"><a href="domxsspapers/21.pdf" target="_blank"> ========= Riding out DOMsday ========= </a></h2>
+        <div class="ChromiumTaintTracking">
+            <ol>
+                <li>"Preventing XSS typically requires website owners to not only sanitize all untrusted inputs to their web application, but also to sanitize all input that could be received <strong>by the client’s JavaScript <a href="https://www.youtube.com/watch?v=3bVcTFOKRyo&t=351s" target="_blank">interpreter—</a></strong>"</li>
+                <li>". The existence of such flows only indicates that data from a source can reach a sink, but does not account for <strong>whether the data has been sanitized by the programmer</strong>. Thus, once a flow with a potential DOM XSS vulnerability is observed, <strong>the flow must be confirmed to be exploitable</strong>"In this paper, we show how to more accurately detect whether <strong>a flow that is potentially vulnerable is capable of being exploited.</strong></li>
+                <li>"..., we focus, similarly to <a href="https://www.youtube.com/watch?v=FxJAeWOop1Y">prior work</a> [22], on confirming flows from <a href="sinksources.html" target="_blank">URL-based sources</a>. These are of particular interest because, compared to other flows, they are easy for attackers to exploit"</li>
+                <li>"We crawled <strong>the homepages and five random subpages</strong> of websites"</li>
+                <li>"In addition, we qualitatively examined the code paths that led to the vulnerabilities. We observed, for example, that <strong>most of the vulnerabilities did not share code</strong>, implying that the vulnerabilities we found are <strong>due to custom code</strong>, rather than the inclusion of buggy shared libraries"</li>
+                <li>"However, some static tools were shown to have low false negative rates and at the same time identify DOM XSS issues not found by the dynamic analysis, suggesting that <strong>dynamic analyses and static analyses are finding qualitatively different types of vulnerabilities.</strong>"</li>
+                <li>"We develop a <strong>modified version of Chromium for tracking the taint information of strings</strong>, which we are releasing as open source.1"</li>
+                <li>"<a href="https://www.youtube.com/watch?v=ergeHSRr1a0&t=391s" target="_blank">Sinks</a> can include <strong>any mechanism to execute arbitrary code</strong>, for example: the eval function, document.write, JavaScript event handlers (e.g., the “onclick” attribute), and URLs that have a JavaScript scheme (e.g., <a href='javascript:...'></a>)."</li>
+                <li>"Server-side taint-tracking and static-analysis techniques <strong>fundamentally cannot be applied for detecting client-side vulnerabilities</strong> [14], [37]"</li>
+                <li>" However,web-application firewalls are known to allow many attacks <strong>due to their reliance on simple pattern matching</strong> [13], [18]."</li>
+                <li><strong>The state of the art for detecting DOM XSS vulnerabilities is using dynamic taint tracking</strong>. This technique marks potentially attacker-controlled sources as “tainted” and propagates information about tainted values throughout the program</li>
+                <li>"Other work, building upon a system for detecting DOM XSS vulnerabilities using <strong>browser-agnostic taint tracking</strong> [29], provided a method to track taint information and inject an extension that sanitizes injected strings at run time just before those strings are inserted into the sensitive sink functions [28]."</li>
+                <li>Additionally, prior work quantitatively examined DOM XSS vulnerabilities [35], finding that while <strong>many vulnerabilities are of low complexity, some are the result of highly complex JavaScript interactions</strong>. The researchers found that many DOM XSS bugs are the result of <strong>vulnerable third-party scripts, missing knowledge about browser-provided APIs, unaware developers, or incompatible first- and third-party code</strong>.</li>
+                <li>"However, <strong>the degree to which static-analysis tools can detect and prevent real DOM XSS vulnerabilities is unknown</strong>. In addition, JavaScript as a programming language <strong>has traditionally been difficult to statically analyze because of its dynamic features</strong> (for example,widespread use of the eval function and reliance on dynamic typing)."</li>
+                <li id="sinksensitivefunction">"Each flow has a source, through which an attacker could inject code, and <strong>a sink, a sensitive function that consumes data derived from the source of the flow</strong>"</li>
+                <li>" For example, to exploit a cookie flow, <strong>an attacker must find a way to manipulate the victim’s cookies</strong>; for message flows, an attacker must find a potential flow whose code <strong>does not check the message origin and also send the message at the proper time</strong>, when the receiver is expecting it"</li>
+                <li>"We first discard flows in which <strong>the tainted value is encoded using a built-in encoding method</strong>, for example, the <strong>encodeURIComponent</strong> function; <strong>we are certain that such flows would ordinarily not be exploitable</strong>"</li>
+                <li id="confirmedvulnerableflows">"We next remove from consideration flows that could not be exploited in Chromium due to <strong>Chromium</strong>’s natural 
+                	<strong>encoding of some URL variables</strong> (for example, <strong>Chromium automatically encodes the content of <a href="sinksources.html#locationsearch" >document.location.search</a> to prevent the occurrence of any character that would not be allowed in a URL</strong>). "</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+            </ol>
+        </div>
+        <h2 class="MillionFlowsLater"><a href="domxsspapers/10.pdf" target="_blank"> ========= 25 Million Flows Later ========= </a></h2>
+        <div class="MillionFlowsLater">
+            <ol>
+                <li>"DOM-based XSS is caused by <strong>unsafe data flows from attacker-controlled sources</strong>, such as the document.location property, into <strong>security sensitive APIs</strong>, e.g., document.write."</li>
+                <li>"Furthermore, compared to server-side languages such as Java or C#, a large portion of JavaScript code frequently relies <strong>on runtime interpretation of string data as executable code via APIs</strong> such as eval()"</li>
+                <li>"Finally, it is common practice for modern Web applications to include <strong>third-party JavaScript code using script-tags that point to cross-domain hosts</strong>"</li>
+                <li>"We present the design and implementation of a <strong>dynamic, byte-level taint-tracking approach</strong> in JavaScript engines. Through directly altering the <strong>JavaScript engine’s implementation of the low-level string type</strong>"</li>
+                <li>"Due to our exact <strong>knowledge of data source and syntactical context of the final data sink</strong>, our system can create attack payloads that match <strong>the syntactic surroundings of the injection point</strong>"</li>
+                <li>" Depending on the Web application’s program logic, it processes attacker-controllable inputs <strong>and at some point in time conducts a string-to-code conversion</strong>"</li>
+                <li>"<strong>If input is not sanitized correctly</strong>, the attacker may be able to inject his own code into the application."</li>
+                <li>"Web applications <strong>commonly insert generated HTML code into the DOM via functions such as document.write, innerHTML</strong> or insertAdjacentHTML. When these functions are called, <strong>the browser parses the string parameter and interprets the contents as HTML code, which is then inserted into a certain position within the DOM</strong>. If user input flows into these sinks, sanitization or encoding functions have to be used in order to avoid code injection vulnerabilities. <strong>If the input is not sanitized correctly an attacker is able to inject own HTML tags including \<script\>, which enables JavaScript execution.</strong>" </li>
+                <li> "<strong>eval takes a string parameter, interprets it as JavaScript code and executes it</strong>. Besides <strong><a href="sinksources.html#sinks" target="_blank">eval</a> and its aliases setTimeout and setInterval</strong>, there are also other contexts in which strings are converted into JavaScript code such as script.innerText, script.text, script.textContent and the assignment of strings to event handler attributes." </li>
+                <li>"For <a href="https://www.youtube.com/watch?v=h_HdKzsfxmg&t=257s">vulnerability</a> detection, we utilize a modified browsing engine that supports <strong>dynamic, byte-level tainttracking of suspicious flows</strong>. Through directly <strong>altering the engine’s string type implementation</strong>, we achieve complete coverage of all JavaScript language features and the full DOM API."</li>
+                <li>"Due to the exact knowledge of <strong>data source and syntactical context of the final data sink</strong>, our system is able to create <strong>attack payloads that match the syntactic surroundings of the injection point</strong>"</li>
+                <li>"For this, we modified the open-source browser Chromium in such a manner that its JavaScript engine V8 as well as <strong>the DOM implementation in WebKit</strong> were enhanced with taint-tracking capabilities. For both components of the browser, we selected to use a <strong>byte-wise taint-tracking approach built directly into the respective string representations</strong>. "</li>
+                <li>"<strong>Every object in V8 stores a pointer to its map</strong>. The map describes the class of an object. In V8, there are maps for each type of object. We found an used part of a bitmap in the maps and used it to create new map objects for tainted strings"</li>
+                <li>"After patching the string implementation itself, <strong>we also instrumented the string propagation function such as substring, concat, charAt, etc</strong>. This is necessary to ensure that <strong>the byte-wise taint-tracking information</strong> is also propagated during string conversions."</li>
+                <li>"In contrast to the V8 engine, <strong>WebKit makes frequent use of the concept of member variables for its classes</strong>. Therefore, to allow for the detection of a tainted string, we were able to add such a member denoting whether a string is tainted or not."</li>
+                <li>"This is necessary because <strong>tainted data might be temporarily stored in the DOM before flowing to a sink</strong>, e.g. by setting the href attribute of an anchor and later using this in a document.write. To allow for correct propagation of the taint information, we not only needed to change the string implementation but also modify <strong>the HTML tokenizer</strong>."</li>
+                <li>"There are various reasons why a successful exploitation is not possible for an existing flow. For example, the Web site could use built-in or <strong>custom encoding or filter functions that are capable of defusing a malicious payload.</strong>"</li>
+                <li>"JavaScript context-specific generation is necessary whenever a data flow ends within a sink that interprets a string as JavaScript code. This is the case for functions such as eval & Function, <strong>Event handlers (such as onload and onerror) and DOM properties such as script.textContent, script.text and script.innerText.</strong>"</li>
+                <li>"While browsers are very forgiving when parsing and executing syntactically incorrect HTML, they are quite strict when it comes to JavaScript code execution. If the JavaScript parser encounters a syntax error, it cancels the script execution for the complete block/function"</li>
+                <li>"An HTML context is present whenever a tainted string is directly converted into HTML code."</li>
+                <li>"In order to create a valid exploit, the system needs to <strong>determine into which DOM node the tainted parts will be transformed when the string-to-HTML conversion takes place</strong>"</li>
+                <li>"Every character sequence that is placed outside a tag or a comment or that is <strong>located in between an opening and a closing tag is regarded as a TextNode by the HTML parser.</strong>"</li>
+                <li>"When using innerHTML, outerHTML or <strong>adjacentHTML</strong> browsers react differently than document.write in terms of script execution."</li>
+                <li>"However, <strong>it is still possible to execute scripts via an injection through innerHTML. In order to do so, the framework makes use of event handlers</strong>"</li>
+                <li>"When innerHTML inserts the img tag, <strong>the browser creates an HTTP request to the non-existing resource</strong>. Obviously, <strong>this request will fail and trigger the onerror event handler</strong> that executes the given payload."</li>
+                <li>"We designed our experiment set-up to meet these requirements, utilizing the following components: <strong>Our flow-tracking rendering engine</strong> to identify and record potentially unsafe JavaScripts (as discussed in Sec. 4), <strong>our exploit generation</strong> and <strong>validation framework</strong> (as presented in Sec. 5), and a crawling infrastructure that automatically causes the browsing engine to visit and examine a large set of URLs."</li>
+                <li id="BrokenURLparsing">"As browsers sometimes auto-encode certain parts of user controlled values, it is not possible to inject code into some of the analyzed sources. One example for this is <strong>location.search that is auto-encoded by all browser</strong> except Internet Explorer. Another source that is encoded by every modern browser is <a href="sinksources.html#pathname">location.pathname</a>. <strong>An injection via location.pathname is in general not possible</strong>	 until the application itself decodes the value"</li>
+                <li id="windownameflows">"Within our dataset, we detected a surprisingly high number (>2 million) of flows originating from <strong><a href="sinksources.html#windowname">window.name</a></strong> that we couldn’t explain at first sight. Although some of them were exploitable, we soon discovered the reason for this number. <strong>Most of these flows are not exploitable via DOM XSS</strong> as they are caused by a simple programming error."</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+            </ol>
+        </div>
+        <h2 class="ReflectedXSSExploits"><a href="domxsspapers/8.pdf" target="_blank"> ========= What’s in an Exploit? ========= </a></h2>
+        <div class="ReflectedXSSExploits">
+            <ol>
+                <li>"Presumably due to increased filtering of this tag, in the more recent submissions to OPENBUGBOUNTY, we observe a trend of <strong>replacing the \<script\> tag with \<img\> or \<svg\> tags and indirect code execution using the onload and onerror event handlers</strong>"</li>
+                <li>"Unfortunately, developers often omit input sanitisation entirely, use an incorrect type of escaping, or implement custom sanitisation code that is not sufficient to block the attacks."</li>
+            </ol>
+        </div>
+        <h2 class="HeiderichThesis"><a href="domxsspapers/13.pdf" target="_blank"> ========= Towards Elimination of XSS Attacks ========= </a></h2>
+        <div class="HeiderichThesis">
+        	<ol>
+        		<li>"While a classic XSS attack usually abuses a lack of proper filltering on the server, <strong>DOMXSS only affects client-side vulnerabilities</strong> and most times it is being carried out by the use of properties only the client has access to"</li>
+        		<li id="helloWorldOfDOMXSS">"One example for those properties is the <strong><a href="sinksources.html#locationhash">location.hash</a></strong> string. This string, represented by the part in a URL starting with a sharp character (U+0023), is not being sent to the server but only meant to be used as client-side fragment identfier. <strong>By choosing a location hash that matches the ID of an existing DOM element</strong> on a website, the user agent will attempt to focus that element in case it is visible"</li>
+        		<li id="documentURLIsNoSink"> <strong>The property <a href="sinksources.html#documenturl"> document.URL</a> for instance is no sink on most browsers and it usually is not even a working source</strong>"</li>
+        		<li>""</li>
+        		<li>""</li>
+        		<li>""</li>
+        		<li>""</li>
+        		<li>""</li>
+        		<li>""</li>
+        		<li>""</li>
+        		<li>""</li>
+        		<li>""</li>
+        		<li>""</li>
+        		<li>""</li>
+        		<li>""</li>
+        		<li>""</li>
+        		<li>""</li>
+        		<li>""</li>
+        		<li>""</li>
+        		<li>""</li>
+        	</ol>
+        </div>
+		<h2 class="StaticAnalyisOfJS"><a href="domxsspapers/15.pdf" target="_blank"> ========= Static Analysis of a Dynamic Language ========= </a></h2>
+		<div class="StaticAnalyisOfJS">
+			<ol>
+				<li>"JavaScript is a dynamic and weakly typed language with first-class functions. It has objects, but no <a href="https://www.youtube.com/watch?v=KJzlllc7Jq8&t=770s">classes</a>."</li>
+				<li>""</li>
+				<li>""</li>
+				<li>""</li>
+				<li>""</li>
+				<li>""</li>
+				<li>""</li>
+				<li>""</li>
+				<li>""</li>
+				<li>""</li>
+				<li>""</li>
+				<li>""</li>
+				<li>""</li>
+				<li>""</li>
+			</ol>
+		</div>
+
     </div>
 </body>
 
