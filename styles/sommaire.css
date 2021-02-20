@@ -126,6 +126,14 @@ ol {
         color: #fd971f;
     }
 
+    .UntanglingTheWebOfXSS a:visited {
+        background-color: transparent;
+        text-decoration: none;
+        color: #f92972;
+    }
+    .UntanglingTheWebOfXSS li {
+       margin: 10px 0;
+    }
 
     .HeiderichThesis a:visited,
     .MillionFlowsLater a:visited,
@@ -135,6 +143,7 @@ ol {
         text-decoration: none;
         color: #f92972;
     }
+
 
     .HeiderichThesis li,
     .MillionFlowsLater li,

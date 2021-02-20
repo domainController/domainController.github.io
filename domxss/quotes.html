@@ -10,7 +10,7 @@
 
 <body>
     <div class="quotes">
-    	<h2 class="dontTrustTheLocals"><a href="domxsspapers/6.pdf" target="_blank"> ========= Don’t Trust The Locals =========  </a></h2>
+        <h2 class="dontTrustTheLocals"><a href="domxsspapers/6.pdf" target="_blank"> ========= Don’t Trust The Locals ========= </a></h2>
         <div class="dontTrustTheLocals">
             <ol>
                 <li>"... we leverage <strong>taint tracking</strong> to identify suspicious flows from <strong>client-side persistent storage</strong> (Web Storage, cookies) to dangerous sinks (HTML, JavaScript, andscript.src)"</li>
@@ -58,8 +58,8 @@
                 <li id="sinksensitivefunction">"Each flow has a source, through which an attacker could inject code, and <strong>a sink, a sensitive function that consumes data derived from the source of the flow</strong>"</li>
                 <li>" For example, to exploit a cookie flow, <strong>an attacker must find a way to manipulate the victim’s cookies</strong>; for message flows, an attacker must find a potential flow whose code <strong>does not check the message origin and also send the message at the proper time</strong>, when the receiver is expecting it"</li>
                 <li>"We first discard flows in which <strong>the tainted value is encoded using a built-in encoding method</strong>, for example, the <strong>encodeURIComponent</strong> function; <strong>we are certain that such flows would ordinarily not be exploitable</strong>"</li>
-                <li id="confirmedvulnerableflows">"We next remove from consideration flows that could not be exploited in Chromium due to <strong>Chromium</strong>’s natural 
-                	<strong>encoding of some URL variables</strong> (for example, <strong>Chromium automatically encodes the content of <a href="sinksources.html#locationsearch" >document.location.search</a> to prevent the occurrence of any character that would not be allowed in a URL</strong>). "</li>
+                <li id="confirmedvulnerableflows">"We next remove from consideration flows that could not be exploited in Chromium due to <strong>Chromium</strong>’s natural
+                    <strong>encoding of some URL variables</strong> (for example, <strong>Chromium automatically encodes the content of <a href="sinksources.html#locationsearch">document.location.search</a> to prevent the occurrence of any character that would not be allowed in a URL</strong>). "</li>
                 <li>""</li>
                 <li>""</li>
                 <li>""</li>
@@ -104,18 +104,8 @@
                 <li>"However, <strong>it is still possible to execute scripts via an injection through innerHTML. In order to do so, the framework makes use of event handlers</strong>"</li>
                 <li>"When innerHTML inserts the img tag, <strong>the browser creates an HTTP request to the non-existing resource</strong>. Obviously, <strong>this request will fail and trigger the onerror event handler</strong> that executes the given payload."</li>
                 <li>"We designed our experiment set-up to meet these requirements, utilizing the following components: <strong>Our flow-tracking rendering engine</strong> to identify and record potentially unsafe JavaScripts (as discussed in Sec. 4), <strong>our exploit generation</strong> and <strong>validation framework</strong> (as presented in Sec. 5), and a crawling infrastructure that automatically causes the browsing engine to visit and examine a large set of URLs."</li>
-                <li id="BrokenURLparsing">"As browsers sometimes auto-encode certain parts of user controlled values, it is not possible to inject code into some of the analyzed sources. One example for this is <strong>location.search that is auto-encoded by all browser</strong> except Internet Explorer. Another source that is encoded by every modern browser is <a href="sinksources.html#pathname">location.pathname</a>. <strong>An injection via location.pathname is in general not possible</strong>	 until the application itself decodes the value"</li>
+                <li id="BrokenURLparsing">"As browsers sometimes auto-encode certain parts of user controlled values, it is not possible to inject code into some of the analyzed sources. One example for this is <strong>location.search that is auto-encoded by all browser</strong> except Internet Explorer. Another source that is encoded by every modern browser is <a href="sinksources.html#pathname">location.pathname</a>. <strong>An injection via location.pathname is in general not possible</strong> until the application itself decodes the value"</li>
                 <li id="windownameflows">"Within our dataset, we detected a surprisingly high number (>2 million) of flows originating from <strong><a href="sinksources.html#windowname">window.name</a></strong> that we couldn’t explain at first sight. Although some of them were exploitable, we soon discovered the reason for this number. <strong>Most of these flows are not exploitable via DOM XSS</strong> as they are caused by a simple programming error."</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
             </ol>
         </div>
         <h2 class="ReflectedXSSExploits"><a href="domxsspapers/8.pdf" target="_blank"> ========= What’s in an Exploit? ========= </a></h2>
@@ -127,49 +117,39 @@
         </div>
         <h2 class="HeiderichThesis"><a href="domxsspapers/13.pdf" target="_blank"> ========= Towards Elimination of XSS Attacks ========= </a></h2>
         <div class="HeiderichThesis">
-        	<ol>
-        		<li>"While a classic XSS attack usually abuses a lack of proper filltering on the server, <strong>DOMXSS only affects client-side vulnerabilities</strong> and most times it is being carried out by the use of properties only the client has access to"</li>
-        		<li id="helloWorldOfDOMXSS">"One example for those properties is the <strong><a href="sinksources.html#locationhash">location.hash</a></strong> string. This string, represented by the part in a URL starting with a sharp character (U+0023), is not being sent to the server but only meant to be used as client-side fragment identfier. <strong>By choosing a location hash that matches the ID of an existing DOM element</strong> on a website, the user agent will attempt to focus that element in case it is visible"</li>
-        		<li id="documentURLIsNoSink"> <strong>The property <a href="sinksources.html#documenturl"> document.URL</a> for instance is no sink on most browsers and it usually is not even a working source</strong>"</li>
-        		<li>""</li>
-        		<li>""</li>
-        		<li>""</li>
-        		<li>""</li>
-        		<li>""</li>
-        		<li>""</li>
-        		<li>""</li>
-        		<li>""</li>
-        		<li>""</li>
-        		<li>""</li>
-        		<li>""</li>
-        		<li>""</li>
-        		<li>""</li>
-        		<li>""</li>
-        		<li>""</li>
-        		<li>""</li>
-        		<li>""</li>
-        	</ol>
+            <ol>
+                <li>"While a classic XSS attack usually abuses a lack of proper filltering on the server, <strong>DOMXSS only affects client-side vulnerabilities</strong> and most times it is being carried out by the use of properties only the client has access to"</li>
+                <li id="helloWorldOfDOMXSS">"One example for those properties is the <strong><a href="sinksources.html#locationhash">location.hash</a></strong> string. This string, represented by the part in a URL starting with a sharp character (U+0023), is not being sent to the server but only meant to be used as client-side fragment identfier. <strong>By choosing a location hash that matches the ID of an existing DOM element</strong> on a website, the user agent will attempt to focus that element in case it is visible"</li>
+                <li id="documentURLIsNoSink"> <strong>The property <a href="sinksources.html#documenturl"> document.URL</a> for instance is no sink on most browsers and it usually is not even a working source</strong>"</li>
+            </ol>
         </div>
-		<h2 class="StaticAnalyisOfJS"><a href="domxsspapers/15.pdf" target="_blank"> ========= Static Analysis of a Dynamic Language ========= </a></h2>
-		<div class="StaticAnalyisOfJS">
-			<ol>
-				<li>"JavaScript is a dynamic and weakly typed language with first-class functions. It has objects, but no <a href="https://www.youtube.com/watch?v=KJzlllc7Jq8&t=770s">classes</a>."</li>
-				<li>""</li>
-				<li>""</li>
-				<li>""</li>
-				<li>""</li>
-				<li>""</li>
-				<li>""</li>
-				<li>""</li>
-				<li>""</li>
-				<li>""</li>
-				<li>""</li>
-				<li>""</li>
-				<li>""</li>
-				<li>""</li>
-			</ol>
-		</div>
-
+        <h2 class="StaticAnalyisOfJS"><a href="domxsspapers/15.pdf" target="_blank"> ========= Static Analysis of a Dynamic Language ========= </a></h2>
+        <div class="StaticAnalyisOfJS">
+            <ol>
+                <li>"JavaScript is a dynamic and weakly typed language with first-class functions. It has objects, but no <a href="https://www.youtube.com/watch?v=KJzlllc7Jq8&t=770s">classes</a>."</li>
+            </ol>
+        </div>
+        <h2 class="UntanglingTheWebOfXSS"><a href="domxsspapers/3.pdf" target="_blank"> ========= Untangling The Web Of XSS ========= </a></h2>
+        <div class="UntanglingTheWebOfXSS">
+            <ol>
+                <li id="analysisofvulnjs">"They find that <strong>the most common usage for <a href="sinksources.html#eval">eval</a> is the parsing of JSON</strong>, although the JSON.parse method provides an equivalent, yet secure functionality."</li></ol>
+                <li>"In addition to the Same-Origin Policy for JavaScript interaction and DOM access between documents, other types of Same-Origin Policies exist for XmlHttpRequests (van Kesteren et al., 2014) or Flash (Zalewski, 2009b). <strong>For XmlHttpRequests, the policy can be relaxed using Cross-Origin Resource Sharing</strong> (van Kesteren, 2014) <strong>to allow cross-domain communication</strong>"</li>
+                <li>"Essentially, <strong>this type of attack constitutes a bypass of the Same-Origin Policy</strong> since the code injected by the attacker is used to gain access to resources which would normally not be accessible to it."</li>
+                <li>"<strong>Non-persistent Server-Side Cross-Site Scripting</strong> As the name of this type of Cross-Site Scripting, which is also often referred to as Reflected Cross-Site Scripting, correctly suggest, this variant does not persistently store the attacker’s XSS payload on the server". In contrast, vulnerabilities of this kind are caused by Web pages which <strong>consume user-provided input (such as a GET parameter) and subsequently reflect or echo it back to the user</strong>.</li>
+                <li>"The term taint tracking refers to a technique which is used to track the flow of data throughout the execution of a program (Schwartz et al., 2010). The process can conceptually be split up into <strong>three stages: taint introduction, taint propagation and taint checking</strong>."</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+            </ol>
+        </div>
     </div>
 </body>
 
