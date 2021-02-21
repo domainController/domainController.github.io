@@ -17,6 +17,8 @@
                     <a href="domxsspapers/taintDexterJS.pdf#page=2" target="_blank">(DexterJS)</a></li>
                 <li>"DOM-based XSS, which is <strong>a subtype of Cross-site Scripting (XSS) problems that results from unsafe processing of untrusted data</strong> from sources controlled by the attacker."
                     <a href="domxsspapers/taintDexterJS.pdf#page=2" target="_blank">(DexterJS)</a></li>
+                <li>a vulnerability class subsuming all Cross-site Scripting problems that are caused by insecure handling of untrusted data through JavaScript
+                	<a href="domxsspapers/taint25M.pdf" target="_blank">(taint25M)</a></li>
             </ol>
         </div>
         <h2 class="ExploitDefinition"> ========= Exploit ========= </h2>
@@ -33,12 +35,33 @@
                 <li>"the source locations of incoming data"
                     <a href="domxsspapers/detectionDOM.pdf#page=4" target="_blank">(DomXssMicro)</a>
                 </li>
+                <li>"the Source denotes a code fragment, which embodies a vulnerable node from the DOM abstraction, implemented on the client-side of the Web-App. It represents the <strong>start node of a possible data flow</strong>, where an untrusted, malicious input data is collected and with greater likelihood acquired for processing of the Web-Application."
+                    <a href="domxsspapers/domxssAttacks.pdf#page=26" target="_blank">(DOM XSS Attacks)</a>
+                </li>
+                <li>"In software security the sources are to be considered starting points where untrusted input data is taken by an application."
+                    <a href="https://code.google.com/archive/p/domxsswiki/wikis/Sources.wiki" target="_blank">(Google DOM XSS Wiki)</a></li>
+            </ol>
+        </div>
+        <h2 class="SinkDefinition"> ========= Sink ========= </h2>
+        <div class="SinkDefinition">
+            <ol>
+                <li>"Sinks are meant to be the points in the flow where data depending from sources is used in a potentially dangerous way resulting in loss of Confidentiality, Integrity or Availability (the CIA triad)."
+                    <a href="https://code.google.com/archive/p/domxsswiki/wikis/Sources.wiki" target="_blank">(Google DOM XSS Wiki)</a>
+                </li>
             </ol>
         </div>
         <h2 class="PropagationDefinition"> ========= Propagation ========= </h2>
         <div class="PropagationDefinition">
             <ol>
                 <li>"the statements which propagate tainted values from the source to the sink without modifying them"
+                    <a href="domxsspapers/detectionDOM.pdf#page=4" target="_blank">(DomXssMicro)</a>
+                </li>
+            </ol>
+        </div>
+        <h2 class="ContextDefinition"> ========= Context ========= </h2>
+        <div class="ContextDefinition">
+            <ol>
+                <li>"represents the surrounding context where the tainted content locates
                     <a href="domxsspapers/detectionDOM.pdf#page=4" target="_blank">(DomXssMicro)</a>
                 </li>
             </ol>

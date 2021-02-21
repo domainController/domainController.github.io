@@ -11,7 +11,40 @@
 <body>
     <table class="content-table">
         <tbody>
-        	<caption>Extension Tainted flow Analysers</caption>
+            <caption>Taint Tracking Systems</caption>
+            <tr class=javascript>
+                <td><a href="domxsspapers/stockLocals.pdf"></a>Persistent DOMXSS</td>
+                <td><a href="domxsscanners.html" target="_blank">Exploit Gen & Taint engine</a></td>
+                <td><a href="https://swag.cispa.saarland/" target="_blank">CISPA</a></td>
+                <td>2020</td>
+                <td><a href="https://github.com/cispa/persistent-clientside-xss" target="_blank">16</a> </td>
+            </tr>
+            <tr class=javascript>
+                <td><a href="https://github.com/neraliu/tainted-phantomjs"></a>Tainted Chromium</td>
+                <td><a href="domxsscanners.html" target="_blank">Chromium</a></td>
+                <td><a href="https://www.slideshare.net/legiap1806/dom-based-xss" target="_blank">Carnegie Mellon University</a></td>
+                <td>2018</td>
+                <td><a href="https://github.com/wrmelicher/ChromiumTaintTracking" target="_blank">14</a> </td>
+            </tr>
+            <tr class=javascript>
+                <td><a href="https://www.worldscientific.com/doi/abs/10.1142/9789814733878_0035"></a>Tainted PhantomJS</td>
+                <td><a href="domxsscanners.html" target="_blank">PhantomJS</a></td>
+                <td><a href="https://www.slideshare.net/legiap1806/dom-based-xss" target="_blank">Ri-Zhan Dong, Jie Ling & Yi Liu</a></td>
+                <td>2016</td>
+                <td><a href="https://github.com/neraliu/tainted-phantomjs" target="_blank">53</a> </td>
+            </tr>
+            <tr class=javascript>
+                <td><a href="https://github.com/neraliu/tainted-phantomjs" target="_blank"></a>tainted DexterJS </td>
+                <td><a href="domxsspapers/taintDexterJS.pdf" target="_blank">Selenium/Mitmproxy</a></td>
+                <td><a href="https://www.youtube.com/watch?v=73BsDij5Fu4" target="_blank">University of Singapore</a></td>
+                <td>2015</td>
+                <td><a href="https://drive.google.com/drive/u/0/folders/0B_DZv_UIhF_iZnZhbllLZWJqR3c" target="_blank">N/A</a> </td>
+            </tr>
+        </tbody>
+    </table> 
+    <table class="content-table">
+        <tbody>
+            <caption>Data flow Analysis Extensions</caption>
             <tr class="javascript">
                 <td>untrusted types</td>
                 <td><a href="domxsscanners.html" target="_blank">chrome extension</a></td>
@@ -35,12 +68,9 @@
             </tr>
         </tbody>
     </table>
-    <br>
-    <br>
-
     <table class="content-table">
         <tbody>
-            <caption>Others Open Source Tools</caption>
+            <caption>Pattern Matching</caption>
             <tr class=shell>
                 <td><a href="http://www.justanotherhacker.com/" target="_blank">graudit</a></td>
                 <td><a href="https://github.com/wireghoul/" target="_blank">shell</a></td>
@@ -48,6 +78,32 @@
                 <td>2021</td>
                 <td><a href="https://github.com/wireghoul/graudit" target="_blank">738</a></td>
             </tr>
+            <tr class=shell>
+                <td>finDOM-XSS</td>
+                <td>shell</td>
+                <td>dwisiswant0</td>
+                <td>2021</td>
+                <td><a href="https://github.com/dwisiswant0/findom-xss" target="_blank">264</a></td>
+            </tr>
+            <tr class="python">
+                <td><a href="semgrep.html" target="_blank">semgrep</a></td>
+                <td><a href="https://semgrep.dev/editor#category-3" target="_blank">python/OCaml</a></td>
+                <td><a href="https://www.youtube.com/results?search_query=yoan+padioleau" target="_blank">Yoann Padioleau</a></td>
+                <td>2019</td>
+                <td><a href="https://github.com/returntocorp/semgrep" target="_blank">3200</a></td>
+            </tr><!-- 
+            <tr class=ql>
+                <td><a href="https://github.com/OWASP/ASST">CodeQL</a></td>
+                <td><a href="https://codeql.github.com/docs/codeql-overview/about-codeql/" target="_blank">QL</a></td>
+                <td><a href="https://www.youtube.com/watch?v=XrAB8_BHxfo" target="_blank">Semmle</a></td>
+                <td>2007</td>
+                <td><a href="https://github.com/marketplace/lgtm" target="_blank">Marketplace</a> </td>
+            </tr> -->
+        </tbody>
+    </table>
+    <table class="content-table">
+        <tbody>
+            <caption>other tools </caption><!-- 
             <tr class=javascript>
                 <td><a href="https://github.com/fraxken/js-x-ray" target="_blank">js-x-ray</a></td>
                 <td><a href="https://github.com/fraxken/js-x-ray" target="_blank">javascript</a></td>
@@ -61,25 +117,21 @@
                 <td><a href="https://www.youtube.com/watch?v=XrAB8_BHxfo" target="_blank">Tarik Seyceri</a></td>
                 <td>2020</td>
                 <td><a href="https://github.com/OWASP/ASST" target="_blank">21</a> </td>
-            </tr>
-            <tr class=shell>
-                <td>finDOM-XSS</td>
-                <td>shell</td>
-                <td>2021</td>
-                <td><a href="https://github.com/dwisiswant0/findom-xss" target="_blank">264</a></td>
-            </tr>
+            </tr> -->
             <tr class=javascript>
                 <td>domdig</td>
                 <td><a href="puppeteerdomxss.html" target="_blank">puppeteer</a></td>
+                <td><a href="https://fcvl.net/">Filippo Cavallarin</a></td>
                 <td>2021</td>
                 <td><a href="https://github.com/fcavallarin/domdig" target="_blank">216</a></td>
             </tr>
             <tr class=javascript>
                 <td>crosser</td>
                 <td><a href="puppeteerdomxss.html" target="_blank">puppeteer</a></td>
+                <td><a href="https://iwantmore.pizza/">Francesco Soncina</a></td>
                 <td>2020</td>
                 <td><a href="https://github.com/phra/crosser" target="_blank">27</a></td>
-            </tr>
+            </tr><!-- 
             <tr class=go>
                 <td><a href="https://huskyci.opensource.globo.com/" target="_blank">huskyCI</a></td>
                 <td><a href="https://opensource.globo.com/" target="_blank">go</a></td>
@@ -92,7 +144,7 @@
                 <td><a href="https://github.com/msAlcantara" target="_blank">Matheus Alcantara</a></td>
                 <td>2021</td>
                 <td><a href="https://github.com/insidersec/insider" target="_blank">206</a> </td>
-            </tr>
+            </tr> -->
         </tbody>
     </table>
 </body>

@@ -59,7 +59,7 @@
 
     caption {
         font-size: 16px;
-        color: #f92972;
+        color: #f8f8f2;
     }
 
     .orange,
@@ -67,11 +67,7 @@
         color: #fd971f;
     }
 
-    .quotes a:visited {
-        background-color: transparent;
-        text-decoration: none;
-        color: #f92972;
-    }
+
 
     .blue,
     .blue a:visited {
@@ -156,6 +152,11 @@
         color: #f92672;
     }
 
+    .python a:visited {
+        color: #f92672;
+    }
+    
+
     .javascript a:visited {
         color: #a6e22e;
     }
@@ -180,6 +181,13 @@
         color: #66d9ef;
     }
 
+    .ql{
+        color: #ae81ff;
+    }
+
+    .ql a:visited{
+        color: #ae81ff;
+    }
     .his {
         background-color: #708090;
         color: #3e3d32;
