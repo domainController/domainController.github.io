@@ -121,16 +121,21 @@ ol {
     color: #fd5ff0;
 }
 
-
+    .definition h2 a:visited,
     .quotes h2 a:visited {
         color: #fd971f;
     }
 
+    .ExploitDefinition a:visited,
+    .DOMXSSdefinition a:visited,
     .UntanglingTheWebOfXSS a:visited {
         background-color: transparent;
         text-decoration: none;
         color: #f92972;
     }
+
+    .ExploitDefinition li,
+    .DOMXSSdefinition li,
     .UntanglingTheWebOfXSS li {
        margin: 10px 0;
     }

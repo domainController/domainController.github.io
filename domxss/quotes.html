@@ -32,10 +32,29 @@
                 <li>"Abstractly speaking, an XSS attack occurs <strong>if some attacker controllable piece of data flows into a dangerous sink</strong>. On the client, these sinks can be classified into three <a href="https://www.youtube.com/watch?v=bouTxh76yeU&t=253s">categories</a>: <strong>rendering of HTML, execution of JavaScript, and the inclusion of additional script resources</strong>"</li>
                 <li>"We then relate this concept to its server-side counterpart and introduce two<strong> attacker models</strong>, which enable <strong>storing payloads in her victim’s persistence APIs</strong>, allowing for a persistent XSS attack"</li>
                 <li>"An XSS attacker’s goal is often to <strong>hijack the session of their victim</strong>, i.e., steal the authentication cookies. This problem <strong>is mitigated by the use of HTTP-only cookies</strong>, which ensure that cookies cannot be accessed from JavaScript and are therefore out of reach of the adversary"</li>
-                <li>"This attack becomes more powerful if the attacker conducts a <strong>resident XSS attack</strong> [23], which leverages the existing XSS to ensure that all links a user may visit are also XSS-infested. "</li>
+                <li>"This attack becomes more powerful if the attacker conducts a <a href="https://media.ccc.de/v/28c3-4811-en-rootkits_in_your_web_application">resident</a> <strong>XSS attack</strong> [23], which leverages the existing XSS to ensure that all links a user may visit are also XSS-infested. "</li>
                 <li>"If, however, <strong>the malicious payload is persisted on the client</strong>, i.e., in cookies or Local Storage, <strong>the XSS attacker’s code is revived on every subsequent load of the flawed site</strong>, even without the necessity to add the payload to, e.g., the URL"</li>
                 <li>"Although in general, Session Storage allows to persist data on the client, <strong>it is bound to a browsing window and deleted when said window is closed."</strong></li>
                 <li>"A network-level adversary is able to inject arbitrary packets into any unencrypted connection between a client and server. "</li>
+                <li>"<strong>Such vulnerabilities occur when an adversary’s input is not filtered or encoded before being written to persistent storage</strong>, such as a SQL database"</li>
+				<li>" At the same time, <strong>when the JavaScript code</strong> causing the vulnerable flow from storage to sink is included in every page of a domain, a single injection means that regardless of which URL on the domain is visited, the attack succeeds (assuming the JavaScript snippet causing the flow is included)."</li>
+				<li>"Cookies can be manipulated either by setting them <strong>in the faked HTTP response</strong>, or by delivering JavaScript code which achieves the same"</li>
+				<li>" The ability to inject arbitrary cookies is hindered by <strong>HTTP Strict Transport Security</strong> (abbreviated HSTS) [22]. This HTTP header ensures that a site <strong>will only be accessible via HTTPS</strong>."</li>
+				<li>"On top of this, we build a crawling extension, which recursively crawls a given domain, and reports all found data flows to a database."</li>
+				<li>"Our engine is based on Chromium and is capable of attaching taint information to strings. Moreover, all JavaScript string operations (e.g., concatenation or substrings) as well as the built-in encoding functions like escape pass on the taint. We taint all values from relevant sources (e.g., Local Storage and cookies). We modified Chromium to report invocations with tainted data to numerous sinks. Specifically, this includes all sinks which allow for creation of HTML (e.g., document.write or innerHTML, execution of JavaScript code (e.g., eval) as well as adding additional script resources (via script.src). Apart from these flows which might lead to a direct JavaScript execution, the engine also collects those flows that end in a persistent storage, specifically cookies and Local Storage. On top of this, we build a crawling extension, which recursively crawls a given domain, and reports all found data flows to a database."</li>
+				<li>"To craft an exploit, our original approach would generate a sequence <strong>which breaks out of the existing context</strong> and subsequently calls some function, e.g., alert."</li>
+				<li>"In order to determine how many of these flows could, in fact, be exploited, we first determined how many domains would be attackable by an unlimited adversary, i.e., <strong>an adversary capable of modifying cookies or Local Storage for arbitrary origins</strong>. To that end, we used a Chrome extension to first visit each URL in question, modify the storage accordingly, and reload the site"</li>
+				<li>" First, since cookies are sent along to the server in every HTTP request, <strong>they are subject to inspection by deployed Web Application Firewalls</strong> (WAFs). Although we did not specifically record when a page was not loaded due to our cookies containing JavaScript or HTML markup, sampling sites on which our payload had not triggered frequently led to error pages clearly caused by WAFs"</li>
+				<li>"Considering the Network Attacker, we found that 293 of the 418 domains would, in fact, be exploitable, either due to a complete lack of HTTPS or due to a missing or incomplete (<strong>no includeSubDomains</strong>) deployment of HSTS, which allows for an HTTP-hosted site to set cookies for its HTTPS counterpart and parents."</li>
+				<li>""</li>
+				<li>""</li>
+				<li>""</li>
+				<li>""</li>
+				<li>""</li>
+				<li>""</li>
+				<li>""</li>
+				<li>""</li>
+				<li>""</li>
             </ol>
         </div>
         <h2 class="ChromiumTaintTracking"><a href="domxsspapers/21.pdf" target="_blank"> ========= Riding out DOMsday ========= </a></h2>
@@ -113,6 +132,7 @@
             <ol>
                 <li>"Presumably due to increased filtering of this tag, in the more recent submissions to OPENBUGBOUNTY, we observe a trend of <strong>replacing the \<script\> tag with \<img\> or \<svg\> tags and indirect code execution using the onload and onerror event handlers</strong>"</li>
                 <li>"Unfortunately, developers often omit input sanitisation entirely, use an incorrect type of escaping, or implement custom sanitisation code that is not sufficient to block the attacks."</li>
+                <li>"In DOM-based client XSS, several works [14, 15, 20] reported characteristics of exploitable data flows, such as the source and sink types, and cognitive complexity. <strong>In our context of reflected server XSS, data flows and transformations occur in (hidden) server-side code, thus we need different methods</strong>"</li>
             </ol>
         </div>
         <h2 class="HeiderichThesis"><a href="domxsspapers/13.pdf" target="_blank"> ========= Towards Elimination of XSS Attacks ========= </a></h2>

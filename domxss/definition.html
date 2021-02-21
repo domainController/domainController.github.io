@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definition</title>
+    <link rel="stylesheet" type="text/css" href="../styles/sommaire.css">
+</head>
+
+<body>
+    <div class="definition">
+        <h2 class="DOMXSSdefinition"> ========= DOM XSS ========= </h2>
+        <div class="DOMXSSdefinition">
+            <ol>
+                <li>"DOM-based XSS <strong>can be seen as an information flow problem where portions of strings</strong> — potentially under attacker’s control (e.g., URL, cookie value) — <strong>are being evaluated as code through JavaScript code evaluation functions</strong> like eval() <strong>or being used in unsafe dynamic DOM constructions</strong>, such as via document.write or innerHTML"
+                    <a href="domxsspapers/taintDexterJS.pdf#page=2" target="_blank">(DexterJS)</a></li>
+                <li>"DOM-based XSS, which is <strong>a subtype of Cross-site Scripting (XSS) problems that results from unsafe processing of untrusted data</strong> from sources controlled by the attacker."
+                    <a href="domxsspapers/taintDexterJS.pdf#page=2" target="_blank">(DexterJS)</a></li>
+            </ol>
+        </div>
+        <h2 class="ExploitDefinition"> ========= Exploit ========= </h2>
+        <div class="ExploitDefinition">
+            <ol>
+                <li>"Exploit = BreakOutSequence + AttackVector + EscapeSequence"
+                    <a href="domxsspapers/taintDexterJS.pdf#page=3" target="_blank">(DexterJS)</a>
+                </li>
+            </ol>
+        </div>
+        <h2 class="SourceDefinition"> ========= Source ========= </h2>
+        <div class="SourceDefinition">
+            <ol>
+                <li>"the source locations of incoming data"
+                    <a href="domxsspapers/detectionDOM.pdf#page=4" target="_blank">(DomXssMicro)</a>
+                </li>
+            </ol>
+        </div>
+        <h2 class="PropagationDefinition"> ========= Propagation ========= </h2>
+        <div class="PropagationDefinition">
+            <ol>
+                <li>"the statements which propagate tainted values from the source to the sink without modifying them"
+                    <a href="domxsspapers/detectionDOM.pdf#page=4" target="_blank">(DomXssMicro)</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</body>
+
+</html>
