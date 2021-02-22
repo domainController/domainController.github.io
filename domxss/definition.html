@@ -14,18 +14,19 @@
         <div class="DOMXSSdefinition">
             <ol>
                 <li>"DOM-based XSS <strong>can be seen as an information flow problem where portions of strings</strong> — potentially under attacker’s control (e.g., URL, cookie value) — <strong>are being evaluated as code through JavaScript code evaluation functions</strong> like eval() <strong>or being used in unsafe dynamic DOM constructions</strong>, such as via document.write or innerHTML"
-                    <a href="domxsspapers/taintDexterJS.pdf#page=2" target="_blank">(DexterJS)</a></li>
+                    <a href="domxsspapers/taintDexterJS1.pdf#page=2" target="_blank">(DexterJS1)</a></li>
                 <li>"DOM-based XSS, which is <strong>a subtype of Cross-site Scripting (XSS) problems that results from unsafe processing of untrusted data</strong> from sources controlled by the attacker."
-                    <a href="domxsspapers/taintDexterJS.pdf#page=2" target="_blank">(DexterJS)</a></li>
+                    <a href="domxsspapers/taintDexterJS1.pdf#page=2" target="_blank">(DexterJS1)</a></li>
                 <li>a vulnerability class subsuming all Cross-site Scripting problems that are caused by insecure handling of untrusted data through JavaScript
-                	<a href="domxsspapers/taint25M.pdf" target="_blank">(taint25M)</a></li>
+                    <a href="domxsspapers/taint25M.pdf" target="_blank">(taint25M)</a></li>
+                <li>"DOM-based XSS is a code injection vulnerability in which a web attacker is able to inject malicious JavaScript in a client’s web session."<a href="domxsspapers/taintDexterJS2.pdf#page=2" target="_blank">(DexterJS2)</a></li>
             </ol>
         </div>
         <h2 class="ExploitDefinition"> ========= Exploit ========= </h2>
         <div class="ExploitDefinition">
             <ol>
                 <li>"Exploit = BreakOutSequence + AttackVector + EscapeSequence"
-                    <a href="domxsspapers/taintDexterJS.pdf#page=3" target="_blank">(DexterJS)</a>
+                    <a href="domxsspapers/taintDexterJS1.pdf#page=3" target="_blank">(DexterJS1)</a>
                 </li>
             </ol>
         </div>
@@ -63,6 +64,39 @@
             <ol>
                 <li>"represents the surrounding context where the tainted content locates
                     <a href="domxsspapers/detectionDOM.pdf#page=4" target="_blank">(DomXssMicro)</a>
+                </li>
+            </ol>
+        </div>
+        <h2 class="DynamicAnalysisDefinition"> ========= Dynamic Analysis ========= </h2>
+        <div class="DynamicAnalysisDefinition">
+            <ol>
+                <li>"the ability to monitor code as it executes"
+                    <a href="domxsspapers/taintAnalysis.pdf" target="_blank">(DynamicTaintAnalysis)</a>
+                </li>
+            </ol>
+        </div>
+        <h2 class="dynamicTaintAnalysisDefinition"> ========= Dynamic Taint Analysis ========= </h2>
+        <div class="dynamicTaintAnalysisDefinition">
+            <ol>
+                <li>"runs a program and observes which computations are affected by predefined taint sources such as user input"
+                    <a href="domxsspapers/taintAnalysis.pdf" target="_blank">(DynamicTaintAnalysis)</a>
+                </li>
+            </ol>
+        </div>
+        <h2 class="reviewsOfWebCrawlersDefinition"> ========= Web crawlers ========= </h2>
+        <div class="reviewsOfWebCrawlersDefinition">
+            <ol>
+                <li>"is a programme or a suit of programmes that is used to retrieve contents of web pages"
+                    <a href="domxsspapers/crawler/crawlersReview.pdf" target="_blank">(Reviews of Web Crawlers)</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+        <h2 class="focusedWebCrawlersDefinition"> ========= Focused Web crawlers ========= </h2>
+        <div class="focusedWebCrawlersDefinition">
+            <ol>
+                <li>"<a href="https://en.wikipedia.org/wiki/Focused_crawler">is</a> a type of web crawler that crawls web pages which are specific to a pre-defined topic or domain."
+                    <a href="domxsspapers/crawler/crawlersReview.pdf" target="_blank">(Reviews of Web Crawlers)</a>
                 </li>
             </ol>
         </div>

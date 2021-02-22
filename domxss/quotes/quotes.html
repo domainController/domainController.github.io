@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quotes</title>
+    <link rel="stylesheet" type="text/css" href="../styles/sommaire.css">
+</head>
+
+<body>
+    <div class="quotes">
+        <h2 class="HeiderichThesis"><a href="domxsspapers/13.pdf" target="_blank"> ========= Towards Elimination of XSS Attacks ========= </a></h2>
+        <div class="HeiderichThesis">
+            <ol>
+                <li>"While a classic XSS attack usually abuses a lack of proper filltering on the server, <strong>DOMXSS only affects client-side vulnerabilities</strong> and most times it is being carried out by the use of properties only the client has access to"</li>
+                <li id="helloWorldOfDOMXSS">"One example for those properties is the <strong><a href="sinksources.html#locationhash">location.hash</a></strong> string. This string, represented by the part in a URL starting with a sharp character (U+0023), is not being sent to the server but only meant to be used as client-side fragment identfier. <strong>By choosing a location hash that matches the ID of an existing DOM element</strong> on a website, the user agent will attempt to focus that element in case it is visible"</li>
+                <li id="documentURLIsNoSink"> <strong>The property <a href="sinksources.html#documenturl"> document.URL</a> for instance is no sink on most browsers and it usually is not even a working source</strong>"</li>
+            </ol>
+        </div>
+        <h2 class="StaticAnalyisOfJS"><a href="domxsspapers/15.pdf" target="_blank"> ========= Static Analysis of JS ========= </a></h2>
+        <div class="StaticAnalyisOfJS">
+            <ol>
+                <li>"JavaScript is a dynamic and weakly typed language with first-class functions. It has objects, but no <a href="https://www.youtube.com/watch?v=KJzlllc7Jq8&t=770s">classes</a>."</li>
+            </ol>
+        </div>
+    </div>
+</body>
+
+</html>

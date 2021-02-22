@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChromiumTaintTracking</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/sommaire.css">
+</head>
+
+<body>
+    <div class="quotes">
+        <h2 class="ChromiumTaintTracking"><a href="../domxsspapers/21.pdf" target="_blank"> ========= Riding out DOMsday ========= </a></h2>
+        <div class="ChromiumTaintTracking">
+            <ol>
+                <li>"Preventing XSS typically requires website owners to not only sanitize all untrusted inputs to their web application, but also to sanitize all input that could be received <strong>by the client’s JavaScript <a href="https://www.youtube.com/watch?v=3bVcTFOKRyo&t=351s" target="_blank">interpreter—</a></strong>"</li>
+                <li>". The existence of such flows only indicates that data from a source can reach a sink, but does not account for <strong>whether the data has been sanitized by the programmer</strong>. Thus, once a flow with a potential DOM XSS vulnerability is observed, <strong>the flow must be confirmed to be exploitable</strong>"In this paper, we show how to more accurately detect whether <strong>a flow that is potentially vulnerable is capable of being exploited.</strong></li>
+                <li>"..., we focus, similarly to <a href="https://www.youtube.com/watch?v=FxJAeWOop1Y">prior work</a> [22], on confirming flows from <a href="../sinksources.html" target="_blank">URL-based sources</a>. These are of particular interest because, compared to other flows, they are easy for attackers to exploit"</li>
+                <li>"We crawled <strong>the homepages and five random subpages</strong> of websites"</li>
+                <li>"In addition, we qualitatively examined the code paths that led to the vulnerabilities. We observed, for example, that <strong>most of the vulnerabilities did not share code</strong>, implying that the vulnerabilities we found are <strong>due to custom code</strong>, rather than the inclusion of buggy shared libraries"</li>
+                <li>"However, some static tools were shown to have low false negative rates and at the same time identify DOM XSS issues not found by the dynamic analysis, suggesting that <strong>dynamic analyses and static analyses are finding qualitatively different types of vulnerabilities.</strong>"</li>
+                <li>"We develop a <strong>modified version of Chromium for tracking the taint information of strings</strong>, which we are releasing as open source.1"</li>
+                <li>"<a href="https://www.youtube.com/watch?v=ergeHSRr1a0&t=391s" target="_blank">Sinks</a> can include <strong>any mechanism to execute arbitrary code</strong>, for example: the eval function, document.write, JavaScript event handlers (e.g., the “onclick” attribute), and URLs that have a JavaScript scheme (e.g., <a href='javascript:...'></a>)."</li>
+                <li>"Server-side taint-tracking and static-analysis techniques <strong>fundamentally cannot be applied for detecting client-side vulnerabilities</strong> [14], [37]"</li>
+                <li>" However,web-application firewalls are known to allow many attacks <strong>due to their reliance on simple pattern matching</strong> [13], [18]."</li>
+                <li><strong>The state of the art for detecting DOM XSS vulnerabilities is using dynamic taint tracking</strong>. This technique marks potentially attacker-controlled sources as “tainted” and propagates information about tainted values throughout the program</li>
+                <li>"Other work, building upon a system for detecting DOM XSS vulnerabilities using <strong>browser-agnostic taint tracking</strong> [29], provided a method to track taint information and inject an extension that sanitizes injected strings at run time just before those strings are inserted into the sensitive sink functions [28]."</li>
+                <li>Additionally, prior work quantitatively examined DOM XSS vulnerabilities [35], finding that while <strong>many vulnerabilities are of low complexity, some are the result of highly complex JavaScript interactions</strong>. The researchers found that many DOM XSS bugs are the result of <strong>vulnerable third-party scripts, missing knowledge about browser-provided APIs, unaware developers, or incompatible first- and third-party code</strong>.</li>
+                <li>"However, <strong>the degree to which static-analysis tools can detect and prevent real DOM XSS vulnerabilities is unknown</strong>. In addition, JavaScript as a programming language <strong>has traditionally been difficult to statically analyze because of its dynamic features</strong> (for example,widespread use of the eval function and reliance on dynamic typing)."</li>
+                <li id="sinksensitivefunction">"Each flow has a source, through which an attacker could inject code, and <strong>a sink, a sensitive function that consumes data derived from the source of the flow</strong>"</li>
+                <li>" For example, to exploit a cookie flow, <strong>an attacker must find a way to manipulate the victim’s cookies</strong>; for message flows, an attacker must find a potential flow whose code <strong>does not check the message origin and also send the message at the proper time</strong>, when the receiver is expecting it"</li>
+                <li>"We first discard flows in which <strong>the tainted value is encoded using a built-in encoding method</strong>, for example, the <strong>encodeURIComponent</strong> function; <strong>we are certain that such flows would ordinarily not be exploitable</strong>"</li>
+                <li id="confirmedvulnerableflows">"We next remove from consideration flows that could not be exploited in Chromium due to <strong>Chromium</strong>’s natural
+                    <strong>encoding of some URL variables</strong> (for example, <strong>Chromium automatically encodes the content of <a href="../sinksources.html#locationsearch">document.location.search</a> to prevent the occurrence of any character that would not be allowed in a URL</strong>). "</li>
+                <li id="adsAnalyticsVector">"We found that the vast majority, 2,645 of 3,219 of our unique vulnerabilities (82%), were found to execute inside iframes with domains that were known to serve web advertisements or perform <a href="../../entrepreneurship/projects.html#blogIdeasFeatures">analytics</a>"</li>
+                <li>"We speculate that this difference is because <strong>JavaScript programs are becoming more complex</strong>, and as a consequence <strong>DOM XSS vulnerabilities are becoming more frequent</strong>."</li>
+                <li>"We interpret this to mean that most DOM XSS vulnerabilities are due to custom code, and not library code that is shared by many domains."</li>
+                <li>"In our test, we visited a large number of web pages but did not attempt to exercise much of the web application’s functionality, for example, by </strong>clicking on fields</strong>, entering data into forms, or sending messages to pages. <strong>It is likely that such activities would reveal more vulnerabilities</strong>."</li>
+                <li>"<a href="https://github.com/pauljt/scanjs">ScanJS</a> generally appears to identify poor coding practices that lead to DOM XSS vulnerabilities, rather than detecting such vulnerabilities"</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+                <li>""</li>
+            </ol>
+        </div>
+    </div>
+</body>
+
+</html>

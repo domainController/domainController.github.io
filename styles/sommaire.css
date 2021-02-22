@@ -126,6 +126,17 @@ ol {
         color: #fd971f;
     }
 
+    .quotes a:visited{
+        background-color: transparent;
+        text-decoration: none;
+        color: #f92972;
+    }
+
+    .quotes li {
+       margin: 10px 0;
+    }
+    
+    .AutoPatchingDOMXSS a:visited,
     .ExploitDefinition a:visited,
     .DOMXSSdefinition a:visited,
     .UntanglingTheWebOfXSS a:visited {
@@ -134,6 +145,8 @@ ol {
         color: #f92972;
     }
 
+
+    .AutoPatchingDOMXSS li,
     .ExploitDefinition li,
     .DOMXSSdefinition li,
     .UntanglingTheWebOfXSS li {
