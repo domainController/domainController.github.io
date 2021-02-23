@@ -12,20 +12,25 @@
     <div class="quotes">
         <h2><a href="https://swag.cispa.saarland/papers/stock2015facepalm.pdf" target="_blank"> ========= DOM XSS Causes ========= </a></h2>
         <ol>
-            <li>"Like most security vulnerabilities, client-side XSS is caused by insecure coding"</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
+            <li>"Like most security vulnerabilities, client-side XSS is caused by <strong>insecure coding</strong>"</li>
+            <li>"The DOM and the current JavaScript engines offer many different methods <strong>to turn arbitrary strings into executable code</strong>.Therefore, <strong>the use of insecure APIs seems natural</strong> to an average developer for solving common problems like the interaction with the page (e.g. using  innerHTML)or parsing JSON (e.g. using eval)."</li>
+            <li>"The combination of the browser's Document Object Model API (or <strong>DOM API</strong> ), the highly </strong>dynamic nature of JavaScript</strong>, and the process in which </strong>Web content is assembled on the fly within the browser</strong>, frequently leads to non-obvious control and data ows that can potentially cause security problems"</li>
+            <li>"From a conceptual standpoint, XSS is caused when <strong>an unfiltered data ow occurs from an attacker-controlled source to a security-sensitive sink</strong>."</li>
+            <li>"In the concrete case of client-side XSS, <strong>such a source can be</strong>, e.g., <strong>the URL</strong>, whereas an example for a sink is eval or document.write. Both <strong>these APIs accept strings as parameters</strong>, which are subsequently parsed and executed as code</strong> (JavaScript and HTML, respectively). Therefore, <strong>passing attacker-controllable input to such functions eventually leads to execution of the attacker-provided code</strong>"</li>
+            <li id="cookiesWebStorageDOMXSS">"There are additional sinks, which do not allow for <a href="../sinksources.html#eval" target="_blank">direct code execution</a> (such as cookies or <a href="../sinksources.html#WebStorage2">Web Storage</a>)."</li>
+            <li>"In order to spot a vulnerability, an <strong>analyst</strong> has to follow the data flow from source to sink and fully understand all operations that are performed on the data, with several properties increasing the diffculty of this task."</li>
+            <li>"An analyst therefore has to decide whether the user-provided data is <strong>filtered or encoded properly</strong> and, thus, must understand all operations conducted on that data."</li>
+            <li>"JavaScript, not unlike any other programming language, employs the concept of functions, which can be used to split up functionality into smaller units. While this is best practice in software engineering, it increases the difficulty <strong>a security auditor has to overcome as he has to understand specifically what each of these units does</strong>"</li>
+            <li>"In order to understand that a certain flow constitutes a vulnerability, an analyst has to inspect all the code between the source and respective sink access."</li>
+            <li>"Manual <strong>identification of vulnerable data flows in case of NLDFs is significantly harder</strong>, as no obvious relationship between the tainted data and at least one of the flow's functions exist"</li>
+            <li>"Furthermore, <strong>non-linear control flows (NLCF) are instances of interrupted JavaScript execution</strong>: A first JavaScript execution thread accesses the tainted data source and <strong>stores it in a semi-persistent location</strong>, such as a closure, event handler or global variable, and later on a second JavaScript thread uses the data in a sink access."</li>
+            <li>"Instances of NLCFs can occur if the flow's code is distributed over several code contexts, e.g., an inline and an external script, or in case of asynchronous handling of events."</li>
+            <li>"Multiflows: <strong>A single sink access may contain more than one piece of user-provided data</strong>. This leaves an attacker with a means of <strong>splitting up his malicious payload to avoid detection</strong>. As we [27] have shown, given the right circumstances, such flows can be used to bypass existing filter solutions such as Chrome's XSSAuditor [1]."</li>
+            <li>"Through the use of the eval function, JavaScript code can be dynamically created at runtime and executed in the same context"</li>
+            <li>"Modern Web applications with <strong>complex client-side code often utilize minification to save bandwidth</strong> when delivering JavaScript code to the clients. In this process, space is conserved by removing white spaces as well as using identifier renaming."</li>
+            <li>"The browser was enhanced to track data originating from sources, across all processing steps in the SpiderMonkey JavaScript engine as well as the <a href="https://www.youtube.com/watch?v=0m62tAZm4bA">Gecko</a> rendering engine, and into sinks"</li>
+            <li>"This includes access to source, calls to both built-in and user-dened functions which operate on a tainted string, as well as stack traces for each operation to allow for <strong>execution context analysis</strong>."</li>
+            <li>"Note, that a linear data flow cannot occur with a non-linear control flow, since this implies no relation between source and sink accessing operations."</li>
             <li>""</li>
             <li>""</li>
             <li>""</li>
