@@ -135,7 +135,7 @@
         text-transform: capitalize;
         border-collapse: collapse;
         margin: 20px 0;
-        min-width: 600px;
+        min-width: 400px;
         border-radius: 5px 5px 0 0;
         overflow: hidden;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
