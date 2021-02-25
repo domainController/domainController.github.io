@@ -1,0 +1,12 @@
+(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!w
+=============================
+location.?[a-z]{4,8}
+location.?[a-z]{4,8}<\li>
+=====================
+sed -l 15 's/$/<\/li>/' domxss.html 
+sed 's/<td>\d<\/td>/<td>\d&nbsp<\/td>/' 
+=====================
+ sed 's/:.*//' utilities.txt # remove all characters after ":"
+ ============================================================
+ for i in `cat urlutilities.txt`; do echo "<li><a href="" target="_blank">$i</a></li>"; done 
+ # add twitter app nam in to href

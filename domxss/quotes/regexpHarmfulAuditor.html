@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regexpHarmfulAuditor</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/sommaire.css">
+</head>
+
+<body>
+    <div class="quotes">
+        <h2><a href="http://collinjackson.com/research/xssauditor.pdf" target="_blank">
+                ========= Regular Expressions Considered Harmful in Client-Side XSS Filters ========= </a></h2>
+        <ol>
+            <li>"In principle, such client-side XSS filters are easy to build. In a refected XSS attack, the same attack code is present <strong>in both the HTTP request to the server and the HTTP response</strong> from the server."</li>
+            <li>"Client-side XSS filters are an important <strong>second line of defense</strong> against XSS attacks"</li>
+            <li>"Instead of using regular expressions to simulate the HTML parser, client-side XSS filters should integrate with the <strong>rendering pipeline</strong> and examine the response after it has been parsed"</li>
+            <li>"Client-side XSS filters that <strong>block injection</strong> typically match <strong>content in an HTTP response with content in the HTTP request</strong> that generated the response."</li>
+            <li>"Existing filters mediate <strong>between the network layer and the browser's HTML parser</strong> (see Figure 2). To determine whether a sequence of bytes in an <strong>HTTP response will be treated as script by the </strong>browser, <strong>these filters simulate the browser's HTML parser</strong>. Unfortunately, the browser's HTML parser is quite complex. <strong>The bytes in the response are decoded into characters, segmented into tokens, and then assembled into a document object model</strong> (DOM) tree. Simulating this pipeline is a trade-off between performance and fidelity."</li>
+            <li>"If the attacker can desynchronize the simulated parser from the actual parser, the attacker can usually bypass the filter."</li>
+            <li>"<strong>Parse Tree Divergence</strong>. Mangling an HTTP response before parsing makes it difficult to predict how the remainder of the response will be interpreted by the browser"</li>
+            <li>"<a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-4074">Parse tree divergence vulnerabilities</a> have been discovered in the IE8 XSS filter in the past, allowing attackers to conduct XSS attacks against web sites that have no \inherent" XSS vulnerabilities [17]"</li>
+            <li>"Instead of <strong>mediating between the network stack and the HTML parser</strong>, we advocate interposing a client-side XSS filter <strong>between the HTML parser and the JavaScript engine</strong>"</li>
+            <li>"The filter mediates between the WebCore component, which contains the HTML parser, and the JavaScriptCore component, which contains the JavaScript engine."</li>
+        </ol>
+    </div>
+</body>
+
+</html>
