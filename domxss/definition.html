@@ -22,6 +22,14 @@
                 <li>"DOM-based XSS is a code injection vulnerability in which a web attacker is able to inject malicious JavaScript in a client’s web session."<a href="domxsspapers/taintDexterJS2.pdf#page=2" target="_blank">(DexterJS2)</a></li>
             </ol>
         </div>
+        <h2 class="XSSDefinition"> ========= XSS ========= </h2>
+        <div class="XSSDefinition">
+            <ol>
+                <li>describes a class of string-based code injection vulnerabilities that let adversaries inject HTML and/or JavaScript into Web content that is not legitimately under their control."
+                    <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">(Reviews of Web Crawlers)</a>
+                </li>
+            </ol>
+        </div>
         <h2 class="ExploitDefinition"> ========= Exploit ========= </h2>
         <div class="ExploitDefinition">
             <ol>
@@ -91,12 +99,51 @@
                 </li>
             </ol>
         </div>
-    </div>
         <h2 class="focusedWebCrawlersDefinition"> ========= Focused Web crawlers ========= </h2>
         <div class="focusedWebCrawlersDefinition">
             <ol>
                 <li>"<a href="https://en.wikipedia.org/wiki/Focused_crawler">is</a> a type of web crawler that crawls web pages which are specific to a pre-defined topic or domain."
                     <a href="domxsspapers/crawler/crawlersReview.pdf" target="_blank">(Reviews of Web Crawlers)</a>
+                </li>
+            </ol>
+        </div>
+        <h2 class="HTMLSanitizersDefinition"> ========= HTML Sanitizers ========= </h2>
+        <div class="HTMLSanitizersDefinition">
+            <ol>
+                <li>"These are libraries used by developers to clean untrusted HTML into HTML that is safe to use within the application. This      category contains examples such as DOMPurify1 and Google Closure2 HTML sanitizer."
+                    <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">(Script Gadget)</a>
+                </li>
+            </ol>
+        </div>
+        <h2 class="BrowserXSSFiltersDefinition"> ========= Browser XSS Filters ========= </h2>
+        <div class="BrowserXSSFiltersDefinition">
+            <ol>
+                <li>"These filters are implemented as part of the browser navigation and rendering, and they attempt to detect an XSS attack and neuter it. Internet Explorer, Edge, and Chrome implement XSS filters as part of their default configuration. Firefox does not have one, but the popular NoScript3 AddOn implements one."
+                    <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">(Script Gadget)</a>
+                </li>
+            </ol>
+        </div>
+        <h2 class="WAFDefinition"> ========= Web Application Firewalls ========= </h2>
+        <div class="WAFDefinition">
+            <ol>
+                <li>"This is software that runs on the server, and attempts to allow benign requests from web trac, while detecting and blocking malicious requests. An example of an open-source Web Application Firewall is ModSecurity4 with OWASP Common Rule Set"
+                    <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">(Script Gadget)</a>
+                </li>
+            </ol>
+        </div>
+        <h2 class="CSPDefinition"> ========= CSP ========= </h2>
+        <div class="CSPDefinition">
+            <ol>
+                <li>"This is a browser feature that a web developer can configure to define a policy that allows the browser to whitelist the JavaScript code that belongs to the application."
+                    <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">(Script Gadget)</a>
+                </li>
+            </ol>
+        </div>
+        <h2 class="DOMclobberingDefinition"> ========= DOM clobbering ========= </h2>
+        <div class="DOMclobberingDefinition">
+            <ol>
+                <li>"allows markup to override variables in JavaScript execution environment, making it possible to trigger specific script behavior"
+                    <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=3" target="_blank">(Script Gadget)</a>
                 </li>
             </ol>
         </div>

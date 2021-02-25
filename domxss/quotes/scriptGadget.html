@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScriptGadget</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/sommaire.css">
+</head>
+
+<body>
+    <div class="quotes">
+        <h2 ><a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf" target="_blank"> ========= Script Gadget ========= </a></h2>
+        <div >
+            <ol>
+            <li>"Because of this, various approaches to mitigate XSS [14, 19, 24, 28, 30] have been proposed as a second line of defense, with <strong>HTML sanitizers, Web Application Firewalls, browser-based XSS filters, and the Content Security Policy</strong> being some prominent examples."</li>
+            <li>"At the core of the presented attack are so-called script gadgets, small fragments of JavaScript contained in the vulnerable site’s legitimate code. Generally speaking, a script gadget is piece of JavaScript code which reacts to the presence of specifically formed DOM content in the Web document. In a gadget-based attack, the adversary <strong>injects apparently harmless HTML markup</strong> into the vulnerable Web page. Since the injected content does not carry directly executable script code, it is ignored by the current generation of XSS mitigations. However, during the web application lifetime, the site’s script gadgets pick up the injected content and involuntarily transform its payload into executable code. Thus, script gadgets introduce the practice of <strong>code-reuse attacks</strong> [27], comparable to return-to-libc , to the Web"</li>
+            <li>"be used to circumvent all 4 popular classes of mitigation techniques: The Content Security Policy, HTML sanitizers, Browser-based XSS filters and Web Application Firewalls."</li>
+            <li>"XSS vulnerabilities are generally <strong>categorized based on the location of the vulnerable source code</strong>, i.e., server- or client-side XSS, and the persistence of the injected attack code, i.e., reflected or stored XSS."</li>
+            <li>"Mitigations <strong>detect the injected code, present in inline event handlers or in separate script elements and prevent its execution</strong>, while legitimate JavaScript code, carrying appropriate trust information, is left as-is and is allowed to execute."</li>
+            <li>"<strong>Benign HTML does not contain \<script\> tags, inline event handlers, src or href attributes</strong> with javascript, or data: URLs, or other tags capable of JavaScript execution (\<link rel=import\ >, \<meta\>, \<style\>)."</li>
+            <li>"These gadgets transform their string input by using regular expressions, character replacement and other types of string manipulation."</li>
+            <li>"As $.globalEval is called in various common jQuery methods (e.g. $.html), a controlled input to those may create new script elements, which is a <strong>useful property for bypassing strict-dynamic CSP</strong> (see 4.4)"</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            </ol>
+        </div>
+    </div>
+</body>
+
+</html>
