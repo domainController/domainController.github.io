@@ -150,40 +150,46 @@
         <tbody>
             <tr class=eaj id="eval">
                 <td><a href="quotes.html#analysisofvulnjs" target="_blank">eval()</a></td>
+                <td>Global API</td>
                 <td><a href="https://github.com/wisec/domxsswiki/wiki/Direct-Execution-Sinks" target="_blank">Direct</a> 
                     <a href="quotes/domxsscauses.html#cookiesWebStorageDOMXSS" target="_blank">execution sink</a></td>
                 <td>Javascript <a href="https://www.youtube.com/watch?v=bouTxh76yeU&t=253s" target="_blank">context</a></td>
-                <td></td>
+                <td>Direct code conversion</td>
             </tr>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/js/js_function_definition.asp" target="_blank">function()</a></td>
+                <td>Global API</td>
                 <td><a href="https://youtu.be/kedmtrIEW1k?t=571">Direct execution sink</a></td>
                 <td>Javascript context</td>
-                <td></td>
+                <td>Direct code conversion</td>
             </tr>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/jsref/met_win_settimeout.asp" target="_blank">setTimeout()</a></td>
+                <td>Global API</td>
                 <td>Direct execution sink</td>
                 <td>Javascript context</td>
-                <td></td>
+                <td>Direct code conversion</td>
             </tr>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">setInterval()</a></td>
+                <td>Global API</td>
                 <td>Direct execution sink</td>
                 <td>Javascript context</td>
-                <td></td>
+                <td>Direct code conversion</td>
             </tr>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">setImmediate()</a></td>
+                <td>Global API</td>
                 <td>Direct execution sink</td>
                 <td>Javascript context</td>
-                <td></td>
+                <td>Direct code conversion</td>
             </tr>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">execScript</a></td>
+                <td>Global API</td>
                 <td>Direct execution sink</td>
                 <td>Javascript context</td>
-                <td></td>
+                <td>Direct code conversion</td>
             </tr>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">crypto.generateCRMFRequest</a></td>
@@ -223,45 +229,59 @@
             </tr>
             <tr class=eaj>
                 <td><a href="https://www.w3schools.com/jsref/event_onclick.asp" target="_blank">&lt;anyTag.onEventName='payload'&gt;</a></td>
+                <td>Property</td>
                 <td>Direct execution sink</td>
                 <td>Javascript context</td>
-                <td></td>
-            </tr>
-            <tr class=his>
-                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">inner.html</a></td>
-                <td><a href="https://youtu.be/kedmtrIEW1k?t=608">HTML injection sink</a></td>
-                <td><a href="https://youtu.be/kedmtrIEW1k?t=608">HTML context</a></td>
-                <td></td>
-            </tr>
-            <tr class=his>
-                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-outerHTML" target="_blank">outer.html</a></td>
-                <td>HTML injection sink</td>
-                <td>HTML context</td>
-                <td></td>
-            </tr>
-            <tr class=his>
-                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMParser" target="_blank">parseFromString()</a></td>
-                <td>HTML injection sink</td>
-                <td>HTML context</td>
-                <td></td>
+                <td>DOM modification at runtime</td>
             </tr>
             <tr class=his>
                 <td><a href="https://www.w3schools.com/jsref/met_doc_write.asp" target="_blank">document.write()</a></td>
+                <td>Global API</td>
                 <td><a href="https://youtu.be/kedmtrIEW1k?t=441">HTML injection sink</a></td>
                 <td>HTML context</td>
-                <td>Document modification function</td>
+                <td>DOM modification at rendering</td>
             </tr>
             <tr class=his>
                 <td><a href="https://www.w3schools.com/jsref/met_doc_writeln.asp" target="_blank">document.writeln()</a></td>
+                <td>Global API</td>
                 <td>HTML injection sink</td>
                 <td>HTML context</td>
-                <td>Document modification function</td>
+                <td>DOM modification at rendering</td>
+            </tr>
+            <tr class=his>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">Element.innerHTML</a></td>
+                <td>Property</td>
+                <td><a href="https://youtu.be/kedmtrIEW1k?t=608">HTML injection sink</a></td>
+                <td><a href="https://youtu.be/kedmtrIEW1k?t=608">HTML context</a></td>
+                <td>DOM modification at runtime</td>
+            </tr>
+            <tr class=his>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-outerHTML" target="_blank">Element.outerHTML</a></td>
+                <td>Property</td>
+                <td>HTML injection sink</td>
+                <td>HTML context</td>
+                <td>DOM modification at runtime</td>
+            </tr>
+            <tr class=his>
+                <td><a href="https://dev.w3.org/html5/spec-LC/apis-in-html-documents.html#apis-in-html-documents" target="_blank">Element.setAttribute()</a></td>
+                <td>Global API</td>
+                <td><a href="https://youtu.be/kedmtrIEW1k?t=608">HTML injection sink</a></td>
+                <td>HTML context</td>
+                <td>DOM modification at runtime</td>
+            </tr>
+            <tr class=his>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML" target="_blank">Element.insertAdjacentHTML()</a></td>
+                <td>Global API</td>
+                <td><a href="https://youtu.be/kedmtrIEW1k?t=608">HTML injection sink</a></td>
+                <td>HTML context</td>
+                <td>DOM modification at runtime</td>
             </tr>
             <tr class=his>
                 <td><a href="https://www.w3schools.com/jsref/met_doc_writeln.asp" target="_blank">Range.createContextualFragment</a></td>
+                <td>Local API</td>
                 <td>HTML injection sink</td>
                 <td>HTML context</td>
-                <td></td>
+                <td>DOM modification at runtime</td>
             </tr>
             <tr class=his>
                 <td><a href="https://www.w3schools.com/jsref/met_doc_writeln.asp" target="_blank">HTMLButton.value</a></td>
@@ -270,14 +290,9 @@
                 <td></td>
             </tr>
             <tr class=his>
-                <td><a href="https://dev.w3.org/html5/spec-LC/apis-in-html-documents.html#apis-in-html-documents" target="_blank">Element.setAttribute()</a></td>
-                <td><a href="https://youtu.be/kedmtrIEW1k?t=608">HTML injection sink</a></td>
-                <td>HTML context</td>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMParser" target="_blank">parseFromString()</a></td>
                 <td></td>
-            </tr>
-            <tr class=his>
-                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML" target="_blank">insertAdjacentHTML()</a></td>
-                <td><a href="https://youtu.be/kedmtrIEW1k?t=608">HTML injection sink</a></td>
+                <td>HTML injection sink</td>
                 <td>HTML context</td>
                 <td></td>
             </tr>
@@ -379,22 +394,46 @@
                 <td></td>
             </tr>
             <tr class=dxis>
-                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement" target="_blank">HTMLScriptElement</a></td>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement" target="_blank">HTMLScriptElement.src</a></td>
+                <td>Property</td>
                 <td>DOM XSS injection sink</td>
                 <td>Location sink</td>
-                <td></td>
+                <td>DOM modification at runtime</td>
+            </tr>
+            <tr class=dxis>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement" target="_blank">HTMLScriptElement.text</a></td>
+                <td>Property</td>
+                <td>JavaScript sink</td>
+                <td>Location sink</td>
+                <td>DOM modification at runtime</td>
             </tr>
             <tr class=dxis>
                 <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">HTMLScriptElement.InnerText</a></td>
-                <td>DOM XSS injection sink</td>
+                <td>Property</td>
+                <td>JavaScript sink</td>
                 <td>function</td>
-                <td></td>
+                <td>DOM modification at runtime</td>
             </tr>
             <tr class=dxis>
                 <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">HTMLScriptElement.textContent</a></td>
-                <td>DOM XSS injection sink</td>
+                <td>Property</td>
+                <td>JavaScript sink</td>
                 <td>function</td>
-                <td></td>
+                <td>DOM modification at runtime</td>
+            </tr>
+            <tr class=dxis>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">HTMLIFrameElement.src</a></td>
+                <td>Property</td>
+                <td>Location injection sink</td>
+                <td>function</td>
+                <td>DOM modification at runtime</td>
+            </tr>
+            <tr class=dxis>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">HTMLIFrameElement.srcdoc</a></td>
+                <td>Property</td>
+                <td>HTML injection sink</td>
+                <td>function</td>
+                <td>DOM modification at runtime</td>
             </tr>
             <tr class=dxis>
                 <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">HTMLSourceElement.src</a></td>

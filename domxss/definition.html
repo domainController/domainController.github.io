@@ -13,9 +13,9 @@
         <h2 class="DOMXSSdefinition"> ========= DOM XSS ========= </h2>
         <div class="DOMXSSdefinition">
             <ol>
-                <li>"DOM-based XSS <strong>can be seen as an information flow problem where portions of strings</strong> — potentially under attacker’s control (e.g., URL, cookie value) — <strong>are being evaluated as code through JavaScript code evaluation functions</strong> like eval() <strong>or being used in unsafe dynamic DOM constructions</strong>, such as via document.write or innerHTML"
+                <li>"<strong>can be seen as an information flow problem where portions of strings</strong> — potentially under attacker’s control (e.g., URL, cookie value) — <strong>are being evaluated as code through JavaScript code evaluation functions</strong> like eval() <strong>or being used in unsafe dynamic DOM constructions</strong>, such as via document.write or innerHTML"
                     <a href="domxsspapers/taintDexterJS1.pdf#page=2" target="_blank">(DexterJS1)</a></li>
-                <li>"DOM-based XSS, which is <strong>a subtype of Cross-site Scripting (XSS) problems that results from unsafe processing of untrusted data</strong> from sources controlled by the attacker."
+                <li>"is <strong>a subtype of Cross-site Scripting (XSS) problems that results from unsafe processing of untrusted data</strong> from sources controlled by the attacker."
                     <a href="domxsspapers/taintDexterJS1.pdf#page=2" target="_blank">(DexterJS1)</a></li>
                 <li>a vulnerability class subsuming all Cross-site Scripting problems that are caused by insecure handling of untrusted data through JavaScript
                     <a href="domxsspapers/taint25M.pdf" target="_blank">(taint25M)</a></li>
@@ -28,6 +28,8 @@
                 <li>describes a class of string-based code injection vulnerabilities that let adversaries inject HTML and/or JavaScript into Web content that is not legitimately under their control."
                     <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">(Reviews of Web Crawlers)</a>
                 </li>
+                <li>"is a class of code-injection vulnerabilities in the browser"
+                    <a href="https://swag.cispa.saarland/papers/musch2019scriptprotect.pdf" target="_blank">(ScriptProtect)</a></li>
             </ol>
         </div>
         <h2 class="ExploitDefinition"> ========= Exploit ========= </h2>
@@ -110,7 +112,7 @@
         <h2 class="HTMLSanitizersDefinition"> ========= HTML Sanitizers ========= </h2>
         <div class="HTMLSanitizersDefinition">
             <ol>
-                <li>"These are libraries used by developers to clean untrusted HTML into HTML that is safe to use within the application. This      category contains examples such as DOMPurify1 and Google Closure2 HTML sanitizer."
+                <li>"These are libraries used by developers to clean untrusted HTML into HTML that is safe to use within the application. This category contains examples such as DOMPurify1 and Google Closure2 HTML sanitizer."
                     <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">(Script Gadget)</a>
                 </li>
             </ol>
@@ -144,6 +146,58 @@
             <ol>
                 <li>"allows markup to override variables in JavaScript execution environment, making it possible to trigger specific script behavior"
                     <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=3" target="_blank">(Script Gadget)</a>
+                </li>
+            </ol>
+        </div>
+        <h2 class="postMessageDefinition"> 
+            <a href="https://html.spec.whatwg.org/multipage/web-messaging.html"> ========= postMessage ========= </a></h2>
+        <div class="postMessageDefinition">
+            <ol>
+                <li>"is an exemption by design to enable cross-origin communication"
+                    <a href="https://swag.cispa.saarland/papers/steffens2020pmforce.pdf#page=2" target="_blank">(pMForce)</a>
+                </li>
+                <li>"allows for cross-domain message exchange whenever two sites are rendered in the same browser tab (or popup window)"
+                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-stock.pdf#page=7" target="_blank">(Uncovering History We Insecurity)</a></li>
+                <li>"allows to send serialized messages between two documents."
+                    <a href="https://people.cispa.io/ben.stock/papers/meiser2021cwyt.pdf#page=2" target="_blank">(Careful Who You Trust)</a></li>
+                <li>"allows to exchange data across origin and site boundaries"
+                    <a href="https://people.cispa.io/ben.stock/papers/meiser2021cwyt.pdf#page=2" target="_blank">(Careful Who You Trust)</a></li>
+            </ol>
+        </div>
+        <h2 class="SOPDefinition"> ========= Same-Origin Policiy ========= </h2>
+        <div class="SOPDefinition">
+            <ol>
+                <li>"restricts access to resources as soon as the origin [37] (protocol, host, and port) differs from the requesting page’s own values"
+                    <a href="https://people.cispa.io/ben.stock/papers/meiser2021cwyt.pdf#page=2" target="_blank">(Careful Who You Trust)</a>
+                </li>
+                <li>"is a fundamental security mechanism that provides boundaries between Web sites and prevents unauthorized access to sensitive inf<a href="https://people.cispa.io/ben.stock/papers/meiser2021cwyt.pdf#page=2" target="_blank">(Careful Who You Trust)</a></li>
+            </ol>
+        </div>
+        <h2 class="CORSDefinition"> ========= CORS ========= </h2>
+        <div class="CORSDefinition">
+            <ol>
+                <li>"is an extension of the XMLHttpRequest API to allow cross-origin content in the browser through explicit authorization"
+                    <a href="https://people.cispa.io/ben.stock/papers/meiser2021cwyt.pdf#page=3" target="_blank">(Careful Who You Trust)</a></li>
+                </li>
+            </ol>
+        </div>
+        <h2 class="WebStorageDefinition"> ========= Web Storage ========= </h2>
+        <div class="WebStorageDefinition">
+            <ol>
+                <li>"is a mechanism that allows a Web application to store structured data within the user’s Web browser via Javascript."
+                    <a href="https://www.ieee-security.org/TC/W2SP/2012/papers/w2sp12-final8.pdf" target="_blank">(WebStorage-driven Content Caching)</a></li>
+                    <li>"is a mechanism that allows a piece of Javascript to store structured data within the user’s browser"
+                        <a href="https://www.ieee-security.org/TC/W2SP/2012/papers/w2sp12-final8.pdf" target="_blank">(WebStorage-driven Content Caching)</a></li>
+                    <li>"is, thereby, an umbrella term for two related functionalities - SessionStorage and LocalStorage."
+                        <a href="https://www.ieee-security.org/TC/W2SP/2012/papers/w2sp12-final8.pdf" target="_blank">(WebStorage-driven Content Caching)</a></li>
+                </li>
+            </ol>
+        </div>
+        <h2 class="ContextDefinition"> ========= Context ========= </h2>
+        <div class="ContextDefinition">
+            <ol>
+                <li>"We term the intuitive notion of where untrusted data appears as its context"
+                    <a href="https://people.eecs.berkeley.edu/~dawnsong/papers/2011%20Systematic%20Analysis%20of%20XSS%20Sanitization.pdf#page=4" target="_blank">(Systematic Analysis of XSS Sanitization)</a></li>
                 </li>
             </ol>
         </div>

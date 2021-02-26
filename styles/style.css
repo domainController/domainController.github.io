@@ -100,6 +100,11 @@
         color: #f92972;
     }
 
+    .brown,
+    .brown a:visited {
+        color: brown;
+    }
+
     .blue,
     .blue a:visited {
         color: #66d9ef;
@@ -120,15 +125,15 @@
         color: #a6e22e;
     }
 
+.yellow,
+.yellow a:visited {
+    color: #e6db74;
+}
     .violet,
     .violet a:visited {
         color: #ae81ff;
     }
 
-    .yellow,
-    .yellow a:visited {
-        color: #e6db74;
-    }
 
     .title {
         width: 500px;

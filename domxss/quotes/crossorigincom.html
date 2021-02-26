@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross-Origin Communication</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/sommaire.css">
+</head>
+
+<body>
+    <div class="quotes">
+        <h2><a href="https://people.cispa.io/ben.stock/papers/meiser2021cwyt.pdf" target="_blank"> 
+            ========= Cross-Origin Communication ========= </a></h2>
+        <ol>
+            <li>"Given the move to a more interconnected Web, standard bodies and browser vendors have added new mechanisms to enable cross-origin communication, primarily <strong>domain relaxation, postMessages, and CORS</strong>"</li>
+            <li>"While prior work has already shown the pitfalls of not using these mechanisms securely (e.g., <strong>omitting origin checks for incoming postMessages</strong>)"</li>
+            <li>"The SOP proved to be too restrictive for the modern Web, and the W3C standardized two new ways of cross-origin communication, namely postMessages and CORS"</li>
+            <li>"The main difference to prior work is that an attacker does not need to compromise a third-party server to manipulate the JavaScript it hosts, <strong>but it is rather sufficient to find an XSS vulnerability on a trusted communication partner</strong>"</li>
+            <li>"While browsers already implemented a relaxation of the SOP based on a common parent domain (dubbed <strong>Domain Relaxation</strong>), the W3C also standardized new mechanisms to address this demand, namely postMessages and Cross-Origin Resource Sharing (CORS)."</li>
+            <li>"To record the use of postMessages, <strong>we use Puppeteer to inject JavaScript code to hook the EventListener of message events</strong>. Given the lack of automated tools to analyze postMessage handlers, we rely on manual analysis of the involved JavaScript code."</li>
+            <li>"the top 5 sites with the most incoming postMessages. Again, social media platforms (Facebook, Twitter) and web/ data analytics sites (Hotjar, AddThis) are the most prevalent, accompanied by Google"</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+        </ol>
+    </div>
+</body>
+
+</html>

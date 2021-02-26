@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scriptProtect</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/sommaire.css">
+</head>
+
+<body>
+    <div class="quotes">
+        <h2><a href="https://swag.cispa.saarland/papers/musch2019scriptprotect.pdf" target="_blank"> ========= ScriptProtect ========= </a></h2>
+        <ol>
+            <li>"The downside of this practice is that such external code runs <strong>in the same context and with the same privileges</strong> as the first-party code"</li>
+            <li>"As ScriptProtect is realized through a lightweight
+JavaScript <strong>instrumentation"</strong></li>
+            <li>"This is enabled by the fact that sites may include external JavaScript from other origins, which is subsequently executed in the <a href="https://tools.ietf.org/html/rfc6454">origin</a> of the including site. Hence, such code runs with full privileges, e.g., can modify the DOM to add a frame pointing to an advertisement or observe user interaction for analytic purposes."</li>
+            <li>"At its core, ScriptProtect ensures that third-party code is unable to accidentally add <strong>unsafe markup</strong> into a document"</li>
+            <li>"In the case of such a Client-Side XSS, the source can be, e.g., the URL, whereas an example for a sink is eval or document.write.Both these APIs <strong>accept strings as parameters, which are subsequently parsed and executed as code</strong> (JavaScript and HTML, respectively"</li>             
+            <li>"we consider <strong>Microsoft’s Edge, which automatically encodes the query in location.search, but not the URL fragment in location.hash</strong> [1]. Hence, an adversary can inject markup into the fragment of the URL to trigger the flaw"</li>
+            <li>"HTML’s script-tag allows the direct reference and subsequent inclusion of remote JavaScript files (see Figure 2). As <strong>the inclusion of scripts is exempt from JavaScript’s <a href="https://www.youtube.com/watch?v=Nd3srHK3K2A">Same-Origin Policy</a> [37], the code is downloaded by the browser and <strong>executed in the context of the including first-party Web document</strong>. Thus, it inherits the <a href="https://tools.ietf.org/html/rfc6454">origin</a> of the hosting document and <strong>runs in the same security context as the first-party code</strong>"</li>             
+            <li>"First, he can try to inject malicious <strong>inline scripts</strong> (1). Second, when an HTML injection is possible, he can resort to including an externally hosted JavaScript file containing his payload (2). Finally, he can use the eval functionality to conduct a string-to-code transformation and gain code execution (3).</li>
+            <li>"The attacker in this scenario is a malicious actor, who aims to exploit the Client-Side XSS problem, <strong>which was unwillingly introduced by the third-party script</strong>."</li>
+            <li>"This is done through our protection mechanism which is included early <strong>in the head portion of the hosting HTML document</strong>."</li>
+            <li>"In essence, these considerations result in a policy which strictly forbids third-party JavaScript code to conduct string-to-code conversions, i.e., the introduction of additional executable JavaScript code"</li>             
+            <li>"Furthermore, <strong>a given third party is not allowed to introduce code via the inline event handlers</strong> of newly introduced HTML elements"</li>
+            <li>"There exist a variety of different APIs and DOM properties which have the ability to introduce new code through one of the means above. These APIs and properties can further be divided into different classes of functionality, types of access and accept different kinds of inputs."</li>
+            <li>"The most used element in this class is the innerHTML property, which on assignment inserts new HTML subtree-structures as a DOM child of the hosting HTML element (see Figure 4)."</li>
+            <li>"ScriptProtect is implemented in the form of a JavaScript library that instruments dangerous APIs with HTML sinks in such a way that all values passed to them are sanitized, before the API’s or property’s DOM altering functionality is executed"</li>
+            <li>"We then proceed to <strong>extract the URL of script at the top of this call stack</strong>, as shown in Figure 10. <strong>The script at the top of the stack trace represents the initiator</strong> of the actions that lead to the call in the first place. If the hostname of the script’s URL matches the first party the call is allowed without modification. Otherwise, the function argument is subjected to value sanitization or blocked, depending on the sink."</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+        </ol>
+    </div>
+</body>
+
+</html>

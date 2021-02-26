@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSSanitizationInWebAppFrameworks</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/sommaire.css">
+</head>
+
+<body>
+    <div class="quotes">
+        <h2><a href="https://people.eecs.berkeley.edu/~dawnsong/papers/2011%20systematic%20analysis%20xss" target="_blank"> 
+        ========= A Systematic Analysis of XSS Sanitization in Web Application Frameworks ========= </a></h2>
+        <ol>
+            <li>"However, sanitization or filtering, the practice of encoding or eliminating dangerous constructs in untrusted data, remains the industrystandard defense strategy [45]"</li>
+            <li>"XSS sanitization is deviously complex; it involves understanding <strong>how the web browser parses and interprets web content</strong> in non-trivial detail."</li>
+            <li>"<strong>Context Expressiveness</strong>. Untrusted data needs to be sanitized differently based on its context in the HTML document. For example, the sanitization requirements of a URI attribute are different from those of an HTML tag."</li>
+            <li>"Consider a blogging web application <strong>that emits untrusted content, such as anonymous comments</strong>, on the web page If the developer is not careful, an attacker can input text such as \<script\>...\<script\>, which may be output verbatim in the server’s output HTML page. When a user visits this blog page, her web browser will execute the attacker controlled text as script code.XSS sanitization requires removal of such dangerous tags from the untrusted data"</li>
+            <li>"We present a comprehensive model of the <strong>web browser’s parsing behavior</strong>."</li>
+            <li>"Abstractly, the browser can be viewed as a collection of HTML-related sub-grammars and a collection of <a href="https://fr.wikipedia.org/wiki/Transducteur_fini">transducers</a>. Sub-grammars correspond to parsers for languages such as URI schemes, CSS, HTML, and JavaScript"</li>
+            <li>"<strong>Transducers transform or change the representation of the text, such as in HTML-entity encoding/decoding, URI-encoding, JavaScript Unicode encoding</strong> and so on"</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+
+        </ol>
+    </div>
+</body>
+
+</html>

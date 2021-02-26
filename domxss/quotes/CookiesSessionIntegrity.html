@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookiesSessionIntegrity</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/sommaire.css">
+</head>
+
+<body>
+    <div class="quotes">
+        <h2><a href="https://www.abortz.net/papers/session-integrity.pdf" target="_blank"> ========= Cookies: Session Integrity ========= </a></h2>
+        <ol>
+            <li>"In particular, <strong>cookies can not provide session integrity</strong> against an attacker <strong>who can host content on a related domain</strong>"</li>
+            <li>"A lack of session integrity can result in session hijacking and <strong>session substitution</strong> that seriously compromise the security of web sites."</li>
+            <li>"Despite the fact that modern web applications have become more sophisticated, with rich user experiences that can rival that of desktop applications, <strong>they continue to be built on top of basic web primitives</strong> designed for less demanding applications."</li>
+            <li>"In particular, messages between the user’s browser and the server are transmitted using <strong>HTTP, an inherently stateless protocol</strong>."</li>
+            <li>"<strong>Some applications store this state directly in the cookies themselves, some applications store an identifier</strong> in the cookies that allows the session state to be retrieved by the server, and some do both."</li>
+            <li>"The most common, and most important piece of information stored in session state is <strong>the authenticated identity</strong> of the user. For this reason, <strong>session state represents a very valuable target for attackers</strong>"</li>
+            <li>"However, there remains a significant <strong>design flaw in cookies</strong>, and consequently, secure session state: cookies stored by one site can be modified by another if the two sites happen to share a <strong>sufficiently long suffix</strong> [1], [2]. For example, two such sites are docs.google.com and www.google.com, having google.com as a suffix. While not all suffixes are considered long enough (e.g. com, co.uk), <strong>nearly every domain that can be purchased by individuals or corporations will be</strong>. We call two domains that share a sufficiently long suffix <strong>related domains</strong>, and attackers who control a related domain to their target can manipulate their target’s cookies."</li>
+            <li>"The web attacker and active network attacker threat models are standard from the web security literature"</li>
+            <li>"The web attacker operates a malicious web site, which we <strong>refer to canonically as attacker.com</strong>"</li>
+            <li>"<strong>The active network attacker</strong> is also well-known in the security literature. Our notion of an active network attacker is similar to the classical active network attacker, but slightly stronger. <strong>In addition to the ability to intercept and spoof any network message</strong>, our active network attacker also has all the abilities of a web attacker"</li>
+            <li>"We find that existing techniques <strong>can achieve session integrity against web attackers but fail to achieve session integrity against related-domain attackers or active network attackers</strong>, even if the web sites use HTTPS exclusively."</li>
+            <li>"There are <strong>two required properties for secure sessions</strong> on web sites: <strong>confidentiality and integrity</strong>"</li>
+            <li>"Because sessions are simply data transmitted from a web browser to a web site on each request, <strong>if an attacker can compromise confidentiality and read that data, he can hijack that session</strong>."</li>
+            <li>"Cookies allow web sites to store key/value pairs at the user agent using the HTTP Set-Cookie header, which the user agent then returns on <a href="https://www.linguee.com/english-french/search?source=auto&query=subsequent">subsequent</a> requests."</li>
+            <li>"While setting a cookie, a server can optionally specify a <strong>scope</strong> for that cookie, which consists of a domain and path. The cookie is then attached to HTTP requests for all URLs with a host equal to, or a subdomain of, the cookie’s domain and whose path extends the cookie’s path."</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+        </ol>
+    </div>
+</body>
+
+</html>
