@@ -70,6 +70,24 @@
         font-family: "Ubuntu", sans-serif;
     }
 
+
+      .content-table-diagram {
+        text-transform: capitalize;
+        border-collapse: collapse;
+        margin: 20px 0;
+        table-layout: fixed;
+        width: 1200px;
+        min-width: 800px;
+        line-height: 23px;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        background-color: #3e3d32;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: "Ubuntu", sans-serif;
+    }
+
 .blue,
 .blue a:visited {
     color: #66d9ef;
@@ -147,6 +165,12 @@
 
     .slideAuthor{
         width: 120px;
+    }
+    .diagramDescription{
+        width:  600px;
+    }
+    .diagramAuthors{
+        width: 300px;
     }
     .country {
         width: 70px;

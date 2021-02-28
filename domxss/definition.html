@@ -20,6 +20,9 @@
                 <li>a vulnerability class subsuming all Cross-site Scripting problems that are caused by insecure handling of untrusted data through JavaScript
                     <a href="domxsspapers/taint25M.pdf" target="_blank">(taint25M)</a></li>
                 <li>"DOM-based XSS is a code injection vulnerability in which a web attacker is able to inject malicious JavaScript in a client’s web session."<a href="domxsspapers/taintDexterJS2.pdf#page=2" target="_blank">(DexterJS2)</a></li>
+                <li>"client-side code injection" <a href="https://people.eecs.berkeley.edu/~dawnsong/papers/2011%20Systematic%20Analysis%20of%20XSS%20Sanitization.pdf#page=6" target="_blank">(Systematic Analysis of XSS Sanitization)</a></li>
+                <li>"is a subtype of Cross-site Scripting (XSS) problems that results from unsafe processing of untrusted data from sources controlled by the attacker"<a href="https://cutt.ly/jlFHNfy">(DomXssMicro)</a></li>
+
             </ol>
         </div>
         <h2 class="XSSDefinition"> ========= XSS ========= </h2>
@@ -29,7 +32,7 @@
                     <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">(Reviews of Web Crawlers)</a>
                 </li>
                 <li>"is a class of code-injection vulnerabilities in the browser"
-                    <a href="https://swag.cispa.saarland/papers/musch2019scriptprotect.pdf" target="_blank">(ScriptProtect)</a></li>
+                    <a href="https://swag.cispa.saarland/papers/musch2019scriptprotect.pdf" target="_blank">(Facepalm p.2 &? ScriptProtect )</a></li>
             </ol>
         </div>
         <h2 class="ExploitDefinition"> ========= Exploit ========= </h2>
@@ -69,11 +72,17 @@
                 </li>
             </ol>
         </div>
-        <h2 class="ContextDefinition"> ========= Context ========= </h2>
+        <h2 class="ContextDefinition"><a href="https://www.youtube.com/watch?v=bouTxh76yeU&t=253s">========= Context =========</a>  </h2>
         <div class="ContextDefinition">
             <ol>
                 <li>"represents the surrounding context where the tainted content locates
                     <a href="domxsspapers/detectionDOM.pdf#page=4" target="_blank">(DomXssMicro)</a>
+                </li>
+                <li>"reflects the state of the browser at a given point reading a particular piece of input HTML."
+                    <a href="http://webblaze.cs.berkeley.edu/papers/scriptgard.pdf#page=6" target="_blank">(ScriptGard)</a>
+                </li>
+                <li>"the intuitive notion of where untrusted data appears"
+                    <a href="https://people.eecs.berkeley.edu/~dawnsong/papers/2011%20Systematic%20Analysis%20of%20XSS%20Sanitization.pdf#page=4" target="_blank">(Systematic Analysis of XSS Sanitization)</a>
                 </li>
             </ol>
         </div>
@@ -115,13 +124,15 @@
                 <li>"These are libraries used by developers to clean untrusted HTML into HTML that is safe to use within the application. This category contains examples such as DOMPurify1 and Google Closure2 HTML sanitizer."
                     <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">(Script Gadget)</a>
                 </li>
+                <li>"automatically transform untrustworthy strings into safe-to-render HTML markup or safe-to-follow URLs by removing parts that may lead to XSS"
+                    <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">(Script Gadget)</a></li>
             </ol>
         </div>
         <h2 class="BrowserXSSFiltersDefinition"> ========= Browser XSS Filters ========= </h2>
         <div class="BrowserXSSFiltersDefinition">
             <ol>
                 <li>"These filters are implemented as part of the browser navigation and rendering, and they attempt to detect an XSS attack and neuter it. Internet Explorer, Edge, and Chrome implement XSS filters as part of their default configuration. Firefox does not have one, but the popular NoScript3 AddOn implements one."
-                    <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">(Script Gadget)</a>
+                    <a href="https://research.google/pubs/pub49950.pdf#page=5" target="_blank">( API hardening)</a>
                 </li>
             </ol>
         </div>
@@ -136,9 +147,11 @@
         <h2 class="CSPDefinition"> ========= CSP ========= </h2>
         <div class="CSPDefinition">
             <ol>
-                <li>"This is a browser feature that a web developer can configure to define a policy that allows the browser to whitelist the JavaScript code that belongs to the application."
+                <li>"is a browser feature that a web developer can configure to define a policy that allows the browser to whitelist the JavaScript code that belongs to the application."
                     <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">(Script Gadget)</a>
                 </li>
+                <li>"provides a mechanism to allow websites to explicitly indicate what kinds of JavaScript code can be executed within their origins to prevent injection of attacker-controlled scripts"
+                    <a href="https://research.google/pubs/pub49950.pdf#page=10" target="_blank">( API hardening)</a></li>
             </ol>
         </div>
         <h2 class="DOMclobberingDefinition"> ========= DOM clobbering ========= </h2>
@@ -149,7 +162,7 @@
                 </li>
             </ol>
         </div>
-        <h2 class="postMessageDefinition"> 
+        <h2 class="postMessageDefinition">
             <a href="https://html.spec.whatwg.org/multipage/web-messaging.html"> ========= postMessage ========= </a></h2>
         <div class="postMessageDefinition">
             <ol>
@@ -186,22 +199,13 @@
             <ol>
                 <li>"is a mechanism that allows a Web application to store structured data within the user’s Web browser via Javascript."
                     <a href="https://www.ieee-security.org/TC/W2SP/2012/papers/w2sp12-final8.pdf" target="_blank">(WebStorage-driven Content Caching)</a></li>
-                    <li>"is a mechanism that allows a piece of Javascript to store structured data within the user’s browser"
-                        <a href="https://www.ieee-security.org/TC/W2SP/2012/papers/w2sp12-final8.pdf" target="_blank">(WebStorage-driven Content Caching)</a></li>
-                    <li>"is, thereby, an umbrella term for two related functionalities - SessionStorage and LocalStorage."
-                        <a href="https://www.ieee-security.org/TC/W2SP/2012/papers/w2sp12-final8.pdf" target="_blank">(WebStorage-driven Content Caching)</a></li>
+                <li>"is a mechanism that allows a piece of Javascript to store structured data within the user’s browser"
+                    <a href="https://www.ieee-security.org/TC/W2SP/2012/papers/w2sp12-final8.pdf" target="_blank">(WebStorage-driven Content Caching)</a></li>
+                <li>"is, thereby, an umbrella term for two related functionalities - SessionStorage and LocalStorage."
+                    <a href="https://www.ieee-security.org/TC/W2SP/2012/papers/w2sp12-final8.pdf" target="_blank">(WebStorage-driven Content Caching)</a></li>
                 </li>
             </ol>
         </div>
-        <h2 class="ContextDefinition"> ========= Context ========= </h2>
-        <div class="ContextDefinition">
-            <ol>
-                <li>"We term the intuitive notion of where untrusted data appears as its context"
-                    <a href="https://people.eecs.berkeley.edu/~dawnsong/papers/2011%20Systematic%20Analysis%20of%20XSS%20Sanitization.pdf#page=4" target="_blank">(Systematic Analysis of XSS Sanitization)</a></li>
-                </li>
-            </ol>
-        </div>
-    </div>
 </body>
 
 </html>

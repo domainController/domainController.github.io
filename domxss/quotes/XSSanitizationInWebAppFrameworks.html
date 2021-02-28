@@ -10,7 +10,7 @@
 
 <body>
     <div class="quotes">
-        <h2><a href="https://people.eecs.berkeley.edu/~dawnsong/papers/2011%20systematic%20analysis%20xss" target="_blank"> 
+        <h2><a href="https://people.eecs.berkeley.edu/~dawnsong/papers/2011%20Systematic%20Analysis%20of%20XSS%20Sanitization.pdf" target="_blank"> 
         ========= A Systematic Analysis of XSS Sanitization in Web Application Frameworks ========= </a></h2>
         <ol>
             <li>"However, sanitization or filtering, the practice of encoding or eliminating dangerous constructs in untrusted data, remains the industrystandard defense strategy [45]"</li>
@@ -20,7 +20,7 @@
             <li>"We present a comprehensive model of the <strong>web browser’s parsing behavior</strong>."</li>
             <li>"Abstractly, the browser can be viewed as a collection of HTML-related sub-grammars and a collection of <a href="https://fr.wikipedia.org/wiki/Transducteur_fini">transducers</a>. Sub-grammars correspond to parsers for languages such as URI schemes, CSS, HTML, and JavaScript"</li>
             <li>"<strong>Transducers transform or change the representation of the text, such as in HTML-entity encoding/decoding, URI-encoding, JavaScript Unicode encoding</strong> and so on"</li>
-            <li>""</li>
+            <li>"Consider an embedding of an untrusted string inside a script block, such as <script> var x = ‘ UNTRUSTED DATA’...</script>. In this example, when the underlined data is read by the browser, it is simultaneously placed in two contexts. <strong>It is placed in a JavaScript string literal context by the JavaScript parser</strong> (edge 2) due to the single quotes. But, before that, it is inside a <strong>the HTML parser</strong>. Two distinct attack vectors can be used here: the attacker could use a single quote to break out of the JavaScript string context, or inject </script> to break out of the script tag. In fact, sanitizers commonly fail to account for the latter because they do not recognize the presence of nested contexts."</li>
             <li>""</li>
             <li>""</li>
             <li>""</li>

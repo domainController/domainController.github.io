@@ -29,6 +29,25 @@ JavaScript <strong>instrumentation"</strong></li>
             <li>"The most used element in this class is the innerHTML property, which on assignment inserts new HTML subtree-structures as a DOM child of the hosting HTML element (see Figure 4)."</li>
             <li>"ScriptProtect is implemented in the form of a JavaScript library that instruments dangerous APIs with HTML sinks in such a way that all values passed to them are sanitized, before the API’s or property’s DOM altering functionality is executed"</li>
             <li>"We then proceed to <strong>extract the URL of script at the top of this call stack</strong>, as shown in Figure 10. <strong>The script at the top of the stack trace represents the initiator</strong> of the actions that lead to the call in the first place. If the hostname of the script’s URL matches the first party the call is allowed without modification. Otherwise, the function argument is subjected to value sanitization or blocked, depending on the sink."</li>
+            <li>"Therefore, to achieve backward-compatibility with existing applications, we activate our instrumentation only for the HTML sinks, which still mitigates most risks."</li>
+            <li>"<a href="https://www.techopedia.com/definition/4389/wrapper-software-engineering">Wrapping</a> all JavaScript sinks suffers from a drawback: instrumenting the eval statement is problematic, as it is a language construct rather than a simple function in JavaScript"</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
             <li>""</li>
             <li>""</li>
             <li>""</li>

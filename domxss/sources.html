@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SourceSinks</title>
+    <link rel="stylesheet" href="../styles/sinksource.css">
+</head>
+
+<body>
+    <table class="content-table">
+        <div id=sources>
+            <h2>Attacker-controlled Sources</h2>
+            <p>
+                <a href="https://www.youtube.com/watch?v=ergeHSRr1a0&t=270s" target="_blank">Secret</a> <a href="https://speakerdeck.com/exactpro/static-taint-analysis-for-javascript-programs?slide=14">sources</a> are either functions or object properties that can be controlled by the attacker. <br>
+
+                <a href="https://www.youtube.com/watch?v=ergeHSRr1a0&t=348s">Possible sources</a> are variables, return values of particular function, data from a particular I/O stream.
+            </p>
+        </div>
+        <tbody>
+            <tr class=uds>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">location</a></td>
+                <td><a href="https://github.com/wisec/domxsswiki/wiki/location,-documentURI-and-URL-sources" target="_blank">URL-based</a></td>
+                <td><a href="https://code.google.com/archive/p/domxsswiki/wikis/LocationSources.wiki">DOM Property</a></td>
+                <td></td>
+            </tr>
+            <tr class=uds>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-outerHTML" target="_blank">location.href</a></td>
+                <td>URL-based</td>
+                <td>DOM Property</td>
+                <td>URL Navigation Sink</td>
+            </tr>
+            <tr class=uds>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMParser" target="_blank" id="pathname">location.pathname</a></td>
+                <td><a href="quotes.html#BrokenURLparsing">URL-based</a></td>
+                <td>DOM Property</td>
+                <td></td>
+            </tr>
+            <tr class=uds id="locationsearch">
+                <td><a href="https://www.w3schools.com/jsref/met_doc_write.asp" target="_blank">location.search</a></td>
+                <td><a href="quotes.html#BrokenURLparsing" target="_blank">URL-based</a></td>
+                <td><a href="quotes.html#confirmedvulnerableflows" target="_blank">DOM Property</a></td>
+                <td></td>
+            </tr>
+            <tr class=uds id="locationhash">
+                <td><a href="https://www.w3schools.com/jsref/met_doc_writeln.asp" target="_blank">location.hash</a></td>
+                <td><a href="https://www.youtube.com/watch?v=kedmtrIEW1k&t=405s">URL-based</a></td>
+                <td><a href="quotes.html#helloWorldOfDOMXSS" target="_blank">DOM Property</a></td>
+            <tr class=uds id="documenturl">
+                <td><a href="quotes.html#documentURLIsNoSink" target="_blank">document.URL</a></td>
+                <td>URL-based</td>
+                <td>DOM Property</td>
+                <td></td>
+            </tr>
+            <tr class=uds>
+                <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">document.documentURI</a></td>
+                <td>URL-based</td>
+                <td>DOM Property</td>
+                <td></td>
+            </tr>
+            <tr class=uds>
+                <td><a href="https://www.w3schools.com/jsref/met_win_settimeout.asp" target="_blank">document.baseURI</a></td>
+                <td>URL-based</td>
+                <td>DOM Property</td>
+                <td></td>
+            </tr>
+            <tr class=uds>
+                <td><a href="https://www.w3schools.com/jsref/met_win_settimeout.asp" target="_blank">document.URLUnencoded</a></td>
+                <td>URL-based</td>
+                <td>DOM Property</td>
+                <td></td>
+            </tr>
+            <tr class=nds id="windowname">
+                <td><a href="https://developer.mozilla.org/en-us/docs/Web/API/Window/name" target="_blank">window.name</a></td>
+                <td><a href="https://github.com/wisec/domxsswiki/wiki/window.name-source">Navigation-based</a></td>
+                <td><a href="quotes.html#windownameflows">DOM Property</a></td>
+                <td></td>
+            </tr>
+            <tr class=nds>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/referrer" target="_blank">document.referrer</a></td>
+                <td><a href="https://github.com/wisec/domxsswiki/wiki/referrer-source" target="_blank">Navigation-based</a></td>
+                <td>DOM Property</td>
+                <td></td>
+            </tr>
+            <tr class=cbs>
+                <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">XMLHTTPRequest/Fetch</a></td>
+                <td>Communication based</td>
+                <td><a href="https://youtu.be/kedmtrIEW1k?t=951">2nd order DOM Injections</a></td>
+                <td>Passing messages to other domains</td>
+            </tr>
+            <tr class=cbs>
+                <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">WebSocket</a></td>
+                <td>Communication based</td>
+                <td><a href="https://youtu.be/kedmtrIEW1k?t=951">2nd order DOM Injections</a></td>
+                <td></td>
+            </tr>
+            <tr class=cbs>
+                <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">Window Messaging</a></td>
+                <td>Communication based</td>
+                <td>2nd order DOM Injections</td>
+                <td>Passing messages to other domains</td>
+            </tr>
+            <tr class=sbs>
+                <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">Cookie</a></td>
+                <td><a href="https://github.com/wisec/domxsswiki/wiki/cookie-sources">Cookie source</a></td>
+                <td>Store Type</td>
+                <td>Persistent Client-Side XSS</td>
+            </tr>
+            <tr class=sbs>
+                <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">LocalStorage</a></td>
+                <td><a href="https://github.com/wisec/domxsswiki/wiki/indirect-sources">Indirect source</a></td>
+                <td>Storage Object</td>
+                <td>Persistent Client-Side XSS</td>
+            </tr>
+            <tr class=sbs id="WebStorage2">
+                <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">SessionStorage</a></td>
+                <td><a href="quotes/domxsscauses.html#cookiesWebStorageDOMXSS">Indirect source</a></td>
+                <td>Storage Object</td>
+                <td>Persistent Client-Side XSS</td>
+            </tr>
+            <tr class=sbs>
+                <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">IndexedDB</a></td>
+                <td>Indirect source</td>
+                <td>Storage Object</td>
+                <td>Persistent Client-Side XSS</td>
+            </tr>
+            <tr class=hbs>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/History/pushState" target="_blank">history.pushState()</a></td>
+                <td><a href="https://github.com/wisec/domxsswiki/wiki/history-source" target="_blank">History-based</a></td>
+                <td>DOM Property</td>
+                <td></td>
+            </tr>
+            <tr class=hbs>
+                <td><a href="https://www.w3schools.com/xml/ajax_intro.asp" target="_blank">history.replaceState()</a></td>
+                <td>History-based</td>
+                <td>DOM Property</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

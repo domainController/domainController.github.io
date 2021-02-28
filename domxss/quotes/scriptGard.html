@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scriptGard</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/sommaire.css">
+</head>
+
+<body>
+    <div class="quotes">
+        <h2><a href="http://webblaze.cs.berkeley.edu/papers/scriptgard.pdf" target="_blank"> ========= scriptGard ========= </a></h2>
+        <ol>
+            <li>"For example, we find that two sanitizers in our test application are not commutative: <strong>the order of application matters</strong>, only one order is safe, yet both orders appear in our empirical study."</li>
+            <li>"Instead, we use binary rewriting of server code to embed a browser model that determines the appropriate browser parsing context <strong>when HTML is output by the web application</strong>."</li>
+            <li>"It is well-known that script-injection attack vectors are highly context-dependent | a string such as expression: alert(a) is innocuous when placed inside a HTML tag context, but can result in JavaScript execution when embedded in a CSS attribute value context."</li>
+            <li>"In particular, two <strong>sanitizer functions</strong>, EcmaScriptStringEncode and HtmlAttribEncode, are applied for the JavaScript string context and the HTML attribute context, respectivel"</li>
+            <li>"For instance, EcmaScriptStringEncode simply transforms all characters <strong>that can break out of JavaScript string literals</strong> (like the " character) <strong>to Unicode encoding</strong> (\u0022 for "), and, HtmlAttribEncode HTML-entity encodes characters (&quot; for ""</li>
+            <li>"The key observation is that applying EcmaScriptStringEncode <strong>first encodes the attacker-supplied " character as a Unicode representation \u0022</strong>. This Unicode representation is not subsequently transformed by the second HtmlAttribEncode sanitization, because \u0022 is a completely innocous string <strong>in the URI attribute value context</strong>."</li>
+            <li>"For our purposes, we model a <strong>web browser as a parser consisting of sub-parsers for several languages</strong>"</li>         
+            <li>"More precisely, we treat the browser as a collection of parsers for different HTML standard-supported languages"</li>            
+            <li>"Conceptually, parsers for various languages are <strong>invoked in stages</strong>. After each sub-parser invocation, if a portion <u>of the input HTML document</u> <strong>is recognized to belong to another sub-language, that portion of the input is sent to the appropriate sub-language parser</strong> in the next stage."</li>
+            <li>"As a result, <u>any portion of the input HTML document may be recognized by one or more sub-grammars</u>. Transitions from one sub- grammar to another are restricted through productions involving <strong>special transition symbols</strong> defined above as T , which is key for our formalization of context"</li>
+            <li>"For instance, <strong>data recognized as a JavaScript string is subject to Unicode decoding</strong> <u>before being passed to the AST</u>."</li>
+            <li>"In addition, HTML 5-compliant browsers subject <u>data recognized as a URI to</u> <strong>percent-encoding of certain characters before it is sent to the URI parser</strong>"</li>
+            <li>"The goal of sanitization is typically to <strong>remove special characters</strong> that would <strong>lead to a sub-grammar transition</strong>"</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+        </ol>
+    </div>
+</body>
+
+</html>

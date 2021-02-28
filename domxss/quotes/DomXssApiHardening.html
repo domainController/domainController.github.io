@@ -12,10 +12,37 @@
     <div class="quotes">
         <h2><a href="https://research.google/pubs/pub49950.pdf" target="_blank"> ========= Preventing DOM-Based XSS ========= </a></h2>
         <ol>
-            <li>"The specifications can cover most of the XSS sinks found in practice. However, browser vendors may not fully follow specifications and can implement non-standard features that are prone to XSS. An example of such features is content sniffing, with which browsers may ignore the metadata of a data blob and interpret the type of the blob by heuristically analyzing its content. Skilled attackers can exploit this feature to manipulate browsers and carry out code executions not expected by web developers and users [33]."</li>
-            <li>"It is unrealistic to cover all browser-specific XSS sinks because many browsers have undocumented behaviors."</li>
+            <li>"It is unrealistic to cover all browser-specific XSS sinks because <strong>many browsers have undocumented behaviors</strong>."</li>
+            <li>"Being an interpreted language, JavaScript does not need to be compiled to run in browsers. However, it is now a common practice for web application vendors and publishers to perform a series of analyses and source-to-source transformations using a compiler before deploying the applications, such as obfuscation and minification"</li>
+            <li>"JavaScript is known to be <a href="http://the.gregor.institute/papers/pldi2010-richards-dynjs.pdf">unfriendly</a><strong> to static analysis</strong> [28]."</li>
+            <li>"We collect such APIs by examining the HTML and DOM specifications, which, formalized as <a href="https://www.w3.org/TR/WebIDL/">Web IDL</a>, document all canonical APIs that can trigger JavaScript code execution."</li>
+            <li>"The specifications can cover most of the XSS sinks found in practice. However, browser vendors may not fully follow specifications and can implement non-standard features that are prone to XSS. An example of such features is <strong>content sniffing</strong>, with which browsers may ignore the metadata of a data <a href="https://en.wikipedia.org/wiki/Binary_large_object">blob</a> and interpret the type of the blob by heuristically analyzing its content. Skilled attackers can exploit this feature to manipulate browsers and carry out code executions not expected by web developers and users [33]."</li>
+            <li>"We would like to mention that many other XSS countermeasures, such as <a href="https://www.youtube.com/watch?v=fWoc2bZZ59A&list=PLxeJU39M7tLE9wMNbNwx79K0zeElp65nE&index=7">data-flow analyses</a>, also need to identify a reasonably comprehensive set of XSS <a href="https://www.youtube.com/watch?v=ergeHSRr1a0&t=391s">sinks</a> to be effective"</li>
+             <li>"With the XSS-prone APIs identified and forbidden in development, we need to provide developers with <strong>a set of “hardened” APIs as alternatives</strong>."</li>
+            <li>"We designed six safe types to cover the major attack vectors in the JavaScript language and DOM"</li>
+            <li>"We have built sanitizers to automatically <strong>transform untrustworthy strings into safe-to-render HTML markup or safe-to-follow URLs</strong> by removing parts that may lead to XSS.For instance, <u>the HTML sanitizer</u> prunes <strong>sensitive tags</strong> and possibly vulnerable combinations of tags and attributes. <u>The URL sanitizer</u> prunes potentially <strong>insecure URL schemes</strong> and parameters"</li>
+            <li>"The content security policy [7], following BEEP [47] and SOMA [48] <strong>which are the earlier embodiment of similar ideas</strong>, provides a mechanism to allow websites to explicitly indicate what kinds of JavaScript code can be executed within their origins to prevent injection of attacker-controlled scripts"</li>             
             <li>""</li>
             <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+
         </ol>
     </div>
 </body>

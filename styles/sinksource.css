@@ -4,7 +4,8 @@
         font-family:
 
     }
-      a {
+
+    a {
         text-decoration: none;
     }
 
@@ -34,8 +35,8 @@
         overflow: hidden;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
         margin-left: auto;
-        margin-right: auto;
-        background-color: #272822;
+        margin-right: auto;/* 
+        background-color: #272822; */
         font-family: "Ubuntu", sans-serif;
     }
 
@@ -66,7 +67,6 @@
     }
 
     .cbs {
-        background-color: #272822;
         color: #e6db74;
     }
 
@@ -130,6 +130,69 @@
     .dxis a:visited {
         color: #e6db74;
     }
+
+    .sinkclassdesc {
+        width: 800px;
+    }
+
+    .sinktype {
+        width: 120px;
+    }
+
+    .securityinvariant {
+        width: 200px;
+    }
+
+.bg1,
+.bg1 a:visited {
+    color: #3e3d32;
+
+}
+
+.red,
+.red a:visited {
+    color: #f92972;
+}
+
+.blue,
+.blue a:visited {
+    color: #66d9ef;
+}
+
+.cyan,
+.cyan a:visited {
+    color: #a1efe4;
+}
+
+.creme,
+.creme a:visited {
+    color: #f8f8f2;
+}
+
+.green,
+.green a:visited {
+    color: #a6e22e;
+}
+
+.violet,
+.violet a:visited {
+    color: #ae81ff;
+}
+
+.yellow,
+.yellow a:visited {
+    color: #e6db74;
+}
+
+.orange,
+.orange a:visited {
+    color: #fd971f;
+}
+
+.magenta,
+.magenta a:visited {
+    color: #fd5ff0;
+}
 
     .jqs {
         background-color: ;
