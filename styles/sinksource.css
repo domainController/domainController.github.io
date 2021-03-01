@@ -46,6 +46,10 @@
         font-size: 16px;
     }
 
+    .exploit{
+        width: 220px;
+    }
+
     /* Attacker-controlled Source */
 
     .uds {

@@ -48,18 +48,28 @@
         <div id=sinks>
             <h2>Injection <a href="quotes.html#sinksensitivefunction">sinks</a></h2>
             <p>
-                <a href="https://www.youtube.com/watch?v=ergeHSRr1a0&t=276s">Untrusted</a> <a href="https://speakerdeck.com/exactpro/static-taint-analysis-for-javascript-programs?slide=14">sinks</a> are functions or object where data can be executed.<br>
+                <a href="https://www.youtube.com/watch?v=ergeHSRr1a0&t=276s">Untrusted</a> <a href="https://speakerdeck.com/exactpro/static-taint-analysis-for-javascript-programs?slide=14">sinks</a> are functions or objects where data can be executed.<br>
                 <a href="https://youtu.be/ergeHSRr1a0?t=392">Possible sinks</a>: variables, parameters given to a particular function, instructions of particular type (e.g., jump instructions)
             </p>
         </div>
+        <thead>
+            <tr>
+                <th>Sink name</th>
+                <th>Sink type</th>
+                <th>Function</th>
+                <th>Rendering context</th>
+                <th>Resulting exploit</th>
+
+            </tr>
+        </thead>
         <tbody>
             <tr class="red" id="eval">
                 <td><a href="quotes.html#analysisofvulnjs" target="_blank">eval()</a></td>
                 <td>Global API</td>
-                <td><a href="https://github.com/wisec/domxsswiki/wiki/Direct-Execution-Sinks" target="_blank">Direct</a> 
-                    <a href="quotes/domxsscauses.html#cookiesWebStorageDOMXSS" target="_blank">execution sink</a></td>
-                <td>Javascript <a href="https://www.youtube.com/watch?v=bouTxh76yeU&t=253s" target="_blank">context</a></td>
                 <td>Direct code conversion</td>
+                <td>Javascript <a href="https://www.youtube.com/watch?v=bouTxh76yeU&t=253s" target="_blank">context</a></td>
+                <td class="exploit"><a href="https://github.com/wisec/domxsswiki/wiki/Direct-Execution-Sinks" target="_blank">Direct</a> 
+                    <a href="quotes/domxsscauses.html#cookiesWebStorageDOMXSS" target="_blank">execution sink</a>: <a href="http://webblaze.cs.berkeley.edu/papers/FLAX.pdf#page=9">Script injection</a></td>
             </tr>
             <tr class="red">
                 <td><a href="https://www.w3schools.com/js/js_function_definition.asp" target="_blank">function()</a></td>
@@ -71,16 +81,16 @@
             <tr class="red">
                 <td><a href="https://www.w3schools.com/jsref/met_win_settimeout.asp" target="_blank">setTimeout()</a></td>
                 <td>Global API</td>
-                <td>Direct execution sink</td>
-                <td>Javascript context</td>
                 <td>Direct code conversion</td>
+                <td>Javascript context</td>
+                <td class="exploit">Direct execution sink: Script Injection</td>
             </tr>
             <tr class="red">
                 <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">setInterval()</a></td>
                 <td>Global API</td>
-                <td>Direct execution sink</td>
-                <td>Javascript context</td>
                 <td>Direct code conversion</td>
+                <td>Javascript context</td>
+                <td class="exploit">Direct execution sink: Script Injection</td>
             </tr>
             <tr class="red">
                 <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">setImmediate()</a></td>
@@ -90,11 +100,11 @@
                 <td>Direct code conversion</td>
             </tr>
             <tr class="red">
-                <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">execScript</a></td>
-                <td>Global API</td>
-                <td>Direct execution sink</td>
-                <td>Javascript context</td>
+                <td><a href="https://stackoverflow.com/questions/12208195/eval-vs-execscript#answer-12208214" target="_blank">execScript</a></td>
+                <td><a href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa741364(v=vs.85)">Global API</a></td>
                 <td>Direct code conversion</td>
+                <td>Javascript context</td>
+                <td class="exploit">Direct execution sink: Script Injection</td>
             </tr>
             <tr class="red">
                 <td><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">crypto.generateCRMFRequest</a></td>
@@ -140,18 +150,25 @@
                 <td>DOM modification at runtime</td>
             </tr>
             <tr class=his>
+                <td><a href="https://www.w3schools.com/jsref/met_doc_write.asp" target="_blank">document.cookie</a></td>
+                <td>? API</td>
+                <td><a href="https://youtu.be/kedmtrIEW1k?t=441">?</a></td>
+                <td>?</td>
+                <td>HTML code injection, Session fixation attacks</td>
+            </tr>
+            <tr class=his>
                 <td><a href="https://www.w3schools.com/jsref/met_doc_write.asp" target="_blank">document.write()</a></td>
                 <td>Global API</td>
-                <td><a href="https://youtu.be/kedmtrIEW1k?t=441">HTML injection sink</a></td>
-                <td>HTML context</td>
                 <td>DOM modification at rendering</td>
+                <td>HTML context</td>
+                <td><a href="https://youtu.be/kedmtrIEW1k?t=441">HTML code injection</a></td>
             </tr>
             <tr class=his>
                 <td><a href="https://www.w3schools.com/jsref/met_doc_writeln.asp" target="_blank">document.writeln()</a></td>
                 <td>Global API</td>
-                <td>HTML injection sink</td>
-                <td>HTML context</td>
                 <td>DOM modification at rendering</td>
+                <td>HTML context</td>
+                <td>HTML code injection</td>
             </tr>
             <tr class=his>
                 <td><a href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML" target="_blank">Element.innerHTML</a></td>
