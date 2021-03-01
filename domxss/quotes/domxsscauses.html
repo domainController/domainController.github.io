@@ -27,8 +27,10 @@
             <li>"JavaScript, not unlike any other programming language, employs the concept of functions, which can be used to split up functionality into smaller units. While this is best practice in software engineering, it increases the difficulty <strong>a security auditor has to overcome as he has to understand specifically what each of these units does</strong>"</li>
             <li>"In order to understand that a certain flow constitutes a vulnerability, an analyst has to inspect all the code between the source and respective sink access."</li>
             <li>"Manual <strong>identification of vulnerable data flows in case of NLDFs is significantly harder</strong>, as no obvious relationship between the tainted data and at least one of the flow's functions exist"</li>
+            <li>"In the context of this paper, we consider a data flow to be linear (LDF), if on the way from the source to the sink, the tainted value is always passed to all involved functions directly, i.e., in the form of a function parameter..In consequence, a non-linear data  ow (NLDF) includes at least one instance of transporting the tainted value implicitly, e.g., via a global variable or inside a container object."</li>
             <li>"Furthermore, <strong>non-linear control flows (NLCF) are instances of interrupted JavaScript execution</strong>: A first JavaScript execution thread accesses the tainted data source and <strong>stores it in a semi-persistent location</strong>, such as a closure, event handler or global variable, and later on a second JavaScript thread uses the data in a sink access."</li>
-            <li>"Instances of NLCFs can occur if the flow's code is distributed over several code contexts, e.g., an inline and an external script, or in case of asynchronous handling of events."</li>
+            <li>"Instances of NLCFs can occur if the flow's code is distributed over several code contexts, e.g., an inline and an external script, or in case of asynchronous handling of events."</li>             
+            <li>"In terms of origin of the code involved in a  flow, we differentiate between three cases: self-hosted by the Web page, code which is only hosted on third-party pages, and a mixed variant of the previous,where the  ow traverses both self- hosted and third-party code."</li>
             <li>"Multiflows: <strong>A single sink access may contain more than one piece of user-provided data</strong>. This leaves an attacker with a means of <strong>splitting up his malicious payload to avoid detection</strong>. As we [27] have shown, given the right circumstances, such flows can be used to bypass existing filter solutions such as Chrome's XSSAuditor [1]."</li>
             <li>"Through the use of the eval function, JavaScript code can be dynamically created at runtime and executed in the same context"</li>
             <li>"Modern Web applications with <strong>complex client-side code often utilize minification to save bandwidth</strong> when delivering JavaScript code to the clients. In this process, space is conserved by removing white spaces as well as using identifier renaming."</li>
@@ -36,8 +38,10 @@
             <li>"This includes access to source, calls to both built-in and user-dened functions which operate on a tainted string, as well as stack traces for each operation to allow for <strong>execution context analysis</strong>."</li>
             <li>"Note, that a linear data flow cannot occur with a non-linear control flow, since this implies no relation between source and sink accessing operations."</li>
             <li>"As outlined in Section 4.3, the automatic encoding behavior of data retrieved from the document.location source varies between browsers:"</li>
-            <li>"but rather are either a combination of incompatible first- and third-party code or even caused completely by third-partylibraries. This paradigm is enabled by the Web's programming model, which allows for third-party code to be included in a Web page, gaining full access to that page's DOM."</li>
-            <li>""</li>
+            <li>"but rather are either a combination of incompatible first- and third-party code or even caused completely by third-party libraries. This paradigm is enabled by the Web's programming model, which allows for third-party code to be included in a Web page, gaining full access to that page's DOM."</li>
+            <li>"In our study, we found that 732 exploitable  ows ended in document.write, 495 in innerHTML and remaining 46 in eval and its derivatives."</li>
+            <!-- Page 8, 2nd lecture , dimanche 28 feverier 20:12, arret just avant "5.4 Analysis"--->
+
             <li>""</li>
         </ol>
     </div>
