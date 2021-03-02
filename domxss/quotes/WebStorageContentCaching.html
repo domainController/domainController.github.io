@@ -13,12 +13,26 @@
         <h2><a href="https://www.ieee-security.org/TC/W2SP/2012/papers/w2sp12-final8.pdf" target="_blank"> 
             ========= WebStorage-driven Content Caching ========= </a></h2>
         <ol>
-            <li>"While this API can be used for client-side state management, it is also often used for caching[17] (See Section IV for more details). Especially, <strong>in mobile environments where bandwidth and latency matters</strong> Web-Storage-based caching can be a powerful technique <strong>to decrease loading times</strong> by saving and reusing frequently required scripts or style declarations on the mobile device[17]."</li>
-            <li>"However, caching such content in a storage that is <strong>accessible via scripting</strong> is a dangerous practice as it <strong>creates new attack vectors</strong> for adversaries. The cause of the problem is the fact that at one point in time, <strong>code written to the storage has to be executed again</strong>. Hence, if an attacker is able to <strong>exchange the cached code with his payload</strong>, the application automatically <strong>runs the malicious content</strong>". Well-known cross-site scripting defense techniques such as <strong>input validation or output encoding are not applicable in this scenario</strong></li>
-            <li>"Modern browsers allow Web applications to provide offline capabilities. For this, the application can explicitly specify which of its Web resources should be kept in the browser’s application cache [2]. This is done using a dedicated manifest file that lists the URLs of to be stored resources. In situations, in which the Web browser is disconnected form the network, these files, which were stored earlier, are loaded and rendered from the appcache"</li>             
-            <li>"some applications use Web storage for caching Web page components, such as HTML fragments, CSS styles, or Javascripts, which are meant to be included verbatim into the Web page after retrieval from storage"</li>
-            <li>"By inserting JavaScript code into one of the site’s code fragments which are kept in Web storage, the attacker can ensure, that his malicious payload is executed every time the victim accesses the Web application with his browser, potentially for an unlimited amount time"</li>
-            <li>""</li>
+            <li>"These capabilities are frequently used for caching of markup or script code fragments". e.g., in scenarios with specific bandwidth or responsiveness requirements.</li>
+            <li>"While this API can be used for client-side state management, it is also often used for caching[17] (See Section IV for more details). Especially, <strong>in mobile environments where bandwidth and latency matters</strong> Web-Storage-based caching can be a powerful technique <strong>to decrease loading times</strong> by saving and reusing frequently required scripts or style declarations on the mobile device[17]."
+            </li>
+            <li>"However, caching such content in a storage that is <strong>accessible via scripting</strong> is a dangerous practice as it <strong>creates new attack vectors</strong> for adversaries. The cause of the problem is the fact that at one point in time, <strong>code written to the storage has to be executed again</strong>. Hence, if an attacker is able to <strong>exchange the cached code with his payload</strong>, the application automatically <strong>runs the malicious content</strong>". Well-known cross-site scripting defense techniques such as <strong>input validation or output encoding are not applicable in this scenario</strong>
+            </li>
+            <li>"In this paper we first investigate the usage of Web Storage with regards to code caching by investigating <strong>front pages</strong> the of the Alexa top 500.000 Web sites. Thereby, we found out that 20,422 Web sites <strong>make use</strong> of client-side storage and that 386 Web sites <strong>store</strong> 2084 pieces of HTML, Javascript code or CSS style declarations within Local- or SessionStorage.
+            "</li>
+            <li>"Therefore, an attacker <strong>is not able to inject his payload into client-side storage</strong> capabilities and thus attacks are rendered void."</li>
+            <li><strong>Each of these storage types implements the same API</strong> <u>and adheres to the same security restrictions</u>. The underlying storage mechanism is implemented via a key-value scheme that allows to <strong>store, retrieve and delete</strong> a String value based on a certain key
+            </li>
+            <li>"Up to now, two usage patterns forWeb storage have received some attention: <strong>Keeping state in offline situations and using Web storage for caching</strong> purposes."</li>
+            <li>"Modern browsers allow Web applications to provide offline capabilities. For this, the application can explicitly specify which of its Web resources should be kept in the browser’s application cache [2]. This is done using a dedicated manifest file that lists the URLs of to be stored resources. In situations, in which the Web browser is disconnected form the network, these files, which were stored earlier, are loaded and rendered from the appcache"
+            </li>             
+            <li>"some applications use Web storage for caching Web page components, such as HTML fragments, CSS styles, or Javascripts, which are meant to be included verbatim into the Web page after retrieval from storage"
+            </li>
+            <li>"By inserting JavaScript code into one of the site’s code fragments which are kept in Web storage, the attacker can ensure, that his malicious payload is executed every time the victim accesses the Web application with his browser, potentially for an unlimited amount time"
+            </li>
+            <!-- Ai relu les 3 premieres page deux fois ce Mardi 2 mars 2020. Peut-etre ai-je mal relu les scenarios d'attaque a la va-vite. Page 4 lecture 1 debut ici -->
+            <li>"On the investigated 500,000 Web sites we recorded more than 122,615 <strong>calls</strong> (by 20,421 Web sites) to Web Storage <strong>directives</strong>"</li>
+            <!-- premiere lecture de page4 a page 8 finie ce Mardi 2 mars 2020 -->
         </ol>
     </div>
 </body>

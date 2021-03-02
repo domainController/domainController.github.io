@@ -4,47 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Definition</title>
+    <title>Articles</title>
     <link rel="stylesheet" type="text/css" href="../styles/sommaire.css">
 </head>
 
 <body>
     <div class="definition">
-        <h2 class="DOMXSSdefinition"> ========= DOM XSS ========= </h2>
-        <div class="DOMXSSdefinition">
-            <ol>
-                <li>"DOM-based XSS is the exploitation of an input validation vulnerability that is caused by the client, not the server."</li>
-                <a href="http://index-of.co.uk/Hacking-Coleccion/XSS%20Attacks%20-%20Cross%20Site%20Scripting%20Exploits%20&%20Defense.pdf">(XSS Exploits)</a>
-                <li>"<strong>can be seen as an information flow problem where portions of strings</strong> — potentially under attacker’s control (e.g., URL, cookie value) — <strong>are being evaluated as code through JavaScript code evaluation functions</strong> like eval() <strong>or being used in unsafe dynamic DOM constructions</strong>, such as via document.write or innerHTML"
-                    <a href="domxsspapers/taintDexterJS1.pdf#page=2" target="_blank">(DexterJS1)</a></li>
-                <li>"is <strong>a subtype of Cross-site Scripting (XSS) problems that results from unsafe processing of untrusted data</strong> from sources controlled by the attacker."
-                    <a href="domxsspapers/taintDexterJS1.pdf#page=2" target="_blank">(DexterJS1)</a></li>
-                <li>a vulnerability class subsuming all Cross-site Scripting problems that are caused by insecure handling of untrusted data through JavaScript
-                    <a href="domxsspapers/taint25M.pdf" target="_blank">(taint25M)</a></li>
-                <li>"is a code injection vulnerability in which a web attacker is able to inject malicious JavaScript in a client’s web session."<a href="domxsspapers/taintDexterJS2.pdf#page=2" target="_blank">(DexterJS2)</a></li>
-                <li>"client-side code injection" <a href="https://people.eecs.berkeley.edu/~dawnsong/papers/2011%20Systematic%20Analysis%20of%20XSS%20Sanitization.pdf#page=6" target="_blank">(Systematic Analysis of XSS Sanitization)</a></li>
-                <li>"is a subtype of Cross-site Scripting (XSS) problems that results from unsafe processing of untrusted data from sources controlled by the attacker"<a href="https://cutt.ly/jlFHNfy">(DomXssMicro)</a></li>
-            </ol>
-        </div>
-        <h2 class="XSSDefinition"> ========= XSS ========= </h2>
-        <div class="XSSDefinition">
+        <h2 class="OutputEncoding"> ========= Output encoding ========= </h2>
+        <div>
             <ol>
                 <li>describes a class of string-based code injection vulnerabilities that let adversaries inject HTML and/or JavaScript into Web content that is not legitimately under their control."
                     <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">(Reviews of Web Crawlers)</a>
                 </li>
-                <li>"is a class of code-injection vulnerabilities in the browser"
-                    <a href="https://swag.cispa.saarland/papers/musch2019scriptprotect.pdf" target="_blank">(Facepalm p.2 &? ScriptProtect )</a>
-                </li>
-                <li>"allowing an adversary to execute arbitrary JavaScript code in the context of a vulnerable application"
-                    <a href="https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_01B-1_Steffens_paper.pdf" target="_blank"> (Don’t Trust The Locals) </a>
-                </li>
-                <li>"is a code injection attack, in which an adversary is able to add JavaScript code of her choosing to a vulnerable site."
-                    <a href="https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_01B-1_Steffens_paper.pdf#page=2" target="_blank"> (Don’t Trust The Locals) </a></li>
-                <li>"a type of injection vulnerability in which an attacker can inject arbitrary code into a running web application to, for example, take control of the data and credentials used in the application"
-                    <a href="https://www.cs.cmu.edu/~anupamd/paper/ndss2018.pdf#page=2" target="_blank">(Riding out DOMsday)</a>
-                </li>
-                <li>"occur when input is improperly sanitized, allowing attackers to inject arbitrary JavaScript code into a victim’s browser."
-                    <a href="https://clementfung.me/gallery/papers/www2021-final.pdf" target="_blank">(Hybrid Approach for Detecting DOM XSS Vulnerabilities with ML)</a></li>
             </ol>
         </div>
         <h2 class="ExploitDefinition"> ========= Exploit ========= </h2>
@@ -224,28 +195,12 @@
         <h2 class="WebStorageDefinition"> ========= Web Storage ========= </h2>
         <div class="WebStorageDefinition">
             <ol>
-                <li>"is, thereby, an umbrella term for two related functionalities - SessionStorage and LocalStorage."
-                    <a href="https://www.ieee-security.org/TC/W2SP/2012/papers/w2sp12-final8.pdf" target="_blank">(WebStorage-driven Content Caching)</a>
-                </li>
                 <li>"is a mechanism that allows a Web application to store structured data within the user’s Web browser via Javascript."
                     <a href="https://www.ieee-security.org/TC/W2SP/2012/papers/w2sp12-final8.pdf" target="_blank">(WebStorage-driven Content Caching)</a></li>
                 <li>"is a mechanism that allows a piece of Javascript to store structured data within the user’s browser"
                     <a href="https://www.ieee-security.org/TC/W2SP/2012/papers/w2sp12-final8.pdf" target="_blank">(WebStorage-driven Content Caching)</a></li>
                 <li>"is, thereby, an umbrella term for two related functionalities - SessionStorage and LocalStorage."
                     <a href="https://www.ieee-security.org/TC/W2SP/2012/papers/w2sp12-final8.pdf" target="_blank">(WebStorage-driven Content Caching)</a></li>
-                <li>"summarizes a set of browser-based technologies that allow application-level persistent storage of key/values pairs on the client-side"
-                    <a href="https://www.ieee-security.org/TC/W2SP/2012/papers/w2sp12-final8.pdf" target="_blank">(WebStorage-driven Content Caching)</a></li>
-                </li>
-            </ol>
-        </div>
-        <h2 class="LocalStorageDefinition"> ========= Local Storage ========= </h2>
-        <div>
-            <ol>
-                <li>"is only one of many ways to persist data across multiple HTTP requests as Cookies, WebStorage or the File API exist nowadays.."
-                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity14/sec14-paper-stock.pdf#page=4" target="_blank"> (Beyond XSS Auditor) </a>
-                </li>
-                <li>"is persistent across sessions, while data within SessionStorage is discarded whenever the corresponding session is closed."
-                    <a href="https://www.ieee-security.org/TC/W2SP/2012/papers/w2sp12-final8.pdf#page=2" target="_blank">(WebStorage-driven Content Caching)</a></li>
                 </li>
             </ol>
         </div>
@@ -263,12 +218,11 @@
                     <a href="https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_01B-1_Steffens_paper.pdf#page=2" target="_blank"> (Don’t Trust The Locals) </a></li>
             </ol>
         </div>
-    <div class="definition">
-        <h2 class="OutputEncoding"> ========= Output encoding ========= </h2>
+        <h2 class="LocalStorageDefinition"> ========= Local Storage ========= </h2>
         <div>
             <ol>
-                <li>"is changing input so that it cannot be interpreted as code"
-                    <a href="https://medium.com/swlh/xss-for-beginners-6752b1b1487d" target="_blank">(XSS for beginners…)</a>
+                <li>"is only one of many ways to persist data across multiple HTTP requests as Cookies, WebStorage or the File API exist nowadays.."
+                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity14/sec14-paper-stock.pdf#page=4" target="_blank"> (Beyond XSS Auditor) </a>
                 </li>
             </ol>
         </div>

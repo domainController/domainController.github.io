@@ -81,7 +81,7 @@
     </table> 
     <table class="content-table-slides">
         <tbody>
-            <caption>Browser Parsing Context</caption>
+            <caption>Browser’s parsing behavior</caption>
             <tr class=shell>
                 <td><a href="https://www.youtube.com/watch?v=SmE4OwHztCc&t=187s" target="_blank">    
                 </a>Blueprint: Robust Prevention of Cross-site Scripting Attacks for Existing Browsers</td>
@@ -93,6 +93,36 @@
                 <td class="diagramDescription"><a href="https://people.eecs.berkeley.edu/~dawnsong/papers/2011%20Systematic%20Analysis%20of%20XSS%20Sanitization.pdf#page=4" target="_blank">Flow of Data in our Browser Model. Certain contexts such as PCDATA and CDATA directly refer to parser states in the HTML 5 specification. We refer to the numbered and underlined edges during our discussion in the text</a></td>
                 <td class="diagramAuthors">Joel Weinberger, Prateek Saxena, Devdatta Akhawe, Matthew Finifter, Richard Shin, and Dawn Song</td>
             </tr>
+            <tr class=javascript>
+                <td><a href="" target="_blank">ScriptGard: Automatic Context-Sensitive Sanitization for Large-Scale Legacy Web Applications</a></td>
+                <td class="diagramDescription"><a href="http://webblaze.cs.berkeley.edu/papers/scriptgard.pdf#page=6" target="_blank">An abstract model of an HTML 5-compliant Web browser. Gray boxes represent various parsers for the browser sub-grammars. Black boxes are the major browser execution components.</a></td>
+                <td class="diagramAuthors"><a href="https://dmolnar.com/" target="_blank">David Molnar</a>, Prateek  Saxena, <a href="http://www.doc.ic.ac.uk/~livshits/">Benjamin  Livshits</a></td>
+            </tr>
+        </tbody> 
+    <table class="content-table-slides">
+        <tbody>
+            <caption>Sources/Sinks Classification</caption>
+            <tr class=shell>
+                <td><a href="" target="_blank">DOM-based XSS Attacks</a>
+                </td>    
+                <td class="diagramDescription">
+                    <a href="domxsspapers/2012 - DOM-based XSS Attacks.pdf#page=28" target="_blank">Classification of sinks</a>
+                </td>
+                <td class="diagramAuthors">
+                    <a href="https://www.linkedin.com/in/zdravko-danailov-a43ba049/?originalSubdomain=de">Zdravko Danailov</a>, 
+                    <a href="https://www.linkedin.com/in/krassen-deltchev-01263222/">Krassen Deltchev</a>
+                </td>
+            </tr>
+            <tr class=go>
+                <td><a href="" target="_blank">DOM-based XSS Attacks</a>
+                </td>    
+                <td class="diagramDescription">
+                    <a href="domxsspapers/2012 - DOM-based XSS Attacks.pdf#page=27" target="_blank">Classification of sources</a>
+                </td>
+                <td class="diagramAuthors">
+                    <a href="https://www.linkedin.com/in/zdravko-danailov-a43ba049/?originalSubdomain=de">Zdravko Danailov</a>, 
+                    <a href="https://www.linkedin.com/in/krassen-deltchev-01263222/">Krassen Deltchev</a>
+                </td>
             <tr class=javascript>
                 <td><a href="" target="_blank">ScriptGard: Automatic Context-Sensitive Sanitization for Large-Scale Legacy Web Applications</a></td>
                 <td class="diagramDescription"><a href="http://webblaze.cs.berkeley.edu/papers/scriptgard.pdf#page=6" target="_blank">An abstract model of an HTML 5-compliant Web browser. Gray boxes represent various parsers for the browser sub-grammars. Black boxes are the major browser execution components.</a></td>

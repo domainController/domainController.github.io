@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SystematicXSSsanit</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/sommaire.css">
+</head>
+
+<body>
+    <div class="quotes">
+        <h2><a href="https://people.eecs.berkeley.edu/~dawnsong/papers/2011%20Systematic%20Analysis%20of%20XSS%20Sanitization.pdf" target="_blank"> 
+        ========= A Systematic Analysis of XSS Sanitization in Web Application Frameworks ========= </a></h2>
+        <ol>
+            <li>"However, <strong>sanitization or filtering</strong>    , the practice of encoding or eliminating dangerous constructs in untrusted data, remains the industry standard defense strategy [45]"</li>
+            <li>"XSS sanitization is deviously complex; it involves understanding <strong>how the web browser parses and interprets web content</strong> in non-trivial detail."</li>
+            <li>"Our browser model includes details of the sub-languages supported by HTML5, their internal interactions, and the transductions browsers introduce on content."</li>
+            <li>"When data controlled by the attacker is interpreted by the web browser as if it was code written by the web developer, an XSS attack results"</li>
+            <li>"XSS sanitization requires removal of such dangerous tags from the untrusted data."</li>
+            <li>"We present a comprehensive model of the web browser’s parsing behavior."</li>
+            <li>"<strong>Context Expressiveness</strong>. Untrusted data needs to be sanitized differently based on its context in the HTML document. For example, the sanitization requirements of a URI attribute are different from those of an HTML tag."</li>
+            <li>"Consider a blogging web application <strong>that emits untrusted content, such as anonymous comments</strong>, on the web page If the developer is not careful, an attacker can input text such as \<script\>...\<script\>, which may be output verbatim in the server’s output HTML page. When a user visits this blog page, her web browser will execute the attacker controlled text as script code.XSS sanitization requires removal of such dangerous tags from the untrusted data"</li>
+            <li>"We present a comprehensive model of the <strong>web browser’s parsing behavior</strong>."</li>
+            <li>"Abstractly, the browser can be viewed as a collection of HTML-related sub-grammars and a collection of <a href="https://fr.wikipedia.org/wiki/Transducteur_fini">transducers</a>. Sub-grammars correspond to parsers for languages such as <a href="https://tools.ietf.org/html/rfc3986">URI schemes</a>, CSS, HTML, and JavaScript"</li>
+            <li>"<strong>Transducers transform or change the representation of the text, such as in HTML-entity encoding/decoding, URI-encoding, JavaScript Unicode encoding</strong> and so on"</li>
+            <li>"The browser parses these input fragments <strong>in stages</strong>— <u>when a fragment is recognized as a term in another sub-grammar</u>, <strong>it is shipped to the corresponding sub-grammar for reparsing and evaluation</strong>"</li>
+            <li>"Certain contexts such as <a href="https://en.wikipedia.org/wiki/PCDATA">PCDATA</a> and <a href="https://en.wikipedia.org/wiki/CDATA">CDATA</a> directly refer to parser states in the HTML 5 specification"</li>
+            <li>"Sanitization requirements vary by contexts"</li>
+            <li>We can see in the model that a string in a web application’s output can be parsed by multiple sub-parsers in the browser. We say that such a string is placed in nested contexts.</li>
+            <li>"Consider an embedding of an untrusted string inside a script block, such as <script> var x = ‘ UNTRUSTED DATA’...</script>. In this example, when the underlined data is read by the browser, it is simultaneously placed in two contexts. <strong>It is placed in a JavaScript string literal context by the JavaScript parser</strong> (edge 2) due to the single quotes. But, before that, it is inside a a <a href="https://dev.w3.org/html5/spec-LC/tokenization.html#rcdata-state">RCDATA</a> context according to the HTML 5 specification) that is parsed by the HTML parser.. Two distinct attack vectors can be used here: the attacker could use a single quote to break out of the JavaScript string context, or inject </script> to break out of the script tag. In fact, sanitizers commonly fail to account for the latter because they do not recognize the presence of nested contexts."</li>
+            <li>"In fact, sanitizers commonly fail to account for the latter because they do not recognize the presence of nested contexts"</li>
+            <li>"In the server-side code, which is not shown here, the application sanitizes the title attribute of an HTML element by HTML-entity encoding it. If the attacker enters a string like script>, the encoding converts it to &lt;script&gt;. The client-side code subsequently reads this attribute via the getAttribute DOM API in JavaScript code (shown above) and inserts it back into the DOM via the innerHTML method"</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+
+        </ol>
+    </div>
+</body>
+
+</html>
