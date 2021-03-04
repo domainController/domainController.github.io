@@ -14,9 +14,9 @@
     <div class="blue">
         <ul>
             <li>
-                <a href="persistent.html" target="_blank">Persistent Client-Side XSS</a>  |
+                <a href="persistent.html" target="_blank">Persistent Client-Side XSS</a> |
                 <a href="reflected.html" target="_blank">Reflected Client-Side XSS</a> |
-                <a href="sources.html">Sources</a> | 
+                <a href="sources.html">Sources</a> |
                 <a href="sinks.html">Sinks</a> |
                 <a href="mitigation.html">Mitigations techniques </a>
             </li>
@@ -43,11 +43,11 @@
     <h2>Researchers</h2>
     <div class="magenta">
         <ul>
-            <li> 
-                <a href="http://www.adambarth.com/papers/">Adam Barth</a> | 
+            <li>
+                <a href="http://www.adambarth.com/papers/">Adam Barth</a> |
                 <a href="https://www.comp.nus.edu.sg/~prateeks/" target="_blank">Prateek Saxena</a> |
                 <a href="https://cispa.de/de/people/ben.stock" target="_blank">Benjamin Stock</a> |
-                <a href="http://www.martinjohns.com/" target="_blank">Martin Johns</a> 
+                <a href="http://www.martinjohns.com/" target="_blank">Martin Johns</a>
             </li>
         </ul>
     </div>
@@ -68,10 +68,9 @@
     <div class="creme">
         <ul>
             <li>
-<!--                 <a href="https://www.youtube.com/watch?v=eijtWFKH6JQ&t=38s" target="_blank">Taint Tracking</a> | -->
+                <!--                 <a href="https://www.youtube.com/watch?v=eijtWFKH6JQ&t=38s" target="_blank">Taint Tracking</a> | -->
                 <a href="opensource.html" target="_blank">Open Source</a> |
                 <a href="vendors.html" target="_blank">Commercial</a>
-
             </li>
         </ul>
     </div>
@@ -98,6 +97,31 @@
             </li>
         </ul>
     </div>
+    <ul>
+        <li>Vous avez vu cette page
+            <span id="nb_visites">un nombre indéterminé de</span>
+            fois.</li>
+    </ul>
+    <script>
+    if (typeof(localStorage) == "undefined") {
+        alert("Ce navigateur ne supporte pas Web Storage");
+    } else {
+        // Valeur par défaut
+        if (!localStorage.visites)
+            localStorage.setItem("visites", "0");
+        // Variable temporaire
+        var nb = "";
+        // Lecture
+        // parseInt() convertit le texte en nombre entier
+        nb = parseInt(localStorage.getItem("visites"));
+        // Incrémentation du compteur
+        nb++;
+        // Mémorisation
+        localStorage.setItem("visites", nb);
+        // Affichage
+        document.getElementById("nb_visites").innerHTML = nb;
+    }
+    </script>
 </body>
 
 </html>

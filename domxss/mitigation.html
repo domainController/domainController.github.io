@@ -52,5 +52,30 @@
         </ul>
     </div>
 </body>
+<p>
+            Vous avez vu cette page
+            <span id="nb_visites">un nombre indéterminé de</span>
+            fois.
+        </p>
+        <script>
+        if (typeof(localStorage) == "undefined") {
+            alert("Ce navigateur ne supporte pas Web Storage");
+        } else {
+            // Valeur par défaut
+            if (!localStorage.visites)
+                localStorage.setItem("visites", "0");
+            // Variable temporaire
+            var nb = "";
+            // Lecture
+            // parseInt() convertit le texte en nombre entier
+            nb = parseInt(localStorage.getItem("visites"));
+            // Incrémentation du compteur
+            nb++;
+            // Mémorisation
+            localStorage.setItem("visites", nb);
+            // Affichage
+            document.getElementById("nb_visites").innerHTML = nb;
+        }
+        </script>
 
 </html>

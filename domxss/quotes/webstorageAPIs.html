@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>client-side storage APIs</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/sommaire.css">
+</head>
+
+<body>
+    <div class="quotes">
+        <h2>
+            <a href="http://eprints.bournemouth.ac.uk/30202/1/BUCSR-2018-01%20Client%20side%20security%20considerations.pdf" target="_blank">
+                ========= Client-side storage APIs ========= </a>
+        </h2>
+        <ol>
+            <li>"It should to be noted that, despite being so impactful and ubiquitous, this technology has got its limitations. For example, one of the limits of storing data through HTTP cookies is in the amount of information that can actually be stored. Web browsers tend to limit the size of cookies to a few thousands characters. Contrary to what a few papers in the literature seem to imply, this limitation is not imposed by the specification written by Kristol and Montulli (2009). In fact, that document recommends that user agents should not impose fixed limits to the size and amounts of cookie they support."
+            </li>
+            <li>"Web browsers, however, not only limit the length of HTTP cookies, but they also apply constraints to their quantity, allowing only a few dozens of them per origin. Several studies can be found online providing an overall view of the limits that different vendors set to HTTP cookies (Manico, 2009; Roberts, 2013)"</li>
+            <li>"Limiting the size and the amount of HTTP cookies that a web page can set is a reasonable implementation decision, considering the performance implications that come with their usage. Indeed, cookies are not an ideal way of transferring large amounts of data, mainly because they are transmitted through HTTP requests."</li>
+            <li>"Unlike HTTP cookies, <strong>data cannot be sent via HTTP headers</strong>. The web storage API is the only way in which a web application can access the data in <a href="https://nolanlawson.com/tag/indexeddb/">web storage</a>. "
+            </li>
+            <li>"In November 2010, the W3C followed suit and announced the decision to abandon the Web SQL Database draft, citing that that “all interested implementers have used the same SQL backend (SQLite)”, and lamenting the lack of multiple independent implementations (Hickson, 2010). <strong>Web SQL Database was deprecated in favour of Indexed Database API</strong>."
+            </li>
+            <li>"On the other hand, Indexed Database API allows storing larger amounts of structured data and it provides advanced features such as <strong>in-order retrieval</strong> of keys and storage of duplicate values for a key"</li>
+            <li>"An object store is the primary storage mechanism for storing data in a database. It comprises of a list of records and each record consists of a key and a value. Object stores are identified by a name, which is unique in the context of the database."</li>
+            <li>"Unlike WebSQL Database, IndexedDB is an object-oriented database. <strong>The interface for adding and retrieving data does not use SQL queries but keys and indexes instead</strong>". Nonetheless, <u>one of the principles that were considered while designing</u> the IndexedDB API, was to allow it <strong>to be easily wrapped by JavaScript libraries built on top of it</strong></li>
+            <li>"The security recommendations for the usage of Indexed Database API are not different to those for Web Storage. The security model of IndexedDB still gravitates around the principles of the <a href="https://developer.mozilla.org/fr/docs/Web/Security/Same-origin_policy">same-origin policy"</a>. This means that browsers assign a set of databases to each requesting  <a href="https://html.spec.whatwg.org/multipage/browsers.html#section-origin">origin</a> , based on a <a href="https://tools.ietf.org/html/rfc6454#section-5">combination</a> of the hostname, the port number and the protocol used by the web application</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+        </ol>
+    </div>
+</body>
+
+</html>

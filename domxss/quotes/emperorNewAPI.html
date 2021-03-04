@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Emperor's New API</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/sommaire.css">
+</head>
+
+<body>
+    <div class="quotes">
+        <h2>
+            <a href="http://www.cs.berkeley.edu/~dawnsong/papers/2010%20emperors%20new%20api.pdf" target="_blank">
+                ========= The Emperor's New API ========= </a>
+        </h2>
+        <ol>
+            <li>"However, if developers do not use the security features of the primitive fully or <strong>implicitly trust data arriving on this channel</strong>  , a variety of attacks can result"
+            </li>
+            <li>"We observe a common problem with these new clientside primitives: to ensure security, every use of the primitive needs to be accompanied by <strong>custom sanity checks</strong>"
+            </li>
+            <li>"We propose <strong>the economy of liabilities</strong> principle in designing security primitives—a primitive must minimize the liability that the user undertakes to ensure application security." For example, in this context, the principle of economy of liabilities implies that client-side primitives should internally perform sanitization functionality critical to achieve the intended security property, as much as possible. New primitives today ignore this design principle, achieving security only ‘in principle’ rather than ‘in practice’
+            </li>
+            <li>"In particular, we suggest <strong>a declarative style, whitelist-based origin validation scheme</strong> that should be provided by the postMessage primitive and enforced by the browser <strong>to ensure channel integrity</strong>"
+            </li>
+            <li>"For client-side database primitives, we suggest the browser database interface <strong>should automatically perform output sanitization</strong> to prevent persistent XSS attacks"
+            </li>
+            <li>"Web browsers typically prevent <a href="https://www.youtube.com/watch?v=pIBKyooZrJQ&t=229s">documents</a> with different origins from affecting each other
+            "</li>
+            <li>"Note that this message exchange happens completely over the client side and no data is sent over the network.
+            "</li>             
+            <li>"The intended recipient’s origin, specified in the method call, is called the targetOrigin parameter. For use cases in which <strong>confidentiality</strong> is not essential, a sender can specify the all-permissive ‘*’ literal as the targetOrigin
+            "</li>             
+            <li>"The recipient <u>is expected to validate</u> the sender’s origin as coming from a trusted source, thus achieving sender <strong>authenticity</strong>
+            "</li>
+            <li>"We <strong>conjecture</strong> that for complex cross-domain interactions involving fine-grained origins, developers may fail to follow the recommended practice
+            "</li>
+            <li>"Due to the complexity of the JavaScript code used by these protocols, we use the Kudzu [10] system to check for the absence of such validation in the code
+            "</li>
+            <li>"<strong>An attacker can assume the user to have already logged onto</strong> Facebook and authorized Facebook Connect applications not controlled by the attacker
+            "</li>
+            <li>"At the end of this transaction, the user has essentially logged in to implementor using his Facebook credentials.
+            "</li>
+            <li>"As discussed before, validating the origin of received messages is necessary for ensuring sender authenticity.
+            "</li>
+            <li>"In this particular case, we find that the data received over the channel is used in a code evaluation construct and thus allows an attacker to inject arbitrary code into implementor’s security context.
+            "</li>
+            <li>"On our test site, we were able to inject a script payload into the benign implementor’s security context3
+            "</li>
+            <li>"Setting the targetOrigin parameter to the ‘*’ literal leaks sensitive user data like profile information and friend lists to the attacker.
+            "</li>
+            <li>"As a result, validating the origin becomes nontrivial. Additionally, for complex protocols, these checks must be repeated for every message
+            "</li>
+            <li>"In fact, in our discussion with Facebook, we were informed that they used the all-permissive ‘*’ directive because postMessage does not support multicast and implementing this functionality would require a series of string-based verification comparisons
+            "</li>
+            <li>"The use of the all-permissive ‘*’ as the targetOrigin allows leakage of confidential data
+            "</li>
+            <li>"We find that data stored in client-side databases is often used in <strong>code evaluation constructs</strong> without sanitization.
+            "</li>
+            <li>"Client-side databases, thus, provide <strong>additional avenues for attackers to persist their payloads across sessions</strong>. For instance, attackers only need to inject XSS attack payloads once into the client-side storage to have them repeatedly compromise the client-side code integrity for sustained periods of time (unlike a common reflected XSS issue which is fixed once patched). Additionally, because the attack payload is stored on the client-side, the server is <strong>oblivious</strong> to the <strong>nefarious</strong> activity
+            "</li>
+            <li>"localStorage is a key/value store tied to an application’s origin. Script executing within an origin can get or set values of the data store using the localStorage object"</li>
+            <li>"The goal of either attacker is to <strong>inject code</strong> into the local storage in order to gain a <strong>persistent foothold</strong> in the application" application—one that remains even when the transient attack vector is fixed. Once an application has been compromised, <strong>the attacker has control of the application until the client side database is cleared</strong>
+            </li>
+            <li>"As a second attack vector, suppose that an attacker has exploited a transient XSS vulnerability as a primary attack vector and has been able to execute arbitrary code within the context of the target site. The attacker is able to modify the database arbitrarily because the attacker has used the XSS to execute JavaScript with the same privilege as the code running within that origin. Not only is this attack persistent, it is also stealthy"
+            </li>
+            <li>"In such a case, the attacker writes an exploit such that its payload is stored inside an email in the database. When the user views the email, the injected code is executed. Now, even if the XSS vulnerability is fixed, the payload persists as long as the database."
+            </li>
+            <li>"We evaluated 11 applications that use client-side storage using Kudzu. Kudzu, a systematic vulnerability finding tool built on the WebKit framework, is a dynamic symbolic execution engine framework which is designed to analyze JavaScript applications running in browsers"</li>
+            <li>"When using Translate, the result of a translation is placed into a text node on the user’s page. Therefore, the attack is mitigated as no code can be executed in a text node."
+            </li>
+            <li>However, all of the other applications failed to sufficiently sanitize database outputs. We speculate that some applications did not sanitize database outputs because of the complexity of the sanitization process required to eliminate the attack.
+            </li>
+            <li>"Based on the current usage, in order to ensure authenticity of messages received, we suggest a declarative system for specifying origins allowed to send messages will function better than manual origin checks. For instance, the Content Security Policy proposal allows a website to specify a whitelist of origins trusted to execute code in the website’s security context [7]. We suggest extending CSP with a directive to specify origins allowed to send messages to the website"
+            </li>
+            <li>"But, like postMessage, we noticed that the output sanitization can often be complex and occur throughout the application code."
+            </li>
+            <li>"They added that they felt, to a large extent, that these problems were inherent to the way that the mechanisms such as localStorage were designed and that first-degree XSS attacks are their primary focus."
+            </li>
+            <li>"In the case of postMessage, we reverse engineered the client-side protocols and systematically extracted the <strong>security-relevant checks</strong> in the code to find new vulnerabilities in them."
+            </li>
+            <li>"In the case of client-side storage, we found that applications <strong>do not sanitize database outputs</strong>, which can lead to a stealthy, persistent, client-side XSS attack."</li>
+        </ol>
+    </div>
+</body>
+
+</html>

@@ -11,7 +11,7 @@
 <body>
     <div class="definition">
         <h2 class="DOMXSSdefinition"> ========= DOM XSS ========= </h2>
-        <div class="DOMXSSdefinition">
+        <div class="definition">
             <ol>
                 <li>"DOM-based XSS is the exploitation of an input validation vulnerability that is caused by the client, not the server."</li>
                 <a href="http://index-of.co.uk/Hacking-Coleccion/XSS%20Attacks%20-%20Cross%20Site%20Scripting%20Exploits%20&%20Defense.pdf">(XSS Exploits)</a>
@@ -23,7 +23,10 @@
                     <a href="domxsspapers/taint25M.pdf" target="_blank">(taint25M)</a></li>
                 <li>"is a code injection vulnerability in which a web attacker is able to inject malicious JavaScript in a client’s web session."<a href="domxsspapers/taintDexterJS2.pdf#page=2" target="_blank">(DexterJS2)</a></li>
                 <li>"client-side code injection" <a href="https://people.eecs.berkeley.edu/~dawnsong/papers/2011%20Systematic%20Analysis%20of%20XSS%20Sanitization.pdf#page=6" target="_blank">(Systematic Analysis of XSS Sanitization)</a></li>
-                <li>"is a subtype of Cross-site Scripting (XSS) problems that results from unsafe processing of untrusted data from sources controlled by the attacker"<a href="https://cutt.ly/jlFHNfy">(DomXssMicro)</a></li>
+                <li>"is a subtype of Cross-site Scripting (XSS) problems that results from unsafe processing of untrusted data from sources controlled by the attacker"<a href="https://cutt.ly/jlFHNfy">(DomXssMicro)</a>
+                </li>
+                <li>"occur when client-side code uses untrusted input data in dynamic code evaluation constructs without sufficient validation."<a href="https://vividmachines.com/papers/kudzu.pdf" target="_blank">(Symbolic Execution)</td>
+                </li>
             </ol>
         </div>
         <h2 class="XSSDefinition"> ========= XSS ========= </h2>
@@ -178,6 +181,18 @@
             <a href="https://html.spec.whatwg.org/multipage/web-messaging.html"> ========= postMessage ========= </a></h2>
         <div class="postMessageDefinition">
             <ol>
+                <li>"is a primitive that enables crossorigin communication within the web browser"
+                    <a href="http://www.cs.berkeley.edu/~dawnsong/papers/2010%20emperors%20new%20api.pdf" target="_blank"> (Emperor's New API)</a>
+                </li>
+                <li>"is a message passing mechanism that can be used for secure communication of primitive strings between browser windows."
+                    <a href="http://www.cs.berkeley.edu/~dawnsong/papers/2010%20emperors%20new%20api.pdf" target="_blank"> (Emperor's New API)</a>
+                </li>
+                <li>"is a client-side primitive to enable cross-origin communication at the browser side."
+                    <a href="http://www.cs.berkeley.edu/~dawnsong/papers/2010%20emperors%20new%20api.pdf#page=2" target="_blank"> (Emperor's New API)</a>
+                </li>
+                <li>"aims to provide a simple, purely client-side cross-origin channel for exchanging primitive strings."
+                    <a href="http://www.cs.berkeley.edu/~dawnsong/papers/2010%20emperors%20new%20api.pdf#page=2" target="_blank"> (Emperor's New API)</a>
+                </li>
                 <li>"is an exemption by design to enable cross-origin communication"
                     <a href="https://swag.cispa.saarland/papers/steffens2020pmforce.pdf#page=2" target="_blank">(pMForce)</a>
                 </li>
@@ -200,6 +215,8 @@
         <h2 class="SOPDefinition"> ========= Same-Origin Policiy ========= </h2>
         <div class="SOPDefinition">
             <ol>
+                <li>"specifies trust by URI"<a href="https://tools.ietf.org/html/rfc6454#section-3.1">(RFC The Web Origin Concept)</a>
+                </li>
                 <li>"restricts access to resources as soon as the origin [37] (protocol, host, and port) differs from the requesting page’s own values"
                     <a href="https://people.cispa.io/ben.stock/papers/meiser2021cwyt.pdf#page=2" target="_blank">(Careful Who You Trust)</a>
                 </li>
@@ -224,8 +241,8 @@
         <h2 class="WebStorageDefinition"> ========= Web Storage ========= </h2>
         <div class="WebStorageDefinition">
             <ol>
-                <li>"is, thereby, an umbrella term for two related functionalities - SessionStorage and LocalStorage."
-                    <a href="https://www.ieee-security.org/TC/W2SP/2012/papers/w2sp12-final8.pdf" target="_blank">(WebStorage-driven Content Caching)</a>
+                <li>"two persistent storage abstractions"
+                    <a href="http://www.cs.berkeley.edu/~dawnsong/papers/2010%20emperors%20new%20api.pdf#page6" target="_blank"> (Emperor's New API)</a>
                 </li>
                 <li>"is a mechanism that allows a Web application to store structured data within the user’s Web browser via Javascript."
                     <a href="https://www.ieee-security.org/TC/W2SP/2012/papers/w2sp12-final8.pdf" target="_blank">(WebStorage-driven Content Caching)</a></li>
@@ -235,12 +252,16 @@
                     <a href="https://www.ieee-security.org/TC/W2SP/2012/papers/w2sp12-final8.pdf" target="_blank">(WebStorage-driven Content Caching)</a></li>
                 <li>"summarizes a set of browser-based technologies that allow application-level persistent storage of key/values pairs on the client-side"
                     <a href="https://www.ieee-security.org/TC/W2SP/2012/papers/w2sp12-final8.pdf" target="_blank">(WebStorage-driven Content Caching)</a></li>
+                <li>"is a specification that allows web applications to create a persistent key-value store in the browser, the content of which is maintained either until the end of a session (Session Storage), or beyond (Local Storage)"<a href="http://eprints.bournemouth.ac.uk/30202/1/BUCSR-2018-01%20Client%20side%20security%20considerations.pdf" target="_blank">(Client-side storage APIs)</a>
                 </li>
             </ol>
         </div>
         <h2 class="LocalStorageDefinition"> ========= Local Storage ========= </h2>
         <div>
             <ol>
+                <li>"is a key/value store tied to an application’s origin."
+                    <a href="http://www.cs.berkeley.edu/~dawnsong/papers/2010%20emperors%20new%20api.pdf#page=6" target="_blank"> (Emperor's New API)</a>
+                </li>
                 <li>"is only one of many ways to persist data across multiple HTTP requests as Cookies, WebStorage or the File API exist nowadays.."
                     <a href="https://www.usenix.org/system/files/conference/usenixsecurity14/sec14-paper-stock.pdf#page=4" target="_blank"> (Beyond XSS Auditor) </a>
                 </li>
@@ -253,14 +274,29 @@
         <div class="CookieDefinition">
             <ol>
                 <li>"simple key-value stores are used by browsers to persist small pieces of string data, which are sent along in every HTTP request to matching servers"
-                    <a href="https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_01B-1_Steffens_paper.pdf#page=2" target="_blank"> (Don’t Trust The Locals) </a></li>
+                    <a href="https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_01B-1_Steffens_paper.pdf#page=2" target="_blank"> (Don’t Trust The Locals) </a>
+                </li>
+                <li>"is a short piece of data that a website sends to a visiting client, either via HTTP response headers or by using client-side scripting"<a href="http://eprints.bournemouth.ac.uk/30202/1/BUCSR-2018-01%20Client%20side%20security%20considerations.pdf">client-side storage APIs)</a></li>
             </ol>
         </div>
         <h2 class="CSVulnDefinition"> ========= Client-side validation vulnerability ========= </h2>
         <div class="CSVulnDefinition">
             <ol>
                 <li>"represent bugs in JavaScript programs that allow for unauthorized actions via untrusted input."
-                    <a href="https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_01B-1_Steffens_paper.pdf#page=2" target="_blank"> (Don’t Trust The Locals) </a></li>
+                    <a href="https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_01B-1_Steffens_paper.pdf#page=2" target="_blank"> (Don’t Trust The Locals) </a>
+                </li>
+            </ol>
+        </div>
+    <div class="definition">
+        <h2 class="IndexedDB"> ========= Indexed DB ========= </h2>
+        <div>
+            <ol>
+                <li>"It defines a JavaScript-based interface for an embedded transactional database system"
+                    <a href="http://eprints.bournemouth.ac.uk/30202/1/BUCSR-2018-01%20Client%20side%20security%20considerations.pdf" target="_blank">(Client-side storage APIs)</a>
+                </li>
+                <li>"is an object-oriented database"
+                    <a href="http://eprints.bournemouth.ac.uk/30202/1/BUCSR-2018-01%20Client%20side%20security%20considerations.pdf#page=10" target="_blank">(Client-side storage APIs)</a>
+                </li>
             </ol>
         </div>
     <div class="definition">
@@ -271,7 +307,31 @@
                     <a href="https://medium.com/swlh/xss-for-beginners-6752b1b1487d" target="_blank">(XSS for beginners…)</a>
                 </li>
             </ol>
-        </div>
+        </div><p>
+            Vous avez vu cette page
+            <span id="nb_visites">un nombre indéterminé de</span>
+            fois.
+        </p>
+        <script>
+        if (typeof(localStorage) == "undefined") {
+            alert("Ce navigateur ne supporte pas Web Storage");
+        } else {
+            // Valeur par défaut
+            if (!localStorage.visites)
+                localStorage.setItem("visites", "0");
+            // Variable temporaire
+            var nb = "";
+            // Lecture
+            // parseInt() convertit le texte en nombre entier
+            nb = parseInt(localStorage.getItem("visites"));
+            // Incrémentation du compteur
+            nb++;
+            // Mémorisation
+            localStorage.setItem("visites", nb);
+            // Affichage
+            document.getElementById("nb_visites").innerHTML = nb;
+        }
+        </script>
 
 </body>
 
