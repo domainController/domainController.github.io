@@ -17,7 +17,7 @@
                 <a href="http://index-of.co.uk/Hacking-Coleccion/XSS%20Attacks%20-%20Cross%20Site%20Scripting%20Exploits%20&%20Defense.pdf">(XSS Exploits)</a>
                 <li>"<strong>can be seen as an information flow problem where portions of strings</strong> — potentially under attacker’s control (e.g., URL, cookie value) — <strong>are being evaluated as code through JavaScript code evaluation functions</strong> like eval() <strong>or being used in unsafe dynamic DOM constructions</strong>, such as via document.write or innerHTML"
                     <a href="domxsspapers/taintDexterJS1.pdf#page=2" target="_blank">(DexterJS1)</a></li>
-                <li>"is <strong>a subtype of Cross-site Scripting (XSS) problems that results from unsafe processing of untrusted data</strong> from sources controlled by the attacker."
+                <li>"is <strong>a subtype of Cross-site Scripting (XSS) problems that results from unsafe processing of untrusted data</strong> from <a href="https://www.youtube.com/watch?v=LRghBhLFFO0&t=204s">sources</a> controlled by the attacker."
                     <a href="domxsspapers/taintDexterJS1.pdf#page=2" target="_blank">(DexterJS1)</a></li>
                 <li>a vulnerability class subsuming all Cross-site Scripting problems that are caused by insecure handling of untrusted data through JavaScript
                     <a href="domxsspapers/taint25M.pdf" target="_blank">(taint25M)</a></li>
@@ -64,11 +64,15 @@
                 <li>"the source locations of incoming data"
                     <a href="domxsspapers/detectionDOM.pdf#page=4" target="_blank">(DomXssMicro)</a>
                 </li>
-                <li>"the Source denotes a code fragment, which embodies a vulnerable node from the DOM abstraction, implemented on the client-side of the Web-App. It represents the <strong>start node of a possible data flow</strong>, where an untrusted, malicious input data is collected and with greater likelihood acquired for processing of the Web-Application."
+                <li>"denotes a code fragment, which embodies a vulnerable node from the DOM abstraction, implemented on the client-side of the Web-App. It represents the <strong>start node of a possible data flow</strong>, where an untrusted, malicious input data is collected and with greater likelihood acquired for processing of the Web-Application."
                     <a href="domxsspapers/domxssAttacks.pdf#page=26" target="_blank">(DOM XSS Attacks)</a>
                 </li>
-                <li>"In software security the sources are to be considered starting points where untrusted input data is taken by an application."
-                    <a href="https://code.google.com/archive/p/domxsswiki/wikis/Sources.wiki" target="_blank">(Google DOM XSS Wiki)</a></li>
+                <li>"are to be considered starting points where untrusted input data is taken by an application."
+                    <a href="https://code.google.com/archive/p/domxsswiki/wikis/Sources.wiki" target="_blank">(Google DOM XSS Wiki)</a>
+                </li>
+                <li>"the program input that supplies the data for an attack"
+                    <a href="https://vividmachines.com/papers/kudzu.pdf#page=2" target="_blank">(Symbolic Execution)</td>
+                </li>
             </ol>
         </div>
         <h2 class="SinkDefinition"> ========= Sink ========= </h2>
@@ -76,6 +80,9 @@
             <ol>
                 <li>"Sinks are meant to be the points in the flow where data depending from sources is used in a potentially dangerous way resulting in loss of Confidentiality, Integrity or Availability (the CIA triad)."
                     <a href="https://code.google.com/archive/p/domxsswiki/wikis/Sources.wiki" target="_blank">(Google DOM XSS Wiki)</a>
+                </li>
+                <li>"potentially vulnerable code evaluation construct"
+                    <a href="https://vividmachines.com/papers/kudzu.pdf#page=2" target="_blank">(Symbolic Execution)</td>
                 </li>
             </ol>
         </div>
@@ -166,7 +173,11 @@
                     <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">(Script Gadget)</a>
                 </li>
                 <li>"provides a mechanism to allow websites to explicitly indicate what kinds of JavaScript code can be executed within their origins to prevent injection of attacker-controlled scripts"
-                    <a href="https://research.google/pubs/pub49950.pdf#page=10" target="_blank">( API hardening)</a></li>
+                    <a href="https://research.google/pubs/pub49950.pdf#page=10" target="_blank">(API hardening)</a>
+                </li>
+                <li>"is a key response header that provides strong defence mechanisms against Cross Site Scripting (XSS) and other client-side injection attacks by whitelisting allowed sources and disabling certain insecure JavaScript features."
+                    <a href="" target="_blank">(HTTP security headers analysis of top 1M websites)</a>
+                </li>
             </ol>
         </div>
         <h2 class="DOMclobberingDefinition"> ========= DOM clobbering ========= </h2>
@@ -210,6 +221,12 @@
                 <li>"enables applications to communicate with each other purely within the browser, and are not subject to the classical same origin policy (SOP) that defines how code from mutually untrusted principals are separated."
                     <a href="https://mweissbacher.com/publications/zigzag_usenix.pdf#page=2" target="_blank">(ZigZag)</a>
                 </li>
+                <li>"enables web content from different origins being exchanged between different service providers."
+                    <a href="http://www.cs.wm.edu/~ksun/publications/postmessage-asiaccs16.pdf">(Privacy Breach by Exploiting postMessage)</a>
+                </li>
+                <li>"is a browser API designed for interframe communication"
+                    <a href="http://seclab.stanford.edu/websec/frames/post-message.pdf">(Securing Frames)</a>
+                </li>
             </ol>
         </div>
         <h2 class="SOPDefinition"> ========= Same-Origin Policiy ========= </h2>
@@ -228,13 +245,31 @@
                 <li>"automatically prevents client-side code from distinct origins from interfering with each others’ code and data"
                     <a href="https://mweissbacher.com/publications/zigzag_usenix.pdf#page=2" target="_blank">(ZigZag)</a>
                 </li>
+                <li>"guards web resources from being accessed by scripts from another origin"
+                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-chen.pdf#page=2">(Empirical Study of CORS)</a>
+                </li>
+                <li>"the fundamental isolation strategy for client-side web application security."
+                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-chen.pdf#page=3">(Empirical Study of CORS)</a>
+                </li>
+                <li>"defines the security boundary of a resource by its origin, the URI scheme/host/port tuple"
+                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-chen.pdf#page=3">(Empirical Study of CORS)</a>
+                </li>
+                <li>"is used to denote a complex set of rules which governs the interaction of different Web Origins within a web application"
+                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-schwenk.pdf">(SOP:Evaluation in Modern Browsers)</a>
+                </li>
             </ol>
         </div>
-        <h2 class="CORSDefinition"> ========= CORS ========= </h2>
+        <h2 class="CORSDefinition"><a href="https://www.youtube.com/watch?v=_FrnLbLQn-M&t=1420s"> ========= CORS =========</a></h2>
         <div class="CORSDefinition">
             <ol>
                 <li>"is an extension of the XMLHttpRequest API to allow cross-origin content in the browser through explicit authorization"
                     <a href="https://people.cispa.io/ben.stock/papers/meiser2021cwyt.pdf#page=3" target="_blank">(Careful Who You Trust)</a></li>
+                </li>
+                <li>"is proposed to solve the problems of JSON-P, and to provide a protocol support of authorized access cross-origin network resources."
+                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-chen.pdf#page=2">(Empirical Study of CORS)</a>
+                </li>
+                <li>"is an access control model regulating access to cross-origin network resources (including sending requests and reading responses) between browsers and servers."
+                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-chen.pdf#page=5">(Empirical Study of CORS)</a>
                 </li>
             </ol>
         </div>
@@ -287,52 +322,64 @@
                 </li>
             </ol>
         </div>
-    <div class="definition">
-        <h2 class="IndexedDB"> ========= Indexed DB ========= </h2>
-        <div>
-            <ol>
-                <li>"It defines a JavaScript-based interface for an embedded transactional database system"
-                    <a href="http://eprints.bournemouth.ac.uk/30202/1/BUCSR-2018-01%20Client%20side%20security%20considerations.pdf" target="_blank">(Client-side storage APIs)</a>
-                </li>
-                <li>"is an object-oriented database"
-                    <a href="http://eprints.bournemouth.ac.uk/30202/1/BUCSR-2018-01%20Client%20side%20security%20considerations.pdf#page=10" target="_blank">(Client-side storage APIs)</a>
-                </li>
-            </ol>
+        <div class="definition">
+            <h2 class="IndexedDB"> ========= Indexed DB ========= </h2>
+            <div>
+                <ol>
+                    <li>"It defines a JavaScript-based interface for an embedded transactional database system"
+                        <a href="http://eprints.bournemouth.ac.uk/30202/1/BUCSR-2018-01%20Client%20side%20security%20considerations.pdf" target="_blank">(Client-side storage APIs)</a>
+                    </li>
+                    <li>"is an object-oriented database"
+                        <a href="http://eprints.bournemouth.ac.uk/30202/1/BUCSR-2018-01%20Client%20side%20security%20considerations.pdf#page=10" target="_blank">(Client-side storage APIs)</a>
+                    </li>
+                </ol>
+            </div>
         </div>
-    <div class="definition">
-        <h2 class="OutputEncoding"> ========= Output encoding ========= </h2>
-        <div>
-            <ol>
-                <li>"is changing input so that it cannot be interpreted as code"
-                    <a href="https://medium.com/swlh/xss-for-beginners-6752b1b1487d" target="_blank">(XSS for beginners…)</a>
-                </li>
-            </ol>
-        </div><p>
-            Vous avez vu cette page
-            <span id="nb_visites">un nombre indéterminé de</span>
-            fois.
-        </p>
-        <script>
-        if (typeof(localStorage) == "undefined") {
-            alert("Ce navigateur ne supporte pas Web Storage");
-        } else {
-            // Valeur par défaut
-            if (!localStorage.visites)
-                localStorage.setItem("visites", "0");
-            // Variable temporaire
-            var nb = "";
-            // Lecture
-            // parseInt() convertit le texte en nombre entier
-            nb = parseInt(localStorage.getItem("visites"));
-            // Incrémentation du compteur
-            nb++;
-            // Mémorisation
-            localStorage.setItem("visites", nb);
-            // Affichage
-            document.getElementById("nb_visites").innerHTML = nb;
-        }
-        </script>
-
+        <div class="definition">
+            <h2 class="OutputEncoding"> ========= Output encoding ========= </h2>
+            <div>
+                <ol>
+                    <li>"is changing input so that it cannot be interpreted as code"
+                        <a href="https://medium.com/swlh/xss-for-beginners-6752b1b1487d" target="_blank">(XSS for beginners…)</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="definition">
+            <h2 class="DOM"> ========= DOM ========= </h2>
+            <div>
+                <ol>
+                    <li>"is the standardized application programming interface (API) for scripts running in a browser to interact with the HTML document"
+                        <a href="https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-schwenk.pdf">(SOP:Evaluation in Modern Browsers)</a>
+                    </li>
+                </ol>
+            </div>
+            <div>
+                <ul>
+                    <li>Vous avez vu cette page
+                        <span id="nb_visites">un nombre indéterminé de</span>
+                        fois.</li>
+                </ul>
+            </div>
+            <script>
+            if (typeof(localStorage) == "undefined") {
+                alert("Ce navigateur ne supporte pas Web Storage");
+            } else {
+                // Valeur par défaut
+                if (!localStorage.visites)
+                    localStorage.setItem("visites", "0");
+                // Variable temporaire
+                var nb = "";
+                // Lecture                  // parseInt() convertit le texte en nombre entier
+                nb = parseInt(localStorage.getItem("visites"));
+                // Incrémentation du compteur
+                nb++;
+                // Mémorisation
+                localStorage.setItem("visites", nb);
+                // Affichage
+                document.getElementById("nb_visites").innerHTML = nb;
+            }
+            </script>
 </body>
 
-</html>
+</html
