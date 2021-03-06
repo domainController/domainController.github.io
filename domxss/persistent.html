@@ -15,8 +15,8 @@
         <ul>
             <li>
                 <a href="https://html.spec.whatwg.org/multipage/webstorage.html" target="_blank">localStorage</a> |
-                <a href="https://html.spec.whatwg.org/multipage/origin.html" target="_blank">Origin</a> |
-                <a href="https://tools.ietf.org/html/rfc6454" target="_blank">Web Origin</a> |
+                <a href="https://html.spec.whatwg.org/multipage/origin.html" target="_blank">Origin</a>
+                <a href="https://tools.ietf.org/html/rfc6454" target="_blank">(1)</a> |
                 <a href="https://html.spec.whatwg.org/multipage/webstorage.html" target="_blank">sessionStorage</a> |
                 <a href="https://www.w3.org/TR/IndexedDB/" target="_blank">IndexedDB</a> |
                 <a href="https://github.com/localForage/localForage" target="_blank">localForage</a>
@@ -27,20 +27,35 @@
     <div class="red">
         <ul>
             <li>
-                <a href="https://tools.ietf.org/html/rfc6265" target="_blank">HTTP State Management Mechanism</a> |
-                <a href="https://blog.rapid7.com/2012/02/21/metasploit-javascript-keylogger/" target="_blank">Keylogger</a> |
+                <a href="https://tools.ietf.org/html/rfc6265" target="_blank">RFC</a> |<!-- 
+                <a href="https://blog.rapid7.com/2012/02/21/metasploit-javascript-keylogger/" target="_blank">Keylogger</a> | -->
                 <a href="https://owasp.org/www-community/attacks/Session_fixation" target="_blank">Session Fixation</a> |
-                <a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" target="_blank">CSRF</a>
+                <a href="https://seclab.stanford.edu/websec/csrf/csrf.pdf" target="_blank">CSRF</a> |
+                <a href="https://scarybeastsecurity.blogspot.com/2008/11/cookie-forcing.html" target="_blank">Cookie Forcing</a> |
+                <a href="https://github.blog/2013-04-09-yummy-cookies-across-domains/" target="_blank">Cookie</a>
+                <a href="https://www.youtube.com/watch?v=tl6JCLAj5os">Tossing</a> |
+                <a href="https://seclab.stanford.edu/websec/csrf/csrf.pdf#page=10" target="_blank">Cookie Overwriting</a> |
+                <a href="https://owasp.org/www-community/attacks/Session_fixation" target="_blank">Cookie Shadowing</a> |
+                <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-zheng-updated.pdf#page=4" target="_blank">Origin-Cookie</a>  |
+                <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-zheng-updated.pdf#page=5" target="_blank">
+                Web Attacker Threat Model</a>
             </li>
         </ul>
     </div>
-    <h2><a href="papers.html" target="_blank">Quotes</a></h2>
+    <h2><a href="papers.html" target="_blank">References</a></h2>
     <div class="green">
         <ul>
             <li>
+                <a href="https://ieeexplore.ieee.org/document/7119784?arnumber=7119784" target="_blank">Cookie Lacks Integrity</a> |
+                <a href="https://swag.cispa.saarland/papers/calzavara2021reining.pdf">Site Policy</a>
+            </li>
+            <li>
                 <a href="quotes/dontTrustTheLocals.html" target="_blank">Don't Trust the Locals</a> |
                 <a href="quotes/WebStorageContentCaching.html" target="_blank">Web Storage-driven Content Caching</a> |
-                <a href="quotes/webstorageAPIs.html" target="_blank">Client-side storage APIs</a>
+                <a href="http://www.cs.berkeley.edu/~dawnsong/papers/2010%20emperors%20new%20api.pdf#page=6" target="_blank">The Emperor's</a>
+                <a href="quotes/emperorNewAPI.html">New API</a></td> |
+                <a href="http://eprints.bournemouth.ac.uk/30202/1/BUCSR-2018-01%20Client%20side%20security%20considerations.pdf#page=7" target="_blank">Security considerations
+                <a href="quotes/webstorageAPIs.html"></a> around [...]</a>
             </li>
         </ul>
     </div>
@@ -48,11 +63,11 @@
     <div class="orange">
         <ul>
             <li>
-                <a href="https://www.oreilly.com/library/view/client-side-data-storage/9781491935101/" target="_blank">Client-Side Data Storage, Oreilly</a>
+                <a href="https://www.oreilly.com/library/view/client-side-data-storage/9781491935101/" target="_blank">Client-Side Data Storage</a>
             </li>
         </ul>
     </div>
-    <h2><a href="papers.html" target="_blank">Papers</a></h2>
+    <h2><a href="papers.html" target="_blank">Unread</a></h2>
     <div class="yellow">
         <ul>
             <li>
@@ -60,31 +75,6 @@
             </li>
         </ul>
     </div>
-    <ul>
-        <li class="bg1">Vous avez vu cette page
-            <span id="nb_visites">un nombre indéterminé de</span>
-            fois.</li>
-        </ul>
-        <script>
-        if (typeof(localStorage) == "undefined") {
-            alert("Ce navigateur ne supporte pas Web Storage");
-        } else {
-            // Valeur par défaut
-            if (!localStorage.visites)
-                localStorage.setItem("visites", "0");
-            // Variable temporaire
-            var nb = "";
-            // Lecture
-            // parseInt() convertit le texte en nombre entier
-            nb = parseInt(localStorage.getItem("visites"));
-            // Incrémentation du compteur
-            nb++;
-            // Mémorisation
-            localStorage.setItem("visites", nb);
-            // Affichage
-            document.getElementById("nb_visites").innerHTML = nb;
-        }
-        </script>
 </body>
 
 </html>

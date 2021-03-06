@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Tale of Two Headers</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/sommaire.css">
+</head>
+
+<body>
+    <div class="quotes">
+        <h2>
+            <a href="https://www.usenix.org/system/files/sec20_slides_calzavara.pdf" target="_blank">
+                ========= Inconsistent Click-Jacking Protection ========= </a>
+        </h2>
+        <ol>
+            <li>"Though these client-side security mechanisms are certainly useful and successful, delegating protection to web browsers opens room for inconsistencies in the security guarantees offered to users of different browsersThough these client-side security mechanisms are certainly useful and successful, delegating protection to web browsers opens room for inconsistencies in the security guarantees offered to users of different browsers"
+            </li>
+            <li>To assist developers in securing their applications, the Web platform has evolved to support more and more server-sent, yet <strong>client-enforced security mechanisms</strong>"</li>
+            <li>"possible. Examples of popular <strong>client-side security mechanisms</strong> include Content Security Policy (CSP) [25], cookie security attributes [3], and HSTS [11]."</li>
+            <li>"In this paper, we are concerned about inconsistencies in framing control, a cornerstone of Web application security, which pioneered the adoption of client-side security mechanisms."</li>
+            <li>"Framing control constrains the inclusion of Web content inside iframes (sub-documents) opened by malicious pages and it is particularly useful to prevent click-jacking attacks"</li>
+            <li>"In 2009, Internet Explorer introduced the X-Frame-Options header (XFO) as a simple, browser-based mechanism to control framing without relying on JavaScript"</li>
+            <li>"In 2014, the second iteration of the CSP specification introduced the frame-ancestors directive to control framing, with the goal of obsoleting XFO and to offer a comprehensive, uniform protection mechanism for all CSP-compliant browsers"</li>
+            <li>"Most browsers provide two different defenses in the form of XFO and CSP, possibly with different implementations, and developers may choose to use any of these two mechanisms, or a combination thereof, to protect their Web applications"</li>
+            <li>"Importantly, although an XFO specification exists in the form of <a href="https://tools.ietf.org/html/rfc7034">RFC 7034</a>, that specification was written after various browsers had implemented XFO and notes that “not all browsers implement X-Frame-Options in exactly the same way, which can lead to unintended results”."</li>
+            <li>"Overall, we find that XFO is indeed <strong>inconsistently implemented across browsers</strong>."</li>
+            <li>"While initially meant as a means of mitigating injection attacks, CSP nowadays offers support for framing control and TLS enforcement as well."</li>
+            <li>"the Referer header of incoming HTTP requests. This header is sent by browsers and indicates the document which initiated the loading of a specific resource (in this case, an iframe)."</li>
+            <!-- read first 5 pages but with less consistency for the last one (theory of a policy consistency) Mardi 5 mars ~12h--> 
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+        </ol>
+    </div>
+</body>
+
+</html>

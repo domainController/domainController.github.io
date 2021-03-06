@@ -178,6 +178,21 @@
                 <li>"is a key response header that provides strong defence mechanisms against Cross Site Scripting (XSS) and other client-side injection attacks by whitelisting allowed sources and disabling certain insecure JavaScript features."
                     <a href="" target="_blank">(HTTP security headers analysis of top 1M websites)</a>
                 </li>
+                <li>"means of mitigating injection attacks"
+                    <a href="https://www.usenix.org/system/files/sec20fall_calzavara_prepub.pdf" target="_blank">(Inconsistent Click-Jacking Protection)</a>
+                </li>
+                <li>"was initially designed to grant Web developers more control over the content loaded by their Web sites"
+                    <a href="https://www.securitee.org/files/csp_ndss2020.pdf" target="_blank">(Deployed CSP Analysis)</a>
+                </li>
+                <li>"is a security mechanism originally aimed at mitigating the severe dangers of Cross-Site Scripting (XSS) attacks"
+                    <a href="https://swag.cispa.saarland/papers/calzavara2021reining.pdf#page=2">(Site Policy)</a>
+                </li>
+                <li>"is meant to ensure that only resources explicitly allowed by the developer of a page can be included therein"
+                    <a href="https://swag.cispa.saarland/papers/calzavara2021reining.pdf#page=2">(Site Policy)</a>
+                </li>
+                <li>"is a defense-in-depth security mechanism which deployed on a page, defines content that are allowed or disallowed to load"
+                        <a href="https://secweb.work/papers/some2020remote.pdf#page=4" target="_blank">(The Remote on the Local)</a>
+                </li>
             </ol>
         </div>
         <h2 class="DOMclobberingDefinition"> ========= DOM clobbering ========= </h2>
@@ -257,6 +272,21 @@
                 <li>"is used to denote a complex set of rules which governs the interaction of different Web Origins within a web application"
                     <a href="https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-schwenk.pdf">(SOP:Evaluation in Modern Browsers)</a>
                 </li>
+                <li>"is a corner stone of web security, guarding the web content of one domain from the access from another domain"
+                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-zheng-updated.pdf">(Cookies Lack Integrity)</a>
+                </li>
+                <li>"is the principal security policy in Web browsers"
+                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-lekies.pdf">(XSSI)</a>
+                </li>
+                <li>"strongly separates mutually distrusting Web content within the Web browser through origin-based compartmentalization"
+                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-lekies.pdf">(XSSI)</a>
+                </li>
+                <li>"allows a given JavaScript access only to resources that have the same origin"
+                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-lekies.pdf">(XSSI)</a>
+                </li>
+                <li>"ensures two pages with different origins are not allowed to access each other (e.g., through JavaScript."
+                    <a href="https://swag.cispa.saarland/papers/calzavara2021reining.pdf">(Site Policy)</a>
+                </li>
             </ol>
         </div>
         <h2 class="CORSDefinition"><a href="https://www.youtube.com/watch?v=_FrnLbLQn-M&t=1420s"> ========= CORS =========</a></h2>
@@ -270,6 +300,8 @@
                 </li>
                 <li>"is an access control model regulating access to cross-origin network resources (including sending requests and reading responses) between browsers and servers."
                     <a href="https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-chen.pdf#page=5">(Empirical Study of CORS)</a>
+                </li>
+                <li>"is the most important access control mechanism to segregate static contents and active scripts from different origins."<a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-zheng-updated.pdf#page=3">(Cookies Lack Integrity)</a>
                 </li>
             </ol>
         </div>
@@ -308,10 +340,16 @@
         <h2 class="CookieDefinition"> ========= Cookie ========= </h2>
         <div class="CookieDefinition">
             <ol>
-                <li>"simple key-value stores are used by browsers to persist small pieces of string data, which are sent along in every HTTP request to matching servers"
+                <li>"simple key-value stores used by browsers to persist small pieces of string data, which are sent along in every HTTP request to matching servers"
                     <a href="https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_01B-1_Steffens_paper.pdf#page=2" target="_blank"> (Don’t Trust The Locals) </a>
                 </li>
-                <li>"is a short piece of data that a website sends to a visiting client, either via HTTP response headers or by using client-side scripting"<a href="http://eprints.bournemouth.ac.uk/30202/1/BUCSR-2018-01%20Client%20side%20security%20considerations.pdf">client-side storage APIs)</a></li>
+                <li>"is a short piece of data that a website sends to a visiting client, either via HTTP response headers or by using client-side scripting"<a href="http://eprints.bournemouth.ac.uk/30202/1/BUCSR-2018-01%20Client%20side%20security%20considerations.pdf">(client-side storage APIs)</a>
+                </li>
+                <li>"are a browser-side assisted state management mechanism that are pervasively used by web applications"<a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-zheng-updated.pdf">(Cookies Lack Integrity)</a>
+                </li>
+                <li>"are small pieces of text communicated via an HTTP header or set via JavaScript, which map a key to a value and have optional attributes"
+                    <a href="https://swag.cispa.saarland/papers/calzavara2021reining.pdf#page=2">(Site Policy)</a>
+                </li>
             </ol>
         </div>
         <h2 class="CSVulnDefinition"> ========= Client-side validation vulnerability ========= </h2>
@@ -354,32 +392,36 @@
                     </li>
                 </ol>
             </div>
+        </div>
+        <div class="definition">
+            <h2 class="DOM"> ========= Origin ========= </h2>
             <div>
-                <ul>
-                    <li>Vous avez vu cette page
-                        <span id="nb_visites">un nombre indéterminé de</span>
-                        fois.</li>
-                </ul>
+                <ol>
+                    <li>"is a 3-tuple, consisting of the scheme, the domain and the port number"
+                        <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-zheng-updated.pdf">(Cookies Lack Integrity)</a>
+                    </li>
+                    <li>"for a given URL is defined by a 3-tuple: scheme (or protocol), e.g. HTTP or HTTPS, domain (or host), and port (not supported by IE (Internet Explorer))"
+                        <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-zheng-updated.pdf#page=3">(Cookies Lack Integrity)</a>
+                    </li>
+                    <li>"the triple consisting of scheme, host, and port of the involved resources."
+                        <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-lekies.pdf">(XSSI)</a>
+                    </li>
+                    <li>"The combination of protocol, subdomain (or hostname), and port constitutes an origin as defined by RFC 6454 [3]."
+                        <a href="https://swag.cispa.saarland/papers/calzavara2021reining.pdf">(Site Policy)</a>
+                    </li>
+                </ol>
             </div>
-            <script>
-            if (typeof(localStorage) == "undefined") {
-                alert("Ce navigateur ne supporte pas Web Storage");
-            } else {
-                // Valeur par défaut
-                if (!localStorage.visites)
-                    localStorage.setItem("visites", "0");
-                // Variable temporaire
-                var nb = "";
-                // Lecture                  // parseInt() convertit le texte en nombre entier
-                nb = parseInt(localStorage.getItem("visites"));
-                // Incrémentation du compteur
-                nb++;
-                // Mémorisation
-                localStorage.setItem("visites", nb);
-                // Affichage
-                document.getElementById("nb_visites").innerHTML = nb;
-            }
-            </script>
+        </div>
+        <div class="definition">
+            <h2 class="serviceWorker"> ========= Service Worker ========= </h2>
+            <div>
+                <ol>
+                    <li>"is an event-driven and browsermanaged process triggered by the registration of a JavaScript code hosted by a web application, and registered to manage all or part of an application"
+                        <a href="https://secweb.work/papers/some2020remote.pdf" target="_blank">(The Remote on the Local)</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
 </body>
 
 </html
