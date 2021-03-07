@@ -15,15 +15,27 @@
                 ========= Deployed CSP Analysis ========= </a>
         </h2>
         <ol>
-            <li>"CSPs can be specified inside the Content-Security- Policy header or by including them in <meta> tags inside an HTML head section."</li>
-            <li>"First, even though CSP offers the report-only mode to enable developers to experiment with policies before deployment, this mode is not nearly as popular as the enforcement mode. This means that most developers are rolling out policies without having a chance to test them on their user base. We suspect that this is one of the main reasons why CSPs in the wild are so relaxed since they have not been appropriately evaluated and the developers eventually opted for utility over security"</li>
-            <li>"Unfortunately, CSP — especially for its original use case of script content restriction — is way more complicated than other security mechanisms and requires constant maintenance to ensure that the appropriate sources are whitelisted so that the site remains operational and secure."
+            <li>"<a href="https://en.wikipedia.org/wiki/Content_Security_Policy">CSP</a>s can be specified inside the Content-Security- Policy header or by including them in <meta> tags inside an HTML head section."</li>
+            <li>"CSP provides <strong>directives</strong> to bind content types to sets of <strong>source expressions</strong>, regular-expression-like constructs used to represent <u>the <a href="https://tools.ietf.org/html/rfc6454">Web origins</a> from which resources of a given type may be included</u>"
             </li>
-            <!-- lu les 5 premieres pages, peut-etre relire le debut du bilan correctement Mardi 5 mars 13:52 -->
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
+            <li>"The original CSP design proved to be an inflexible security mechanism, since it required the removal of all the inline scripts and event handlers to actually provide any security benefit; hence, its adoption initially lagged behind other security headers [51]. To remedy this, the second version of CSP introduced hashes and <a href="https://www.techopedia.com/definition/10297/nonce">nonces</a> to whitelist selected inline script elements [46"
+            </li>
+            <li id="realCSPstart">"The figure does not include the CSP adoption from 2012 to 2014, since only 8 different sites deployed CSP before 2014
+            "</li>
+            <li>"First, even though CSP offers the report-only mode to enable developers to experiment with policies before deployment, this mode is not nearly as popular as the enforcement mode. This means that most developers are rolling out policies without having a chance to test them on their user base. We suspect that this is one of the main reasons <strong>why CSPs in the wild are so relaxed</strong> since they have not been appropriately evaluated and the developers eventually opted for utility over security"
+            </li>
+            <li>"Unfortunately, CSP — especially for its original use case of script content restriction — is way more complicated than other security mechanisms and requires <strong>constant maintenance</strong> to ensure that the appropriate sources are whitelisted so that the site remains operational and secure."
+            </li>
+            <!-- lu les 5 premieres pages, peut-etre relire le debut du bilan correctement Vendredi 5 mars 13:52 -->
+            <!-- relu les 5 premieres pages,    Dimanche 7 mars 18:36 -->
+            <li>"Whitelisting an entire scheme (such as https) and allowing unsafe-inline may result in short policies (in terms of the number of entries) which are, however, still more vulnerable than explicitly trusting hundreds of remote third parties."
+            </li>
+            <li>"Despite the lack of zone files covering the full duration of our dataset, we were still able to find 9 cases of domains expiring after being added to a whitelist and 7 domains which were not registered at all during the periods they appeared in CSP whitelists."
+            </li>
+            <li>"A typo entered in the whitelist permits the loading of content from an unintended domain. The typo domain may not be registered, in which case it can be bought and abused as above. If the typo domain is already owned, there is still the potential for the current owner to discover the issue and abuse the misplaced trust. Compared to traditional typosquatting where each end-user needs to mistype the domain, typos in CSPs involve a one-time mistake which results in a persistent threat."
+            </li>
+            <li>"To find typos we use the fat-finger typosquatting models of Wang et al. [48] to generate a list of domains that may have been the intended ones"
+            </li>
             <li>""</li>
             <li>""</li>
         </ol>

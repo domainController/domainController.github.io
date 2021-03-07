@@ -16,18 +16,26 @@
         <ol>
             <li>"They play the role of an in-browser web application proxy able to intercept HTTP requests and immediately serve HTTP responses present on a cache, or even generate responses on the fly, fetch them from a remote server, cache a copy and return the response to the web application."
             </li>             
-            <li>" In the recent years, the Web has witnessed the introduction of a profusion of security policies, such as Content-Security-Policy, Feature-Policy, Referrer-Policy, etc. aimed at mitigating the impact of widespread web attacks such as Cross-Site Scripting, Clickjacking, etc. Worryingly, when a content is cached, so are its security policies meant to protect it. "
+            <li>" In the recent years, the Web has witnessed the introduction of a profusion of security policies, such as Content-Security-Policy, Feature-Policy, Referrer-Policy, etc. aimed at mitigating the impact of widespread web attacks such as Cross-Site Scripting, Clickjacking, etc. Worryingly, when a content is cached, <strong>so are its security policies</strong> meant to protect it. "
+            </li>
+            <li>"a new class of threats, or more precisely, they exacerbate the power of the standard web attacker"
             </li>             
             <li>"The functionality of the service worker itself, as registered in Listing 1, is defined within the file sw.js, hosted by the application registrating the service worker."
+            </li>
+            <li>"To be accessible, responses must either be from the same-origin as the service worker, or if they are cross-origins, they must be allowed by CORS. 2.1.2. Cache API. Coupled"
             </li>             
             <li>"Coupled with the Cache API, a service worker can be used to provide an offline or better userexperience for web applications"
             </li>  
             <li>"These policies are often shipped as headers of responses to navigation HTTP requests (requests to load HTML documents), where they govern and protect content on entire web pages. When these documents are cached by service workers, so are their security policies, which an attacker can manipulate in order to revert their effects and perform malicious actions,"
             </li>
             <!-- lecture des 5 premieres pages Samedi 6 mars 04;26 AM -->
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
+            <!-- 2nde lecture des 5 premieres pages Dimanche 7 mars 10:21 AM -->
+            <li>"CSP we found in the cache of Twitter’s service worker, for the page https://twitter.com/home?precache=1."
+            </li>
+            <li>"The attacks that we have discussed in this work have all to do with the fact that the service worker cache is bound to the entire origin, and thus can be accessed by potentially malicious scripts running in same-origin web pages."
+            </li>
+            <li>"To mitigate this issue, we think that browser vendors should make the cache of service workers inaccessible to other same-origin browsing contexts"</li>
+            <!-- lecture de tout le pdf acheve Dimanche 7 mars ~11:25 AM -->
             <li>""</li>
             <li>""</li>
             <li>""</li>

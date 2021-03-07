@@ -13,19 +13,21 @@
         <h2 class="DOMXSSdefinition"> ========= DOM XSS ========= </h2>
         <div class="definition">
             <ol>
-                <li>"DOM-based XSS is the exploitation of an input validation vulnerability that is caused by the client, not the server."</li>
+                <li>"DOM-based XSS is the exploitation of an <strong>input validation</strong> vulnerability that is caused by the client, not the server."</li>
                 <a href="http://index-of.co.uk/Hacking-Coleccion/XSS%20Attacks%20-%20Cross%20Site%20Scripting%20Exploits%20&%20Defense.pdf">(XSS Exploits)</a>
                 <li>"<strong>can be seen as an information flow problem where portions of strings</strong> — potentially under attacker’s control (e.g., URL, cookie value) — <strong>are being evaluated as code through JavaScript code evaluation functions</strong> like eval() <strong>or being used in unsafe dynamic DOM constructions</strong>, such as via document.write or innerHTML"
-                    <a href="domxsspapers/taintDexterJS1.pdf#page=2" target="_blank">(DexterJS1)</a></li>
-                <li>"is <strong>a subtype of Cross-site Scripting (XSS) problems that results from unsafe processing of untrusted data</strong> from <a href="https://www.youtube.com/watch?v=LRghBhLFFO0&t=204s">sources</a> controlled by the attacker."
-                    <a href="domxsspapers/taintDexterJS1.pdf#page=2" target="_blank">(DexterJS1)</a></li>
-                <li>a vulnerability class subsuming all Cross-site Scripting problems that are caused by insecure handling of untrusted data through JavaScript
+                    <a href="domxsspapers/taintDexterJS1.pdf#page=2" target="_blank">(DexterJS1)</a>
+                </li>
+                <li>"is a client-side code injection vulnerability that results from <strong>unsafe dynamic code generation</strong> in JavaScript applications"<a href="https://www.comp.nus.edu.sg/~enricob/2015/fse15-main.pdf#page=2" target="_blank">(DexterJS1)</a>
+                </li>
+                <li>"a vulnerability class subsuming all Cross-site Scripting problems that are caused by <strong>insecure handling of untrusted data</strong> through JavaScript"
                     <a href="domxsspapers/taint25M.pdf" target="_blank">(taint25M)</a></li>
                 <li>"is a code injection vulnerability in which a web attacker is able to inject malicious JavaScript in a client’s web session."<a href="domxsspapers/taintDexterJS2.pdf#page=2" target="_blank">(DexterJS2)</a></li>
                 <li>"client-side code injection" <a href="https://people.eecs.berkeley.edu/~dawnsong/papers/2011%20Systematic%20Analysis%20of%20XSS%20Sanitization.pdf#page=6" target="_blank">(Systematic Analysis of XSS Sanitization)</a></li>
-                <li>"is a subtype of Cross-site Scripting (XSS) problems that results from unsafe processing of untrusted data from sources controlled by the attacker"<a href="https://cutt.ly/jlFHNfy">(DomXssMicro)</a>
+                <li>"is a subtype of Cross-site Scripting (XSS) problems that results from <strong>unsafe processing of untrusted data</strong> from <a href="https://www.youtube.com/watch?v=LRghBhLFFO0&t=204s">sources</a> controlled by the attacker"<a href="https://cutt.ly/jlFHNfy">(DomXssMicro)</a>
                 </li>
-                <li>"occur when client-side code uses untrusted input data in dynamic code evaluation constructs without sufficient validation."<a href="https://vividmachines.com/papers/kudzu.pdf" target="_blank">(Symbolic Execution)</td>
+                <li>"occur when client-side code uses <strong>untrusted input</strong> data in <u>dynamic code evaluation constructs</u> without <strong>sufficient validation</strong>."
+                    <a href="https://vividmachines.com/papers/kudzu.pdf" target="_blank">(Symbolic Execution)</a>
                 </li>
             </ol>
         </div>
@@ -50,10 +52,20 @@
                     <a href="https://clementfung.me/gallery/papers/www2021-final.pdf" target="_blank">(Hybrid Approach for Detecting DOM XSS Vulnerabilities with ML)</a></li>
             </ol>
         </div>
+        <h2 class="HTMLSanitizersDefinition"> ========= HTML Sanitizers ========= </h2>
+        <div class="HTMLSanitizersDefinition">
+            <ol>
+                <li>"These are libraries used by developers to clean <strong>untrusted HTML</strong> into <strong>HTML that is safe to use</strong> within the application. This category contains examples such as DOMPurify1 and Google Closure2 HTML sanitizer."
+                    <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">(Script Gadget)</a>
+                </li>
+                <li>"automatically transform <strong>untrustworthy strings</strong> into <strong>safe-to-render HTML markup</strong> or safe-to-follow URLs by removing parts that may lead to XSS"
+                    <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">(Script Gadget)</a></li>
+            </ol>
+        </div>
         <h2 class="ExploitDefinition"> ========= Exploit ========= </h2>
         <div class="ExploitDefinition">
             <ol>
-                <li>"Exploit = BreakOutSequence + AttackVector + EscapeSequence"
+                <li>"Exploit = <a href="https://www.linguee.com/english-french/search?source=auto&query=break+out">BreakOut</a>Sequence + AttackVector + <a href="https://www.linguee.com/english-french/search?source=auto&query=escape">Escape</a>Sequence"
                     <a href="domxsspapers/taintDexterJS1.pdf#page=3" target="_blank">(DexterJS1)</a>
                 </li>
             </ol>
@@ -71,7 +83,7 @@
                     <a href="https://code.google.com/archive/p/domxsswiki/wikis/Sources.wiki" target="_blank">(Google DOM XSS Wiki)</a>
                 </li>
                 <li>"the program input that supplies the data for an attack"
-                    <a href="https://vividmachines.com/papers/kudzu.pdf#page=2" target="_blank">(Symbolic Execution)</td>
+                    <a href="https://vividmachines.com/papers/kudzu.pdf#page=2" target="_blank">(Symbolic Execution)</a>
                 </li>
             </ol>
         </div>
@@ -82,11 +94,11 @@
                     <a href="https://code.google.com/archive/p/domxsswiki/wikis/Sources.wiki" target="_blank">(Google DOM XSS Wiki)</a>
                 </li>
                 <li>"potentially vulnerable code evaluation construct"
-                    <a href="https://vividmachines.com/papers/kudzu.pdf#page=2" target="_blank">(Symbolic Execution)</td>
+                    <a href="https://vividmachines.com/papers/kudzu.pdf#page=2" target="_blank">(Symbolic Execution)</a>
                 </li>
             </ol>
         </div>
-        <h2 class="PropagationDefinition"> ========= Propagation ========= </h2>
+        <h2 class="PropagationDefinition"> ========= Propagation =========</h2>
         <div class="PropagationDefinition">
             <ol>
                 <li>"the statements which propagate tainted values from the source to the sink without modifying them"
@@ -94,7 +106,7 @@
                 </li>
             </ol>
         </div>
-        <h2 class="ContextDefinition"><a href="https://www.youtube.com/watch?v=bouTxh76yeU&t=253s">========= Context =========</a> </h2>
+        <h2 class="ContextDefinition"><a href="https://www.youtube.com/watch?v=bouTxh76yeU&t=253s">========= Context =========</a></h2>
         <div class="ContextDefinition">
             <ol>
                 <li>"represents the surrounding context where the tainted content locates
@@ -140,16 +152,6 @@
                 </li>
             </ol>
         </div>
-        <h2 class="HTMLSanitizersDefinition"> ========= HTML Sanitizers ========= </h2>
-        <div class="HTMLSanitizersDefinition">
-            <ol>
-                <li>"These are libraries used by developers to clean untrusted HTML into HTML that is safe to use within the application. This category contains examples such as DOMPurify1 and Google Closure2 HTML sanitizer."
-                    <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">(Script Gadget)</a>
-                </li>
-                <li>"automatically transform untrustworthy strings into safe-to-render HTML markup or safe-to-follow URLs by removing parts that may lead to XSS"
-                    <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">(Script Gadget)</a></li>
-            </ol>
-        </div>
         <h2 class="BrowserXSSFiltersDefinition"> ========= Browser XSS Filters ========= </h2>
         <div class="BrowserXSSFiltersDefinition">
             <ol>
@@ -169,6 +171,9 @@
         <h2 class="CSPDefinition"> ========= CSP ========= </h2>
         <div class="CSPDefinition">
             <ol>
+                <li>"is activated by a client’s browser when the X-Content-Security-Policy HTTP header is provided in a HTTP response"
+                    <a href="http://research.sidstamm.com/papers/csp-www2010.pdf#page=3" target="_blank">(Reigning in the web with CSP)</a>
+                </li>
                 <li>"is a browser feature that a web developer can configure to define a policy that allows the browser to whitelist the JavaScript code that belongs to the application."
                     <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">(Script Gadget)</a>
                 </li>
