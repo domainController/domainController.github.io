@@ -12,38 +12,86 @@
     <div class="quotes">
         <h2><a href="domxsspapers/postMessage/pMStock2020.pdf" target="_blank"> ========= pMForce ========= </a></h2>
         <ol>
-            <li>"While the Same-Origin Policy prevents direct data exchange with documents from other origins, the postMessage API offers one <strong>relaxation</strong> that allows developers <strong>to exchange data across these boundaries</strong>."</li>
-            <li>"To achieve this goal, we present an automated analysis framework running inside the browser, which uses <strong>selective forced execution</strong> paired with lightweight dynamic taint tracking to find traces in the analyzed handlers that end in sinks allowing for code execution or state alterations."</li>
-            <li>"Based on these constraints, we use <a href="https://ericpony.github.io/z3py-tutorial/guide-examples.htm">Z3</a> to generate postMessages aimed at triggering the insecure functionality to prove exploitability, and validate our findings at scale."</li>
-            <li>"The web that we know today heavily relies on <strong>the intricate interplay of various services that jointly contribute to the plethora of feature-rich applications</strong> that we have grown fond of over the years. This interconnectivity, however, would not be possible without controlled relaxations of the web’s fundamental security principle, i.e., the Same-Origin Policy (SOP)."</li>
-            <li>"The receiving frame can register JavaScript callback functions that are invoked when a postMessage is dispatched to the current frame."</li>
-            <li>"By using an <a href="https://fr.wikipedia.org/wiki/Satisfiability_modulo_theories#Instance_d'un_probl%C3%A8me_SMT">SMT solver</a> on the path constraints extracted from these traces, we can generate postMessages that trigger the dangerous behavior"</li>
-            <li>"However, such two frames <strong>might need to exchange data to allow users a seamless integration of services</strong>, e.g., a website using a third-party payment provider that handles the billing of the customer"</li>
-            <li>"In the setting of postMessages, one frame sends a postMessage containing arbitrary, <a href="https://fr.wikipedia.org/wiki/S%C3%A9rialisation" target="_blank">serializable</a> data to another <a href="https://www.w3.org/TR/html401/present/frames.html" target="_blank">frame</a> by calling the postMessage functionality <strong>on a handle to the other frame</strong>."</li>
-            <li>In various cases, these handlers could be abused to achieve Cross- Site Scripting (XSS), which allows an attacker to <a href="https://www.youtube.com/watch?v=xxKAvx4UeUg" target="_blank">exfiltrate data</a> and <strong>perform actions on behalf of the user</strong>. Besides introducing XSS, postMessage handlers can be abused to <strong>manipulate client-side state</strong> (such as cookies and localStorage) or <strong>leak the very same state to attackers</strong>.</li>
-            <li>"By using an <a href="https://papers.nips.cc/paper/2018/file/68331ff0427b551b68e911eebe35233b-Paper.pdf">SMT solver</a> on the path constraints extracted from these traces, we can generate postMessages that trigger the dangerous behavior. Furthermore, we augment our traces by encoding exploitation criteria on the data flows, allowing us to generate exploit candidates, which we validate automatically"</li>
-            <li>"To enable such use cases, the postMessage API was introduced to allow for <strong>controlled relaxations</strong> of the SOP. In the setting of postMessages, one frame sends a postMessage containing arbitrary, serializable data to another frame <strong>by calling the postMessage functionality on a handle to the other frame</strong>."</li>
+            <li>"While the Same-Origin Policy prevents direct data exchange with documents from other origins, the postMessage API offers one <strong>relaxation</strong> that allows developers <strong>to exchange data across these boundaries</strong>."
+            </li>
+            <li>"To achieve this goal, we present an automated analysis framework running inside the browser, which uses <strong>selective forced execution</strong> paired with lightweight dynamic taint tracking to find traces in the analyzed handlers that end in sinks allowing for code execution or state alterations."
+            </li>
+            <li>"Based on these constraints, we use <a href="https://ericpony.github.io/z3py-tutorial/guide-examples.htm">Z3</a> to generate postMessages aimed at triggering the insecure functionality to prove exploitability, and validate our findings at scale."
+            </li>
+            <li>"The web that we know today heavily relies on <strong>the intricate interplay of various services that jointly contribute to the plethora of feature-rich applications</strong> that we have grown fond of over the years. This interconnectivity, however, would not be possible without controlled relaxations of the web’s fundamental security principle, i.e., the Same-Origin Policy (SOP)."
+            </li>
+            <li>"<u>The receiving frame</u> can register JavaScript <strong>callback functions that are invoked when a postMessage is dispatched</strong> to the current frame. The postMessage API provides the means to ascertain the integrity and confidentiality of messages. However, these mechanisms are <strong>purely optional</strong>."
+            </li>
+            <li>"In various cases, <strong>these handlers could be abused</strong> to achieve Cross- Site Scripting (<strong>XSS</strong>), which allows an attacker to exfiltrate data and perform actions on behalf of the user."
+            </li>
+            <li>"integrity is enforced by checking that the message originates from https://bar.org before executing our intended functionality. Confidentiality is achieved by fixing the second parameter of the postMessage call to the desired destination origin."
+            </li>
+            <li>"Our work aims at automatically finding <a href="https://www.exploit-db.com/docs/english/40287-hunting-html-5-postmessage-vulnerabilities.pdf#page=11">security- and privacy-sensitive</a> functionalities inside such handlers, which can be exploited using standard attacker models, i.e., the <a href="https://www.adambarth.com/papers/2008/barth-jackson-mitchell.pdf#page=2">web attacker</a>"
+            </li>
+            <li>"We are interested in understanding <u>how many handlers conduct security- and privacy-sensitive behavior</u> that can be used across origins. In particular, out of this set of sites, we want to investigate how many of those could be abused by an attacker, e.g., because they lack proper integrity checks, to compromise the site"
+            </li>
+            <li>"By using an <a href="https://fr.wikipedia.org/wiki/Satisfiability_modulo_theories#Instance_d'un_probl%C3%A8me_SMT">SMT solver</a> on the path constraints extracted from these traces, we can generate postMessages that trigger the dangerous behavior"
+            </li>
+            <li>"However, such two frames <strong>might need to exchange data to allow users a seamless integration of services</strong>, e.g., a website using a third-party payment provider that handles the billing of the customer"
+            </li>
+            <li>"In the setting of postMessages, one frame sends a postMessage containing arbitrary, <a href="https://fr.wikipedia.org/wiki/S%C3%A9rialisation" target="_blank">serializable</a> data to another <a href="https://www.w3.org/TR/html401/present/frames.html" target="_blank">frame</a> by calling the postMessage functionality <strong>on a handle to the other frame</strong>."
+            </li>
+
+            <li>In various cases, these handlers could be abused to achieve Cross-Site Scripting (XSS), which allows an attacker to <a href="https://www.youtube.com/watch?v=xxKAvx4UeUg" target="_blank">exfiltrate data</a> and <strong>perform actions on behalf of the user</strong>. Besides introducing XSS, postMessage handlers can be abused to <strong>manipulate client-side state</strong> (such as cookies and localStorage) or <strong>leak the very same state to attackers</strong>.
+            </li>
+
+            <li>"By using an <a href="https://papers.nips.cc/paper/2018/file/68331ff0427b551b68e911eebe35233b-Paper.pdf">SMT solver</a> on the path constraints extracted from these traces, we can generate postMessages that trigger the dangerous behavior. Furthermore, we augment our traces by encoding exploitation criteria on the data flows, allowing us to generate exploit candidates, which we validate automatically"
+            </li>
+
+            <li>"In fact, our crawls show that among the top 100,000 sites we can find over 27,000 <strong>hash-unique handlers</strong>. Given this widespread usage of postMessages, we can no longer meaningfully rely on manual efforts to reason about the state of postMessage handler security."
+            </li>
+
+            <li>"To enable such use cases, the postMessage API was introduced to allow for <strong>controlled relaxations</strong> of the SOP. In the setting of postMessages, one frame sends a postMessage containing arbitrary, serializable data to another frame <strong>by calling the postMessage functionality on a handle to the other frame</strong>."
+            </li>
             <li>"Our related work is mainly distributed among two axes, the first one being the feasibility of applying advanced program analysis techniques such as <a href="https://arxiv.org/pdf/1701.07860.pdf">forced execution</a> and <symbolic>
-                    <a href="https://en.wikipedia.org/wiki/Concolic_testing">concolic</a> execution to web sites"</li>
-            <li>"We purposely chose forced execution over symbolic execution, as our approach only needs to conduct the costly constraint solving step when we have found an interesting trace in the program, as we are only interested in a small subset of all behavior constituting a normal postMessage handler."</li>
-            <li>"With respect to XSS on the client, plenty of research has been conducted on the feasibility of finding client-side XSS at scale [10, 14, 25] by using a <strong>browser engine with byte-level taint tracking and context-sensitive exploit generation schemes</strong> ."</li>
-            <li>"We further show that the 2013 insight that even if postMessage handlers perform origin checks, most of them are faulty and circumventable by an attacker, <strong>are no longer valid</strong>."</li>
-            <li>"All the modules,except for <strong>the constraint solving routine</strong>, are implemented in Javascript, which allows us to perform most of the necessary operation within the browser itself."</li>
-            <li>"As there exists no stable port of Z3 for Javascript, we implemented our <strong>constraint solving</strong> mechanism in python using <a href="https://github.com/Z3Prover/z3/wiki">Z3Py</a>, which is exposed to the other modules via bindings through the Dev Tools protocol, thus accessible through the window object."</li>
-            <li>"To that end, we introduce the concept of Exploit Templates and utilize those together with the <strong>path constraints</strong> found in the traces to generate exploit candidates <strong>using Z3 as an SMT solver</strong>."</li>
-            <li>"To achieve this goal, we utilize the dynamic instrumentation framework <a href="https://github.com/maierfelix/Iroh">Iroh</a> [13] and extend its capabilities where necessary."</li>
-            <li>"As a final control flow altering step, we change the outcome of any expression that is <strong>lazily evaluated</strong>, i.e., if an OR is <strong>lazily evaluated</strong>, we change the value of the first expression to false and if an AND is <strong>lazily executed</strong> we change the value to true"</li>
-            <li>"While <strong>the forced execution allows us to reach interesting parts of the handler functionality</strong>, we still need to discuss how we can leverage it to find traces that are relevant to the security or privacy of the site"</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
+                    <a href="https://en.wikipedia.org/wiki/Concolic_testing">concolic</a> execution to web sites"
+            </li>
+            <li>"We purposely chose forced execution over symbolic execution, as our approach only needs to conduct the costly constraint solving step when we have found an interesting trace in the program, as we are only interested in a small subset of all behavior constituting a normal postMessage handler."
+            </li>
+            <li>"With respect to XSS on the client, plenty of research has been conducted on the feasibility of finding client-side XSS at scale [10, 14, 25] by using a <strong>browser engine with byte-level taint tracking and context-sensitive exploit generation schemes</strong> ."
+            </li>
+            <li>"We further show that the 2013 insight that even if postMessage handlers perform origin checks, most of them are faulty and circumventable by an attacker, <strong>are no longer valid</strong>."
+            </li>
+            <li>"We use the <a href="https://github.com/mariussteffens/pmforce/tree/master/src/core">puppeteer</a> Node.js framework to steer our instances of Chromium."
+            </li>
+            <li>"All the modules,except for <strong>the constraint solving routine</strong>, are implemented in Javascript, which allows us to perform most of the necessary operation within the browser itself."
+            </li>
+            <li>"As there exists no stable port of Z3 for Javascript, we implemented our <strong>constraint solving</strong> mechanism in python using <a href="https://github.com/Z3Prover/z3/wiki">Z3Py</a>, which is exposed to the other modules via bindings through the Dev Tools protocol, thus accessible through the window object."
+            </li>
+            <li>"To that end, we introduce the concept of Exploit Templates and utilize those together with the <strong>path constraints</strong> found in the traces to generate exploit candidates <strong>using Z3 as an SMT solver</strong>."
+            </li>
+            <li>"To achieve this goal, we utilize the dynamic instrumentation framework <a href="https://github.com/maierfelix/Iroh">Iroh</a> [13] and extend its capabilities where necessary."
+            </li>
+            <li>"As a final control flow altering step, we change the outcome of any expression that is <strong>lazily evaluated</strong>, i.e., if an OR is <strong>lazily evaluated</strong>, we change the value of the first expression to false and if an AND is <strong>lazily executed</strong> we change the value to true"
+            </li>
+            <li>"While <strong>the forced execution allows us to reach interesting parts of the handler functionality</strong>, we still need to discuss how we can leverage it to find traces that are relevant to the security or privacy of the site"
+            <!-- de la 2nde lecture des 4 premieres pages ce Mardi 9 Mars 16:44 , lecture molle de la 4 eme page ...-->
+            </li>
+            <li>"so-called XSS polyglots [2]. These are payloads intended to break out of as many contexts as possible, before adding pieces of HTML code that then execute the XSS payload"
+            </li>
+            <li>"To paint a clear picture of how many different families of handlers we could observe to be vulnerable, we used a hash over the lexical structure, i.e., the representation as tokens, of the registered handlers and used this as a distinguishing facto"             </li>             
+            <li>"Naturally, this analysis comes with the inherent limitation that we do not have any means to log in to the sites. While this is a general limitation of a large-scale analysis, our framework could be used in a context where automatic logins are feasible, e.g., assisted by login information of the developer. This would allow us to uncover more functionality of the sites overall, but in particular, could unveil more handler functions which handle sensitive user data since these might only be present after the login."             
+            </li>
+            <!-- fin de la lecture des 13 pages ce Mercredi 10 Mars 06:18 , lecture extrement difficile il va sans dire ...-->
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
         </ol>
     </div>
 </body>

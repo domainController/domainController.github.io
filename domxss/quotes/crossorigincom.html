@@ -13,13 +13,64 @@
         <h2><a href="https://people.cispa.io/ben.stock/papers/meiser2021cwyt.pdf" target="_blank"> 
             ========= Cross-Origin Communication ========= </a></h2>
         <ol>
-            <li>"Given the move to a more interconnected Web, standard bodies and browser vendors have added new mechanisms to enable cross-origin communication, primarily <strong>domain relaxation, postMessages, and CORS</strong>"</li>
-            <li>"While prior work has already shown the pitfalls of not using these mechanisms securely (e.g., <strong>omitting origin checks for incoming postMessages</strong>)"</li>
-            <li>"The SOP proved to be too restrictive for the modern Web, and the W3C standardized two new ways of cross-origin communication, namely postMessages and CORS"</li>
+            <li>"Given the move to a more interconnected Web, standard bodies and browser vendors have added new mechanisms to enable cross-origin communication, primarily <strong>domain relaxation, <a href="../definition.html#postMessageDefinition">postMessages</a>, and <a href="../definition.html#CORSDefinition">CORS</a></strong>"
+            </li>
+            <li>"While prior work has already shown the pitfalls of not using these mechanisms securely (e.g., <strong>omitting origin checks for incoming <a href="../definition.html#postMessageDefinition">postMessages</a></strong>)"
+            </li>
+            <li>"The SOP proved to be too restrictive for the modern Web, and the W3C standardized two new ways of cross-origin communication, namely <a href="../definition.html#postMessageDefinition">postMessages</a>s and <a href="../definition.html#CORSDefinition">CORS</a>"
+            </li>
             <li>"The main difference to prior work is that an attacker does not need to compromise a third-party server to manipulate the JavaScript it hosts, <strong>but it is rather sufficient to find an XSS vulnerability on a trusted communication partner</strong>"</li>
-            <li>"While browsers already implemented a relaxation of the SOP based on a common parent domain (dubbed <strong>Domain Relaxation</strong>), the W3C also standardized new mechanisms to address this demand, namely postMessages and Cross-Origin Resource Sharing (CORS)."</li>
-            <li>"To record the use of postMessages, <strong>we use Puppeteer to inject JavaScript code to hook the EventListener of message events</strong>. Given the lack of automated tools to analyze postMessage handlers, we rely on manual analysis of the involved JavaScript code."</li>
-            <li>"the top 5 sites with the most incoming postMessages. Again, social media platforms (Facebook, Twitter) and web/ data analytics sites (Hotjar, AddThis) are the most prevalent, accompanied by Google"</li>
+            <li>"Hence, if an attacker can identify a Web application that is trusted by others to send <a href="../definition.html#postMessageDefinition">postMessages</a> (which end up being evaled) or is allowed to read authenticated responses through <a href="../definition.html#CORSDefinition">CORS</a> from others, such an application becomes the target to detect XSS flaws on."
+            </li>
+            <li>"While browsers already implemented a relaxation of the SOP based on a common parent domain (dubbed <strong>Domain Relaxation</strong>), the W3C also standardized new mechanisms to address this demand, namely <a href="../definition.html#postMessageDefinition">postMessages</a> and Cross-Origin Resource Sharing (<a href="../definition.html#CORSDefinition">CORS</a>). In the following, we outline <strong>how these three mechanisms work</strong> and how we consider them to be relevant when we investigate trust between origins and sites."
+            </li>
+            <li>"For example, if https://login.example.com and https://example.com want to communicate, they can both set their document.domain to example.com so that they are allowed by the browser to exchange information"
+            </li>
+            <li>"<u>As soon as the communication exceeds the borders of a registrable domain, domain relaxation cannot be used any longer</u>. To nevertheless enable two documents to communicate, the HTML5 specification standardized the postMessage API [36], which allows to send serialized messages between two documents"
+            </li>
+            <li>"The sender can specify which origin is permitted to receive the message, and the receiver can verify the origin of the message to ascertain its integrity"
+            </li>
+            <li>"If a browser visiting site A makes a request for data to site B, the SOP will not grant read access to the received content. It becomes readable only if site B is CORS configured and responds with an Access-Control-Allow-Origin (ACAO) header indicating that A is allowed as a communication partner"
+            </li>
+            <!-- fin de la seconde lecture  des 3 premieres page: concentration 15/20 Mardi 9 mars 06:05 am -->
+            <li>"To record the use of <a href="../definition.html#postMessageDefinition">postMessages</a>, <strong>we use Puppeteer to inject JavaScript code to hook the EventListener of message events</strong>. Given the lack of automated tools to analyze <a href="../definition.html#postMessageDefinition">postMessages</a> handlers, we rely on manual analysis of the involved JavaScript code."</li>
+            <li>"Using the crawler, we search for anchor elements on the visited pages to find subpages, log occurrences of domain relaxation, analyze postMessages, and log CORS-related headers"
+            </li>
+            <!-- lecture page 4 plus superficielle, survole et difficile (reproductibilite) a l'air nouvelle -->
+            <li>"In particular, when present in a page, we extract the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/connect-src">connect-src</a> from its Content Security Policy (CSP), which is primarily used to control to which URLs a page can establish an XMLHttpRequest [9]"
+            </li>
+            <li>"Here, we see that https://samsungasiasupport4.zendesk.com can execute JavaScript on https://www.samsung.com due to an intended functionality which passes the postMessage’s content to an execution sink. An adversary that is able to compromise the zendesk origin can easily pivot to the main page; either by loading www.samsung.com in an iframe or opening a popup (note that Samsung does not deploy mechanisms for framing control such as X-Frame-Options or CSP). This now enables the attacker to execute code in the origin of https://www.samsung.com"
+            </li>
+            <li>"More importantly, the vast majority of high-profile sites is making use of data from other origins in one way or the other."</li>
+            <li>"Notably, four of the five domains only make use of the mechanism on at least one subdomain, but not the main domain, i.e., its use is related to subdomains being enabled to communicate between each other, but not with the main page. Interestingly, we only observe the usage of document.domain on both Twitter and Microsoft on merely a single subdomain; begging the question of the necessity in the first place (as there seems to be no sibling domain to communicate with)."
+            </li>
+            <li>"the top 5 sites with the most incoming <a href="../definition.html#postMessageDefinition">postMessages</a>. Again, social media platforms (Facebook, Twitter) and web/ data analytics sites (Hotjar, AddThis) are the most prevalent, accompanied by Google"</li>
+            <!--  2nde lecture jusqu'a page 7 achevee Mardi 9 mars -->
+            <li>"Fortunately, we found that blindly evaling postMessages is a technique which is decreasing in popularity in favor, e.g., of parsing JSON with the JSON.parse functionality of JavaScript."
+            </li>
+            <li>"<strong>the sites which are trusted by most others</strong> and <u>which trust most others</u> <strong>to modify storage</strong> (i.e., set arbitrary cookies or Local Storage entries), respectively. Not surprisingly, we again find both Facebook and Twitter in the top trusted sites, primarily based on the implicit trust in those parties."
+            </li>
+            <li>"it is security best practice to outsource non-vital functionality to a CDN; as a client-side compromise of such a CDN seemingly has no security impact then"
+            </li>
+            <li>"One common assumption is that the impact of a Cross-Site Scripting flaw can be mitigated through usage of sandbox domains. In particular, assuming that on such a domain there is no relevant information (e.g., cookies) which could be stolen, an XSS is not a problem."
+            </li>             
+            <li>"For our attacker, we consider a Web attacker in the classical sense, meaning they can lure a victim to their site and hence force the victim’s browser to load any page in an iframe or a popup."
+            </li>             
+            <li>"In Web security, the main security concept is often to ensure that only benign code is executed. This includes mechanisms such as Content Security Policy, which ensures only developer-specified code can be executed, or Subresource Integrity (SRI) which aims at ensuring that remote scripts will only be executed if their cryptographic hash matches what is expected"
+            </li>
+            <!--  fin de lecture page 10/13 Mardi 9 mars 08:16 am . relire la page 10 peut-etre-->
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
             <li>""</li>
             <li>""</li>
             <li>""</li>

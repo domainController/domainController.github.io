@@ -10,7 +10,7 @@
 
 <body>
     <div class="definition">
-        <h2 class="DOMXSSdefinition"> ========= DOM XSS ========= </h2>
+        <h2 id="DOMXSSdefinition"> ========= DOM XSS ========= </h2>
         <div class="definition">
             <ol>
                 <li>"DOM-based XSS is the exploitation of an <strong>input validation</strong> vulnerability that is caused by the client, not the server."</li>
@@ -31,7 +31,7 @@
                 </li>
             </ol>
         </div>
-        <h2 class="XSSDefinition"> ========= XSS ========= </h2>
+        <h2 id="XSSDefinition"> ========= XSS ========= </h2>
         <div class="XSSDefinition">
             <ol>
                 <li>describes a class of string-based code injection vulnerabilities that let adversaries inject HTML and/or JavaScript into Web content that is not legitimately under their control."
@@ -52,7 +52,7 @@
                     <a href="https://clementfung.me/gallery/papers/www2021-final.pdf" target="_blank">(Hybrid Approach for Detecting DOM XSS Vulnerabilities with ML)</a></li>
             </ol>
         </div>
-        <h2 class="HTMLSanitizersDefinition"> ========= HTML Sanitizers ========= </h2>
+        <h2 id="HTMLSanitizersDefinition"> ========= HTML Sanitizers ========= </h2>
         <div class="HTMLSanitizersDefinition">
             <ol>
                 <li>"These are libraries used by developers to clean <strong>untrusted HTML</strong> into <strong>HTML that is safe to use</strong> within the application. This category contains examples such as DOMPurify1 and Google Closure2 HTML sanitizer."
@@ -62,7 +62,7 @@
                     <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">(Script Gadget)</a></li>
             </ol>
         </div>
-        <h2 class="ExploitDefinition"> ========= Exploit ========= </h2>
+        <h2 id="ExploitDefinition"> ========= Exploit ========= </h2>
         <div class="ExploitDefinition">
             <ol>
                 <li>"Exploit = <a href="https://www.linguee.com/english-french/search?source=auto&query=break+out">BreakOut</a>Sequence + AttackVector + <a href="https://www.linguee.com/english-french/search?source=auto&query=escape">Escape</a>Sequence"
@@ -70,7 +70,7 @@
                 </li>
             </ol>
         </div>
-        <h2 class="SourceDefinition"> ========= Source ========= </h2>
+        <h2 id="SourceDefinition"> ========= Source ========= </h2>
         <div class="SourceDefinition">
             <ol>
                 <li>"the source locations of incoming data"
@@ -87,7 +87,7 @@
                 </li>
             </ol>
         </div>
-        <h2 class="SinkDefinition"> ========= Sink ========= </h2>
+        <h2 id="SinkDefinition"> ========= Sink ========= </h2>
         <div class="SinkDefinition">
             <ol>
                 <li>"Sinks are meant to be the points in the flow where data depending from sources is used in a potentially dangerous way resulting in loss of Confidentiality, Integrity or Availability (the CIA triad)."
@@ -98,7 +98,7 @@
                 </li>
             </ol>
         </div>
-        <h2 class="PropagationDefinition"> ========= Propagation =========</h2>
+        <h2 id="PropagationDefinition"> ========= Propagation =========</h2>
         <div class="PropagationDefinition">
             <ol>
                 <li>"the statements which propagate tainted values from the source to the sink without modifying them"
@@ -106,7 +106,7 @@
                 </li>
             </ol>
         </div>
-        <h2 class="ContextDefinition"><a href="https://www.youtube.com/watch?v=bouTxh76yeU&t=253s">========= Context =========</a></h2>
+        <h2 id="ContextDefinition"><a href="https://www.youtube.com/watch?v=bouTxh76yeU&t=253s">========= Context =========</a></h2>
         <div class="ContextDefinition">
             <ol>
                 <li>"represents the surrounding context where the tainted content locates
@@ -120,7 +120,7 @@
                 </li>
             </ol>
         </div>
-        <h2 class="DynamicAnalysisDefinition"> ========= Dynamic Analysis ========= </h2>
+        <h2 id="DynamicAnalysisDefinition"> ========= Dynamic Analysis ========= </h2>
         <div class="DynamicAnalysisDefinition">
             <ol>
                 <li>"the ability to monitor code as it executes"
@@ -128,7 +128,7 @@
                 </li>
             </ol>
         </div>
-        <h2 class="dynamicTaintAnalysisDefinition"> ========= Dynamic Taint Analysis ========= </h2>
+        <h2 id="dynamicTaintAnalysisDefinition"> ========= Dynamic Taint Analysis ========= </h2>
         <div class="dynamicTaintAnalysisDefinition">
             <ol>
                 <li>"runs a program and observes which computations are affected by predefined taint sources such as user input"
@@ -136,7 +136,7 @@
                 </li>
             </ol>
         </div>
-        <h2 class="reviewsOfWebCrawlersDefinition"> ========= Web crawlers ========= </h2>
+        <h2 id="reviewsOfWebCrawlersDefinition"> ========= Web crawlers ========= </h2>
         <div class="reviewsOfWebCrawlersDefinition">
             <ol>
                 <li>"is a programme or a suit of programmes that is used to retrieve contents of web pages"
@@ -144,7 +144,7 @@
                 </li>
             </ol>
         </div>
-        <h2 class="focusedWebCrawlersDefinition"> ========= Focused Web crawlers ========= </h2>
+        <h2 id="focusedWebCrawlersDefinition"> ========= Focused Web crawlers ========= </h2>
         <div class="focusedWebCrawlersDefinition">
             <ol>
                 <li>"<a href="https://en.wikipedia.org/wiki/Focused_crawler">is</a> a type of web crawler that crawls web pages which are specific to a pre-defined topic or domain."
@@ -152,7 +152,7 @@
                 </li>
             </ol>
         </div>
-        <h2 class="BrowserXSSFiltersDefinition"> ========= Browser XSS Filters ========= </h2>
+        <h2 id="BrowserXSSFiltersDefinition"> ========= Browser XSS Filters ========= </h2>
         <div class="BrowserXSSFiltersDefinition">
             <ol>
                 <li>"These filters are implemented as part of the browser navigation and rendering, and they attempt to detect an XSS attack and neuter it. Internet Explorer, Edge, and Chrome implement XSS filters as part of their default configuration. Firefox does not have one, but the popular NoScript3 AddOn implements one."
@@ -160,7 +160,7 @@
                 </li>
             </ol>
         </div>
-        <h2 class="WAFDefinition"> ========= Web Application Firewalls ========= </h2>
+        <h2 id="WAFDefinition"> ========= Web Application Firewalls ========= </h2>
         <div class="WAFDefinition">
             <ol>
                 <li>"This is software that runs on the server, and attempts to allow benign requests from web trac, while detecting and blocking malicious requests. An example of an open-source Web Application Firewall is ModSecurity4 with OWASP Common Rule Set"
@@ -168,7 +168,7 @@
                 </li>
             </ol>
         </div>
-        <h2 class="CSPDefinition"> ========= CSP ========= </h2>
+        <h2 id="CSPDefinition"> ========= CSP ========= </h2>
         <div class="CSPDefinition">
             <ol>
                 <li>"is activated by a client’s browser when the X-Content-Security-Policy HTTP header is provided in a HTTP response"
@@ -196,11 +196,30 @@
                     <a href="https://swag.cispa.saarland/papers/calzavara2021reining.pdf#page=2">(Site Policy)</a>
                 </li>
                 <li>"is a defense-in-depth security mechanism which deployed on a page, defines content that are allowed or disallowed to load"
-                        <a href="https://secweb.work/papers/some2020remote.pdf#page=4" target="_blank">(The Remote on the Local)</a>
+                    <a href="https://secweb.work/papers/some2020remote.pdf#page=4" target="_blank">(The Remote on the Local)</a>
                 </li>
             </ol>
         </div>
-        <h2 class="DOMclobberingDefinition"> ========= DOM clobbering ========= </h2>
+        <div class="definition" id="origin">
+            <h2> <a href="https://tools.ietf.org/html/rfc6454" target="_blank">========= Origin =========</a></h2>
+            <div>
+                <ol>
+                    <li>"is a 3-tuple, consisting of the scheme, the domain and the port number"
+                        <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-zheng-updated.pdf" target="_blank">(Cookies Lack Integrity)</a>
+                    </li>
+                    <li>"for a given URL is defined by a 3-tuple: scheme (or protocol), e.g. HTTP or HTTPS, domain (or host), and port (not supported by IE)"
+                        <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-zheng-updated.pdf#page=3" target="_blank">(Cookies Lack Integrity)</a>
+                    </li>
+                    <li>"the triple consisting of scheme, host, and port of the involved resources."
+                        <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-lekies.pdf" target="_blank">(XSSI)</a>
+                    </li>
+                    <li>"The combination of protocol, subdomain (or hostname), and port constitutes an origin as defined by RFC 6454 [3]."
+                        <a href="https://swag.cispa.saarland/papers/calzavara2021reining.pdf" target="_blank">(Site Policy)</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <h2 id="DOMclobberingDefinition"> ========= DOM clobbering ========= </h2>
         <div class="DOMclobberingDefinition">
             <ol>
                 <li>"allows markup to override variables in JavaScript execution environment, making it possible to trigger specific script behavior"
@@ -208,96 +227,121 @@
                 </li>
             </ol>
         </div>
-        <h2 class="postMessageDefinition">
+        <h2 id="postMessageDefinition">
             <a href="https://html.spec.whatwg.org/multipage/web-messaging.html"> ========= postMessage ========= </a></h2>
         <div class="postMessageDefinition">
             <ol>
-                <li>"is a primitive that enables crossorigin communication within the web browser"
+                <li>"is a primitive that <strong>enables crossorigin communication</strong> within the web browser"
                     <a href="http://www.cs.berkeley.edu/~dawnsong/papers/2010%20emperors%20new%20api.pdf" target="_blank"> (Emperor's New API)</a>
                 </li>
-                <li>"is a message passing mechanism that can be used for secure communication of primitive strings between browser windows."
+                <li>"is a <strong>message passing mechanism</strong> that can be used for <strong>secure communication of primitive strings</strong> between browser windows."
                     <a href="http://www.cs.berkeley.edu/~dawnsong/papers/2010%20emperors%20new%20api.pdf" target="_blank"> (Emperor's New API)</a>
                 </li>
-                <li>"is a client-side primitive to enable cross-origin communication at the browser side."
+                <li>"allows two <iframe> tags from different origins to communicate."
+                        <a href="https://learning.oreilly.com/library/view/cors-in-action/9781617291821/kindle_split_025.html" target="_blank"> (CORS in Action)</a>
+                </li>
+                <li>"is a client-side primitive to <strong>enable cross-origin communication</strong> at the browser side."
                     <a href="http://www.cs.berkeley.edu/~dawnsong/papers/2010%20emperors%20new%20api.pdf#page=2" target="_blank"> (Emperor's New API)</a>
                 </li>
-                <li>"aims to provide a simple, purely client-side cross-origin channel for exchanging primitive strings."
+                <li>"aims to provide a simple, purely <strong>client-side cross-origin channel</strong> for exchanging primitive strings."
                     <a href="http://www.cs.berkeley.edu/~dawnsong/papers/2010%20emperors%20new%20api.pdf#page=2" target="_blank"> (Emperor's New API)</a>
                 </li>
-                <li>"is an exemption by design to enable cross-origin communication"
+                <li>"is an exemption by design to <strong>enable cross-origin communication</strong>"
                     <a href="https://swag.cispa.saarland/papers/steffens2020pmforce.pdf#page=2" target="_blank">(pMForce)</a>
                 </li>
-                <li>"allows for cross-domain message exchange whenever two sites are rendered in the same browser tab (or popup window)"
+                <li>"allows for <strong>cross-domain message exchange</strong> whenever two sites are rendered in the same browser tab (or popup window)"
                     <a href="https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-stock.pdf#page=7" target="_blank">(Uncovering History We Insecurity)</a></li>
-                <li>"allows to send serialized messages between two documents."
+                <li>"allows to send <strong>serialized messages</strong> between two documents."
                     <a href="https://people.cispa.io/ben.stock/papers/meiser2021cwyt.pdf#page=2" target="_blank">(Careful Who You Trust)</a>
                 </li>
-                <li>"allows to exchange data across origin and site boundaries"
+                <li>"allows to <strong>exchange data across origin</strong> and site boundaries"
                     <a href="https://people.cispa.io/ben.stock/papers/meiser2021cwyt.pdf#page=2" target="_blank">(Careful Who You Trust)</a>
                 </li>
-                <li>"is a stringbased message passing mechanism proposed for inclusion in HTML 5"
+                <li>"is a <strong>stringbased message passing mechanism</strong> proposed for inclusion in HTML 5"
                     <a href="https://www.comp.nus.edu.sg/~prateeks/papers/FLAX.pdf#page=4" target="_blank"> (FLAX) </a>
                 </li>
-                <li>"enables applications to communicate with each other purely within the browser, and are not subject to the classical same origin policy (SOP) that defines how code from mutually untrusted principals are separated."
+                <li>"enables applications to communicate with each other purely within the browser, and are <strong>not subject to the classical same origin policy</strong> (SOP)."
                     <a href="https://mweissbacher.com/publications/zigzag_usenix.pdf#page=2" target="_blank">(ZigZag)</a>
                 </li>
-                <li>"enables web content from different origins being exchanged between different service providers."
+                <li>"enables web content <strong>from different origins being exchanged</strong> between different service providers."
                     <a href="http://www.cs.wm.edu/~ksun/publications/postmessage-asiaccs16.pdf">(Privacy Breach by Exploiting postMessage)</a>
                 </li>
-                <li>"is a browser API designed for interframe communication"
+                <li>"is a browser API designed for <strong>interframe communication</strong>"
                     <a href="http://seclab.stanford.edu/websec/frames/post-message.pdf">(Securing Frames)</a>
+                </li>
+                <li>"The Web’s <strong>most basic security policy</strong>"
+                    <a href="https://people.cispa.io/ben.stock/papers/meiser2021cwyt.pdf#page=2" target="_blank">(Careful Who You Trust)</a>
+                </li>
+                <li>"is a fundamental security mechanism that <strong>provides boundaries between Web sites</strong> and prevents unauthorized access to sensitive information"
+                    <a href="https://people.cispa.io/ben.stock/papers/meiser2021cwyt.pdf#page=2" target="_blank">(Careful Who You Trust)</a>
+                </li>
+                <li>"creates a <strong>security barrier around an application</strong> which is bounded by the origin"
+                    <a href="https://people.cispa.io/ben.stock/papers/meiser2021cwyt.pdf#page=2" target="_blank">(Careful Who You Trust)</a>
+                </li>
+                <li>"allows sending serializable JavaScript objects from one frame to another"
+                    <a href="https://swag.cispa.saarland/papers/steffens2020pmforce.pdf#page=1" target="_blank">(pMForce)</a>
+                </li>
+                <li>"enables a script to send a message to a window regardless of their respective origins"
+                    <a href="https://www.cs.cornell.edu/~shmat/shmat_ndss13postman.pdf" target="_blank">(The Postman Always Rings Twice)</a>
+                </li>
+                <li>"allowing a script to send a string to any window in the same or different origin"
+                    <a href="https://www.cs.cornell.edu/~shmat/shmat_ndss13postman.pdf" target="_blank">(The Postman Always Rings Twice)</a>
                 </li>
             </ol>
         </div>
-        <h2 class="SOPDefinition"> ========= Same-Origin Policiy ========= </h2>
+        <h2 id="SOPDefinition">
+            <a href="https://developer.mozilla.org/fr/docs/Web/Security/Same-origin_policy">========= Same-Origin Policiy =========</a> </h2>
         <div class="SOPDefinition">
             <ol>
-                <li>"specifies trust by URI"<a href="https://tools.ietf.org/html/rfc6454#section-3.1">(RFC The Web Origin Concept)</a>
+                <li>"only permits to exchange data with other documents sharing the same protocol, host, and port"<a href="https://people.cispa.io/ben.stock/papers/meiser2021cwyt.pdf" target="_blank">(Careful Who You Trust)</a>
                 </li>
-                <li>"restricts access to resources as soon as the origin [37] (protocol, host, and port) differs from the requesting page’s own values"
+                <li>"guards web resources from being accessed by scripts <strong>from another origin</strong>"
+                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-chen.pdf#page=2">(Empirical Study of CORS)</a>
+                </li>
+                <li>"defines the security boundary of a resource <strong>by its origin</strong>, the URI scheme/host/port tuple"
+                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-chen.pdf#page=3">(Empirical Study of CORS)</a>
+                </li>
+                <li>"specifies trust<strong> by URI</strong>"<a href="https://tools.ietf.org/html/rfc6454#section-3.1">(RFC The Web Origin Concept)</a>
+                </li>
+                <li>"restricts access to resources as soon as <strong>the origin (protocol, host, and port) differs</strong> from the requesting page’s own values"
                     <a href="https://people.cispa.io/ben.stock/papers/meiser2021cwyt.pdf#page=2" target="_blank">(Careful Who You Trust)</a>
-                </li>
-                <li>"is a fundamental security mechanism that provides boundaries between Web sites and prevents unauthorized access to sensitive inf<a href="https://people.cispa.io/ben.stock/papers/meiser2021cwyt.pdf#page=2" target="_blank">(Careful Who You Trust)</a>
                 </li>
                 <li>"defines how code from mutually untrusted principals are separated."
                     <a href="https://mweissbacher.com/publications/zigzag_usenix.pdf#page=2" target="_blank">(ZigZag)</a>
                 </li>
-                <li>"automatically prevents client-side code from distinct origins from interfering with each others’ code and data"
+                <li>"automatically prevents client-side code <strong>from distinct origins</strong> from interfering with each others’ code and data"
                     <a href="https://mweissbacher.com/publications/zigzag_usenix.pdf#page=2" target="_blank">(ZigZag)</a>
                 </li>
-                <li>"guards web resources from being accessed by scripts from another origin"
-                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-chen.pdf#page=2">(Empirical Study of CORS)</a>
-                </li>
-                <li>"the fundamental isolation strategy for client-side web application security."
-                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-chen.pdf#page=3">(Empirical Study of CORS)</a>
-                </li>
-                <li>"defines the security boundary of a resource by its origin, the URI scheme/host/port tuple"
-                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-chen.pdf#page=3">(Empirical Study of CORS)</a>
-                </li>
-                <li>"is used to denote a complex set of rules which governs the interaction of different Web Origins within a web application"
+                <li>"is used to denote a complex set of rules which governs the interaction of <strong>different Web Origins</strong> within a web application"
                     <a href="https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-schwenk.pdf">(SOP:Evaluation in Modern Browsers)</a>
                 </li>
-                <li>"is a corner stone of web security, guarding the web content of one domain from the access from another domain"
+                <li>"strongly separates mutually distrusting Web content within the Web browser through <strong>origin-based compartmentalization</strong>"
+                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-lekies.pdf">(XSSI)</a>
+                </li>
+                <li>"allows a given JavaScript access only to resources that have <strong>the same origin</strong>"
+                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-lekies.pdf">(XSSI)</a>
+                </li>
+                <li>"ensures two pages with <strong>different origins</strong> are not allowed to access each other (e.g., through JavaScript."
+                    <a href="https://swag.cispa.saarland/papers/calzavara2021reining.pdf">(Site Policy)</a>
+                </li>
+                <li>"<strong>the fundamental isolation</strong> strategy for client-side web application security."
+                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-chen.pdf#page=3">(Empirical Study of CORS)</a>
+                </li>
+                <li>"is a <strong>corner stone</strong> of web security, guarding the web content of one domain from the access from another domain"
                     <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-zheng-updated.pdf">(Cookies Lack Integrity)</a>
                 </li>
-                <li>"is the principal security policy in Web browsers"
+                <li>"is <strong>the principal</strong> security policy in Web browsers"
                     <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-lekies.pdf">(XSSI)</a>
                 </li>
-                <li>"strongly separates mutually distrusting Web content within the Web browser through origin-based compartmentalization"
-                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-lekies.pdf">(XSSI)</a>
-                </li>
-                <li>"allows a given JavaScript access only to resources that have the same origin"
-                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-lekies.pdf">(XSSI)</a>
-                </li>
-                <li>"ensures two pages with different origins are not allowed to access each other (e.g., through JavaScript."
-                    <a href="https://swag.cispa.saarland/papers/calzavara2021reining.pdf">(Site Policy)</a>
+                <li>"is <strong>a fundamental</strong> security mechanism that provides boundaries between Web sites and prevents unauthorized access to sensitive inf<a href="https://people.cispa.io/ben.stock/papers/meiser2021cwyt.pdf#page=2" target="_blank">(Careful Who You Trust)</a>
                 </li>
             </ol>
         </div>
-        <h2 class="CORSDefinition"><a href="https://www.youtube.com/watch?v=_FrnLbLQn-M&t=1420s"> ========= CORS =========</a></h2>
+        <h2 id="CORSDefinition"><a href="https://www.youtube.com/watch?v=_FrnLbLQn-M&t=1420s">
+                ========= Cross-Origin Resource Sharing (CORS) =========</a></h2>
         <div class="CORSDefinition">
             <ol>
-                <li>"is an extension of the XMLHttpRequest API to allow cross-origin content in the browser through explicit authorization"
+                <li>"is <strong>an extension of the XMLHttpRequest API to allow cross-origin content in the browser</strong> through explicit authorization"
                     <a href="https://people.cispa.io/ben.stock/papers/meiser2021cwyt.pdf#page=3" target="_blank">(Careful Who You Trust)</a></li>
                 </li>
                 <li>"is proposed to solve the problems of JSON-P, and to provide a protocol support of authorized access cross-origin network resources."
@@ -308,9 +352,12 @@
                 </li>
                 <li>"is the most important access control mechanism to segregate static contents and active scripts from different origins."<a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-zheng-updated.pdf#page=3">(Cookies Lack Integrity)</a>
                 </li>
+                <li>"is <strong>a set of server-side headers</strong>, enforced by the client, which allow a server to allow read access from JavaScript"
+                    <a href="https://people.cispa.io/ben.stock/papers/meiser2021cwyt.pdf#page=3" target="_blank">(Careful Who You Trust)</a></li>
+                </li>
             </ol>
         </div>
-        <h2 class="WebStorageDefinition"> ========= Web Storage ========= </h2>
+        <h2 id="WebStorageDefinition"> ========= Web Storage ========= </h2>
         <div class="WebStorageDefinition">
             <ol>
                 <li>"two persistent storage abstractions"
@@ -328,7 +375,7 @@
                 </li>
             </ol>
         </div>
-        <h2 class="LocalStorageDefinition"> ========= Local Storage ========= </h2>
+        <h2 id="LocalStorageDefinition"> ========= Local Storage ========= </h2>
         <div>
             <ol>
                 <li>"is a key/value store tied to an application’s origin."
@@ -342,7 +389,7 @@
                 </li>
             </ol>
         </div>
-        <h2 class="CookieDefinition"> ========= Cookie ========= </h2>
+        <h2 id="CookieDefinition"> ========= Cookie ========= </h2>
         <div class="CookieDefinition">
             <ol>
                 <li>"simple key-value stores used by browsers to persist small pieces of string data, which are sent along in every HTTP request to matching servers"
@@ -357,7 +404,7 @@
                 </li>
             </ol>
         </div>
-        <h2 class="CSVulnDefinition"> ========= Client-side validation vulnerability ========= </h2>
+        <h2 id="CSVulnDefinition"> ========= Client-side validation vulnerability ========= </h2>
         <div class="CSVulnDefinition">
             <ol>
                 <li>"represent bugs in JavaScript programs that allow for unauthorized actions via untrusted input."
@@ -366,20 +413,22 @@
             </ol>
         </div>
         <div class="definition">
-            <h2 class="IndexedDB"> ========= Indexed DB ========= </h2>
-            <div>
-                <ol>
-                    <li>"It defines a JavaScript-based interface for an embedded transactional database system"
-                        <a href="http://eprints.bournemouth.ac.uk/30202/1/BUCSR-2018-01%20Client%20side%20security%20considerations.pdf" target="_blank">(Client-side storage APIs)</a>
-                    </li>
-                    <li>"is an object-oriented database"
-                        <a href="http://eprints.bournemouth.ac.uk/30202/1/BUCSR-2018-01%20Client%20side%20security%20considerations.pdf#page=10" target="_blank">(Client-side storage APIs)</a>
-                    </li>
-                </ol>
-            </div>
+            <h2 id="IndexedDB"> <a href="https://developer.mozilla.org/fr/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB">========= Indexed DB =========</a> </h2>
+            <ol>
+                <li>"It defines a JavaScript-based interface for an embedded transactional database system"
+                    <a href="http://eprints.bournemouth.ac.uk/30202/1/BUCSR-2018-01%20Client%20side%20security%20considerations.pdf" target="_blank">(Client-side storage APIs)</a>
+                </li>
+                <li>"is an object-oriented database"
+                    <a href="http://eprints.bournemouth.ac.uk/30202/1/BUCSR-2018-01%20Client%20side%20security%20considerations.pdf#page=10" target="_blank">(Client-side storage APIs)</a>
+                </li>
+                <li>"is an asynchronous API"
+                    <a href="https://learning.oreilly.com/library/view/learn-typescript-3/9781789615869/603daaa0-1ce5-4b82-a4f3-8b2007a115c9.xhtml">
+                        (Learn Typescript 3)</a>
+                </li>
+            </ol>
         </div>
         <div class="definition">
-            <h2 class="OutputEncoding"> ========= Output encoding ========= </h2>
+            <h2 id="OutputEncoding"> ========= Output encoding ========= </h2>
             <div>
                 <ol>
                     <li>"is changing input so that it cannot be interpreted as code"
@@ -389,43 +438,168 @@
             </div>
         </div>
         <div class="definition">
-            <h2 class="DOM"> ========= DOM ========= </h2>
-            <div>
-                <ol>
-                    <li>"is the standardized application programming interface (API) for scripts running in a browser to interact with the HTML document"
-                        <a href="https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-schwenk.pdf">(SOP:Evaluation in Modern Browsers)</a>
-                    </li>
-                </ol>
-            </div>
+            <h2 id="DOM"> ========= DOM ========= </h2>
+            <ol>
+                <li>"is the standardized application programming interface (API) for scripts running in a browser to interact with the HTML document"
+                    <a href="https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-schwenk.pdf">(SOP:Evaluation in Modern Browsers)</a>
+                </li>
+            </ol>
         </div>
         <div class="definition">
-            <h2 class="DOM"> ========= Origin ========= </h2>
-            <div>
-                <ol>
-                    <li>"is a 3-tuple, consisting of the scheme, the domain and the port number"
-                        <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-zheng-updated.pdf">(Cookies Lack Integrity)</a>
-                    </li>
-                    <li>"for a given URL is defined by a 3-tuple: scheme (or protocol), e.g. HTTP or HTTPS, domain (or host), and port (not supported by IE (Internet Explorer))"
-                        <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-zheng-updated.pdf#page=3">(Cookies Lack Integrity)</a>
-                    </li>
-                    <li>"the triple consisting of scheme, host, and port of the involved resources."
-                        <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-lekies.pdf">(XSSI)</a>
-                    </li>
-                    <li>"The combination of protocol, subdomain (or hostname), and port constitutes an origin as defined by RFC 6454 [3]."
-                        <a href="https://swag.cispa.saarland/papers/calzavara2021reining.pdf">(Site Policy)</a>
-                    </li>
-                </ol>
-            </div>
+            <h2 id="serviceWorker"> ========= Service Worker ========= </h2>
+            <ol>
+                <li>"is an event-driven and browsermanaged process triggered by the registration of a JavaScript code hosted by a web application, and registered to manage all or part of an application"
+                    <a href="https://secweb.work/papers/some2020remote.pdf" target="_blank">(The Remote on the Local)</a>
+                </li>
+                <li>"is a script that can be registered to control one or more pages of your site. Once installed, a service worker sits outside of any single browser window or tab."
+                    <a href="https://secweb.work/papers/some2020remote.pdf" target="_blank">(The Remote on the Local)</a>
+                </li>
+            </ol>
         </div>
-        <div class="definition">
-            <h2 class="serviceWorker"> ========= Service Worker ========= </h2>
-            <div>
-                <ol>
-                    <li>"is an event-driven and browsermanaged process triggered by the registration of a JavaScript code hosted by a web application, and registered to manage all or part of an application"
-                        <a href="https://secweb.work/papers/some2020remote.pdf" target="_blank">(The Remote on the Local)</a>
-                    </li>
-                </ol>
-            </div>
+        <div class="definition" id="robots.txt">
+            <h2> ========= robots.txt ========= </h2>
+            <ol>
+                <li>"is called “The Robots Exclusion Protocol”."
+                    <a href="https://fruct.org/publications/fruct20/files/Men.pdf" target="_blank">(A Study of Different Web-Crawler Behaviour )</a>
+                </li>
+            </ol>
+        </div>
+        <div class="definition" id="crawler">
+        <h2> ========= Web crawler ========= </h2>
+            <ol>
+                <li>"is software for downloading pages from the Web automatically. It is also called web spider or web robot"
+                    <a href="https://www.researchgate.net/publication/287397481_Web_Crawler_Extracting_the_Web_Data" target="_blank">(Web Crawler: Extracting the Web Data)</a>
+                </li>
+                <li>"are full text search engines which assist users in navigating the web"
+                    <a href="https://www.researchgate.net/publication/287397481_Web_Crawler_Extracting_the_Web_Data" target="_blank">(Web Crawler: Extracting the Web Data)</a>
+                </li>
+                <li>"(also known as a robot or a spider) is a system for the bulk downloading of web pages"
+                    <a href="http://infolab.stanford.edu/~olston/publications/crawling_survey.pdf#page=5" target="_blank">(Web Crawling)</a>
+                </li>
+            </ol>
+        </div>
+        <div class="definition" id="crawler">
+            <h2> ========= Web crawler ========= </h2>
+            <ol>
+                <li>"is software for downloading pages from the Web automatically. It is also called web spider or web robot"
+                    <a href="https://www.researchgate.net/publication/287397481_Web_Crawler_Extracting_the_Web_Data" target="_blank">(Web Crawler: Extracting the Web Data)</a>
+                </li>
+                <li>"are full text search engines which assist users in navigating the web"
+                    <a href="https://www.researchgate.net/publication/287397481_Web_Crawler_Extracting_the_Web_Data" target="_blank">(Web Crawler: Extracting the Web Data)</a>
+                </li>
+            </ol>
+        </div>
+        <div class="definition" id="BFcrawler">
+            <h2> ========= Breadth First Crawler ========= </h2>
+            <ol>
+                <li>"starts with a small set of pages and then explores other pages by following links in the breadth-first [6] fashion."
+                    <a href="https://www.researchgate.net/publication/287397481_Web_Crawler_Extracting_the_Web_Data" target="_blank">(Web Crawler: Extracting the Web Data p.3)</a>
+                </li>
+            </ol>
+        </div>
+        <div class="definition" id="BFalgorithm">
+            <h2> ========= Breadth-First Algorithm ========= </h2>
+            <ol>
+                <li>"It is the simplest crawling strategy. It was designed in 1994. It uses the frontier as the FIFO queue and crawls the links in the order in which they are encountered. It is basically used as a baseline crawler. Main drawback of this approach is that it traverses the URLs in the order in which they are entered into the frontier. It is good to implement this approach if the numbers of pages are less. In real life a lot of useless links are produced by useless pages which results in the wastage of time and memory of the frontier. Therefore a useful page should always be selected from the frontier."
+                    <a href="https://www.researchgate.net/publication/287397481_Web_Crawler_Extracting_the_Web_Data" target="_blank">(Web Crawler: Extracting the Web Data p.3)</a>
+                </li>
+            </ol>
+        </div>
+        <div class="definition" id="BTapproach">
+            <h2> ========= Blind Traversing Approach ========= </h2>
+            <ol>
+                <li>"Firstly a seed URL is decided and the crawling process is applied. This process is called blind as there is particular method for selecting the next URL from the frontier. Breadth- First search is a very common example of this approach."
+                    <a href="https://www.researchgate.net/publication/287397481_Web_Crawler_Extracting_the_Web_Data" target="_blank">(Web Crawler: Extracting the Web Data p.3)</a>
+                </li>
+            </ol>
+        </div>
+        <div class="definition" id="Icrawler">
+        <h2> ========= Excluded Content ========= </h2>
+            <ol>
+                <li> "The site’s robot.txt file needs to be fetched before fetching a page from the site so that it can be determined whether the web master has specified about how much file can be crawled [9]."
+                    <a href="https://www.researchgate.net/publication/287397481_Web_Crawler_Extracting_the_Web_Data" target="_blank">(Web Crawler: Extracting the Web Data)</a>
+                </li>
+        </div>
+        <div class="definition" id="FFcrawler">
+            <h2> ========= Form Focused Crawler ========= </h2>
+            <ol>
+                <li>"is software for downloading pages from the Web automatically. It is also called web spider or web robot"
+                    <a href="https://www.researchgate.net/publication/287397481_Web_Crawler_Extracting_the_Web_Data" target="_blank">(Web Crawler: Extracting the Web Data)</a>
+                </li>
+                <li>"are full text search engines which assist users in navigating the web"
+                    <a href="https://www.researchgate.net/publication/287397481_Web_Crawler_Extracting_the_Web_Data" target="_blank">(Web Crawler: Extracting the Web Data)</a>
+                </li>
+            </ol>
+        </div>
+        <div class="definition" id="Hcrawler">
+        <h2> ========= Hidden Web Crawlers ========= </h2>
+            <ol>
+                <li>"A lot of data on the web actually resides in the database and it can only be retrieved by posting appropriate queries or by filling out forms on the web. Recently interest has been focused on access of this kind of data called “deep web” or “hidden web”. Current day crawlers’ crawl only publicly indexable web (PIW) i.e., set of pages which are accessible by following hyperlinks ignoring search pages and forms which require authorization or prior registration. In reality they may ignore huge amount of high quality data, which is hidden behind search forms."
+                    <a href="https://www.researchgate.net/publication/287397481_Web_Crawler_Extracting_the_Web_Data" target="_blank">(Web Crawler: Extracting the Web Data)</a>
+                </li>
+        </div>
+        <div class="definition" id="Pcrawler">
+        <h2> ========= Parallel Crawlers ========= </h2>
+            <ol>
+                <li>"As the size of the Web grows, it becomes more difficult to retrieve the whole or a significant portion of the Web using a single process. Therefore, many search engines often run multiple processes in parallel to perform the above task, so that download rate is maximized. This type of crawler is known as a parallel crawler."
+                    <a href="https://www.researchgate.net/publication/287397481_Web_Crawler_Extracting_the_Web_Data" target="_blank">(Web Crawler: Extracting the Web Data)</a>
+                </li>
+        </div>
+        <div class="definition" id="Dcrawler">
+        <h2> ========= Distributed Web Crawler ========= </h2>
+            <ol>
+                <li>"G.Distributed Web Crawler: This crawler runs on network of workstations. Indexing the web is a very challenging task due to growing and dynamic nature of the web. As the size of web is growing it becomes mandatory to parallelize the process of crawling to finish the crawling process in a reasonable amount of time. A single crawling process even with multithreading will be insufficient for the situation. In that case the process needs to be distributed to multiple processes to make the process scalable. It scales up to several hundred pages per second. The rate at which size of web is growing it is imperative to parallelize the process of crawling. In distributed web crawler a URL server distributes individual URLs to multiple crawlers, which download web pages in parallel. The crawlers then send the downloaded pages to a central indexer on which links are extracted and sent via the URL server to the crawlers. This distributed nature of crawling process reduces the hardware requirements and increases the overall download speed and reliability [2]. FAST Crawler [20] is a distributed crawler, used by Fast Search & Transfer."
+                    <a href="https://www.researchgate.net/publication/287397481_Web_Crawler_Extracting_the_Web_Data" target="_blank">(Web Crawler: Extracting the Web Data)</a>
+                </li>
+        </div>
+        <div class="definition" id="politeness">
+        <h2> ========= Politeness ========= </h2>
+            <ol>
+                <li>"Crawling algorithms should be designed in such a way that only one request is send to the server at a time. For this purpose, a politeness delay needs to be inserted between the requests. This will help reduce the risks."
+                    <a href="https://www.researchgate.net/publication/287397481_Web_Crawler_Extracting_the_Web_Data" target="_blank">(Web Crawler: Extracting the Web Data)</a>
+                </li>
+        </div>
+        <div class="definition" id="Dcontent">
+        <h2> ========= Duplicate Content ========= </h2>
+            <ol>
+                <li>"Crawlers should be able to recognize and eliminate duplicate data available on different URLs. Methods like checksum, visitor counter, fingerprinting etc. are needed for this purpose."
+                    <a href="https://www.researchgate.net/publication/287397481_Web_Crawler_Extracting_the_Web_Data" target="_blank">(Web Crawler: Extracting the Web Data)</a>
+                </li>
+        </div>
+        <div class="definition" id="Ccrawling">
+        <h2> ========= Continuous Crawling ========= </h2>
+            <ol>
+                <li>"Carrying out full crawling after regular intervals is not a beneficial approach to follow. This results in low-value and static pages"
+                    <a href="https://www.researchgate.net/publication/287397481_Web_Crawler_Extracting_the_Web_Data" target="_blank">(Web Crawler: Extracting the Web Data)</a>
+                </li>
+        </div>
+        <div class="definition" id="Dcontent">
+        <h2> ========= Duplicate Content ========= </h2>
+            <ol>
+                <li>"Crawlers should be able to recognize and eliminate duplicate data available on different URLs. Methods like checksum, visitor counter, fingerprinting etc. are needed for this purpose."
+                    <a href="https://www.researchgate.net/publication/287397481_Web_Crawler_Extracting_the_Web_Data" target="_blank">(Web Crawler: Extracting the Web Data)</a>
+                </li>
+        </div>
+        <div class="definition" id="BFHcapproach">
+        <h2> ========= Best First Heuristic Approach ========= </h2>
+            <ol>
+                <li>"This was developed in 1998 to overcome the problems of blind traversing approach. The links are selected from the frontier on the basis of some estimation, score or priority. Always the best available link is opened and traversed. Various mathematical formulas are also used."
+                    <a href="https://www.researchgate.net/publication/287397481_Web_Crawler_Extracting_the_Web_Data" target="_blank">(Web Crawler: Extracting the Web Data)</a>
+                </li>
+        </div>
+        <div class="definition" id="Dcontent">
+        <h2> ========= Duplicate Content ========= </h2>
+            <ol>
+                <li>"Crawlers should be able to recognize and eliminate duplicate data available on different URLs. Methods like checksum, visitor counter, fingerprinting etc. are needed for this purpose."
+                    <a href="https://www.researchgate.net/publication/287397481_Web_Crawler_Extracting_the_Web_Data" target="_blank">(Web Crawler: Extracting the Web Data)</a>
+                </li>
+        </div>
+        <div class="definition" id="Dcontent">
+        <h2> ========= Duplicate Content ========= </h2>
+            <ol>
+                <li>"Crawlers should be able to recognize and eliminate duplicate data available on different URLs. Methods like checksum, visitor counter, fingerprinting etc. are needed for this purpose."
+                    <a href="https://www.researchgate.net/publication/287397481_Web_Crawler_Extracting_the_Web_Data" target="_blank">(Web Crawler: Extracting the Web Data)</a>
+                </li>
         </div>
 </body>
 
