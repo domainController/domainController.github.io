@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obfuscation</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/sommaire.css">
+</head>
+
+<body>
+    <div class="quotes">
+        <h2>
+            <a href="https://kapravelos.com/publications/jsobf-imc20.pdf" target="_blank">Hiding in Plain Site</a>
+        </h2>
+        <ol>
+            <li>"Source code obfuscation can be defined as making a program unintelligible while maintaining its functionality intact"
+            </li>
+            <li>"Additionally, JS scripts that do not use any browser features are by definition not interesting due to their very limited capabilities."
+            </li>
+            <li>"Barak et al. defined program obfuscation as "The goal of program obfuscation is to make a program unintelligible while preserving its functionality""
+            </li>
+            <li>"Our hypothesis is that if the interactions of code with its underlying system cannot be deduced from static analysis of its source code, then the code is concealing these interactions and thus can be considered obfuscated."
+            </li>
+            <li>"Notice that our definition of obfuscation is more relaxed and can include unintended concealing of functionality, for example through heavy modification of source code via minification (i.e., rewriting the source code to be more compact without changing its functionality)."
+            </li>
+            <li>"Interactions between the code (JS) and the system (browser) are defined as invocations of browser API features (property accesses or function calls)."
+            </li>
+            <li>"The web crawler is based on the NodeJS library Puppeteer [23], which automates the Chromium browser and communicates with the browser over the Chrome DevTools protocol"
+            </li>
+            <li>"We use VisibleV8 [32], a custom, open-source variant of the V8 JS engine powering the Chromium browser, to capture browser API accesses. Much like the Linux strace tool logs Linux system calls made by native applications, VisibleV8 (VV8) logs browser API function calls and property accesses made by JS applications"
+            </li>
+            <li>"Browser APIs constitute the interface between untrusted JS code and native browser functionality, in much the same way that operating system (OS) system calls constitute the interface between untrusted user applications and the trusted OS kerne"
+            </li>
+            <li>"To get the exact number of available browser API features, we analyzed and processed the WebIDL specification of the Chromium browser, identifying 6,997 unique API features for our analysis."
+            </li>
+
+            <!-- fin de lecture, des 3 premieres pages Jeudi 11 Mars 13:43, ensuite lecture en diagonale pour aller au conclusions -->
+            
+            <li>"We find that obfuscated scripts typically come directly from 3rd-party sources despite executing in a 1st-party security context at nearly the same proportional rate as resolved scripts."
+            </li>
+            <li>"We saw obfuscated scripts loaded overwhelmingly (98%) via external URL (i.e., script tags with explicit, http(s) URL src attributes). Conversely, resolved scripts showed more diversity of loading mechanism: 59% from external URLs, 26% from inline code in HTML documents, 7% generated inline via document.write, 5% generated inline via DOM API calls, etc."
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>

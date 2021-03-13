@@ -68,6 +68,7 @@ h3 {
 ul,
 ol {
     font-size: 16px;
+    line-height: 25px;
 }
 
 .bg1,
@@ -121,54 +122,50 @@ ol {
     color: #fd5ff0;
 }
 
-    .definition h2 a:visited,
-    .quotes h2 a:visited {
-        color: #fd971f;
-    }
+.definition h2 a:visited,
+.quotes h2 a:visited {
+    color: #fd971f;
+}
 
-    .quotes a:visited{
-        background-color: transparent;
-        text-decoration: none;
-        color: #f92972;
-    }
+.quotes a:visited {
+    background-color: transparent;
+    text-decoration: none;
+    color: #f92972;
+}
 
-    .quotes li {
-       margin: 10px 0;
-    }
-    
-    .AutoPatchingDOMXSS a:visited,
-    .ExploitDefinition a:visited,
-    .DOMXSSdefinition a:visited,
-    .deifnition a:visited {
-        background-color: transparent;
-        text-decoration: none;
-        color: #f92972;
-    }
+.quotes li {
+    margin: 5px 0;
+}
 
 
-    .AutoPatchingDOMXSS li,
-    .ExploitDefinition li,
-    .DOMXSSdefinition li,
-    .UntanglingTheWebOfXSS li {
-       margin: 10px 0;
-    }
+.definition a:visited {
+    background-color: transparent;
+    text-decoration: none;
+    color: #f92972;
+}
 
-    .HeiderichThesis a:visited,
-    .MillionFlowsLater a:visited,
-    .ChromiumTaintTracking a:visited,
-    .dontTrustTheLocals a:visited {
-        background-color: transparent;
-        text-decoration: none;
-        color: #f92972;
-    }
+.definition ol,
+    {
+    margin: 10px 0;
+
+}
+
+.HeiderichThesis a:visited,
+.MillionFlowsLater a:visited,
+.ChromiumTaintTracking a:visited,
+.dontTrustTheLocals a:visited {
+    background-color: transparent;
+    text-decoration: none;
+    color: #f92972;
+}
 
 
-    .HeiderichThesis li,
-    .MillionFlowsLater li,
-    .ChromiumTaintTracking li,
-    .dontTrustTheLocals li {
-       margin: 10px 0;
-    }
+.HeiderichThesis li,
+.MillionFlowsLater li,
+.ChromiumTaintTracking li,
+.dontTrustTheLocals li {
+    margin: 10px 0;
+}
 
 #domxss101 a:visited,
 #vuln a:visited {

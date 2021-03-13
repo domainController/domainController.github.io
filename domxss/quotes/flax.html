@@ -13,45 +13,90 @@
         <h2 class="Flax"><a href="https://www.comp.nus.edu.sg/~prateeks/papers/FLAX.pdf" target="_blank"> ========= Flax ========= </a></h2>
         <div>
             <ol>
-                <li>"We define a CSV vulnerability as one which <strong>results from unsafe usage of untrusted data in the client-side code</strong> of the web application"</li>
-                <li>"CSV vulnerabilities belong to the general class of input validation vulnerabilities"</li>
-                <li>"For example, one type of CSV vulnerability involves data that enters the application through the browser’s cross-window communication abstractions and is processed completely by JavaScript code, without ever being sent back to the web server"</li>
-                <li>"Another type of CSV vulnerability is one where a web application sanitizes input data sufficiently before embedding it in its initial HTML response, but does not sanitize the data sufficiently for its use in the JavaScript component."</li>
-                <li>"JavaScript has several dynamic features for code evaluation and is highly permissive in allowing code and data to be inter-mixed."</li>
-                <li>"In JavaScript application code, we observe that parsing operations are syntactically indistinguishable from validation checks."</li>
-                <li>"Third, in many web applications the client-side code <strong>periodically sends data to a remote server for processing via browser interfaces such as XMLHttpRequest</strong>, <u>and then operates on the returned result</u>. We call such a flow of data, to a server and back, a <strong>reflected flow</strong>"</li>
-                <li>"In general, user data should not be interpreted as web application code. For instance, if user can inject scripts into the application, such a bug can be used in conjunction with other vulnerabilities (such as a login-CSRF vulnerabilities)"</li>
-                <li>"As an example, it distinguishes eval sinks(which allow injection of JavaScript code) from DOM sinks(which allow HTML injection). Our sink-aware fuzzing employs input mutation strategies that are based on grammars such as the HTML syntax, JavaScript syntax, or URL syntax grammars."</li>
-                <li>"With JASIL, subsequent dynamic
-taint analysis is greatly simplified because the tainting
-engine only needs to reason about simple operations like
-substring extraction and concatenation."</li>
-<!-- pas termine de remplir le tableau page 9/17 Mardi 1er mars-->
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
-                <li>""</li>
+                <li>"This paper highlights a new class of vulnerabilities, which <strong>we term</strong> client-side validation (or CSV) vulnerabilities."
+                </li>
+                <li>"We define a CSV vulnerability as one which results from <strong>unsafe usage of untrusted data</strong> in the client-side code of the web application"
+                </li>
+                <li>"CSV vulnerabilities belong to the general class of <strong>input validation vulnerabilities</strong>"
+                </li>
+                <li>"Input validation vulnerabilities constitute a majority of web vulnerabilities and have been widely studied in the past"
+                </li>
+                <li>"For example, one type of CSV vulnerability involves data that enters the application through the browser’s cross-window communication abstractions and is processed completely by JavaScript code, without ever being sent back to the web server"
+                </li>
+                <li>"Another type of CSV vulnerability is one where a web application sanitizes input data sufficiently before embedding it in its initial HTML response, <strong>but does not sanitize the data sufficiently for its use in the JavaScript component</strong>."
+                </li>
+                <li>"Due to the convenience of their use in the language, developers tend to <strong>treat strings as a universal type for exchange</strong>, both of code as well as data. Consequently, complex string operations such as regular expression match and replace are pervasively used both for parsing input and for performing custom validation checks."</li>
+
+                <li>Third, in many web applications the client-side code periodically sends data to a remote server for processing via browser interfaces such as XMLHttpRequest, and then operates on the returned result. We call such a flow of data, to a server and back, a <strong>reflected flo</strong>w.</li>
+
+                <li>"JavaScript has several dynamic features for code evaluation and is highly permissive in allowing code and data to be inter-mixed."
+                </li>
+                <li>"Many JavaScript programs use code evaluation constructs to dynamically generate code as well as to serialize strings into complex data structures (such as JSON arrays/objects)."
+                </li>
+                <li>"In JavaScript application code, we observe that parsing operations are syntactically indistinguishable from validation checks."
+                </li>
+                <li>"Third, in many web applications the client-side code <strong>periodically sends data to a remote server for processing via browser interfaces such as XMLHttpRequest</strong>, <u>and then operates on the returned result</u>. We call such a flow of data, to a server and back, a <strong>reflected flow</strong>"
+                </li>
+                <li>"Untrusted data could enter the clientside code of a web application in three ways."
+                </li>
+                <!-- relectuer des 3 premieres page pour bosser postMessage , arret de lecture car trop generaliste: Vendredi 12 mars 20:14 -->
+                <li>"In general, user data should not be interpreted as web application code. For instance, if user can inject scripts into the application, such a bug can be used in conjunction with other vulnerabilities (such as a login-CSRF vulnerabilities)"
+                </li>
+                <li>"As an example, it distinguishes eval sinks(which allow injection of JavaScript code) from DOM sinks(which allow HTML injection). Our sink-aware fuzzing employs input mutation strategies that are based on grammars such as the HTML syntax, JavaScript syntax, or URL syntax grammars."
+                </li>
+                <li>"With JASIL, subsequent dynamic taint analysis is greatly simplified because the tainting engine only needs to reason about simple operations like substring extraction and concatenation."
+                </li>
+                <!-- pas termine de remplir le tableau page 9/17 Mardi 1er mars-->
+                <li>"Certain cross-domain communication primitives such as postMessage are designed to facilitate sender authentication. Applications using postMessage are responsible for validating the authenticity of the domain sending the message."
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
+                <li>""
+                </li>
             </ol>
         </div>
     </div>

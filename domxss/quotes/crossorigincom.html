@@ -41,11 +41,16 @@
             </li>
             <li>"Here, we see that https://samsungasiasupport4.zendesk.com can execute JavaScript on https://www.samsung.com due to an intended functionality which passes the postMessage’s content to an execution sink. An adversary that is able to compromise the zendesk origin can easily pivot to the main page; either by loading www.samsung.com in an iframe or opening a popup (note that Samsung does not deploy mechanisms for framing control such as X-Frame-Options or CSP). This now enables the attacker to execute code in the origin of https://www.samsung.com"
             </li>
-            <li>"More importantly, the vast majority of high-profile sites is making use of data from other origins in one way or the other."</li>
+            <li>"More importantly, the vast majority of high-profile sites is making use of data from other origins in one way or the other."
+            </li>
             <li>"Notably, four of the five domains only make use of the mechanism on at least one subdomain, but not the main domain, i.e., its use is related to subdomains being enabled to communicate between each other, but not with the main page. Interestingly, we only observe the usage of document.domain on both Twitter and Microsoft on merely a single subdomain; begging the question of the necessity in the first place (as there seems to be no sibling domain to communicate with)."
             </li>
             <li>"the top 5 sites with the most incoming <a href="../definition.html#postMessageDefinition">postMessages</a>. Again, social media platforms (Facebook, Twitter) and web/ data analytics sites (Hotjar, AddThis) are the most prevalent, accompanied by Google"</li>
+
+            <li>"We find that of the top 5, all but Facebook make use of CORS with the wildcard *. We attribute this to the fact that they all host scripts which are included from others. In particular, if a script’s <a href="https://www.w3.org/TR/SRI/#the-integrity-attribute">integrity</a> is meant to be ensured through <a href="https://www.w3schools.com/Tags/att_script_integrity.asp">Subresource Integrity</a> (SRI), the hosting site needs to enable cross-origin read access"
+            </li>
             <!--  2nde lecture jusqu'a page 7 achevee Mardi 9 mars -->
+
             <li>"Fortunately, we found that blindly evaling postMessages is a technique which is decreasing in popularity in favor, e.g., of parsing JSON with the JSON.parse functionality of JavaScript."
             </li>
             <li>"<strong>the sites which are trusted by most others</strong> and <u>which trust most others</u> <strong>to modify storage</strong> (i.e., set arbitrary cookies or Local Storage entries), respectively. Not surprisingly, we again find both Facebook and Twitter in the top trusted sites, primarily based on the implicit trust in those parties."

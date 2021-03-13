@@ -17,7 +17,7 @@
                 <a href="https://tools.ietf.org/html/rfc6265#section-4.1" target="_blank">Cookie security attributes</a>
                 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie">(1)</a> |
                 <a href="domxss/csp.html" target="_blank">CSP</a> |
-                <a href="https://tools.ietf.org/html/rfc7034" target="_blank">XFO</a> 
+                <a href="https://tools.ietf.org/html/rfc7034" target="_blank">XFO</a>
                 <a href="https://www.youtube.com/watch?v=JrSFc_KeNzc">(1)</a> |
                 <a href="https://tools.ietf.org/html/rfc6797" target="_blank">HSTS</a> |
                 <a href="https://www.youtube.com/watch?v=l7WFXv5cXzA" target="_blank">x-xss-protection</a> |
@@ -30,16 +30,19 @@
     <h2><a href="https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers" target="_blank">Privacy</a></h2>
     <div class="yellow">
         <ul>
-            <li><a href="https://tools.ietf.org/html/rfc7231#section-7.4.2" target="_blank">server</a> |
-                <a href="https://tools.ietf.org/html/rfc7231#section-7.1.1.2" target="_blank">date</a> |
+            <li>
+                <a href="https://www.youtube.com/watch?v=TNlcoYLIGFk&t=1336s" target="_blank">CORS: </a>
+                <a href="https://developer.mozilla.org/fr/docs/Web/HTTP/CORS" target="_blank">MDN,</a>
+                <a href="https://www.manning.com/books/cors-in-action" target="_blank"> CORS in Action,</a>
+                <a href="definition.html#CORSDefinition" target="_blank">definition </a>
+                <a href="domxss/script.html" target="_blank">(script tag...) </a> |
                 <a href="domxss/domxsspapers/headers/2018 - HTTP security headers analysis of top one million websites.pdf#page=23" target="_blank">referrer policy</a>
                 <a href="https://www.w3.org/TR/referrer-policy/" target="_blank">(1</a>,
                 <a href="https://www.youtube.com/watch?v=TNlcoYLIGFk&t=1250s" target="_blank">2,</a>
                 <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-lekies.pdf#page=11" target="_blank">3,</a>
                 <a href="https://www.youtube.com/watch?v=lCmiYKgq-o8" target="_blank">4</a>) |
-                <a href="https://www.youtube.com/watch?v=TNlcoYLIGFk&t=1336s" target="_blank">CORS</a>
-                <a href="https://developer.mozilla.org/fr/docs/Web/HTTP/CORS" target="_blank">(1,</a>
-                <a href="https://www.manning.com/books/cors-in-action" target="_blank">2)</a>
+                <a href="https://tools.ietf.org/html/rfc7231#section-7.4.2" target="_blank">server</a> |
+                <a href="https://tools.ietf.org/html/rfc7231#section-7.1.1.2" target="_blank">date</a>
             </li>
         </ul>
     </div>
@@ -58,8 +61,6 @@
         <ul>
             <li><a href="https://tools.ietf.org/html/rfc7231#section-5.3.4" target="_blank">accept-encoding</a></li>
             <li><a href="https://tools.ietf.org/html/rfc7231#section-5.3.5" target="_blank">accept-language</a></li>
-            <li><a href="https://tools.ietf.org/html/rfc7231#section-5" target="_blank">user-agent</a> |
-                <a href="https://tools.ietf.org/html/rfc7231#section-5.5.2" target="_blank">referer</a>
             <li><a href="https://w3c.github.io/webappsec-fetch-metadata/#sec-fetch-dest-header" target="_blank">sec-fetch-dest</a> |
                 <a href="https://w3c.github.io/webappsec-fetch-metadata/#sec-fetch-mode-header" target="_blank">sec-fetch-mode</a> |
                 <a href="https://w3c.github.io/webappsec-fetch-metadata/#sec-fetch-site-header" target="_blank">sec-fetch-site</a></li>
@@ -70,7 +71,6 @@
     <div class="orange">
         <ul>
             <li><a href="https://tools.ietf.org/html/rfc7233#section-2.3">accept-ranges</a></li>
-            <li><a href="https://tools.ietf.org/html/rfc7234#section-5.2" target="_blank">cache-control</a></li>
             <li><a href="https://tools.ietf.org/html/rfc7231#section-3.1.2.2" target="_blank">content-encoding</a> |
                 <a href="https://tools.ietf.org/html/rfc7230#section-3.3.2" target="_blank">content-length</a></li>
             <li><a href="https://www.chromestatus.com/feature/5432089535053824" target="_blank">cross-origin-opener-policy</a></li>
@@ -81,7 +81,7 @@
             <li><a href="domxss/domxsspapers/headers/2017 - Exploring HTTP Header Manipulation In-The-Wild.pdf#page=6" target="_blank">x-cache</a>(
                 <a href="https://www.youtube.com/watch?v=TNlcoYLIGFk&t=667s">1</a>)
             </li>
-                </li>
+            </li>
             <li><a href="domxss/domxsspapers/headers/2018 - HTTP security headers analysis of top one million websites.pdf#page=22" target="_blank">x-powered-by</a></li>
             <li><a href="https://staart.js.org/api/response-headers" target="_blank">x-response-time</a></li>
             <li><a href="https://tools.ietf.org/html/rfc7234#section-5.1" target="_blank">x-ton-expected-size</a></li>
@@ -97,9 +97,10 @@
     <h2><a href="https://tools.ietf.org/html/rfc7231#section-5.5" target="_blank">Request Context</a></h2>
     <div class="yellow">
         <ul>
-            <li><a href="https://tools.ietf.org/html/rfc7231#section-5.5.3" target="_blank">user-</a>
-                    <a href="https://humanwhocodes.com/blog/2010/01/12/history-of-the-user-agent-string/" target="_blank">agent</a> |
-                    <a href="https://tools.ietf.org/html/rfc7231#section-5.5.2" target="_blank">referer</a>
+            <li>
+                <a href="https://tools.ietf.org/html/rfc7231#section-5.5.3" target="_blank">user-</a>
+                <a href="https://humanwhocodes.com/blog/2010/01/12/history-of-the-user-agent-string/" target="_blank">agent</a> |
+                <a href="https://tools.ietf.org/html/rfc7231#section-5.5.2" target="_blank">referer</a>
             </li>
         </ul>
     </div>
@@ -107,13 +108,13 @@
     <div class="red">
         <ul>
             <li>
-            <a href="https://tools.ietf.org/html/rfc7234#section-5.4" target="_blank"><s>pragma</s></a> |
-            <a href="https://tools.ietf.org/html/rfc7234#section-5.3" target="_blank"><s>expires</s></a>  |
-            <a href="https://tools.ietf.org/html/rfc7234#section-5.1" target="_blank"><s>age</s></a> |
-            <a href="https://tools.ietf.org/html/rfc7232#section-2.3" target="_blank">etag</a>
-            <a href="https://www.youtube.com/watch?v=WImU1HhsB8k&t=209s">(1)</a> |
-            <a href="https://tools.ietf.org/html/rfc7234#section-5.2" target="_blank">cache-control</a>
-            <a href="https://www.youtube.com/watch?v=WImU1HhsB8k&t=282s">(1)</a> |
+                <a href="https://tools.ietf.org/html/rfc7234#section-5.4" target="_blank"><s>pragma</s></a> |
+                <a href="https://tools.ietf.org/html/rfc7234#section-5.3" target="_blank"><s>expires</s></a> |
+                <a href="https://tools.ietf.org/html/rfc7234#section-5.1" target="_blank"><s>age</s></a> |
+                <a href="https://tools.ietf.org/html/rfc7232#section-2.3" target="_blank">etag</a>
+                <a href="https://www.youtube.com/watch?v=WImU1HhsB8k&t=209s">(1)</a> |
+                <a href="https://tools.ietf.org/html/rfc7234#section-5.2" target="_blank">cache-control</a>
+                <a href="https://www.youtube.com/watch?v=WImU1HhsB8k&t=282s">(1)</a> |
             </li>
         </ul>
     </div>
@@ -123,7 +124,6 @@
             <li><a href="https://developer.fastly.com/reference/http-headers/X-Served-By/" target="_blank">x-served-by</a></li>
             <li><a href="https://developer.fastly.com/reference/http-headers/X-Served-By/" target="_blank">x-amz-ir-id</a></li>
             <li><a href="https://www.w3.org/TR/resource-timing-1/#timing-allow-origin" target="_blank" class="red">timing-allow-origin</a></li>
-            
         </ul>
     </div>
     <h2><a href="https://tools.ietf.org/html/rfc7231#section-5.5" target="_blank">Twitter-specific</a></h2>
