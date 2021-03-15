@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantics CSP</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/sommaire.css">
+</head>
+
+<body>
+    <div class="quotes">
+        <h2><a href="https://www.dais.unive.it/~calzavara/papers/tweb18.pdf" target="_blank">========= Semantics-Based Analysis of CSP Deployment ========= </a></h2>
+        <ol> 
+            <li>"The most effective techniques to defend against content injection are <strong>input sanitization</strong> and <strong>output encoding</strong>, which prevent dangerous contents like malicious script tags from entering benign web pages. Unfortunately, input sanitization is typically difficult to get right and output encoding can be accidentally overlooked, so content injections are still pervasive on the Web. This <strong>motivated the development of complementary in-depth defense</strong> mechanisms aimed at mitigating the effects of a successful content injection.       
+            </li>             
+
+            <li>"Moreover, <a href="https://csp.withgoogle.com/docs/index.html">CSP</a> allows the specification of <strong>constraints</strong> on <strong>content inclusion</strong> based on a white-listing mechanism, whereby different content types, like images or scripts, are bound to the sole set of origins allowed to supply those contents. This way, injected markup elements <strong><u>can</u> only <u>be</u> abused</strong> to load contents <a href="https://content-security-policy.com/#source_list" target="_blank">from</a> <strong>white-listed</strong> web origins, thus further <strong><u>reducing</u> the room </strong>for attacks"
+            </li>
+            <li>"A content security policy is a <strong>list of directives</strong>, <u>restricting</u> <strong>content inclusion</strong> for web pages by means of a <strong>white-listing mechanism</strong>. Directives bind content types to lists of sources from which a CSP-protected web page is allowed to include resources of that specific type. For instance, the directive img-src https://a.com specifies that a web page can only load images from the host a.com via the HTTPS protocol"
+            </li>
+            <li>"CSP is a <strong>client-server defense mechanism</strong>: content security policies are specified by web developers using HTTP(S) headers or meta elements in HTML pages, while their <strong>enforcement</strong> is performed at the <strong>browser side</strong> on a <strong>per-page basis</strong>"
+            </li>             
+
+            <li>"In both modes, the report-uri directive can be used to specify a URI where browsers should send JSON-based security reports when a policy violation occurs"             
+            </li>             
+
+            <li>"Policies in <strong>enforcement</strong> mode are sent in the Content-Security-Policy header, while <strong>report-only</strong> policies are sent in the <a href="https://media.geeksforgeeks.org/wp-content/uploads/20191029103103/conctent-security-policy-report-onlyy.png" target="_blank">Content-Security-Policy-Report-Only</a> header."             
+            </li>             
+
+            <li>"The core of CSP is a <strong>fine-grained mechanism</strong> for <a href="https://www.csoonline.com/article/3562429/whitelisting-explained-how-it-works-and-where-it-fits-in-a-security-program.html" target="_blank">white-listing</a> content inclusions, defined in the CSP 1.0 specification  and summarized in the previous section."
+            </li>
+
+            <li>"Specifically, CSP Level 2 allows one to white-list individual inline scripts and styles by using <a href="https://www.techopedia.com/definition/10297/nonce" target="_blank">nonces</a> or <a href="https://content-security-policy.com/hash/" target="_blank">hashes</a>"
+            </li>
+            <li>"The ’nonce-$value’ source expression white-lists inline scripts or styles with a nonce attribute
+equal to $value, while the ’shaXXX-$value’ source expression white-lists inline scripts or styles
+whose hash (computed using the shaXXX algorithm) is $value. Nonces should be random values
+which are freshly generated upon each page request."
+            </li>
+            <!-- fin 1ere lecture des 6 1eres pages Dimanche 14 Mars 12:05 -->
+        </ol>
+    </div>
+</body>
+
+</html>

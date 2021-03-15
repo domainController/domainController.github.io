@@ -1,0 +1,8 @@
+    inspect(document.body) > gitmain.txt
+VM14568:1 Uncaught ReferenceError: gitmain is not defined
+    at <anonymous>:1:30
+(anonymous) @ VM14568:1
+    inspect(document.body)
+<body class=​"logged-in env-production page-responsive page-profile mine" style=​"word-wrap:​ break-word;​">​…​</body>​
+    inspect(document.documentElement)
+<html lang=​"en" data-color-mode=​"dark" data-light-theme=​"light" data-dark-theme=​"dark">​<script type=​"text/​javascript">​…​</script>​<head>​…​</head>​<body class=​"logged-in env-production page-responsive page-profile mine" style=​"word-wrap:​ break-word;​">​…​</body>​</html>​

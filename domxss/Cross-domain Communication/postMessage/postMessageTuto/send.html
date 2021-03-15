@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sender</title>
+</head>
+
+<body>
+    <iframe id="frame" src="listen.html" width="360" height="75" }></iframe>
+    <script type="text/javascript">
+    document.querySelector('iframe').onload = function() {
+        console.log('iframe loaded');
+    };
+    count = 1
+
+    setTimeout(function() { document.getElementById('frame').contentWindow.postMessage('Message ' + count++, '*') }, 5000)
+    </script>
+</body>
+
+</html>

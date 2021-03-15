@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSP is Dead</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/sommaire.css">
+</head>
+
+<body>
+    <div class="quotes">
+        <h2><a href="https://storage.googleapis.com/pub-tools-public-publication-data/pdf/45542.pdf" target="_blank">
+        ========== CSP Is Dead, Long Live CSP! ========== </a></h2>
+        <ol>
+            <li>"By disallowing <a href="https://content-security-policy.com/examples/allow-inline-script/" target="_blank">inline scripts</a> and allowing only <strong>trusted domains</strong> as a source of external scripts, <a href="https://domaincontroller.github.io/domxss/csp.html">CSP</a> aims to <strong>restrict</strong> a site's capability to execute malicious client-side code."
+            </li>
+            <li>"We suggest that the <strong>model</strong> of designating <a href="https://www.youtube.com/watch?v=qEzBnzhluHY&t=779s" target="_blank">trust</a> by specifying <strong>URL whitelists</strong> from which scripts can execute should be replaced with an approach based on <a href="https://content-security-policy.com/nonce/">nonce</a> and <a href="https://content-security-policy.com/hash/">hashes</a>, already defined by the <a href="https://content-security-policy.com/">CSP</a> specification and available in major browser implementations."
+            </li>
+            <li>"In a <strong>nonce-based policy</strong>, instead of whitelisting hosts and domains for script execution, the application defines a single-use, <strong>unguessable token</strong> <a href="https://content-security-policy.com/nonce/">(nonce)</a> <u>delivered both in the CSP policy and as an HTML attribute</u> of legitimate, application-controlled scripts. The user agent allows the execution only of those scripts whose nonce <strong>matches the value</strong> specified in the policy"
+            </li>
+            <li>"A CSP policy is delivered in the Content-Security-Policy HTTP response header or in a <meta> element."
+            </li>
+            <li>"CSP source lists (commonly known as whitelists) have been a core part of CSP and are the traditional way to specify trust relationships"
+            </li>
+            <li>With ’<a href="https://content-security-policy.com/strict-dynamic/">strict-dynamic</a>’, dynamically generated scripts implicitly <strong>inherit the nonce</strong> from the trusted script that created them.
+            </li>
+            <li>"unsafe-inline allows the execution of inline \<script\> blocks and JavaScript event handlers (effectively re- moving any <a href="https://csp.withgoogle.com/docs/index.html">CSP</a>  protection against XSS)."
+            </li> 
+            <li>"unsafe-eval allows the use of JavaScript APIs that execute string data as code, such as eval(), setTimeout(), setInterval(), and the Function constructor."
+            </li>
+            <li>"A CSP nonce allows the policy to specify a one-time value that acts as an authorization token for scripts (script-src 'nonce-random-value'). Any script on the page with the correct nonce="random-value" at- tribute will be allowed to execute."
+            </li>
+            <li>"In practice, however, clickjacking protection with X-Frame- Options is rarely subverted,"
+            </li>
+            <li>"The security benet of <a href="https://csp.withgoogle.com/docs/index.html">CSP</a>  is overwhelmingly concen- trated in two directives that prevent script execution: script- src and object-src"
+            </li>
+            <li>"An attacker who can inject and execute scripts is able to bypass the restrictions of all other directives. As a result, applications that use a policy without safe script-src and object-src source lists gain very limited benefit from CSP"
+            </li>
+            <!-- Fin de lecture jusqu'a la 4eme page Samedi 13 Mars 16:57 , relire les deux derniers paragraphe peut-etre-->
+            <li>"To address issues about insucient granularity of domain-
+based source lists, CSP2 introduced the ability to constrain
+whitelists to specic paths on a given domain (e.g. exam-
+ple.org/foo/bar)"
+            </li>
+            <li>"the primary reason for the insecurity of poli- cies is the bypassability of script-src whitelists. On the modern web, an approach based on whitelisting domains (even if accompanied with paths) appears to be too in exi- ble to oer developers security gains and prevent XSS"
+            </li>
+            <li>"Instead of relying on whitelists, application maintain-
+ers should apply a nonce-based protection approach."
+            </li>
+            <!-- Fin de lecture jusqu'a la 9eme page Lundi 15 Mars 01:43 , pas tres concentre-->
+            <li>""
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>

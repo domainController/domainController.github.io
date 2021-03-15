@@ -15,19 +15,38 @@
                 ========= Deployed CSP Analysis ========= </a>
         </h2>
         <ol>
-            <li>"<a href="https://en.wikipedia.org/wiki/Content_Security_Policy">CSP</a>s can be specified inside the Content-Security- Policy header or by including them in <meta> tags inside an HTML head section."</li>
+            <li>"Notably though, virtually all papers have focused on <a href="https://content-security-policy.com/">CSP</a> as a means to <strong>restrict content</strong> and have treated its newly added features (such as TLS enforcement and framing control) as <strong>side notes</strong>"
+            </li>
+            <li>Among the insights, we find that <strong>56%</strong> (251/449) of Web sites that test CSP for <strong>content restriction</strong> with <a href="https://content-security-policy.com/report-only/">report-only</a>, presumably due to its complexity, refrain from ever enforcing any policy
+            </li>
+            <li>Moreover, we outline the unexpected interactions between <strong>CSP and DNS</strong> and discover that over 13% of sites attempting to control script resources whitelisted domains that have expired, contain obvious typos, or resolve to private IPs</li>
+
+            <li>In particular, we document the <strong>increase in adoption of TLS enforcement</strong> and how the security mechanism is used in practice for utility purposes.</li>
+
+            <li>Content Security Policy (CSP) is a browser-enforced security mechanism first proposed in 2010 by <a href="http://research.sidstamm.com/papers/csp-www2010.pdf">Stamm et al</a>.</li>
+
+            <li>"<a href="https://en.wikipedia.org/wiki/Content_Security_Policy">CSP</a>s can be specified inside the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</a> header or by including them in <a href="https://content-security-policy.com/examples/meta/">meta tags</a> inside an HTML head section."
+            </li>
             <li>"CSP provides <strong>directives</strong> to bind content types to sets of <strong>source expressions</strong>, regular-expression-like constructs used to represent <u>the <a href="https://tools.ietf.org/html/rfc6454">Web origins</a> from which resources of a given type may be included</u>"
             </li>
-            <li>"The original CSP design proved to be an inflexible security mechanism, since it required the removal of all the inline scripts and event handlers to actually provide any security benefit; hence, its adoption initially lagged behind other security headers [51]. To remedy this, the second version of CSP introduced hashes and <a href="https://www.techopedia.com/definition/10297/nonce">nonces</a> to whitelist selected inline script elements [46"
+            <li>"The original CSP design proved to be an inflexible security mechanism, since it required the removal of all the inline scripts and event handlers to actually provide any security benefit; hence, its adoption initially lagged behind other security headers [51]. To remedy this, the second version of CSP introduced hashes and <a href="https://www.techopedia.com/definition/10297/nonce">nonces</a> to whitelist selected inline script elements. The former allow one to whitelist inline scripts matching a given <a href="https://content-security-policy.com/hash/">hash</a>, whereas the latter enable execution of script tags carrying those nonces."
             </li>
+            <li>Since 2016, the third and latest version of CSP further aims to ease deployment through the strict-dynamic source expression, used <strong>to propagate trust</strong> to scripts loaded by other scripts whitelisted using a <strong>valid hash/nonce</strong></li>
+
             <li id="realCSPstart">"The figure does not include the CSP adoption from 2012 to 2014, since only 8 different sites deployed CSP before 2014
-            "</li>
-            <li>"First, even though CSP offers the report-only mode to enable developers to experiment with policies before deployment, this mode is not nearly as popular as the enforcement mode. This means that most developers are rolling out policies without having a chance to test them on their user base. We suspect that this is one of the main reasons <strong>why CSPs in the wild are so relaxed</strong> since they have not been appropriately evaluated and the developers eventually opted for utility over security"
+            "
             </li>
-            <li>"Unfortunately, CSP — especially for its original use case of script content restriction — is way more complicated than other security mechanisms and requires <strong>constant maintenance</strong> to ensure that the appropriate sources are whitelisted so that the site remains operational and secure."
+            <li>"First, even though <a href="https://csp.withgoogle.com/docs/index.html">CSP</a>  offers the report-only mode to enable developers to experiment with policies before deployment, this mode is not nearly as popular as the enforcement mode. This means that most developers are rolling out policies without having a chance to test them on their user base. We suspect that this is one of the main reasons <strong>why CSPs in the wild are so relaxed</strong> since they have not been appropriately evaluated and the developers eventually opted for utility over security"
             </li>
-            <!-- lu les 5 premieres pages, peut-etre relire le debut du bilan correctement Vendredi 5 mars 13:52 -->
-            <!-- relu les 5 premieres pages,    Dimanche 7 mars 18:36 -->
+            <li> Since CSP is one of many security mechanisms <strong>deployed by servers and enforced by browsers</strong> (like HSTS) one may think that similar to other mechanisms, once a policy is curated, that policy can be deployed and used for a prolonged period."Unfortunately, CSP — especially for its original use case of script content restriction — is way more complicated than other security mechanisms and <strong>requires constant maintenance</strong> to ensure that the <strong>appropriate sources are whitelisted</strong> so that the site remains operational and secure."
+            </li>
+            <li>While we can only speculate about the exact reason for this trend, we opine that it is likely due to event handlers which cannot be whitelisted with hashes or nonces. Checking merely the start pages for the 378 sites which deployed unsafe-inline in December 2018, 180 (48%) of them carried event handlers.
+            </li>
+            
+            <!-- 1ere lecture des 5 premieres pages, Vendredi 5 mars 13:52 (peut-etre relire le debut du bilan correctement)  -->
+            <!-- 2eme lecture des 5 premieres pages, Dimanche 7 mars 18:36 -->
+            <!-- 3eme lecture des 5 premieres pages, Samedi 13 mars 21:34 -->
+
             <li>"Whitelisting an entire scheme (such as https) and allowing unsafe-inline may result in short policies (in terms of the number of entries) which are, however, still more vulnerable than explicitly trusting hundreds of remote third parties."
             </li>
             <li>"Despite the lack of zone files covering the full duration of our dataset, we were still able to find 9 cases of domains expiring after being added to a whitelist and 7 domains which were not registered at all during the periods they appeared in CSP whitelists."
@@ -36,16 +55,18 @@
             </li>
             <li>"To find typos we use the fat-finger typosquatting models of Wang et al. [48] to generate a l<strong>ist of domains that may have been the intended ones</strong>"
             </li>
-            <li>"As the table indicates, 50/373 (13%) sites using CSP whitelists trusted at least <strong>one abusable domain</strong>."
+            <li>"As the table indicates, 50/373 (13%) sites using <a href="https://csp.withgoogle.com/docs/index.html">CSP</a>  whitelists trusted at least <strong>one abusable domain</strong>."
             </li>
             <li>"Even though Airbnb was an early adopter of CSP and made significant efforts to secure their site, they had to often effectively disable their policies for long periods of time. These gaps could have been abused by attackers to launch attacks that would not normally be possible with Airbnb’s CSP. Moreover, while they finally managed to curate a whitelist of 33 sites, it took them multiple years from when they started experimenting with CSP to arrive at this final policy."
             </li>
             <li>"The HSTS header is set to ensure that once a site has been visited over HTTPS, it cannot be loaded over HTTP until a specified timeout occured"
             </li>
-            <li>"In particular, CSP was <strong>extended</strong> to better integrate with the <a href="https://www.w3.org/TR/mixed-content/">Mixed Content specification</a>, a security policy implemented by all modern browsers which regulates the use of HTTP resources in HTTPS pages"</li>
+            <li>"In particular, CSP was <strong>extended</strong> to better integrate with the <a href="https://www.w3.org/TR/mixed-content/">Mixed Content specification</a>, a security policy implemented by all modern browsers which regulates the use of HTTP resources in HTTPS pages"
+            </li>
             <li>"The protection offered by XFO is coarse-grained both because of the small number of configuration options, but also because of Google Chrome’s decision (shared by all Chrome-based browsers) to not support the ALLOW-FROM directive"
             </li>
-            <li>"We find that <strong>starting from 2015 when a meaningful number of sites adopted frame-ancestors</strong> (shown as CSP-FA), at least 50% of them required the flexibility of CSP. For those, we find that the most common pattern is whitelisting all origins from the same site (104 of 321 in 2018)."</li>
+            <li>"We find that <strong>starting from 2015 when a meaningful number of sites adopted frame-ancestors</strong> (shown as CSP-FA), at least 50% of them required the flexibility of CSP. For those, we find that the most common pattern is whitelisting all origins from the same site (104 of 321 in 2018)."
+            </li>
             <li>"CSP’s initial purpose was to restrict the inclusion of content into a pages"
             </li> 
             <li>"Hence, it appears that while content restriction is clearly known as a goal of CSP, most sites are unable to deploy it due to its complexity."
@@ -62,36 +83,63 @@
             </li>             
             <li>"In practice though, we observed up to 3,344 different event handlers on a single page. While the median is only at around 5, any update to the event handlers (for all pages!) needs to be propagated to the CSP header"
             </li>
-            <li>"Our work improves upon previous analyses of CSP in different ways. First, we present the first analysis of the security impact of typos and expired domains on CSPs, complementing previous findings of the insecurity of whitelists"</li>
+            <li>"Our work improves upon previous analyses of CSP in different ways. First, we present the first analysis of the security impact of typos and expired domains on CSPs, complementing previous findings of the insecurity of whitelists"
+            </li>
 
             <!-- Fini la 1ere lecture ce Lundi 8 Mars 07:10 am avec une attention de 12/20 -->
 
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
-            <li>""</li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
         </ol>
     </div>
 </body>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostMessage Tuto</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    if (typeof localStorage === 'undefined') {
+        document.write("Local storage unavailable.")
+    } else {
+        document.write("Local storage available.")
+
+        localStorage.setItem ( 'username', 'kami');
+        localStorage.setItem ('password', 'Musiques42.');
+
+        username = localStorage.getItem('username');
+        password = localStorage.getItem('password');
+
+        alert("Data retrieved: username = '" +
+            username + "', password = '" +
+            password + "'.")
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why is CSP Failing?</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/sommaire.css">
+</head>
+
+<body>
+    <div class="quotes">
+        <h2><a href="https://tobias.lauinger.name/papers/csp-raid2014.pdf" target="_blank">========= Why is CSP Failing? ========= </a></h2>
+        <ol>
+            <li>"Policies are sent by the server in a special security header, and a browser supporting the standard is then responsi- ble for enforcing the policy on the client."
+            </li>
+            <li>"Developers or administrators can congure web servers to include Content-Security-Policy headers as part of the HTTP responses issued to browsers. CSP-enabled browsers are then responsible for en- forcing the policies associated with each resource"
+            </li>
+            <li>"A content security policy consists of a set of directives. Each directive corre- sponds to a specic type of resource, and species the set of origins from which resources of that type may be loaded. The scheme and port in source expressions are optional."
+            </li>
+            <li>"CSP also supports wildcards (*) for subdomains and the port, and has ad- ditional special keywords: `self' represents the origin of the resource, while `none' represents an empty resource list and prevents any resource of the re- spective type from being loaded."
+            </li>
+            <li>"The script-src and style-src directives additionally support the `unsafe-inline' keyword, which allows inline script or CSS to be included in the HTML document rather than being loaded from an external resource"
+            </li>
+            <li>"The directive script-src http://seclab.nu:80, for instance, allows a protected website to load scripts from the host seclab.nu via HTTP on port 80, but blocks all scripts from other sources."
+            </li>
+            <li>"CSP can operate in one of two modes: enforcement or report-only. In en- forcement mode, compatible browsers block resources that violate a policy. In report-only mode, however, browsers do not enforce policies, but rather report violations that would be blocked on the developer console."
+            </li>
+            <li>"To prevent XSS attacks, disallowing inline scripts and eval is the core require- ment to benet from CSP. <strong>Inline scripts should be disabled to prevent the browser from inadvertently executing scripts that have been injected into the site</strong>."
+            </li>
+            <li>"Therefore, for version 1.0 of CSP, inline scripts should be moved to les and eval replaced with a safe equivalent for the corresponding task, such as JSON.parse() to parse JSON. Furthermore, JavaScript should be hosted on a domain that only serves static les instead of user content. This separation makes it harder for attackers to execute code in the browser. Also, external scripts should be moved to a server controlled by the website owner, reducing trust in third-party servers. The number of whitelisted sources should be kept to a minimum to increase the difficulty of data exltration for attackers."
+            <!-- fin de 1ere lecture 6/22 Samedi 13 Mars -- Intro bonbon pedagogique, papier de reference" -->
+            </li>
+            <li>"The SOP as well as the HTML5 frame sandboxing mechanism can be used to ensure that untrustworthy scripts in the frame cannot access or modify the main document."             
+            </li>             
+
+            <li>"Neither naive crawling nor manual browsing alone are sufficient methods to generate a content security policy for a website. In our approach, a certain amount of <strong>fine-tuning</strong> of generated policies is required for all but the simplest sites. Advanced crawling, or applying machine learning to the generated policies, could reduce the importance of manual tweaks. More complex sites may be able to use only a subset of CSP unless they adjust their architecture. Once a policy has been deployed, an additional challenge is to <strong>ensure that it is always up to date</strong>."
+            </li>
+            <li>"Hash might be more promising because documents can be distributed over CDNs more easily, whereas for nonce a new document would need to be generated for each response"             
+            </li>             
+            <li>"Instead of whitelisting all possible ad networks or developing a mechanism for recursive policy adoption, ads should be moved into sandboxed iframes. This allows the main site to be protected with an effective policy, while the iframe can be more permissive, but isolated."             
+            </li>             
+            <li>"Currently, inline scripts are as popular with websites as they are bad for the effectiveness of CSP to prevent XSS"             </li>
+             <!-- fin du survol Dimanche 14 Mars 08:38am -->
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+            <li>""
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>
