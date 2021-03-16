@@ -33,7 +33,7 @@
                 <a href="https://storage.googleapis.com/pub-tools-public-publication-data/pdf/45542.pdf#page=3https://archive-csp.github.io./github.com.html" target="_blank">- CSP Is Dead, Long Live CSP! </a>
             </li>
             <li>describes a class of <strong>string-based code injection</strong> vulnerabilities that let adversaries inject HTML and/or JS into Web content"
-                <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">- Reviews of Web Crawlers</a>
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=2" target="_blank">- Reviews of Web Crawlers</a>
             </li>
         </ol>
     </div>
@@ -62,7 +62,7 @@
                 <a href="https://storage.googleapis.com/pub-tools-public-publication-data/pdf/45542.pdf" target="_blank">- CSP Is Dead, Long Live CSP! </a>
             </li>
             <li>is a <strong>browser feat.</strong> that a web dev. can configure to define a <a href="http://people.w3.org/mike/diffs/csp/diff-to-db6a34dad6cb.html" target="_blank">policy</a> that allows the browser to <strong>whitelist</strong> the JS code that belongs to the app."
-                <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">- Script Gadget</a>
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=2" target="_blank">- Script Gadget</a>
             </li>
             <li>is a <strong>list of directives</strong>, restricting content inclusion for web pages by means of a <strong>white-listing mechanism</strong>.
                 <a href="https://www.dais.unive.it/~calzavara/papers/tweb18.pdf" target="_blank">- Semantics CSP </a>
@@ -99,6 +99,14 @@
             </li>
         </ol>
     </div>
+    <h2 id="DOMclobberingDefinition"> ********* Script Gadgets ********* </h2>
+    <div class="definition">
+        <ol>
+            <li>legitimate JavaScript fragments within an application’s legitimate code base
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=1" target="_blank">- Script Gadget</a>
+            </li>
+        </ol>
+    </div>
     <h2 id="NonceDefinition"> ========= Nonce ========= </h2>
     <div class="definition">
         <ol>
@@ -111,7 +119,7 @@
     <div class="definition">
         <ol>
             <li>allows the developer to list cryptographic hashes of expected scripts within the page
-                <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=3" target="_blank">- Script Gadget</a>
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=3" target="_blank">- Script Gadget</a>
             </li>
         </ol>
     </div>
@@ -148,10 +156,10 @@
     <div class="definition">
         <ol>
             <li>These are libraries used by developers to clean <strong>untrusted HTML</strong> into <strong>HTML that is safe to use</strong> within the application. This category contains examples such as DOMPurify1 and Google Closure2 HTML sanitizer."
-                <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">- Script Gadget</a>
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=2" target="_blank">- Script Gadget</a>
             </li>
             <li>automatically transform <strong>untrustworthy strings</strong> into <strong>safe-to-render HTML markup</strong> or safe-to-follow URLs by removing parts that may lead to XSS"
-                <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">- Script Gadget</a></li>
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=2" target="_blank">- Script Gadget</a></li>
         </ol>
     </div>
     <h2 id="ExploitDefinition"> ********* Exploit ********* </h2>
@@ -216,7 +224,7 @@
         </ol>
     </div>    
     <div class="definition">
-    <h2 id="IVDefinition"> ========= Input Validation ========= </h2>
+    <h2 id="IVDefinition"> ********* Input Validation ********* </h2>
         <ol>
             <li>only allow data into the application if it matches its specification.
                  <a href="http://ernie.ips.cs.tu-bs.de/papers/2014_JISA.pdf#page=2" target="_blank">- Script-templates for the CSP </a>
@@ -272,7 +280,7 @@
     <div class="definition">
         <ol>
             <li>This is software that runs on the server, and attempts to allow benign requests from web trac, while detecting and blocking malicious requests. An example of an open-source Web Application Firewall is ModSecurity4 with OWASP Common Rule Set"
-                <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=2" target="_blank">- Script Gadget</a>
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=2" target="_blank">- Script Gadget</a>
             </li>
         </ol>
     </div>
@@ -739,7 +747,21 @@
     <div class="definition">
         <ol>
             <li>allows markup to override variables in JavaScript execution environment, making it possible to trigger specific script behavior"
-                <a href="https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf#page=3" target="_blank">- Script Gadget</a>
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=3" target="_blank">- Script Gadget</a>
+            </li>
+        </ol>
+    </div>
+    <h2 id="URLRedirectDefinition"> ========= URL Redirection ========= </h2>
+    <div class="definition">
+        <ol>
+            <li>is a popular technique that automatically navigates users to an intended destination webpage without user awareness
+                <a href="http://papers.www2017.com.au.s3-website-ap-southeast-2.amazonaws.com/proceedings/p1491.pdf" target="_blank">- Redirection Trail</a>
+            </li>
+            <li>allows a webpage to be accessible via multiple URLs.
+                <a href="http://papers.www2017.com.au.s3-website-ap-southeast-2.amazonaws.com/proceedings/p1491.pdf#page=2" target="_blank">- Redirection Trail</a>
+            </li>
+            <li>is an automatic redirection of one URL to another, usually indicated by the 3xx HTTP status code.
+                <a href="https://publications.cispa.saarland/2987/1/asiaccs2020roth.pdf#page=3" target="_blank">- Script Gadgets CSP</a>
             </li>
         </ol>
     </div>

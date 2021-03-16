@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semmle</title>
+    <link rel="stylesheet" href="styles/sommaire.css">
+</head>
+
+<body>
+    <br>
+     <h2><a href="index.html" class="bg1">Request</a></h2>
+    <p class="headers">
+:authority: blog.semmle.com<br>
+:method: GET<br>
+:path: /commons-cc8edcd62230e5f0cdcc.js<br>
+:scheme: https<br>
+accept: */*<br>
+accept-encoding: gzip, deflate, br<br>
+accept-language: en-US,en;q=0.9,fr;q=0.8<br>
+cache-control: no-cache<br>
+cookie: __cfduid=d869f0a2046e3d33eeb020da01a94342d1613297943<br>
+pragma: no-cache<br>
+<a href="https://tools.ietf.org/html/rfc7231#section-5.5.2" target="_blank">referer</a>: https://blog.semmle.com/secure-software-github-semmle/<br>
+sec-fetch-dest: script<br>
+<a href="https://github.com/w3c/webappsec-fetch-metadata">sec-fetch-mode</a>: no-cors<br>
+<a href="https://w3c.github.io/webappsec-fetch-metadata/#sec-fetch-site-header">sec-fetch-site</a>: same-origin<br>
+user-agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36<br>
+<br>
+    <h2><a href="index.html" class="bg1">Response</a></h2>
+    <p class="headers">
+HTTP/2 200<br>    
+date: Tue, 16 Mar 2021 02:34:47 GMT<br>
+content-type: application/javascript; charset=UTF-8<br>
+x-powered-by: Express<br>
+cache-control: public, max-age=0<br>
+last-modified: Tue, 17 Dec 2019 09:43:17 GMT<br>
+etag: W/"d556b-16f133d8708"<br>
+via: 1.1 <a href="https://github.com/heroku/vegur" target="_blank">vegur</a><br>
+cf-cache-status: EXPIRED<br>
+cf-request-id: 08da7bd43700002c7e51aba000000001<br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT">expect-ct</a>: <a href="https://unix.stackexchange.com/questions/27013/displaying-seconds-as-days-hours-mins-seconds">max-age</a>=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"<br>
+<a href="https://w3c.github.io/webappsec-csp/#directive-report-to">report-to</a>: {"max_age":604800,"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=eD7rvs5L3emIVX1VuI5hh4cl8xHU1msoEcgDAdwo6GREerels%2B0OjIOfygrR9StOQPX%2F6oWlw2P8XgWtdHWmHwMgTGpddD7AIoFSyKcPz90%3D"}],"group":"cf-nel"}<br>
+nel: {"max_age":604800,"report_to":"cf-nel"}<br>
+vary: Accept-Encoding<br>
+server: cloudflare<br>
+<a href="https://support.cloudflare.com/hc/en-us/articles/203118044#h_f7a7396f-ec41-4c52-abf5-a110cadaca7c">cf-ray</a>: 630a9599e8e42c7e-LHR<br>
+content-encoding: gzip<br>
+<br>
+<br>
+
+
+    </p><!-- 
+    <h2><a href="https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers" target="_blank">Privacy</a></h2>
+    <div class="yellow">
+        <ul>
+            <li>
+                <a href="https://www.youtube.com/watch?v=TNlcoYLIGFk&t=1336s" target="_blank">CORS: </a>
+                <a href="https://developer.mozilla.org/fr/docs/Web/HTTP/CORS" target="_blank">MDN,</a>
+                <a href="https://www.manning.com/books/cors-in-action" target="_blank"> CORS in Action,</a>
+                <a href="definition.html#CORSDefinition" target="_blank">definition </a>
+                <a href="domxss/script.html" target="_blank">(script tag...) </a> |
+                <a href="domxss/domxsspapers/headers/2018 - HTTP security headers analysis of top one million websites.pdf#page=23" target="_blank">referrer policy</a>
+                <a href="https://www.w3.org/TR/referrer-policy/" target="_blank">(1</a>,
+                <a href="https://www.youtube.com/watch?v=TNlcoYLIGFk&t=1250s" target="_blank">2,</a>
+                <a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-lekies.pdf#page=11" target="_blank">3,</a>
+                <a href="https://www.youtube.com/watch?v=lCmiYKgq-o8" target="_blank">4</a>) |
+                <a href="https://tools.ietf.org/html/rfc7231#section-7.4.2" target="_blank">server</a> |
+                <a href="https://tools.ietf.org/html/rfc7231#section-7.1.1.2" target="_blank">date</a>
+            </li>
+        </ul>
+    </div>
+    <h2><a href="https://www.youtube.com/playlist?list=PLxeJU39M7tLFbwYxe27vzwNeX3rCgONg4" target="_blank">Parameters</a></h2>
+    <div class="red">
+        <ul>
+            <li>
+                <a href="https://tools.ietf.org/html/rfc7231#section-4" target="_blank">request method</a> |
+                <a href="https://tools.ietf.org/html/rfc7231#section-5" target="_blank">request URL</a> |
+                <a href="https://tools.ietf.org/html/rfc7231#section-6" target="_blank">response status code</a>
+            </li>
+        </ul>
+    </div>
+    <h2><a href="https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers" target="_blank">Request</a></h2>
+    <div class="green">
+        <ul>
+            <li><a href="https://tools.ietf.org/html/rfc7231#section-5.3.4" target="_blank">accept-encoding</a></li>
+            <li><a href="https://tools.ietf.org/html/rfc7231#section-5.3.5" target="_blank">accept-language</a></li>
+            <li><a href="https://w3c.github.io/webappsec-fetch-metadata/#sec-fetch-dest-header" target="_blank">sec-fetch-dest</a> |
+                <a href="https://w3c.github.io/webappsec-fetch-metadata/#sec-fetch-mode-header" target="_blank">sec-fetch-mode</a> |
+                <a href="https://w3c.github.io/webappsec-fetch-metadata/#sec-fetch-site-header" target="_blank">sec-fetch-site</a></li>
+            </li>
+        </ul>
+    </div>
+    <h2><a href="https://tools.ietf.org/html/rfc7231#section-8.3.2">Response</a></h2>
+    <div class="orange">
+        <ul>
+            <li><a href="https://tools.ietf.org/html/rfc7233#section-2.3">accept-ranges</a></li>
+            <li><a href="https://tools.ietf.org/html/rfc7231#section-3.1.2.2" target="_blank">content-encoding</a> |
+                <a href="https://tools.ietf.org/html/rfc7230#section-3.3.2" target="_blank">content-length</a></li>
+            <li><a href="https://www.chromestatus.com/feature/5432089535053824" target="_blank">cross-origin-opener-policy</a></li>
+            <li><a href="https://tools.ietf.org/html/rfc7232#section-2.2" target="_blank">last-modified</a></li>
+            <li><a href="https://docs.fastly.com/en/guides/getting-started-with-surrogate-keys" target="_blank" class="red">surrogate-key</a></li>
+            <li><a href="https://tools.ietf.org/html/rfc7231#section-7.1.4" target="_blank">vary</a>
+            </li>
+            <li><a href="domxss/domxsspapers/headers/2017 - Exploring HTTP Header Manipulation In-The-Wild.pdf#page=6" target="_blank">x-cache</a>(
+                <a href="https://www.youtube.com/watch?v=TNlcoYLIGFk&t=667s">1</a>)
+            </li>
+            </li>
+            <li><a href="domxss/domxsspapers/headers/2018 - HTTP security headers analysis of top one million websites.pdf#page=22" target="_blank">x-powered-by</a></li>
+            <li><a href="https://staart.js.org/api/response-headers" target="_blank">x-response-time</a></li>
+            <li><a href="https://tools.ietf.org/html/rfc7234#section-5.1" target="_blank">x-ton-expected-size</a></li>
+        </ul>
+    </div>
+    <h2><a href="https://tools.ietf.org/html/rfc7231#section-5.3" target="_blank">Content Negociation</a></h2>
+    <div class="violet">
+        <ul>
+            <li><a href="https://tools.ietf.org/html/rfc7231#section-5.3.4" target="_blank">accept-encoding</a> |
+                <a href="https://tools.ietf.org/html/rfc7231#section-5.3.5" target="_blank">accept-language</a></li>
+        </ul>
+    </div>
+    <h2><a href="https://tools.ietf.org/html/rfc7231#section-5.5" target="_blank">Request Context</a></h2>
+    <div class="yellow">
+        <ul>
+            <li>
+                <a href="https://tools.ietf.org/html/rfc7231#section-5.5.3" target="_blank">user-</a>
+                <a href="https://humanwhocodes.com/blog/2010/01/12/history-of-the-user-agent-string/" target="_blank">agent</a> |
+                <a href="https://tools.ietf.org/html/rfc7231#section-5.5.2" target="_blank">referer</a>
+            </li>
+        </ul>
+    </div>
+    <h2><a href="https://www.youtube.com/watch?v=WImU1HhsB8k&t=172s" target="_blank">Caching</a></h2>
+    <div class="red">
+        <ul>
+            <li>
+                <a href="https://tools.ietf.org/html/rfc7234#section-5.4" target="_blank"><s>pragma</s></a> |
+                <a href="https://tools.ietf.org/html/rfc7234#section-5.3" target="_blank"><s>expires</s></a> |
+                <a href="https://tools.ietf.org/html/rfc7234#section-5.1" target="_blank"><s>age</s></a> |
+                <a href="https://tools.ietf.org/html/rfc7232#section-2.3" target="_blank">etag</a>
+                <a href="https://www.youtube.com/watch?v=WImU1HhsB8k&t=209s">(1)</a> |
+                <a href="https://tools.ietf.org/html/rfc7234#section-5.2" target="_blank">cache-control</a>
+                <a href="https://www.youtube.com/watch?v=WImU1HhsB8k&t=282s">(1)</a> |
+            </li>
+        </ul>
+    </div>
+    <h2><a href="https://tools.ietf.org/html/rfc7231#section-5.5" target="_blank">Amazon-specific</a></h2>
+    <div class="creme">
+        <ul>
+            <li><a href="https://developer.fastly.com/reference/http-headers/X-Served-By/" target="_blank">x-served-by</a></li>
+            <li><a href="https://developer.fastly.com/reference/http-headers/X-Served-By/" target="_blank">x-amz-ir-id</a></li>
+            <li><a href="https://www.w3.org/TR/resource-timing-1/#timing-allow-origin" target="_blank" class="red">timing-allow-origin</a></li>
+        </ul>
+    </div>
+    <h2><a href="https://tools.ietf.org/html/rfc7231#section-5.5" target="_blank">Twitter-specific</a></h2>
+    <div class="blue">
+        <ul>
+            <li><a href="https://twitter.com/TwitterAPI/status/453289427700170752" target="_blank">x-connection-hash</a></li>
+            <li><a href="https://twitter.com/TwitterAPI/status/453289427700170752" target="_blank">x-ton-expected-size</a></li>
+            <li><a href="https://twitter.com/TwitterAPI/status/453289427700170752" target="_blank">x-connection-hash</a></li>
+        </ul>
+    </div> -->
+</body>
+
+</html>

@@ -133,11 +133,15 @@ ol {
     color: #f92972;
 }
 
+.headers,
 .quotes li {
     margin: 5px 0;
 }
-
-
+.headers a:visited {
+    background-color: transparent;
+    text-decoration: underline;
+    color: #f92972;
+}
 .definition a:visited {
     background-color: transparent;
     text-decoration: none;
