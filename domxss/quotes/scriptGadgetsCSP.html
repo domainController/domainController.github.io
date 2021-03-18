@@ -14,11 +14,19 @@
             <li>These small snippets of benign JavaScript code transform non-script markup contained in a page into executable JavaScript, opening the door for bypasses of a deployed CSP. Especially in combination with CSP’s logic in handling redirected resources, script gadgets enable attackers to bypass an otherwise secure policy
             </li>
             
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>and outline how open redirects can be used to further widen the attack surface of script gadget based CSP bypasses</li>
+
+            <li>Including content from third-party pages is commonplace on the Web: from advertisements to map services, all sorts of content are loaded via frames into applications</li>
+
+            <li>Whenever either script-src or default-src (as fallback) is specified, CSP also prohibits the use of inline scripts, event handlers, and functions that perform a string-to-code transformation.</li>
+
+            <li>However, if the target of the redirect is not validated properly on the server-side, an attacker can use this to cause a redirect to an arbitrary target. Generally speaking, this can be used to trick users into hiding the actual source of content. As an example, open redirects may be used by attackers in phishing campaigns, as users may only check the URL before clicking it (pointing to a seemingly benign site), but not after a redirect has occurred (to the attacker’s page). For our use case, such an open redirect becomes especially problematic in combination with CSP, as CSP’s matching algorithm for whitelisted sources ignores any paths when a resource is loaded as the result of a redirect.</li>
+
+            <!-- A partir de la page 3/4 , lecture zig zag via pattern matching ("open redirect") -->
+
+            <li>Most of the top domains with the highest number of open redirect URLs are ad or analytic providers. This fact is especially important for our generation of CSP bypasses because ad and analytics scripts are whitelisted frequently in real-wprld CSPs.We also investigated
+which query parameter is how frequently used to define a target
+of a redirection</li>
             <li></li>
             <li></li>
             <li></li>

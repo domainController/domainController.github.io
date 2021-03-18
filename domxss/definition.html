@@ -33,13 +33,16 @@
                 <a href="https://storage.googleapis.com/pub-tools-public-publication-data/pdf/45542.pdf#page=3https://archive-csp.github.io./github.com.html" target="_blank">- CSP Is Dead, Long Live CSP! </a>
             </li>
             <li>describes a class of <strong>string-based code injection</strong> vulnerabilities that let adversaries inject HTML and/or JS into Web content"
-                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=2" target="_blank">- Reviews of Web Crawlers</a>
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=2" target="_blank">- Scrpt Gadgets</a>
             </li>
         </ol>
     </div>
     <div class="definition" id="CSPDefinition">
         <h2><a href="https://domaincontroller.github.io/domxss/csp.html"> ********* CSP ********* </a></h2>
         <ol class="definition">
+            <li>is is the most popular example of code-filtering mitigation"
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=2" target="_blank">- Scrpt Gadgets</a>
+            </li>
             <li>is activated by a client’s browser when the <a href="https://developer.mozilla.org/fr/docs/Web/HTTP/Headers/Content-Security-Policy" target="_blank">X-Content-Security-Policy</a> HTTP header is provided in a HTTP response"
                 <a href="http://research.sidstamm.com/papers/csp-www2010.pdf#page=3" target="_blank">- Reining in the web with CSP</a>
             </li>
@@ -62,7 +65,7 @@
                 <a href="https://storage.googleapis.com/pub-tools-public-publication-data/pdf/45542.pdf" target="_blank">- CSP Is Dead, Long Live CSP! </a>
             </li>
             <li>is a <strong>browser feat.</strong> that a web dev. can configure to define a <a href="http://people.w3.org/mike/diffs/csp/diff-to-db6a34dad6cb.html" target="_blank">policy</a> that allows the browser to <strong>whitelist</strong> the JS code that belongs to the app."
-                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=2" target="_blank">- Script Gadget</a>
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=2" target="_blank">- Script Gadgets</a>
             </li>
             <li>is a <strong>list of directives</strong>, restricting content inclusion for web pages by means of a <strong>white-listing mechanism</strong>.
                 <a href="https://www.dais.unive.it/~calzavara/papers/tweb18.pdf" target="_blank">- Semantics CSP </a>
@@ -103,7 +106,10 @@
     <div class="definition">
         <ol>
             <li>legitimate JavaScript fragments within an application’s legitimate code base
-                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=1" target="_blank">- Script Gadget</a>
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=1" target="_blank">- Script Gadgets</a>
+            </li>
+            <li>is piece of JavaScript code which reacts to the presence of specifically formed DOM content in the Web document
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=1" target="_blank">- Script Gadgets</a>
             </li>
         </ol>
     </div>
@@ -119,14 +125,14 @@
     <div class="definition">
         <ol>
             <li>allows the developer to list cryptographic hashes of expected scripts within the page
-                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=3" target="_blank">- Script Gadget</a>
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=3" target="_blank">- Script Gadgets</a>
             </li>
         </ol>
     </div>
     <h2 id="NonceDefinition"> ========= Mixed Content ========= </h2>
     <div class="definition">
         <ol>
-            <li>Mixed content is the inclusion of unencrypted content into HTTPS sessions, which reduces the benet of encryption.
+            <li>is the inclusion of unencrypted content into HTTPS sessions, which reduces the benet of encryption.
                  <a href="https://tobias.lauinger.name/papers/csp-raid2014.pdf#page=8" target="_blank">- Why is CSP Failing? </a>
             </li>
         </ol>
@@ -134,7 +140,7 @@
     <div class="definition">
         <h2 id="DOMXSSdefinition"> ********* DOM XSS ********* </h2>
         <ol>
-            <li>DOM-based XSS is the exploitation of an <strong>input validation</strong> vulnerability that is caused by the client, not the server."</li>
+            <li>is the exploitation of an <strong>input validation</strong> vulnerability that is caused by the client, not the server."</li>
             <a href="http://index-of.co.uk/Hacking-Coleccion/XSS%20Attacks%20-%20Cross%20Site%20Scripting%20Exploits%20&%20Defense.pdf">- XSS Exploits</a>
             <li><strong>can be seen as an information flow problem where portions of strings</strong> — potentially under attacker’s control - e.g., URL, cookie value] — <strong>are being evaluated as code through JavaScript code evaluation functions</strong> like eval- ] <strong>or being used in unsafe dynamic DOM constructions</strong>, such as via document.write or innerHTML"
                 <a href="domxsspapers/taintDexterJS1.pdf#page=2" target="_blank">- DexterJS1</a>
@@ -156,10 +162,10 @@
     <div class="definition">
         <ol>
             <li>These are libraries used by developers to clean <strong>untrusted HTML</strong> into <strong>HTML that is safe to use</strong> within the application. This category contains examples such as DOMPurify1 and Google Closure2 HTML sanitizer."
-                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=2" target="_blank">- Script Gadget</a>
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=2" target="_blank">- Script Gadgets</a>
             </li>
             <li>automatically transform <strong>untrustworthy strings</strong> into <strong>safe-to-render HTML markup</strong> or safe-to-follow URLs by removing parts that may lead to XSS"
-                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=2" target="_blank">- Script Gadget</a></li>
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=2" target="_blank">- Script Gadgets</a></li>
         </ol>
     </div>
     <h2 id="ExploitDefinition"> ********* Exploit ********* </h2>
@@ -268,7 +274,7 @@
             </li>
         </ol>
     </div>
-    <h2 id="BrowserXSSFiltersDefinition"> @@@@@@@@@ Browser XSS Filters @@@@@@@@@ </h2>
+    <h2 id="BrowserXSSFiltersDefinition"> --------- Browser XSS Filters --------- </h2>
     <div class="definition">
         <ol>
             <li>These filters are implemented as part of the browser navigation and rendering, and they attempt to detect an XSS attack and neuter it. Internet Explorer, Edge, and Chrome implement XSS filters as part of their default configuration. Firefox does not have one, but the popular NoScript3 AddOn implements one."
@@ -276,17 +282,37 @@
             </li>
         </ol>
     </div>
-    <h2 id="WAFDefinition"> @@@@@@@@@ Web Application Firewalls @@@@@@@@@ </h2>
+    <h2 id="WAFDefinition"> --------- Web Application Firewalls --------- </h2>
     <div class="definition">
         <ol>
             <li>This is software that runs on the server, and attempts to allow benign requests from web trac, while detecting and blocking malicious requests. An example of an open-source Web Application Firewall is ModSecurity4 with OWASP Common Rule Set"
-                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=2" target="_blank">- Script Gadget</a>
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=2" target="_blank">- Script Gadgets</a>
+            </li>
+            <li>are request filtering mitigations deployed as hardware in front of web servers, as well as as software next to the web server itself.
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=6" target="_blank">- Script Gadgets</a>
+            </li>
+        </ol>
+    <h2 id="ModSecurity"> --------- Mod Security --------- </h2>
+    <div class="definition">
+        <ol>
+            <li>is an open-source Web Application Firewall, commonly used with the OWASP Core Rule Set."
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=6" target="_blank">- Script Gadgets</a>
+            </li>
+        </ol>
+    <h2 id="WAFDefinition"> --------- Web Application Firewalls --------- </h2>
+    <div class="definition">
+        <ol>
+            <li>This is software that runs on the server, and attempts to allow benign requests from web trac, while detecting and blocking malicious requests. An example of an open-source Web Application Firewall is ModSecurity4 with OWASP Common Rule Set"
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=2" target="_blank">- Script Gadgets</a>
+            </li>
+            <li>are request filtering mitigations deployed as hardware in front of web servers, as well as as software next to the web server itself.
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=6" target="_blank">- Script Gadgets</a>
             </li>
         </ol>
     </div>
     <div class="definition">
         <h2 id="CORSDefinition"><a href="https://www.youtube.com/watch?v=_FrnLbLQn-M&t=1420s">
-                ========= Cross-Origin Resource Sharing - 2009] =========</a></h2>
+                ========= Cross-Origin Resource Sharing - [2009] =========</a></h2>
         <ol>
             <li>is <strong>an extension of the XMLHttpRequest API to allow cross-origin content in the browser</strong> through explicit authorization"
                 <a href="https://people.cispa.io/ben.stock/papers/meiser2021cwyt.pdf#page=3" target="_blank">- Careful Who You Trust</a></li>
@@ -747,7 +773,7 @@
     <div class="definition">
         <ol>
             <li>allows markup to override variables in JavaScript execution environment, making it possible to trigger specific script behavior"
-                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=3" target="_blank">- Script Gadget</a>
+                <a href="https://acmccs.github.io/papers/p1709-lekiesA.pdf#page=3" target="_blank">- Script Gadgets</a>
             </li>
         </ol>
     </div>
@@ -762,6 +788,44 @@
             </li>
             <li>is an automatic redirection of one URL to another, usually indicated by the 3xx HTTP status code.
                 <a href="https://publications.cispa.saarland/2987/1/asiaccs2020roth.pdf#page=3" target="_blank">- Script Gadgets CSP</a>
+            </li>
+        </ol>
+    </div>
+    <h2 id="ACDefinition"> --------- Access Control --------- </h2>
+    <div class="definition">
+        <ol>
+            <li>provides a line of defense to prevent exploits by blocking unauthorized access.
+                <a href="https://www.usenix.org/system/files/conference/tapp2017/tapp17_paper_capobianco.pdf" target="_blank">- Tracking the Provenance of AC Decisions</a>
+            </li>
+            <li>is a pervasive security mechanism which is used in virtually all systems.
+                <a href="https://cutt.ly/Kz3vBpL#page3" target="_blank">Automated Inference of AC Policies for Web Apps</a>
+            </li>
+            <li>restricts the subjects (e.g., users and programs) that may perform operations (e.g., read and write) over objects (e.g., files and records).
+                <a href="https://cutt.ly/Kz3vBpL#page3" target="_blank">Automated Inference of AC Policies for Web Apps</a>
+            </li>
+        </ol>
+    </div>
+    <h2 id="ACDefinition"> --------- Broken access control --------- </h2>
+    <div class="definition">
+        <ol>
+            <li>is a widely recognised security issue in web applications; it leads to unauthorised accesses to sensitive data and system resources.
+                <a href="https://cutt.ly/Kz3vBpL" target="_blank">Automated Inference of AC Policies for Web Apps</a>
+            </li>
+        </ol>
+    </div>
+    <h2 id="ACDefinition"> --------- Insecure Direct Object References --------- </h2>
+    <div class="definition">
+        <ol>
+            <li>refers to the exposure of direct references to internal resources (such as files).
+                <a href="https://cutt.ly/Kz3vBpL" target="_blank">Automated Inference of AC Policies for Web Apps</a>
+            </li>
+        </ol>
+    </div>
+    <h2 id="ACDefinition"> --------- Broken Authentication and Session Management --------- </h2>
+    <div class="definition">
+        <ol>
+            <li>relates to the authentication and session management of an access control mechanism.
+                <a href="https://cutt.ly/Kz3vBpL" target="_blank">Automated Inference of AC Policies for Web Apps</a>
             </li>
         </ol>
     </div>

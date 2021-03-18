@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>automatedDetectionAC</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/sommaire.css">
+</head>
+
+<body>
+    <div class="quotes">
+        <h2><a href="https://digitalcollection.zhaw.ch/bitstream/11475/21946/3/2021_Kushnir_etal_Automated-black-box-detection_ICISSP.pdf" target="_blank"> ========= Automated Detection of AC Vuln. in Web Apps ========= </a></h2>
+        <ol>
+            <li>This includes access control vulnerabilities, which are highly relevant in practice as they can grant <strong>unauthorized users access</strong> to <strong>security-critical data</strong> or <strong>functions</strong> in web applications</li>
+            
+            <li>However, there are also vulnerability types that are hard to detect for vulnerability scanners, which includes access control vulnerabilities. The main reason for this is that vulnerability scanners typically d<strong>o not know which users are allowed to do what</strong> in a web application, so there’s no way to determine which accesses to the web application are legitimate or not.</li>
+            
+            <li>and while all these proposals have their merits, they usually have limitations that prevent their wide applicability in practice, e.g., because they still require significant manual work, because they <strong>require</strong> a <strong>formal specification</strong> of an <strong>access control model</strong> <strong><u>as a basis</u></strong> (which is typically not available in practice)</li>
+            
+            <li>Access control vulnerabilities in web applications can be divided into two main categories: function-level and object-level vulnerabilities.</li>
+            
+            <li>Function-level access control vulnerabilities occur if a web application does not sufficiently check whether the current user is authorized to access a specific function (which often corresponds to a resource in the web application). For instance, assume that the URL https: //www.site.com/admin/viewcustomers is intended to be accessible only by administrators of an e-shop to view the registered customers. In this case, the resource admin/viewcustomers identifies the function to view customers and if a non-administrative user of the web application manages to successfully access this function, then this corresponds to a function-level access control vulnerability.</li>
+            
+            <li><a href="automatedInferencesAC.html#acconcepts" target="_blank">Object-level</a> access control vulnerabilities occur when a user gets unauthorized access to objects within a web application. For instance, assume that a seller in an e-shop has legitimate access to edit his own products, that the product with id=123 belongs to him, and that the URL https://www.site.com/editproduct&id=123 grants him access to edit the product. If this seller now changes the id in this URL so that it corresponds to a product that belongs to another seller (e.g., by using id=257 so that the resulting URL is https://www.site.com/ editproduct&id=257) and if access to edit the product is granted by the web application, then this corresponds to an object-level access control vulnerability.</li>
+            
+            <li>There are many possible root causes for such vulnerabilities, including coding mistakes (e.g., forgetting to include an authorization check or implementing the check incorrectly), configuration errors (e.g., Cross-Origin Resource Sharing (CORS) misconfigurations in the case of APIs), and vulnerabilities in web application server software and web application frameworks (OWASP, 2017b).</li>
+            
+            <li>The impact of an access control vulnerability depends on the vulnerable component and can range from information disclosure (e.g., an e-banking customer that manages to view the account details of other customers) to unauthorized manipulation of data (e.g., a user of a webbased auctioning platform who can modify the bids of other users) up to getting complete access to and control of the affected web application (e.g., an attacker that manages to get access to the function to create a new administrator account in the web application).</li>
+            
+            <li>Black box means that the solution analyses a running web application by interacting with it “from the outside” and that it neither requires nor makes use of any internal information such as the source code or access control configurations</li>
+            
+            <li>The reason for focusing on GET requests is to minimize side effects due to changes in the application state that usually happen with POST, PUT, PATCH or DELETE requests. These requests often change the data and/or state of an application, which can alter its appearance and functionality and which in turn would make it more difficult to compare application behavior when using different users</li>
+            
+            <li>The fundamental idea how our solution determines legitimate accesses in the web application under test is based on the assumption that in most web applications, the web pages presented to a user contain only links, buttons or other navigation elements that can legitimately be used by this user. For instance, navigation elements to access administrative functions in a web application typically only show up after an administrator has successfully logged in and are usually not presented to users that don’t have Automated Black Box Detection of HTTP GET Request-based Access Control Vulnerabilities in Web Applications administrator rights.</li>
+            
+            <li>Based on this assumption, web crawling can be used to determine the content which can be legitimately accessed by different users of a web application, as web crawlers mainly follow navigation elements that are presented to a user. In the next step, it is then checked – for each user – whether content that was found during crawling with the other users (but not with the current user) can be accessed by the current user. If this is the case, then this is a strong indication for an access control vulnerability</li>
+            
+            <li>Most web applications use either cookie-based session authentication or token-based authentication with JSON Web Tokens (JWT) and our solution supports both</li>
+            
+            <li>The workflow described in this and the following subsections is always based on two authenticated users</li>
+            
+            <li>Second, by adding the custom crawler based on Puppeteer, it is possible to capture HTTP requests and responses that are executed as part of JavaScript code in the browser. Many single page application dynamically load and modify the Document Object Model (DOM) of a web page and can therefore not be reliably crawled with a crawler such as <strong>Scrapy</strong> that relies on <strong>parsing HTML content</strong>. The custom crawler based on Puppeteer, however, allows to control a real Chrome browser instance and waits for a page to fully load all dynamic content before processing the page for any navigation links and action elements such as buttons.</li>
+            
+            <li>Both crawlers are used to crawl the target application three times: One time for each of the users U1 and U2 for which authentication information has been provided and once without any authentication information to capture content that is publicly accessible</li>
+
+            <li>The first filter, the public content filter, looks for content that is accessible without any authentication.</li>
+
+            <li>Next, the <strong>static content</strong> filter filters out static content that is not relevant for access control decisions. This applies mostly to <strong>frontend-specific</strong> content that is served as static files, e.g., <u>CSS files, JavaScript files, logo files, etc.</u> This is a configurable filter that can be supplied with a list of file extensions that mark static content. The filter will then filter out all requests <strong>that point to</strong> files with these extensions. <strong>By default</strong>, only CSS and JavaScript files are filtered.</li>
+
+            <li>The standard pages filter filters out specific <strong>standard pages</strong>. Many web applications have pages like “<strong>About Us</strong>” or contact forms that are typically <strong>not relevant</strong> in access control testing scenarios.</li>
+
+            <li>The used approach is based on fuzzy hashing and will be described in Section 3.6. This filter mainly aims at filtering out standard content that is missed by the previous filter. For instance, some applications do not use HTTP status codes to indicate that a page was not found, that a redirect occurred or that some other error happened, but instead respond with an HTTP 200 status code and a custom error page.</li>
+
+            <li>The replay testing component is the core component of the solution to detect access control vulnerabilities.</li>
+
+            <li>All responses that have a 200 status code are next analyzed by the regex validator. This validator looks for specific strings inside the response body to decide about permitted and denied access, e.g., custom access denied error messages that appear when an illegitimate access is attempted.</li>
+
+            <!-- 2nde lecture des 5 prmieres pages achevee. Jeudi 18 Mars 14:10 -->
+            <!-- lecture jusqu'a page 7/13. Jeudi 18 Mars 14:37 -->
+
+            <li></li>
+
+            <li></li>
+
+            <li></li>
+
+            <li></li>
+
+            <li></li>
+
+            <li></li>
+
+            <li></li>
+
+            <li></li>
+
+            <li></li>
+
+            <li></li>
+
+            <li></li>
+
+            <li></li>
+        </ol>
+    </div>
+</body>
+
+</html>
